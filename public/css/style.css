@@ -1,0 +1,145 @@
+@font-face {
+    font-family: Viga;
+    src: url(../assets/fonts/Viga-Regular.otf) format("opentype");
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+    font-family: Viga;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.nav-custom::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #fff;
+    transform: scaleX(0);
+    transition: transform .40s ease;
+}
+
+.nav-custom:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-custom:focus {
+    outline: none;
+}
+
+.nav-custom:focus::after {
+    transform: scaleX(1);
+}
+
+.nav-custom.active::after {
+    transform: scaleX(1);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #343A40;
+}
+
+
+/* Profile */
+
+.profile {
+    background-image: url(../assets/images/desk.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+
+/* Info Panel */
+
+.info-panel {
+    top: 140px;
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+.info-panel img {
+    width: 200px;
+    border: 5px solid white;
+    margin-top: -100px;
+}
+
+
+/* About & Contact */
+
+.about hr,
+.contact hr {
+    width: 250px;
+    border-top: 3px solid #212529;
+}
+
+
+/* Certificates */
+
+.certificates {
+    background-image: url(../assets/images/petualang.jpg);
+    background-size: cover;
+}
+
+.certificates h2 {
+    color: white !important;
+}
+
+.certificates hr {
+    width: 250px;
+    border-top: 3px solid white;
+}
+
+
+/* Footer */
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer a {
+    color: white !important;
+}
+
+.footer a:hover {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+
+/* Desktop Version */
+
+@media (min-width: 992px) {
+
+    /* Navbar */
+
+    .nav-item {
+        margin-right: 10px;
+    }
+
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+
+
+    /* Contact */
+
+    .form {
+        padding-right: 200px;
+        padding-left: 200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
