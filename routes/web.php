@@ -15,7 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/myportfolio/students', 'StudentsController@index');
-Route::get('/myportfolio/students/create', 'StudentsController@create');
-Route::get('/myportfolio/students/{student}', 'StudentsController@show');
-Route::post('/myportfolio/students', 'StudentsController@store');
+// Route::get('/myportfolio/students', 'StudentsController@index');
+// Route::post('/myportfolio/students', 'StudentsController@store');
+// Route::get('/myportfolio/students/create', 'StudentsController@create');
+// Route::get('/myportfolio/students/{student}', 'StudentsController@show');
+// Route::patch('myportfolio/students/{student}', 'StudentsController@update');
+// Route::delete('/myportfolio/students/{student}', 'StudentsController@destroy');
+// Route::get('/myportfolio/students/{student}/edit', 'StudentsController@edit');
+
+Route::resource('/myportfolio/students', 'StudentsController');

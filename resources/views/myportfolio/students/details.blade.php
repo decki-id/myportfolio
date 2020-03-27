@@ -13,8 +13,12 @@
                         <h6 class="card-subtitle mb-2 text-muted">{{$student->nrp}}</h6>
                         <p class="card-text">{{$student->email}}</p>
                         <p class="card-text">{{$student->majors}}</p>
-                        <button type="submit" class="btn btn-success">Update</button>
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a href="/myportfolio/students/{{$student->id}}/edit" class="btn btn-success">Update</a>
+                        <form method="post" action="/myportfolio/students/{{$student->id}}" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                        </form>
                         <a href="/myportfolio/students" class="btn btn-secondary">Back</a>
                     </div>
                 </div>

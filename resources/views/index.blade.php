@@ -137,7 +137,7 @@
             <?php $year = date('Y'); ?>
             <div class="row">
                 <div class="col-sm-12">
-                    <p class="text-center">Copyright &copy; <?= $year; ?> | Decki Herdiawan Soepandi | All rights reserved</p>
+                    <p class="text-center">&copy; <?= $year; ?> Decki Herdiawan Soepandi. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

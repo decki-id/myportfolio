@@ -75,8 +75,8 @@ class StudentsController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
-        //
+    public function edit(Student $student) {
+        return view('myportfolio/students/update', compact('student'));
     }
 
     /**
@@ -86,8 +86,22 @@ class StudentsController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
-        //
+    public function update(Request $request, Student $student) {
+        $request->validate([
+            'name' => 'required',
+            'nrp' => 'required|size:9',
+            'email' => 'required|email',
+            'majors' => 'required|in:Administrasi Bisnis,Komputerisasi Akuntansi,Sistem Informasi,Teknik Industri,Teknis Informatika,Teknik Mesin'
+        ]);
+
+        Student::where('id', $student->id)->update([
+            'name' => $request->name,
+            'nrp' => $request->nrp,
+            'email' => $request->email,
+            'majors' => $request->majors
+        ]);
+
+        return redirect('/myportfolio/students')->with('status', 'The data has been updated successfully.');
     }
 
     /**
@@ -96,7 +110,8 @@ class StudentsController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
-        //
+    public function destroy(Student $student) {
+        Student::destroy($student->id);
+        return redirect('/myportfolio/students')->with('status', 'The data has been deleted successfully.');
     }
 }

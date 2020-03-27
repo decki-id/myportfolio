@@ -28,12 +28,12 @@
                         <label for="majors">Majors</label>
                         <select type="text" class="form-control @error('majors') is-invalid @enderror" id="majors" name="majors">
                             <option>==Choose majors==</option>
-                            <option>Administrasi Bisnis</option>
-                            <option>Komputerisasi Akuntansi</option>
-                            <option>Sistem Informasi</option>
-                            <option>Teknis Industri</option>
-                            <option>Teknik Informatika</option>
-                            <option>Teknik Mesin</option>
+                            <option {{old('majors') == 'Administrasi Bisnis' ? 'selected' : ''}}>Administrasi Bisnis</option>
+                            <option {{old('majors') == 'Komputerisasi Akuntansi' ? 'selected' : ''}}>Komputerisasi Akuntansi</option>
+                            <option {{old('majors') == 'Sistem Informasi' ? 'selected' : ''}}>Sistem Informasi</option>
+                            <option {{old('majors') == 'Teknik Industri' ? 'selected' : ''}}>Teknis Industri</option>
+                            <option {{old('majors') == 'Teknik Informatika' ? 'selected' : ''}}>Teknik Informatika</option>
+                            <option {{old('majors') == 'Teknik Mesin' ? 'selected' : ''}}>Teknik Mesin</option>
                         </select>
                         @error('majors') <div class="invalid-feedback">{{$message}}</div> @enderror
                     </div>
