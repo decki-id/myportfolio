@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@home')->name('home');
 
 // Route::get('/myportfolio/students', 'StudentsController@index');
 // Route::post('/myportfolio/students', 'StudentsController@store');

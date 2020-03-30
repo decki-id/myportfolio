@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Deckiherdiawans')
+@section('title', 'Deckiherdiawans - Home')
 
 @section('section')
     <section class="profile" id="profile">
@@ -28,11 +28,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-5 offset-sm-1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur dolores voluptate placeat aspernatur animi repellendus esse, alias sapiente, quibusdam cum, ipsum fugit? Libero, enim neque dolore doloremque sapiente at!</p>
-                </div>
-                <div class="col-sm-5">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur dolores voluptate placeat aspernatur animi repellendus esse, alias sapiente, quibusdam cum, ipsum fugit? Libero, enim neque dolore doloremque sapiente at!</p>
+                <div class="col-sm-12">
+                    <p class="text-center trans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur dolores voluptate placeat aspernatur animi repellendus esse, alias sapiente, quibusdam cum, ipsum fugit? Libero, enim neque dolore doloremque sapiente at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eveniet optio, aspernatur quae distinctio blanditiis excepturi quisquam possimus sequi aperiam, accusantium quibusdam voluptas perferendis voluptate error laborum, ipsam inventore iusto.</p>
                 </div>
             </div>
         </div>
@@ -48,30 +45,60 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 mb-4">
-                    <a href="">
-                        <img src="{{url('/assets/images/mos1.jpg')}}" class="img-thumbnail" alt="">
+                    <a href="#mos1">
+                        <img src="{{url('/assets/images/mos1.jpg')}}" class="img-thumbnail" alt="Microsoft1">
                     </a>
+                    <div class="overlay overlay-custom text-center" id="mos1">
+                        <a href="#" class="close-button mr-2"><i class="fas fa-times fa-2x"></i></a>
+                        <a href="#toeic" class="prev"><i class="fas fa-chevron-left fa-6x"></i></a>
+                        <img src="{{url('/assets/images/mos1.jpg')}}" alt="Microsoft1">
+                        <a href="#oracle" class="next"><i class="fas fa-chevron-right fa-6x"></i></a>
+                    </div>
                 </div>
                 <div class="col-sm-4 mb-4">
-                    <a href="">
-                        <img src="{{url('/assets/images/oracle.jpg')}}" class="img-thumbnail" alt="">
+                    <a href="#oracle">
+                        <img src="{{url('/assets/images/oracle.jpg')}}" class="img-thumbnail" alt="Oracle">
                     </a>
+                    <div class="overlay overlay-custom text-center" id="oracle">
+                        <a href="#" class="close-button mr-2"><i class="fas fa-times fa-2x"></i></a>
+                        <a href="#mos1" class="prev"><i class="fas fa-chevron-left fa-6x"></i></a>
+                        <img src="{{url('/assets/images/oracle.jpg')}}" alt="Oracle">
+                        <a href="#mtcna" class="next"><i class="fas fa-chevron-right fa-6x"></i></a>
+                    </div>
                 </div>
                 <div class="col-sm-4 mb-4">
-                    <a href="">
-                        <img src="{{url('/assets/images/mtcna.jpg')}}" class="img-thumbnail" alt="">
+                    <a href="#mtcna">
+                        <img src="{{url('/assets/images/mtcna.jpg')}}" class="img-thumbnail" alt="MikroTik">
                     </a>
+                    <div class="overlay overlay-custom text-center" id="mtcna">
+                        <a href="#" class="close-button mr-2"><i class="fas fa-times fa-2x"></i></a>
+                        <a href="#oracle" class="prev"><i class="fas fa-chevron-left fa-6x"></i></a>
+                        <img src="{{url('/assets/images/mtcna.jpg')}}" alt="MikroTik">
+                        <a href="#mos2" class="next"><i class="fas fa-chevron-right fa-6x"></i></a>
+                    </div>
                 </div>
                 <div class="col-sm-4 mb-4">
-                    <a href="">
-                        <img src="{{url('/assets/images/mos2.jpg')}}" class="img-thumbnail" alt="">
+                    <a href="#mos2">
+                        <img src="{{url('/assets/images/mos2.jpg')}}" class="img-thumbnail" alt="Microsoft2">
                     </a>
+                    <div class="overlay text-center" id="mos2">
+                        <a href="#" class="close-button mr-2"><i class="fas fa-times fa-2x"></i></a>
+                        <a href="#mtcna" class="prev"><i class="fas fa-chevron-left fa-6x"></i></a>
+                        <img src="{{url('/assets/images/mos2.jpg')}}" alt="Microsoft2">
+                        <a href="#toeic" class="next"><i class="fas fa-chevron-right fa-6x"></i></a>
+                    </div>
                 </div>
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 mb-4">
-                    <a href="">
-                        <img src="{{url('/assets/images/toeic.jpg')}}" class="img-thumbnail" alt="">
+                    <a href="#toeic">
+                        <img src="{{url('/assets/images/toeic.jpg')}}" class="img-thumbnail" alt="TOEIC">
                     </a>
+                    <div class="overlay text-center" id="toeic">
+                        <a href="#" class="close-button mr-2"><i class="fas fa-times fa-2x"></i></a>
+                        <a href="#mos2" class="prev"><i class="fas fa-chevron-left fa-6x"></i></a>
+                        <img src="{{url('/assets/images/toeic.jpg')}}" alt="TOEIC">
+                        <a href="#mos1" class="next"><i class="fas fa-chevron-right fa-6x"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

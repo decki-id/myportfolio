@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="{{url('assets/bootstrap-441/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{url('css/style.css')}}">
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{{url('assets/fontawesome-512/css/all.css')}}">
+
         <link rel="icon" type="image/png" href="{{url('assets/images/decki-revota.png')}}">
         <title>@yield('title')</title>
     </head>
@@ -22,10 +25,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link nav-custom" href="/">Home</a>
+                            <a class="nav-link nav-custom {{Route::currentRouteName() == 'home' ? 'active' : ''}}" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-custom" href="#">More About Me</a>
+                            <a class="nav-link nav-custom" href="#">My Diary</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-custom" href="#">My Blog</a>
@@ -52,16 +55,6 @@
         <script src="{{url('assets/jquery/jquery-3.4.1.min.js')}}"></script>
         <script src="{{url('assets/popper/popper.min.js')}}"></script>
         <script src="{{url('assets/bootstrap-441/js/bootstrap.min.js')}}"></script>
-        <script src="{{url('assets/ckeditor/ckeditor.js')}}"></script>
-        <script>
-            ClassicEditor
-                .create (document.querySelector('#message'))
-                .then (message => {
-                    console.log(message);
-                })
-                .catch (error => {
-                    console.error(error);
-                });
-        </script>
+        <script src="{{url('js/script.js')}}"></script>
     </body>
 </html>

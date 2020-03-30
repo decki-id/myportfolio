@@ -51,7 +51,9 @@
 .profile {
     background-image: url(../assets/images/desk.jpg);
     background-size: cover;
+    background-attachment: fixed;
     height: 500px;
+    overflow: hidden;
 }
 
 
@@ -79,6 +81,17 @@
     border-top: 3px solid #212529;
 }
 
+.trans {
+    opacity: 0;
+    transform: translate(-200px, 0);
+    transition: 3s;
+}
+
+.trans.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 
 /* Certificates */
 
@@ -94,6 +107,94 @@
 .certificates hr {
     width: 250px;
     border-top: 3px solid white;
+}
+
+.certificates .img-thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 1s;
+}
+
+.certificates .img-thumbnail.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay img {
+    max-height: 100%;
+    border: 5px solid white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    margin-left: 30px;
+}
+
+.overlay-custom img {
+    margin-top: 100px;
+}
+
+.overlay:target img {
+    animation: ZoomAndFade 1s;
+}
+
+.close-button {
+    float: right;
+    color: white;
+}
+
+.close-button:hover {
+    color: white;
+}
+
+.next {
+    position: absolute;
+    color: white;
+    top: 40%;
+    right: 200px;
+}
+
+.next:hover {
+    color: white;
+}
+
+.prev {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 200px;
+}
+
+.prev:hover {
+    color: white;
+}
+
+@keyframes ZoomAndFade {
+    0% {
+        transform: scale(0);
+        opoacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
