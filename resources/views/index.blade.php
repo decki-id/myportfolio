@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <section class="about pt-4 pb-5" id="about">
+    <section class="about pt-4 pb-4" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -107,58 +107,74 @@
     <section class="footer pt-3" id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <p class="text-center">
-                        <a target="_blank" href="https://instagram.com/deckiherdiawans">
-                            <img src="{{url('/assets/icons/instagram.png')}}"><br>deckiherdiawans
-                        </a>
-                    </p>
+                <div class="col-lg-6">
+                    <div class="row mb-4">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4 text-center footer-img">
+                            <img src="{{url('/assets/images/DeckiRevota.jpg')}}" class="rounded-circle">
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <b>Decki Herdiawan Soepandi</b><br><br>
+                                Perumahan Citra Padalarang Indah Blok B No. 11 RT. 04 RW. 20<br>
+                                Desa Jayamekar, Kecamatan Padalarang, Kabupaten Bandung Barat<br>
+                                Jawa Barat, 40553, Indonesia
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <p class="text-center">
-                        <a target="_blank" href="https://facebook.com/deckiherdiawans">
-                            <img src="{{url('/assets/icons/facebook.png')}}"><br>Decki Herdiawan Soepandi
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <p class="text-center">
-                        <a target="_blank" href="https://github.com/deckiherdiawans">
-                            <img src="{{url('/assets/icons/github.png')}}"><br>deckiherdiawans
-                        </a>
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p class="text-center">
-                        <a target="_blank" href="https://bitbucket.org/deckiherdiawans">
-                            <img src="{{url('/assets/icons/bitbucket.png')}}"><br>deckiherdiawans
-                        </a>
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p class="text-center">
-                        <a target="_blank" href="https://gitlab.com/deckiherdiawans">
-                            <img src="{{url('/assets/icons/gitlab.png')}}"><br>deckiherdiawans
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <p class="text-center">
-                        <a target="_blank" href="https://api.whatsapp.com/send?phone=6282216668131">
-                            <img src="{{url('/assets/icons/whatsapp.png')}}"><br>+62 822 1666 8131
-                        </a>
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <p class="text-center">
-                        <a target="_blank" href="https://gmail.com">
-                            <img src="{{url('/assets/icons/gmail.png')}}"><br>d.herdiawan.s@gmail.com
-                        </a>
-                    </p>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=6282216668131">
+                                    <img src="{{url('/assets/icons/whatsapp.png')}}"><br>+62 822 1666 8131
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://gmail.com">
+                                    <img src="{{url('/assets/icons/gmail.png')}}"><br>d.herdiawan.s@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://linkedin.com/in/decki-herdiawan-soepandi-8a2a99131">
+                                    <img src="{{url('/assets/icons/linkedin.png')}}"><br>Decki Herdiawan Soepandi
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://github.com/deckiherdiawans">
+                                    <img src="{{url('/assets/icons/github.png')}}"><br>deckiherdiawans
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://facebook.com/deckiherdiawans">
+                                    <img src="{{url('/assets/icons/facebook.png')}}"><br>Decki Herdiawan Soepandi
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="text-center">
+                                <a target="_blank" href="https://instagram.com/deckiherdiawans">
+                                    <img src="{{url('/assets/icons/instagram.png')}}"><br>deckiherdiawans
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php $year = date('Y'); ?>

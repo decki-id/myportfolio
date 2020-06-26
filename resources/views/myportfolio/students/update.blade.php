@@ -1,12 +1,10 @@
-@extends('main')
+@extends('/myportfolio/students/main')
 
 @section('title', 'Decki\'s Portfolio - Students')
 
 @section('section')
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h1 class="mt-3">Update Student</h1>
+    <div class="students">
+                <h3 class="text-center mt-3 mb-3">Update Student</h3>
                 <form method="post" action="/myportfolio/students/{{$student->id}}">
                     @method('patch')
                     @csrf

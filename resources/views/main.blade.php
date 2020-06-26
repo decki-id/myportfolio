@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{url('css/style.css')}}">
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{url('assets/fontawesome-512/css/all.css')}}">
+        <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
 
         <link rel="icon" type="image/png" href="{{url('assets/images/decki-revota.png')}}">
         <title>@yield('title')</title>
@@ -25,24 +25,28 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link nav-custom {{Route::currentRouteName() == 'home' ? 'active' : ''}}" href="/">Home</a>
+                            <a class="nav-link nav-custom {{Route::currentRouteName() == 'home' ? 'active' : ''}}" onmouseover="popOver()" onmouseout="popOut()" href="/"><i class="fas fa-fw fa-house-user"></i></a>
+                            <div class="popover bs-popover-left" role="tooltip" id="mypopover">
+                                <div class="arrow"></div>
+                                <div class="popover-body">Home</div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-custom" href="#">My Diary</a>
+                            <a class="nav-link nav-custom" href="#">Curcol Cinema</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-custom" href="#">My Blog</a>
+                            <a class="nav-link btn btn-custom font-weight-bold" target="_blank" href="http://deckiherdiawans.blogspot.com">My Diary</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown center">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Portfolio</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/myportfolio/students">CRUD Students</a>
+                            <div class="dropdown-menu dropdown-menu-portfolio" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" target="_blank" href="/myportfolio/students">CRUD Students</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>                            
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
