@@ -231,6 +231,55 @@ body {
     border-top: 3px solid white;
 }
 
+
+/* Gallery & Lightbox */
+
+.img-hover-zoom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.img-thumbnail {
+    transition: transform .5s ease;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.close-button {
+    float: right;
+    color: white;
+}
+
+.close-button:hover {
+    color: white;
+}
+
+.next {
+    position: absolute;
+    color: white;
+    top: 45%;
+    right: 1%;
+}
+
+.next:hover {
+    color: white;
+}
+
+.prev {
+    position: absolute;
+    color: white;
+    top: 45%;
+    left: 1%;
+}
+
+.prev:hover {
+    color: white;
+}
+
 .overlay {
     width: 0;
     height: 0;
@@ -257,43 +306,12 @@ body {
     margin-left: 30px;
 }
 
+.overlay:target img {
+    animation: JustFade 1s;
+}
+
 .overlay-custom img {
     margin-top: 100px;
-}
-
-.overlay:target img {
-    animation: ZoomAndFade 1s;
-}
-
-.close-button {
-    float: right;
-    color: white;
-}
-
-.close-button:hover {
-    color: white;
-}
-
-.next {
-    position: absolute;
-    color: white;
-    top: 40%;
-    right: 200px;
-}
-
-.next:hover {
-    color: white;
-}
-
-.prev {
-    position: absolute;
-    color: white;
-    top: 40%;
-    left: 200px;
-}
-
-.prev:hover {
-    color: white;
 }
 
 
@@ -335,14 +353,12 @@ body {
 }
 
 
-@keyframes ZoomAndFade {
+@keyframes JustFade {
     0% {
-        transform: scale(0);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
         opacity: 1;
     }
 }
@@ -384,19 +400,5 @@ body {
 
     .nav-item:last-child {
         margin-right: 0;
-    }
-
-    .dropdown-menu-portfolio {
-        left: -80px;
-    }
-
-
-    /* Contact */
-
-    .form {
-        padding-right: 200px;
-        padding-left: 200px;
-        margin-right: auto;
-        margin-left: auto;
     }
 }
