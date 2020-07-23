@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@home')->name('home');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/certificates', 'PagesController@certificates')->name('certificates');
+Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
+Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 
 // Route::get('/myportfolio/students', 'StudentsController@index');
 // Route::post('/myportfolio/students', 'StudentsController@store');

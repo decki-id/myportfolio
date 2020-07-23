@@ -5,9 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{{url('assets/bootstrap-441/css/bootstrap.min.css')}}">
+        <!-- CSS -->
         <link rel="stylesheet" href="{{url('css/style.css')}}">
+        <link rel="stylesheet" href="{{url('css/red.css')}}">
+
+        <!-- Color Switcher -->
+        <link rel="stylesheet" class="alternative-color" id="Red" title="Red" href="{{url('css/red.css')}}" disabled>
+        <link rel="stylesheet" class="alternative-color" id="Yellow" title="Yellow" href="{{url('css/yellow.css')}}" disabled>
+        <link rel="stylesheet" class="alternative-color" id="Green" title="Green" href="{{url('css/green.css')}}" disabled>
+        <link rel="stylesheet" class="alternative-color" id="Blue" title="Blue" href="{{url('css/blue.css')}}" disabled>
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
@@ -16,43 +22,62 @@
         <title>@yield('title')</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="/">Deckiherdiawans</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link nav-custom {{Route::currentRouteName() == 'home' ? 'active' : ''}}" onmouseover="popOver()" onmouseout="popOut()" href="/"><i class="fas fa-fw fa-house-user"></i></a>
-                            <div class="popover bs-popover-left" role="tooltip" id="mypopover">
-                                <div class="arrow"></div>
-                                <div class="popover-body">Home</div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-custom" href="#">Curcol Cinema</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-custom font-weight-bold" target="_blank" href="http://deckiherdiawans.blogspot.com">My Diary</a>
-                        </li>
-                        <!-- <li class="nav-item dropdown center">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Portfolio</a>
-                            <div class="dropdown-menu dropdown-menu-portfolio" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" target="_blank" href="/myportfolio/students">CRUD Students</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>                            
-                        </li> -->
-                    </ul>
+        <div class="main-container">
+            <div class="sidebar">
+                <div class="logo"><a href="/">Deckiherdiawans</a></div>
+                <div class="nav-toggler"><span></span></div>
+                <ul class="nav">
+                    <li>
+                        <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
+                            <i class="fas fa-fw fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">
+                            <i class="fas fa-fw fa-user"></i>About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/certificates" class="{{ Route::currentRouteName() == 'certificates' ? 'active' : '' }}">
+                            <i class="fas fa-fw fa-id-card"></i>Certificates
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolios" class="{{ Route::currentRouteName() == 'portfolios' ? 'active' : '' }}">
+                            <i class="fas fa-fw fa-laptop"></i>Portfolios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blogs" class="{{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}">
+                            <i class="fas fa-fw fa-newspaper"></i>Blogs
+                        </a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <?php $year = date('Y'); ?>
+                    &copy <?= $year; ?><br>Deckiherdiawans.<br>All Rights Reserved.
                 </div>
             </div>
-        </nav>
+        </div>
 
-        @yield('section')
+        <div class="content">
+            @yield('section')
+        </div>
+
+       <div class="style-switcher">
+           <div class="switcher-toggle"><i class="fas fa-cog fa-spin"></i></div>
+           <h5>Color Switcher</h5>
+           <ul>
+               <li><a href="javascript:void(0);" title="Red" style="background-color: red" onclick="setActiveColor('Red')"></a></li>
+               <li><a href="javascript:void(0);" title="Yellow" style="background-color: yellow" onclick="setActiveColor('Yellow')"></a></li>
+               <li><a href="javascript:void(0);" title="Green" style="background-color: lime" onclick="setActiveColor('Green')"></a></li>
+               <li><a href="javascript:void(0);" title="Blue" style="background-color: dodgerblue" onclick="setActiveColor('Blue')"></a></li>
+           </ul>
+           <hr>
+           <h5>Body Skin</h5>
+           <label><input type="radio" class="body-skin" id="light" name="body-skin" value="light" checked>Light</label>
+           <label><input type="radio" class="body-skin" id="dark" name="body-skin" value="dark">Dark</label>
+       </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

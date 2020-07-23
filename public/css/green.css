@@ -1,0 +1,29 @@
+.sidebar .logo a::before {
+    border-top: 3px solid lime;
+    border-left: 3px solid lime;
+}
+
+.sidebar .logo a::after {
+    border-bottom: 3px solid lime;
+    border-right: 3px solid lime;
+}
+
+.sidebar .nav li a:hover,
+.sidebar .nav li a.active,
+body.dark .sidebar .nav li a:hover,
+body.dark .sidebar .nav li a.active,
+.about .about-content .about-text span,
+.style-switcher .switcher-toggle .fas {
+    color: lime;
+}
+
+.sidebar .nav-toggler span,
+.sidebar .nav-toggler span::before,
+.sidebar .nav-toggler span::after,
+.home .intro .social-links a,
+.section-title h2::before,
+.section-title h2::after,
+.about .about-content .timeline .timeline-item::before,
+.about .about-content .timeline .circle-dot {
+    background-color: lime;
+}

@@ -7,7 +7,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{url('assets/bootstrap-441/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{url('css/style.css')}}">
+        <link rel="stylesheet" href="{{url('css/students.css')}}">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
@@ -17,8 +17,8 @@
     </head>
     <body>
         <nav class="navbar navbar-side navbar-expand-sm navbar-light bg-white fixed-top">
-            <div class="navbar-nav ml-auto navbar-right-top">
-                <div class="nav-item dropdown nav-user">
+            <div class="navbar-nav ml-auto">
+                <div class="dropdown nav-user">
                     <a href="#" class="nav-link nav-user-img" id="navbarDropdownMenuLink" data-toggle="dropdown">
                         <img src="{{url('assets/images/decki-revota.png')}}" class="user-avatar-md rounded-circle">
                     </a>
@@ -33,15 +33,11 @@
                 </div>
             </div>
         </nav>
-        <ul class="nav sidebar flex-column navbar-dark bg-dark">
-            <a class="navbar-brand center" href="/">Deckiherdiawans<br>Students</a>
-            <div class="sidebar-divider"></div>
+        <ul class="nav students-sidebar flex-column navbar-dark bg-dark">
+            <a class="navbar-brand text-center" href="/">Deckiherdiawans<br>Students</a>
             <a class="nav-link side-link active" href="#"><i class="fas fa-fw fa-user-graduate mr-2"></i>Students</a>
-            <div class="sidebar-divider"></div>
             <a class="nav-link side-link" href="#">Link</a>
-            <div class="sidebar-divider"></div>
             <a class="nav-link side-link" href="#">Link</a>
-            <div class="sidebar-divider"></div>
         </ul>
 
         @yield('section')
