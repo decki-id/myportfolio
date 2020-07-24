@@ -24,7 +24,10 @@
     <body>
         <div class="main-container">
             <div class="sidebar">
-                <div class="logo"><a href="/">Deckiherdiawans</a></div>
+                <div class="logo">
+                    <a href="/" id="decki">Decki</a>
+                    <a href="/" id="herdiawans">Herdiawans</a>
+                </div>
                 <div class="nav-toggler"><span></span></div>
                 <ul class="nav">
                     <li>

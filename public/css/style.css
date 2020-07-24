@@ -126,30 +126,51 @@ body {
 }
 
 .sidebar .logo a {
-    font-size: 17px;
+    font-size: 20px;
     color: #302e4d;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     position: relative;
-    padding: 0 5px;
 }
 
-.sidebar .logo a::before {
+.sidebar .logo #decki::before {
     content: '';
-    height: 20px;
-    width: 50px;
+    height: 4px;
+    width: 25px;
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 0;
 }
 
-.sidebar .logo a::after {
+.sidebar .logo #decki::after {
     content: '';
-    height: 20px;
-    width: 95px;
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.sidebar .logo #herdiawans {
+    top: -10px;
+}
+
+.sidebar .logo #herdiawans::before {
+    content: '';
+    height: 4px;
+    width: 96px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
+}
+
+.sidebar .logo #herdiawans::after {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
 }
 
 .sidebar .nav-toggler {
@@ -201,7 +222,7 @@ body {
 
 .sidebar .nav {
     font-family: sans-serif;
-    margin: 80px 0 100px 0;
+    margin: 70px 0 80px 0;
     padding: 0;
 }
 
