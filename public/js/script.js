@@ -64,8 +64,11 @@ function nextItem() {
 }
 
 function toggleLightbox() {
-    const a = window.matchMedia("(max-height: 500px)");
-    if (a.matches) {
+    const
+        a = window.matchMedia("(max-height: 500px)"),
+        isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (a.matches || isMobile) {
         if (lightbox.classList.contains("open")) {
             lightbox.classList.remove("open");
         } else {
