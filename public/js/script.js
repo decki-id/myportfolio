@@ -64,15 +64,23 @@ function nextItem() {
 }
 
 function toggleLightbox() {
-    lightbox.classList.toggle("open");
+    const a = window.matchMedia("(max-height: 500px)");
+    if (a.matches) {
+        if (lightbox.classList.contains("open")) {
+            lightbox.classList.remove("open");
+        } else {
+            console.log("Your screen is too small for Lightbox!");
+        }
+    } else {
+        lightbox.classList.toggle("open");
+    }
 }
 
 function changeItem() {
     const
         lightboxImage = lightbox.querySelector(".lightbox-image"),
         lightboxText = lightbox.querySelector(".caption-text"),
-        lightboxCounter = lightbox.querySelector(".caption-counter"),
-        a = window.matchMedia("(max-height: 480px)");
+        lightboxCounter = lightbox.querySelector(".caption-counter");
 
     imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src");
     lightboxImage.src = imageSource;
@@ -82,21 +90,9 @@ function changeItem() {
     imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt");
     imageStyle = document.querySelector(".lightbox .lightbox-content img");
     if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") {
-        if (a.matches) {
-            imageStyle.style.height = "235px";
-            imageStyle.style.width = "auto";
-        } else {
-            imageStyle.style.height = "435px";
-            imageStyle.style.width = "auto";
-        }
-    } else if (imageAlt == "mos2" || imageAlt == "toeic") {
-        if (a.matches) {
-            imageStyle.style.height = "435px";
-            imageStyle.style.width = "auto";
-        } else {
-            imageStyle.style.height = "650px";
-            imageStyle.style.width = "auto";
-        }
+        imageStyle.style.height = "435px";
+    } else {
+        imageStyle.style.height = "650px";
     }
 }
 
