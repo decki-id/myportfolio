@@ -71,7 +71,8 @@ function changeItem() {
     const
         lightboxImage = lightbox.querySelector(".lightbox-image"),
         lightboxText = lightbox.querySelector(".caption-text"),
-        lightboxCounter = lightbox.querySelector(".caption-counter");
+        lightboxCounter = lightbox.querySelector(".caption-counter"),
+        a = window.matchMedia("(max-height: 480px)");
 
     imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src");
     lightboxImage.src = imageSource;
@@ -98,10 +99,6 @@ function changeItem() {
         }
     }
 }
-
-const a = window.matchMedia("(max-height: 480px)");
-myFunction(a);
-x.addListener(myFunction);
 
 
 // Style Switcher
