@@ -118,6 +118,7 @@ body {
     padding: 30px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    overflow: auto;
 }
 
 .sidebar .logo {
@@ -828,7 +829,6 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
 /* Responsive */
 
 @media (max-width: 991px) {
-
     .content {
         padding-left: 0;
     }

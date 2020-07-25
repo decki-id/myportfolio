@@ -81,11 +81,27 @@ function changeItem() {
     imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt");
     imageStyle = document.querySelector(".lightbox .lightbox-content img");
     if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") {
-        imageStyle.style.height = "435px";
+        if (a.matches) {
+            imageStyle.style.height = "235px";
+            imageStyle.style.width = "auto";
+        } else {
+            imageStyle.style.height = "435px";
+            imageStyle.style.width = "auto";
+        }
     } else if (imageAlt == "mos2" || imageAlt == "toeic") {
-        imageStyle.style.height = "650px";
+        if (a.matches) {
+            imageStyle.style.height = "435px";
+            imageStyle.style.width = "auto";
+        } else {
+            imageStyle.style.height = "650px";
+            imageStyle.style.width = "auto";
+        }
     }
 }
+
+const a = window.matchMedia("(max-height: 480px)");
+myFunction(a);
+x.addListener(myFunction);
 
 
 // Style Switcher
