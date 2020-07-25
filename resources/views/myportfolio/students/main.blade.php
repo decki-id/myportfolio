@@ -20,7 +20,7 @@
             <div class="navbar-nav ml-auto">
                 <div class="dropdown nav-user">
                     <a href="#" class="nav-link nav-user-img" id="navbarDropdownMenuLink" data-toggle="dropdown">
-                        <img src="{{url('assets/images/decki-revota.png')}}" class="user-avatar-md rounded-circle">
+                        <img src="{{url('assets/images/decki-revota.jpg')}}" class="user-avatar-md rounded-circle">
                     </a>
                     <div class="dropdown-menu dropdown-menu-user nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink">
                         <div class="nav-user-info">
