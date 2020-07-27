@@ -50,6 +50,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center;
     margin-right: -15px;
     margin-left: -15px;
     position: relative;
@@ -172,7 +173,7 @@ body {
 .sidebar .logo #herdiawans::after {
     content: '';
     height: 4px;
-    width: 133px;
+    width: 62px;
     position: absolute;
     bottom: -8px;
     left: 0;
