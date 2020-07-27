@@ -29,33 +29,35 @@
                     <a href="/" id="herdiawans">Herdiawans</a>
                 </div>
                 <div class="nav-toggler"><span></span></div>
-                <ul class="nav">
-                    <li>
-                        <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
-                            <i class="fas fa-fw fa-home"></i>Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">
-                            <i class="fas fa-fw fa-user"></i>About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/certificates" class="{{ Route::currentRouteName() == 'certificates' ? 'active' : '' }}">
-                            <i class="fas fa-fw fa-id-card"></i>Certificates
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/portfolios" class="{{ Route::currentRouteName() == 'portfolios' ? 'active' : '' }}">
-                            <i class="fas fa-fw fa-laptop"></i>Portfolios
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/blogs" class="{{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}">
-                            <i class="fas fa-fw fa-newspaper"></i>Blogs
-                        </a>
-                    </li>
-                </ul>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-home"></i>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-user"></i>About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/certificates" class="{{ Route::currentRouteName() == 'certificates' ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-id-card"></i>Certificates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/portfolios" class="{{ Route::currentRouteName() == 'portfolios' ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-laptop"></i>Portfolios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blogs" class="{{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-newspaper"></i>Blogs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="copyright">
                     <?php $year = date('Y'); ?>
                     &copy <?= $year; ?><br>Deckiherdiawans.<br>All Rights Reserved.
