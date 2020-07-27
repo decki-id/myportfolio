@@ -28,7 +28,7 @@
                     <a href="/" id="decki">Decki</a>
                     <a href="/" id="herdiawans">Herdiawans</a>
                 </div>
-                <div class="nav-toggler"><span></span></div>
+                <div class="nav-toggler"><i class="fas fa-fw fa-bars"></i></div>
                 <div class="nav">
                     <ul>
                         <li>
