@@ -17,6 +17,7 @@
     </head>
     <body>
         <nav class="navbar navbar-side navbar-expand-sm navbar-light bg-white fixed-top">
+            <div class="nav-toggler"><i class="fas fa-fw fa-bars"></i></div>
             <div class="navbar-nav ml-auto">
                 <div class="dropdown nav-user">
                     <a href="#" class="nav-link nav-user-img" id="navbarDropdownMenuLink" data-toggle="dropdown">
@@ -28,13 +29,13 @@
                             <span>d.herdiawan.s@gmail.com</span>
                         </div>
                         <a href="#" class="dropdown-item"><i class="fas fa-fw fa-user mr-2"></i>Profile</a>
-                        <a href="http://127.0.0.1:8000" class="dropdown-item"><i class="fas fa-fw fa-power-off mr-2"></i>Log Out</a>
+                        <a href="/" class="dropdown-item"><i class="fas fa-fw fa-power-off mr-2"></i>Log Out</a>
                     </div>
                 </div>
             </div>
         </nav>
         <ul class="nav students-sidebar flex-column navbar-dark bg-dark">
-            <a class="navbar-brand text-center" href="/">Deckiherdiawans<br>Students</a>
+            <a class="navbar-brand text-center" href="/myportfolio/students">Deckiherdiawans<br>Students</a>
             <a class="nav-link side-link active" href="#"><i class="fas fa-fw fa-user-graduate mr-2"></i>Students</a>
             <a class="nav-link side-link" href="#">Link</a>
             <a class="nav-link side-link" href="#">Link</a>
@@ -47,6 +48,6 @@
         <script src="{{url('assets/jquery/jquery-3.4.1.min.js')}}"></script>
         <script src="{{url('assets/popper/popper.min.js')}}"></script>
         <script src="{{url('assets/bootstrap-441/js/bootstrap.min.js')}}"></script>
-        <script src="{{url('js/script.js')}}"></script>
+        <script src="{{url('js/students.js')}}"></script>
     </body>
 </html>

@@ -1,3 +1,40 @@
+body {
+    background-color: #f2f2fc;
+}
+
+.students-sidebar {
+    width: 200px;
+    background-color: #fdf9ff;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-right: 1px solid #e8dfec;
+}
+
+.students-sidebar.hide {
+    left: -200px;
+}
+
+.navbar-brand {
+    margin: 5px 0 5px 0;
+    padding: 0;
+}
+
+.side-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.side-link:hover {
+    color: white;
+}
+
+.side-link.active {
+    color: white;
+    background-color: #007bff;
+}
+
 .nav-user-img {
     right: 30px;
     padding: 18px !important;
@@ -8,6 +45,14 @@
     left: 200px;
     padding: 0 30px 0 30px;
     box-shadow: 0 5px 5px 0 rgba(128, 128, 128, .1);
+}
+
+.navbar-side.hide {
+    left: 0;
+}
+
+.nav-toggler {
+    cursor: pointer;
 }
 
 .user-avatar-md {
@@ -34,43 +79,44 @@
     border-radius: 2px 2px 0 0;
 }
 
-.students-sidebar {
-    width: 200px;
-    background-color: #fdf9ff;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    border-right: 1px solid #e8dfec;
-}
-
-.navbar-brand {
-    font-family: Viga;
-    margin: 5px 0 5px 0;
-    padding: 0;
-}
-
-.side-link {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.side-link:hover {
-    color: white;
-}
-
-.side-link.active {
-    color: white;
-    background-color: #007bff;
-}
-
 .students {
-    background-color: #f2f2fc;
     position: absolute;
     top: 70px;
     left: 200px;
     right: 0;
     padding: 0 30px 0 30px;
-    min-height: 100vh;
     display: block;
+}
+
+.students.hide {
+    left: 0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .students-sidebar {
+        left: 0;
+    }
+
+    .students-sidebar.hide {
+        left: -200px;
+    }
+
+    .navbar-side {
+        left: 200px;
+    }
+
+    .navbar-side.hide {
+        left: 0;
+    }
+
+    .students {
+        left: 200px;
+    }
+
+    .students.hide {
+        left: 0;
+    }
 }
