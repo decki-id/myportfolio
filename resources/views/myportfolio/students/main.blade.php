@@ -12,7 +12,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
 
-        <link rel="icon" type="image/png" href="{{url('assets/images/decki-revota.png')}}">
+        <link rel="icon" type="image/png" href="{{url('assets/images/decki-revota.jpg')}}">
         <title>@yield('title')</title>
     </head>
     <body>
