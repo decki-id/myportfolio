@@ -104,7 +104,7 @@ body {
 
 /* Responsive */
 
-@media (max-width: 500px) {
+@media (max-width: 580px) {
     .col-header {
         text-align: center;
     }
@@ -160,7 +160,7 @@ body {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 990px) {
     .nav-toggler {
         display: block;
     }
