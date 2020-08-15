@@ -5,8 +5,8 @@
 @section('section')
     <div class="students">
         <div class="row mt-3 mb-3">
-            <div class="col-sm-6"><h3>List of Students</h3></div>
-            <div class="col-sm-6 text-right"><a href="/myportfolio/students/create" class="btn btn-primary">Add New Student</a></div>
+            <div class="col-sm-6 col-header"><h3>List of Students</h3></div>
+            <div class="col-sm-6 col-button"><a href="/myportfolio/students/create" class="btn btn-primary">Add New Student</a></div>
         </div>
         @if (session('status'))
             <div class="alert alert-success">
