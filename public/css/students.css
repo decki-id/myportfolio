@@ -101,22 +101,14 @@ body {
     text-align: right;
 }
 
+.card-body button {
+    display: inline-block;
+}
+
 
 /* Responsive */
 
 @media (max-width: 580px) {
-    .col-header {
-        text-align: center;
-    }
-
-    .col-button {
-        text-align: center;
-    }
-
-    .btn {
-        display: block;
-    }
-
     .navbar-expand-sm {
         -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
@@ -157,6 +149,14 @@ body {
 
     .navbar-expand-sm .navbar-toggler {
         display: none;
+    }
+
+    .col-header {
+        text-align: center;
+    }
+
+    .col-button {
+        text-align: center;
     }
 }
 
