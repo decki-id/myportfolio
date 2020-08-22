@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2fc;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+
+/* Topbar */
+
+.topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 0 20px;
+    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, .1);
+    background-color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar .nav-toggler {
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.topbar .nav-toggler:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.topbar .nav-toggler .fas {
+    display: block;
+}
+
+.topbar .logo {
+    font-family: fantasy;
+    position: absolute;
+    padding: 0 0 0 60px;
+}
+
+.topbar .user-dropdown {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.topbar .user-dropdown .profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    background-color: #fff;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .topbar .logo {
+        position: static;
+        padding: 0;
+    }
+
+    .sidebar {
+        left: -250px;
+    }
+}

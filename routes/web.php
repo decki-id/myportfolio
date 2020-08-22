@@ -28,3 +28,5 @@ Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 // Route::get('/myportfolio/students/{student}/edit', 'StudentsController@edit');
 
 Route::resource('/myportfolio/students', 'StudentsController');
+
+Route::get('/myportfolio/helpdeck', 'HelpdeckController@index');
