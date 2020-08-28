@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: Viga;
+    src: url(../assets/fonts/Viga-Regular.otf) format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +17,7 @@
 }
 
 body {
-    background-color: #f2f2fc;
+    background-color: #f2f2fc !important;
 }
 
 ::before,
@@ -15,10 +25,15 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Topbar */
 
-.topbar {
+.dhs-topbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -33,63 +48,164 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: Viga;
 }
 
-.topbar .nav-toggler {
-    padding: 10px;
+.dhs-topbar .dhs-navtoggler {
+    padding: 10px 8px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 5;
+    color: #606060;
 }
 
-.topbar .nav-toggler:hover {
-    background-color: rgb(230, 230, 230);
+.dhs-topbar .dhs-navtoggler:hover {
+    background-color: rgb(240, 240, 240);
 }
 
-.topbar .nav-toggler .fas {
+.dhs-topbar .dhs-navtoggler .fas {
     display: block;
+    font-size: 17px;
 }
 
-.topbar .logo {
-    font-family: fantasy;
+.dhs-topbar .dhs-logo {
     position: absolute;
     padding: 0 0 0 60px;
 }
 
-.topbar .user-dropdown {
-    padding: 0 10px;
-    cursor: pointer;
+.dhs-topbar .dhs-usericon {
+    padding: 0 6px;
 }
 
-.topbar .user-dropdown .profile-picture {
+.dhs-topbar .dhs-usericon .dhs-profilepicture {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     display: block;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+.dhs-userdropdownmenu {
+    position: relative;
+    float: right;
+    right: 26px;
+    top: 50px;
+    width: 230px;
+    background-color: #fff;
+    font-family: 'Segoe UI';
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    display: none;
+}
+
+.dhs-userdropdownmenu.click {
+    display: block;
+}
+
+.dhs-userdropdownmenu::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    top: -6px;
+    left: 94%;
+    transform: translateX(-50%) rotate(45deg);
+    border-left: 1px solid rgba(0, 0, 0, .15);
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    z-index: 5;
+}
+
+.dhs-userdropdownmenu .dhs-userinfo {
+    padding: 12px;
+    border-radius: 3px 3px 0 0;
+}
+
+.dhs-userdropdownmenu .dhs-username {
+    font-size: 16px;
+}
+
+.dhs-userdropdownmenu span {
+    font-size: 13px;
+}
+
+.dhs-userdropdownmenu .dhs-dropdownmenuitem {
+    display: block;
+    width: 100%;
+    padding: 6px 13px;
+}
+
+.dhs-userdropdownmenu .dhs-dropdownmenuitem:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.dhs-userdropdownmenu .dhs-dropdownmenuitem:first-of-type {
+    margin-top: 6px;
+}
+
+.dhs-userdropdownmenu .dhs-dropdownmenuitem:last-child {
+    margin-bottom: 6px;
+}
+
+.dhs-userdropdownmenu .dhs-dropdownmenuitem .fas {
+    margin: 0 12px 0 0;
 }
 
 
 /* Sidebar */
 
-.sidebar {
+.dhs-sidebar {
     position: fixed;
     background-color: #fff;
     top: 50px;
     left: 0;
     bottom: 0;
     width: 250px;
+    font-family: Roboto;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 5px 0 5px 0 rgba(128, 128, 128, .1);
+}
+
+.dhs-sidebar .dhs-navlink {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 28px;
+    color: #606060;
+}
+
+.dhs-sidebar .dhs-navlink:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.dhs-sidebar .dhs-navlink.active {
+    background-color: rgb(190, 190, 190);
+    color: #000;
+}
+
+.dhs-sidebar .dhs-navlink .fas {
+    margin-right: 30px;
+    font-size: 17px;
+}
+
+.dhs-sidebar .dhs-navlink h4 {
+    display: inline;
+    font-size: 15px;
+    font-weight: normal;
 }
 
 
 /* Responsive */
 
 @media (max-width: 991px) {
-    .topbar .logo {
+    .dhs-topbar .dhs-logo {
         position: static;
         padding: 0;
     }
 
-    .sidebar {
+    .dhs-sidebar {
         left: -250px;
     }
 }
