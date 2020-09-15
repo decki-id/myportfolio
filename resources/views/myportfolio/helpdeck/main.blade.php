@@ -17,7 +17,7 @@
     <body>
         <div class="dhs-topbar">
             <div class="dhs-navtoggler"><i class="fas fa-fw fa-bars"></i></div>
-            <div class="dhs-logo"><h1>HelpDeck</h1></div>
+            <a href="#" class="dhs-logo"><h1>HelpDeck</h1></a>
             <div class="dhs-usericon"><img src="{{url('assets/images/user.jpg')}}" class="dhs-profilepicture"></div>
         </div>
         <div class="dhs-userdropdownmenu">
@@ -31,8 +31,8 @@
             <a href="/" class="dhs-dropdownmenuitem"><i class="fas fa-fw fa-power-off"></i>Log Out</a>
         </div>
         <div class="dhs-sidebar">
-            <a href="#" class="dhs-navlink"><i class="fas fa-fw fa-ticket-alt"></i><h4>Tickets</h4></a>
-            <a href="#" class="dhs-navlink"><i class="fas fa-fw fa-user"></i><h4>Lists</h4></a>
+            <a href="#" class="dhs-navlink"><i class="fas fa-fw fa-ticket-alt"></i><span class="dhs-navtext">Tickets</span></a>
+            <a href="#" class="dhs-navlink"><i class="fas fa-fw fa-user"></i><span class="dhs-navtext">Lists</span></a>
         </div>
 
         @yield('section')

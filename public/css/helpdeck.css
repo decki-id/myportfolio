@@ -60,7 +60,7 @@ a {
 }
 
 .dhs-topbar .dhs-navtoggler:hover {
-    background-color: rgb(240, 240, 240);
+    background-color: lightskyblue;
 }
 
 .dhs-topbar .dhs-navtoggler .fas {
@@ -99,7 +99,7 @@ a {
     display: none;
 }
 
-.dhs-userdropdownmenu.click {
+.dhs-userdropdownmenu.show {
     display: block;
 }
 
@@ -137,7 +137,7 @@ a {
 }
 
 .dhs-userdropdownmenu .dhs-dropdownmenuitem:hover {
-    background-color: rgb(240, 240, 240);
+    background-color: lightskyblue;
 }
 
 .dhs-userdropdownmenu .dhs-dropdownmenuitem:first-of-type {
@@ -163,8 +163,11 @@ a {
     bottom: 0;
     width: 250px;
     font-family: Roboto;
-    border-top: 1px solid rgba(0, 0, 0, .15);
-    box-shadow: 5px 0 5px 0 rgba(128, 128, 128, .1);
+    box-shadow: 10px 0 5px -5px rgba(128, 128, 128, .1);
+}
+
+.dhs-sidebar.show {
+    width: 78px;
 }
 
 .dhs-sidebar .dhs-navlink {
@@ -173,27 +176,30 @@ a {
     align-items: center;
     height: 40px;
     padding: 0 28px;
+    margin: 0;
     color: #606060;
 }
 
 .dhs-sidebar .dhs-navlink:hover {
-    background-color: rgb(240, 240, 240);
-}
-
-.dhs-sidebar .dhs-navlink.active {
-    background-color: rgb(190, 190, 190);
-    color: #000;
+    background-color: lightskyblue;
 }
 
 .dhs-sidebar .dhs-navlink .fas {
-    margin-right: 30px;
+    margin: 0 30px 0 0;
     font-size: 17px;
 }
 
-.dhs-sidebar .dhs-navlink h4 {
-    display: inline;
-    font-size: 15px;
+.dhs-sidebar .dhs-navlink .fas.show {
+    margin: 0;
+}
+
+.dhs-sidebar .dhs-navlink .dhs-navtext {
     font-weight: normal;
+    font-size: 15px;
+}
+
+.dhs-sidebar .dhs-navlink .dhs-navtext.show {
+    display: none;
 }
 
 
@@ -207,5 +213,9 @@ a {
 
     .dhs-sidebar {
         left: -250px;
+    }
+
+    .dhs-sidebar.mobile {
+        left: 0;
     }
 }
