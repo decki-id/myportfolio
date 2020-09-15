@@ -30,3 +30,6 @@ Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::resource('/myportfolio/students', 'StudentsController');
 
 Route::get('/myportfolio/helpdeck', 'HelpdeckController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
