@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('/myportfolio/instadeck/app')
+
+@section('title', 'Login to InstaDeck')
 
 @section('content')
 <div class="container">

@@ -24,5 +24,9 @@ class PagesController extends Controller {
     public function blogs() {
         return view('blogs');
     }
+
+    public function welcome() {
+        return view('welcome');
+    }
     
 }

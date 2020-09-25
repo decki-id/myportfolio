@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@home')->name('home');
-Route::get('/about', 'PagesController@about')->name('about');
-Route::get('/certificates', 'PagesController@certificates')->name('certificates');
-Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
-Route::get('/blogs', 'PagesController@blogs')->name('blogs');
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/certificates', 'PagesController@certificates');
+Route::get('/portfolios', 'PagesController@portfolios');
+Route::get('/blogs', 'PagesController@blogs');
+
+Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 
 // Route::get('/myportfolio/students', 'StudentsController@index');
 // Route::post('/myportfolio/students', 'StudentsController@store');
@@ -30,6 +32,7 @@ Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::resource('/myportfolio/students', 'StudentsController');
 
 Route::get('/myportfolio/helpdeck', 'HelpdeckController@index');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/myportfolio/instadeck/home', 'InstadeckController@index');
+
+Auth::routes();
