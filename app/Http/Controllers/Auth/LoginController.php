@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/myportfolio/instadeck/home';
+    protected $redirectTo = '/myportfolio/instadeck/index';
 
     /**
      * Create a new controller instance.

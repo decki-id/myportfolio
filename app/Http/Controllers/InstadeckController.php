@@ -11,7 +11,6 @@ class InstadeckController extends Controller
      *
      * @return void
      */
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -22,9 +21,8 @@ class InstadeckController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-
     public function index()
     {
-        return view('/myportfolio/instadeck/home');
+        return view('/myportfolio/instadeck/index');
     }
 }
