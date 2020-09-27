@@ -8,10 +8,10 @@
         <div class="col-8 offset-2">
             <form action="/myportfolio/instadeck/post" enctype="multipart/form-data" method="post">
                 @csrf
-                <div class="text-center"><h2>New Post</h2></div>
+                <div class="text-center"><h2>{{ __('New Post') }}</h2></div>
                 <div class="form-group row">
                     <label for="image" class="col-form-label">{{ __('Post Image') }}</label>
-                    <input type="file" class="form-control-file" id="image" name="image" autofocus>
+                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image" autofocus>
                     @error('image')<strong>{{ $message }}</strong>@enderror
                 </div>
                 <div class="form-group row">

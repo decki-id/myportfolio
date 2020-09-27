@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/certificates', 'PagesController@certificates');
-Route::get('/portfolios', 'PagesController@portfolios');
-Route::get('/blogs', 'PagesController@blogs');
+Route::get('/', 'PagesController@index')->name('home');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/certificates', 'PagesController@certificates')->name('certificates');
+Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
+Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 
 
@@ -34,7 +34,9 @@ Auth::routes();
 
 Route::get('/myportfolio/helpdeck', 'HelpdeckController@index');
 
-Route::get('/myportfolio/instadeck', 'InstadeckController@index')->name('instadeck');
+Route::get('/myportfolio/instadeck', 'InstadeckController@index')->name('instadeck.home');
+Route::post('/myportfolio/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
+Route::get('/myportfolio/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
+Route::get('/myportfolio/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
 Route::get('/myportfolio/instadeck/profile/{user}', 'InstadeckProfilesController@index')->name('profile.show');
-Route::get('/myportfolio/instadeck/post/create', 'InstadeckPostsController@create');
-Route::post('/myportfolio/instadeck/post', 'InstadeckPostsController@store');
+Route::get('/myportfolio/instadeck/profile/{user}/edit', 'InstadeckProfilesController@edit')->name('profile.edit');

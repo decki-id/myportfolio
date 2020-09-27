@@ -7,12 +7,18 @@ use App\User;
 
 class InstadeckProfilesController extends Controller
 {
-    public function index($user)
+    public function index(User $user)
     {
-        $user = User::findOrFail($user);
+        // WITHOUT \App\User
+        // $user = User::findOrFail($user);
+        // return view('/myportfolio/instadeck/index', [
+        //     'user' => $user,
+        // ]);
+        return view('/myportfolio/instadeck/index', compact('user'));
+    }
 
-        return view('/myportfolio/instadeck/index', [
-            'user' => $user,
-        ]);
+    public function edit(User $user)
+    {
+        return view('myportfolio/instadeck/edit', compact('user'));
     }
 }

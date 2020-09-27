@@ -17,7 +17,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/myportfolio/instadeck/home') }}">Home</a>
+                        <a href="{{ url('/myportfolio/instadeck') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

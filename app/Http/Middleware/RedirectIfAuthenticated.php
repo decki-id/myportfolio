@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             // return redirect(RouteServiceProvider::HOME);
-            return redirect('/myportfolio/instadeck/index');
+            return redirect('/myportfolio/instadeck');
         }
 
         return $next($request);

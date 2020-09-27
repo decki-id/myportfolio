@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class InstadeckPostsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function create()
     {
         return view('/myportfolio/instadeck/create');
@@ -18,6 +24,21 @@ class InstadeckPostsController extends Controller
             'caption' => 'required',
         ]);
 
-        \App\Post::create($data);
+        $imagePath = request('image')->store('uploads', 'public');
+
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save();
+        
+        auth()->user()->posts()->create([
+            'image' => $imagePath,
+            'caption' => $data['caption'],
+        ]);
+
+        return redirect('/myportfolio/instadeck');
+    }
+
+    public function show(\App\Post $post)
+    {
+        return view('/myportfolio/instadeck/show', compact('post'));
     }
 }

@@ -183,7 +183,7 @@ body {
     width: 45px;
     cursor: pointer;
     position: fixed;
-    left: 0;
+    left: 200;
     top: 20px;
     z-index: 11;
     border: 1px solid #d4d4ec;
@@ -821,6 +821,7 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
     }
 
     .sidebar .nav-toggler {
+        left: 0;
         display: -ms-flexbox;
         display: flex;
     }
