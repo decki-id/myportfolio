@@ -1,6 +1,6 @@
 @extends('/myportfolio/instadeck/app')
 
-@section('title', 'InstaDeck || Create')
+@section('title', 'InstaDeck || Create New Post')
 
 @section('content')
 <div class="container">
@@ -21,15 +21,14 @@
                         type="text"
                         class="form-control @error('caption') is-invalid @enderror"
                         name="caption"
-                        value="{{ old('caption') }}"
                         autocomplete="caption"
-                        autofocus>
+                        autofocus>{{ old('caption') }}
                     </textarea>
                     @error('caption')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                 </div>
                 <div class="form-group row pt-3">
-                    <button class="btn btn-primary mr-2">Post</button>
-                    <a href="/myportfolio/instadeck" class="btn btn-danger">Cancel</a>
+                    <div class="col"><button class="form-control btn btn-primary">Post</button></div>
+                    <div class="col"><a href="/myportfolio/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
                 </div>
             </form>
         </div>

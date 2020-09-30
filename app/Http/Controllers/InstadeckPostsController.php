@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use App\Post;
 
 class InstadeckPostsController extends Controller
 {
@@ -19,25 +20,25 @@ class InstadeckPostsController extends Controller
 
     public function store()
     {
-        $data = request()->validate([
+        $dhsData = request()->validate([
             'image' => 'required|image',
             'caption' => 'required',
         ]);
 
-        $imagePath = request('image')->store('uploads', 'public');
+        $dhsImagePath = request('image')->store('uploads', 'public');
 
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
-        $image->save();
+        $dhsImage = Image::make(public_path("storage/{$dhsImagePath}"))->fit(1200, 1200);
+        $dhsImage->save();
         
         auth()->user()->posts()->create([
-            'image' => $imagePath,
-            'caption' => $data['caption'],
+            'image' => $dhsImagePath,
+            'caption' => $dhsData['caption'],
         ]);
 
-        return redirect('/myportfolio/instadeck');
+        return redirect('/myportfolio/instadeck/profile/' . auth()->user()->id);
     }
 
-    public function show(\App\Post $post)
+    public function show(Post $post)
     {
         return view('/myportfolio/instadeck/show', compact('post'));
     }
