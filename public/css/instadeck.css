@@ -1,0 +1,37 @@
+/* Link take over */
+
+.dhs_link:hover {
+    color: #007bff !important;
+    text-decoration: none !important;
+}
+
+.dhs_link-dark {
+    color: #343a40 !important;
+}
+
+.dhs_link-dark {
+    text-decoration: none !important;
+}
+
+
+/* Profile Picture take over */
+
+.dhs_profile-picture {
+    width: 166px;
+    height: 166px;
+}
+
+.dhs_pp-post-detail {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Dropdown Item take over */
+
+.dhs_dropdown-item.active,
+.dhs_dropdown-item:active {
+    color: #16181b !important;
+    text-decoration: none !important;
+    background-color: #f8f9fa !important;
+}

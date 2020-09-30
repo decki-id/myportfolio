@@ -24,6 +24,7 @@
     <!-- Styles -->
     <link href="{{ url('assets/bootstrap-441/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
+    <link href="{{ url('css/instadeck.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
