@@ -26,7 +26,7 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/myportfolio/instadeck/index';
+    protected $redirectTo = '/myportfolio/instadeck';
 
     /**
      * Create a new controller instance.

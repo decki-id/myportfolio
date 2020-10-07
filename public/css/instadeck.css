@@ -14,6 +14,20 @@
 }
 
 
+/* Button take over */
+
+.dhs_btn-text-white {
+    color: #fff !important;
+}
+
+
+/* h4 take over */
+
+.dhs_h4 {
+    margin: 0 !important;
+}
+
+
 /* Profile Picture take over */
 
 .dhs_profile-picture {

@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
 
     <!-- Styles -->
-    <link href="{{ url('assets/bootstrap-441/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
     <link href="{{ url('css/instadeck.css') }}" rel="stylesheet">
 </head>

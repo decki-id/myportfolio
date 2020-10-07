@@ -37512,9 +37512,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("button", { staticClass: "btn btn-sm btn-info ml-3" }, [
-        _vm._v("Follow")
-      ])
+      _c(
+        "button",
+        { staticClass: "btn btn-sm btn-info ml-3 dhs_btn-text-white" },
+        [_vm._v("Follow")]
+      )
     ])
   }
 ]

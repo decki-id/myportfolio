@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn btn-sm btn-info ml-3">Follow</button>
+    <button class="btn btn-sm btn-info ml-3 dhs_btn-text-white">Follow</button>
   </div>
 </template>
 
