@@ -41,3 +41,4 @@ Route::patch('/myportfolio/instadeck/profile/{user}', 'InstadeckProfilesControll
 Route::get('/myportfolio/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
 Route::post('/myportfolio/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
 Route::get('/myportfolio/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
+Route::post('/myportfolio/instadeck/follow/{user}', 'InstadeckFollowsController@store');

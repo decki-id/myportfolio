@@ -11,7 +11,7 @@
             <div class="col-6">
                 <div class="d-flex justify-content-start align-items-center">
                     <h4 class="dhs_h4">{{ $user->username }}</h4>
-                    <follow-button></follow-button>
+                    <follow-button user-id="{{ $user->id }}"></follow-button>
                 </div>
                 <div class="d-flex pt-2">
                     <div class="mr-5"><strong>{{ $user->posts->count() }}</strong> Posts</div>

@@ -1914,9 +1914,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["userId"],
   mounted: function mounted() {
     console.log("Component mounted.");
+  },
+  methods: {
+    followUser: function followUser() {
+      axios.post("/myportfolio/instadeck/follow/" + this.userId).then(function (response) {
+        alert(response.data);
+      });
+    }
   }
 });
 
@@ -37504,22 +37517,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-sm btn-info ml-3 dhs_btn-text-white",
+        on: { click: _vm.followUser }
+      },
+      [_vm._v("\n    Follow\n  ")]
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "button",
-        { staticClass: "btn btn-sm btn-info ml-3 dhs_btn-text-white" },
-        [_vm._v("Follow")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
