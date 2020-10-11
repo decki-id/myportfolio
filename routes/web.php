@@ -42,3 +42,4 @@ Route::get('/myportfolio/instadeck/post/create', 'InstadeckPostsController@creat
 Route::post('/myportfolio/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
 Route::get('/myportfolio/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
 Route::post('/myportfolio/instadeck/follow/{user}', 'InstadeckFollowsController@store');
+Route::get('/telescope', 'InstadeckTelescopeController@index');
