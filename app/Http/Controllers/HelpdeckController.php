@@ -8,6 +8,6 @@ class HelpdeckController extends Controller
 {
     public function index()
     {
-        return view('myportfolio/helpdeck/index');
+        return view('/helpdeck/index');
     }
 }

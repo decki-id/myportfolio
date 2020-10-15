@@ -15,7 +15,7 @@ class StudentsController extends Controller {
     public function index() {
         // $students = DB::table('students')->get();
         $students = Student::all()->sortBy('name');
-        return view('myportfolio/students/index', compact('students'));
+        return view('/students/index', compact('students'));
     }
 
     /**
@@ -24,7 +24,7 @@ class StudentsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('myportfolio/students/create');
+        return view('/students/create');
     }
 
     /**
@@ -38,7 +38,7 @@ class StudentsController extends Controller {
             'name' => 'required|unique:students',
             'nrp' => 'required|size:9|unique:students',
             'email' => 'required|email|unique:students',
-            'majors' => 'required|in:Administrasi Bisnis,Komputerisasi Akuntansi,Sistem Informasi,Teknik Industri,Teknis Informatika,Teknik Mesin'
+            'majors' => 'required|in:Administrasi Bisnis,Komputerisasi Akuntansi,Sistem Informasi,Teknik Industri,Teknik Informatika,Teknik Mesin'
         ]);
 
         // $student = new Student;
@@ -56,7 +56,7 @@ class StudentsController extends Controller {
         // ]);
 
         Student::create($request->all());
-        return redirect('/myportfolio/students')->with('status', 'The data has been saved successfully.');
+        return redirect('/students')->with('status', 'The data has been saved successfully.');
     }
 
     /**
@@ -66,7 +66,7 @@ class StudentsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show(Student $student) {
-        return view('myportfolio/students/details', compact('student'));
+        return view('/students/details', compact('student'));
     }
 
     /**
@@ -76,7 +76,7 @@ class StudentsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(Student $student) {
-        return view('myportfolio/students/update', compact('student'));
+        return view('/students/update', compact('student'));
     }
 
     /**
@@ -101,7 +101,7 @@ class StudentsController extends Controller {
             'majors' => $request->majors
         ]);
 
-        return redirect('/myportfolio/students')->with('status', 'The data has been updated successfully.');
+        return redirect('/students')->with('status', 'The data has been updated successfully.');
     }
 
     /**
@@ -112,6 +112,6 @@ class StudentsController extends Controller {
      */
     public function destroy(Student $student) {
         Student::destroy($student->id);
-        return redirect('/myportfolio/students')->with('status', 'The data has been deleted successfully.');
+        return redirect('/students')->with('status', 'The data has been deleted successfully.');
     }
 }

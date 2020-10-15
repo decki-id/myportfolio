@@ -1,4 +1,4 @@
-@extends('/myportfolio/instadeck/app')
+@extends('/instadeck/app')
 
 @section('title', 'InstaDeck || Create New Post')
 
@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <form action="/myportfolio/instadeck/post" enctype="multipart/form-data" method="post">
+            <form action="/instadeck/post" enctype="multipart/form-data" method="post">
                 @csrf
                 <div class="text-center"><h2>{{ __('New Post') }}</h2></div>
                 <div class="form-group row">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group row pt-3">
                     <div class="col"><button class="form-control btn btn-primary">Post</button></div>
-                    <div class="col"><a href="/myportfolio/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
+                    <div class="col"><a href="/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
                 </div>
             </form>
         </div>

@@ -35,7 +35,7 @@
             </div>
         </nav>
         <ul class="nav students-sidebar flex-column navbar-dark bg-dark">
-            <a class="navbar-brand text-center" href="/myportfolio/students">Deckiherdiawans<br>Students</a>
+            <a class="navbar-brand text-center" href="/students">Deckiherdiawans<br>Students</a>
             <a class="nav-link side-link active" href="#"><i class="fas fa-fw fa-user-graduate mr-2"></i>Students</a>
             <a class="nav-link side-link" href="#">Link</a>
             <a class="nav-link side-link" href="#">Link</a>

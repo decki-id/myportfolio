@@ -53,7 +53,7 @@
     <div class="lightbox">
         <div class="lightbox-content">
             <div class="lightbox-close">&times;</div>
-            <img src="{{ url('assets/images/mos1.jpg') }}" class="lightbox-image">
+            <img src="{{ url('/assets/images/mos1.jpg') }}" class="lightbox-image">
             <div class="lightbox-caption">
                 <div class="caption-text"></div>
                 <div class="caption-counter"></div>

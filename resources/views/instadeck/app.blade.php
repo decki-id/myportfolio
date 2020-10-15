@@ -27,9 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="/myportfolio/instadeck">
-                    InstaDeck
-                </a>
+                <a class="navbar-brand" href="/instadeck">InstaDeck</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,18 +42,18 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::currentRouteName() == 'login')
+                            @if (Route::currentRouteName() == 'instadeck.login')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('instadeck.register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @elseif (Route::currentRouteName() == 'register')
+                            @elseif (Route::currentRouteName() == 'instadeck.register')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('instadeck.login') }}">{{ __('Login') }}</a>
                                 </li>
                             @else
                                 <li class="nav-item d-flex">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('instadeck.login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('instadeck.register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -65,7 +63,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item dhs_dropdown-item" href="/myportfolio/instadeck/profile/{{ Auth::user()->id }}">
+                                    <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->id }}">
                                         {{ __('Profile') }}
                                     </a>
 

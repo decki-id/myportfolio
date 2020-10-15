@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/myportfolio/instadeck';
+    protected $redirectTo = '/instadeck';
 
     /**
      * Create a new controller instance.
@@ -39,6 +39,11 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('/instadeck/auth/register');
     }
 
     /**

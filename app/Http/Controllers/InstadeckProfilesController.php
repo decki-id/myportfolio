@@ -13,16 +13,16 @@ class InstadeckProfilesController extends Controller
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
         // WITHOUT \App\User
         // $user = User::findOrFail($user);
-        // return view('/myportfolio/instadeck/index', [
+        // return view('/instadeck/index', [
         //     'user' => $user,
         // ]);
-        return view('/myportfolio/instadeck/profile', compact('user', 'follows'));
+        return view('/instadeck/profile', compact('user', 'follows'));
     }
 
     public function edit(User $user)
     {
         $this->authorize('update', $user->profile);
-        return view('myportfolio/instadeck/edit', compact('user'));
+        return view('/instadeck/edit', compact('user'));
     }
 
     public function update(User $user)
@@ -49,6 +49,6 @@ class InstadeckProfilesController extends Controller
             auth()->user()->profile()->update($dhsData);
         }
 
-        return redirect("/myportfolio/instadeck/profile/{$user->id}");
+        return redirect("/instadeck/profile/{$user->id}");
     }
 }

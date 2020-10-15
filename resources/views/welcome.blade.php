@@ -17,12 +17,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/myportfolio/instadeck') }}">Home</a>
+                        <a href="{{ url('/instadeck') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('instadeck.login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('instadeck.register') }}">Register</a>
                         @endif
                     @endauth
                 </div>

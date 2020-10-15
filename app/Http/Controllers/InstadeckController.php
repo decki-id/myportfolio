@@ -23,6 +23,6 @@ class InstadeckController extends Controller
      */
     public function index()
     {
-        return view('/myportfolio/instadeck/index');
+        return view('/instadeck/index');
     }
 }

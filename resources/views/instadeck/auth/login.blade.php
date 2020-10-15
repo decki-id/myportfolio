@@ -1,4 +1,4 @@
-@extends('/myportfolio/instadeck/app')
+@extends('/instadeck/app')
 
 @section('title', 'Login to InstaDeck')
 

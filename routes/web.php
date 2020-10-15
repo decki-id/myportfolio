@@ -20,26 +20,29 @@ Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
 Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 
+// Route::get('/students', 'StudentsController@index');
+// Route::get('/students/create', 'StudentsController@create');
+// Route::post('/students', 'StudentsController@store');
+// Route::get('/students/{student}', 'StudentsController@show');
+// Route::get('/students/{student}/edit', 'StudentsController@edit');
+// Route::patch('students/{student}', 'StudentsController@update');
+// Route::delete('/students/{student}', 'StudentsController@destroy');
+Route::resource('/students', 'StudentsController');
 
-// Route::get('/myportfolio/students', 'StudentsController@index');
-// Route::get('/myportfolio/students/create', 'StudentsController@create');
-// Route::post('/myportfolio/students', 'StudentsController@store');
-// Route::get('/myportfolio/students/{student}', 'StudentsController@show');
-// Route::get('/myportfolio/students/{student}/edit', 'StudentsController@edit');
-// Route::patch('myportfolio/students/{student}', 'StudentsController@update');
-// Route::delete('/myportfolio/students/{student}', 'StudentsController@destroy');
-Route::resource('/myportfolio/students', 'StudentsController');
+Route::get('/helpdeck', 'HelpdeckController@index');
 
-Auth::routes();
+// Auth::routes();
+Route::get('/instadeck/login', 'Auth\LoginController@showLoginForm')->name('instadeck.login');
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/instadeck/register', 'Auth\RegisterController@showRegistrationForm')->name('instadeck.register');
+Route::post('register', 'Auth\RegisterController@register')->name('register');
 
-Route::get('/myportfolio/helpdeck', 'HelpdeckController@index');
-
-Route::get('/myportfolio/instadeck', 'InstadeckController@index')->name('instadeck.home');
-Route::get('/myportfolio/instadeck/profile/{user}', 'InstadeckProfilesController@index')->name('profile.show');
-Route::get('/myportfolio/instadeck/profile/{user}/edit', 'InstadeckProfilesController@edit')->name('profile.edit');
-Route::patch('/myportfolio/instadeck/profile/{user}', 'InstadeckProfilesController@update')->name('profile.update');
-Route::get('/myportfolio/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
-Route::post('/myportfolio/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
-Route::get('/myportfolio/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
-Route::post('/myportfolio/instadeck/follow/{user}', 'InstadeckFollowsController@store');
-Route::get('/telescope', 'InstadeckTelescopeController@index');
+Route::get('/instadeck', 'InstadeckController@index')->name('instadeck.home');
+Route::get('/instadeck/profile/{user}', 'InstadeckProfilesController@index')->name('profile.show');
+Route::get('/instadeck/profile/{user}/edit', 'InstadeckProfilesController@edit')->name('profile.edit');
+Route::patch('/instadeck/profile/{user}', 'InstadeckProfilesController@update')->name('profile.update');
+Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
+Route::post('/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
+Route::get('/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
+Route::post('/instadeck/follow/{user}', 'InstadeckFollowsController@store');

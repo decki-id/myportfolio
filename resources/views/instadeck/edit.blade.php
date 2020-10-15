@@ -1,4 +1,4 @@
-@extends('/myportfolio/instadeck/app')
+@extends('/instadeck/app')
 
 @section('title', 'InstaDeck || Edit Profile')
 
@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <form action="/myportfolio/instadeck/profile/{{ $user->id }}" enctype="multipart/form-data" method="post">
+            <form action="/instadeck/profile/{{ $user->id }}" enctype="multipart/form-data" method="post">
                 @csrf
                 @method('PATCH')
                 <div class="text-center"><h2>{{ __('Edit Profile') }}</h2></div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="form-group row pt-3">
                     <div class="col"><button class="form-control btn btn-primary">Save</button></div>
-                    <div class="col"><a href="/myportfolio/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
+                    <div class="col"><a href="/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
                 </div>
             </form>
         </div>

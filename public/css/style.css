@@ -14,6 +14,7 @@
 body {
     line-height: 1.5;
     background-color: #f2f2fc;
+    overflow-x: hidden;
 }
 
 ::before,
@@ -30,8 +31,8 @@ body {
     min-height: 100vh;
     display: block;
     padding: 0 30px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-animation: slideSectionX 1s ease;
+    animation: slideSectionX 1s ease;
 }
 
 .section .container {
@@ -830,6 +831,12 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
         left: 200px;
     }
 
+    .section {
+        left: 0;
+        -webkit-animation: slideSectionY 1s ease;
+        animation: slideSectionY 1s ease;
+    }
+
     .section-title h2 {
         text-align: center;
     }
@@ -865,5 +872,32 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
     .portfolios .portfolio-item,
     .blogs .blog-item {
         margin-bottom: 30px;
+    }
+}
+
+
+/* Key Frames */
+
+@-webkit-keyframes slideSectionX {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideSectionY {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
     }
 }

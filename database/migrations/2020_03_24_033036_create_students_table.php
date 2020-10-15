@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration {
             $table->string('name');
             $table->string('nrp')->unique();
             $table->string('email')->unique();
-            $table->string('field');
+            $table->string('majors');
             $table->timestamps();
         });
     }

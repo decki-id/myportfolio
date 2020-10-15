@@ -15,7 +15,7 @@ class InstadeckPostsController extends Controller
     
     public function create()
     {
-        return view('/myportfolio/instadeck/create');
+        return view('/instadeck/create');
     }
 
     public function store()
@@ -27,7 +27,7 @@ class InstadeckPostsController extends Controller
 
         $dhsImagePath = request('image')->store('uploads', 'public');
 
-        $dhsImage = Image::make(public_path("storage/{$dhsImagePath}"))->fit(1200, 1200);
+        $dhsImage = Image::make(public_path("/storage/{$dhsImagePath}"))->fit(1200, 1200);
         $dhsImage->save();
         
         auth()->user()->posts()->create([
@@ -35,11 +35,11 @@ class InstadeckPostsController extends Controller
             'caption' => $dhsData['caption'],
         ]);
 
-        return redirect('/myportfolio/instadeck/profile/' . auth()->user()->id);
+        return redirect('/instadeck/profile/' . auth()->user()->id);
     }
 
     public function show(Post $post)
     {
-        return view('/myportfolio/instadeck/show', compact('post'));
+        return view('/instadeck/show', compact('post'));
     }
 }

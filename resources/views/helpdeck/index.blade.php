@@ -1,4 +1,4 @@
-@extends('/myportfolio/helpdeck/main')
+@extends('/helpdeck/main')
 
 @section('title', 'Decki\'s Portfolio - HelpDeck')
 

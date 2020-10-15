@@ -1,4 +1,4 @@
-@extends('/myportfolio/instadeck/app')
+@extends('/instadeck/app')
 
 @section('title', 'InstaDeck || Create')
 
@@ -16,7 +16,7 @@
                     </div>
                     <div>
                         <div class="font-weight-bold">
-                            <a href="/myportfolio/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark"> {{ $post->user->username }}</a>
+                            <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark"> {{ $post->user->username }}</a>
                             |
                             <a href="#" class="dhs_link">Follow</a>
                         </div>
@@ -25,7 +25,7 @@
                 <hr>
                 <p>
                     <span class="font-weight-bold">
-                        <a href="/myportfolio/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark"> {{ $post->user->username }}</a>
+                        <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark"> {{ $post->user->username }}</a>
                     </span> {{ $post->caption }}
                 </p>
             </div>

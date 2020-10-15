@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="row">
-                <a href="/myportfolio/students" target="_blank">
+                <a href="/students" target="_blank">
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-image">

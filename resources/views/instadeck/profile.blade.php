@@ -1,4 +1,4 @@
-@extends('/myportfolio/instadeck/app')
+@extends('/instadeck/app')
 
 @section('title', 'InstaDeck || Profile')
 
@@ -25,8 +25,8 @@
             <div class="col-3">
                 @can ('update', $user->profile)
                     <div class="d-flex justify-content-end align-items-center">
-                        <a href="/myportfolio/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
-                        <a href="/myportfolio/instadeck/profile/{{ $user->id }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
+                        <a href="/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
+                        <a href="/instadeck/profile/{{ $user->id }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
                     </div>
                 @endcan
             </div>
@@ -34,7 +34,7 @@
         <div class="row pt-5">
             @foreach($user->posts as $post)
                 <div class="col-4 pb-4">
-                    <a href="/myportfolio/instadeck/post/{{ $post->id }}">
+                    <a href="/instadeck/post/{{ $post->id }}">
                         <img src="/storage/{{ $post->image }}" class="w-100">
                     </a>
                 </div>

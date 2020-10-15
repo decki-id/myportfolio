@@ -1,11 +1,11 @@
-@extends('/myportfolio/students/main')
+@extends('/students/main')
 
 @section('title', 'Decki\'s Portfolio - Students')
 
 @section('section')
     <div class="students">
                 <h3 class="text-center mt-3 mb-3">Update Student</h3>
-                <form method="post" action="/myportfolio/students/{{$student->id}}">
+                <form method="post" action="/students/{{$student->id}}">
                     @method('patch')
                     @csrf
                     <div class="form-group">
@@ -36,7 +36,7 @@
                         </select>
                         @error('majors') <div class="invalid-feedback">{{$message}}</div> @enderror
                     </div>
-                    <a href="/myportfolio/students/{{$student->id}}" class="btn btn-secondary float-right ml-1">Cancel</a>
+                    <a href="/students/{{$student->id}}" class="btn btn-secondary float-right ml-1">Cancel</a>
                     <button type="submit" class="btn btn-primary float-right">Update</button>
                 </form>
             </div>
