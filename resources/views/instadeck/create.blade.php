@@ -11,7 +11,7 @@
                 <div class="text-center"><h2>{{ __('New Post') }}</h2></div>
                 <div class="form-group row">
                     <label for="image" class="col-form-label">{{ __('Post Image') }}</label>
-                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image" autofocus>
+                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image">
                     @error('image')<strong>{{ $message }}</strong>@enderror
                 </div>
                 <div class="form-group row">
@@ -21,8 +21,7 @@
                         type="text"
                         class="form-control @error('caption') is-invalid @enderror"
                         name="caption"
-                        autocomplete="caption"
-                        autofocus>{{ old('caption') }}
+                        autocomplete="caption">{{ old('caption') }}
                     </textarea>
                     @error('caption')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                 </div>
@@ -34,4 +33,6 @@
         </div>
     </div>
 </div>
+
+<script>window.onload = function () { document.querySelector("#image").focus(); }</script>
 @endsection

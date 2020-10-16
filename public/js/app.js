@@ -1932,12 +1932,12 @@ __webpack_require__.r(__webpack_exports__);
     followUser: function followUser() {
       var _this = this;
 
-      axios.post("/myportfolio/instadeck/follow/" + this.userId).then(function (response) {
+      axios.post("/instadeck/follow/" + this.userId).then(function (response) {
         _this.status = !_this.status;
         console.log(response.data);
       })["catch"](function (errors) {
         if (errors.response.status == 401) {
-          window.location = "/login";
+          window.location = "/instadeck/login";
         }
       });
     }

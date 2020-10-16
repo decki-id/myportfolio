@@ -38,11 +38,11 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/instadeck/register', 'Auth\RegisterController@showRegistrationForm')->name('instadeck.register');
 Route::post('register', 'Auth\RegisterController@register')->name('register');
 
-Route::get('/instadeck', 'InstadeckController@index')->name('instadeck.home');
-Route::get('/instadeck/profile/{user}', 'InstadeckProfilesController@index')->name('profile.show');
-Route::get('/instadeck/profile/{user}/edit', 'InstadeckProfilesController@edit')->name('profile.edit');
-Route::patch('/instadeck/profile/{user}', 'InstadeckProfilesController@update')->name('profile.update');
+Route::get('/instadeck', 'InstadeckPostsController@index')->name('instadeck.home');
 Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
 Route::post('/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
 Route::get('/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');
+Route::get('/instadeck/profile/{user}', 'InstadeckProfilesController@index')->name('profile.show');
+Route::get('/instadeck/profile/{user}/edit', 'InstadeckProfilesController@edit')->name('profile.edit');
+Route::patch('/instadeck/profile/{user}', 'InstadeckProfilesController@update')->name('profile.update');
 Route::post('/instadeck/follow/{user}', 'InstadeckFollowsController@store');

@@ -10,13 +10,18 @@ class InstadeckProfilesController extends Controller
 {
     public function index(User $user)
     {
-        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
         // WITHOUT \App\User
         // $user = User::findOrFail($user);
         // return view('/instadeck/index', [
         //     'user' => $user,
         // ]);
-        return view('/instadeck/profile', compact('user', 'follows'));
+
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+        $postsCount = $user->posts->count();
+        $followersCount = $user->profile->followers->count();
+        $followingCount = $user->following->count();
+
+        return view('/instadeck/profile', compact('user', 'follows', 'postsCount', 'followersCount', 'followingCount'));
     }
 
     public function edit(User $user)

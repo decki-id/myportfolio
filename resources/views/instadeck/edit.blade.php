@@ -18,8 +18,7 @@
                         class="form-control @error('title') is-invalid @enderror"
                         name="title"
                         value="{{ old('title') ?? $user->profile->title }}"
-                        autocomplete="title"
-                        autofocus>
+                        autocomplete="title">
                     @error('title')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                 </div>
                 <div class="form-group row">
@@ -29,8 +28,7 @@
                         type="text"
                         class="form-control @error('description') is-invalid @enderror"
                         name="description"
-                        autocomplete="description"
-                        autofocus>{{ old('description') ?? $user->profile->description }}
+                        autocomplete="description">{{ old('description') ?? $user->profile->description }}
                     </textarea>
                     @error('description')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                 </div>
@@ -42,13 +40,12 @@
                         class="form-control @error('url') is-invalid @enderror"
                         name="url"
                         value="{{ old('url') ?? $user->profile->url }}"
-                        autocomplete="url"
-                        autofocus>
+                        autocomplete="url">
                     @error('url')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                 </div>
                 <div class="form-group row">
                     <label for="image" class="col-form-label">{{ __('Profile Image') }}</label>
-                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image" autofocus>
+                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image">
                     @error('image')<strong>{{ $message }}</strong>@enderror
                 </div>
                 <div class="form-group row pt-3">
@@ -59,4 +56,6 @@
         </div>
     </div>
 </div>
+
+<script>window.onload = function () { document.querySelector("#title").focus(); }</script>
 @endsection
