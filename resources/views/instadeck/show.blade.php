@@ -19,8 +19,10 @@
                     <div>
                         <div class="font-weight-bold d-flex">
                             <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark mr-1">{{ $post->user->username }}</a>
-                            |
-                            <follow-link user-id="{{ $post->user->id }}" follows="{{ auth()->user()->following }}"></follow-link>
+                            @if ($post->user->id != auth()->user()->id)
+                                |
+                                <follow-link user-id="{{ $post->user->id }}" follows="{{ auth()->user()->following }}"></follow-link>
+                            @endif
                         </div>
                     </div>
                 </div>
