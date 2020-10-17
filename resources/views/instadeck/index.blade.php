@@ -7,16 +7,16 @@
         @foreach($posts as $post)
             <div class="row">
                 <div class="col-6 offset-3 d-flex align-items-center pb-2">
-                    <div class="pr-4">
+                    <div class="pr-3">
                         <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark">
                             <img src="{{ $post->user->profile->profileImage() }}" class="rounded-circle dhs_pp-post-detail">
                         </a>
                     </div>
                     <div>
-                        <div class="font-weight-bold">
-                            <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark">{{ $post->user->username }}</a>
+                        <div class="font-weight-bold d-flex">
+                            <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark mr-1">{{ $post->user->username }}</a>
                             |
-                            <a href="#" class="dhs_link">Follow</a>
+                            <follow-link user-id="{{ $post->user->id }}" follows="{{ auth()->user()->following }}"></follow-link>
                         </div>
                     </div>
                 </div>

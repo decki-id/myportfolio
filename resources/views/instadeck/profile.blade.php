@@ -4,14 +4,19 @@
 
 @section('content')
     <div class="container">
-        <div class="row pt-3 pb-3">
-            <div class="col-3 pl-5 pr-5 text-center">
-                <img src="{{ $user->profile->profileImage() }}" class="dhs_profile-picture rounded-circle">
+        <div class="row pt-3 pb-3 d-flex justify-content-center">
+            <div class="col-3 pl-5 pr-5 text-center" id="dhs_pp">
+                <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
-            <div class="col-6">
+            <div class="col-3 pr-5 text-center" id="dhs_pp-responsive">
+                <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
+            </div>
+            <div class="col-6" id="dhs_profile-detail">
                 <div class="d-flex justify-content-start align-items-center">
-                    <h4 class="dhs_h4">{{ $user->username }}</h4>
-                    <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                    <h5 class="dhs_h5">{{ $user->username }}</h5>
+                    @if ($user->id != auth()->user()->id)
+                        <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                    @endif
                 </div>
                 <div class="d-flex pt-2">
                     <div class="mr-5"><strong>{{ $postsCount }}</strong> Posts</div>
@@ -22,7 +27,23 @@
                 <div>{{ $user->profile->description }}</div>
                 <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
             </div>
-            <div class="col-3">
+            <div id="dhs_profile-detail-responsive">
+                <div class="d-flex justify-content-start align-items-center">
+                    <h5 class="dhs_h5">{{ $user->username }}</h5>
+                    @if ($user->id != auth()->user()->id)
+                        <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                    @endif
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="mr-5"><strong>{{ $postsCount }}</strong> Posts</div>
+                    <div class="mr-5"><strong>{{ $followersCount }}</strong> Followers</div>
+                    <div class="mr-5"><strong>{{ $followingCount }}</strong> Following</div>
+                </div>
+                <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
+                <div>{{ $user->profile->description }}</div>
+                <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
+            </div>
+            <div class="col-3" id="dhs_right-btn">
                 @can ('update', $user->profile)
                     <div class="d-flex justify-content-end align-items-center">
                         <a href="/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
@@ -30,6 +51,16 @@
                     </div>
                 @endcan
             </div>
+        </div>
+        <div class="row" id="dhs_bottom-btn">
+            @can ('update', $user->profile)
+                <div class="col">
+                    <a href="/instadeck/post/create" class="form-control btn btn-primary mr-3">Create New Post</a>
+                </div>
+                <div class="col">
+                    <a href="/instadeck/profile/{{ $user->id }}/edit" class="form-control btn btn-success">Edit Profile</a>
+                </div>
+            @endcan
         </div>
         <div class="row pt-5">
             @foreach($user->posts as $post)

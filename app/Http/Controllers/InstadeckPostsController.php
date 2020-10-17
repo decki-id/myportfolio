@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-use App\Post;
+use App\InstadeckPost;
 
 class InstadeckPostsController extends Controller
 {
@@ -15,9 +15,9 @@ class InstadeckPostsController extends Controller
 
     public function index()
     {
-        $users = auth()->user()->following()->pluck('profiles.user_id');
-        // $posts = Post::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
-        $posts = Post::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(2);
+        $users = auth()->user()->following()->pluck('instadeck_profiles.user_id');
+        // $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
+        $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(5);
         return view('/instadeck/index', compact('posts'));
     }
     
@@ -46,7 +46,7 @@ class InstadeckPostsController extends Controller
         return redirect('/instadeck/profile/' . auth()->user()->id);
     }
 
-    public function show(Post $post)
+    public function show(InstadeckPost $post)
     {
         return view('/instadeck/show', compact('post'));
     }

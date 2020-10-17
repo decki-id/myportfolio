@@ -14,24 +14,8 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/instadeck') }}">Home</a>
-                    @else
-                        <a href="{{ route('instadeck.login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('instadeck.register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
-                <div class="title m-b-md">
-                    InstaDeck
-                </div>
+                <div class="title m-b-md">{{ __('Laravel') }}</div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

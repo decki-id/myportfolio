@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable {
     use Notifiable;
@@ -44,21 +45,24 @@ class User extends Authenticatable {
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+            
+            Mail::to($user->email)->send(new InstadeckNewUserWelcomeMail());
         });
+
     }
 
     public function posts()
     {
-        return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
+        return $this->hasMany(InstadeckPost::class)->orderBy('created_at', 'DESC');
     }
 
     public function following()
     {
-        return $this->belongsToMany(Profile::class);
+        return $this->belongsToMany(InstadeckProfile::class);
     }
 
     public function profile()
     {
-        return $this->hasOne(Profile::class);
+        return $this->hasOne(InstadeckProfile::class);
     }
 }

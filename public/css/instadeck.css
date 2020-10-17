@@ -21,16 +21,16 @@
 }
 
 
-/* h4 take over */
+/* h5 take over */
 
-.dhs_h4 {
+.dhs_h5 {
     margin: 0 !important;
 }
 
 
 /* Profile Picture take over */
 
-.dhs_profile-picture {
+#dhs_profile-picture {
     width: 166px;
     height: 166px;
 }
@@ -48,4 +48,65 @@
     color: #16181b !important;
     text-decoration: none !important;
     background-color: #f8f9fa !important;
+}
+
+
+/* Additional divs for responsive */
+
+#dhs_pp {
+    display: block !important;
+}
+
+#dhs_pp-responsive {
+    display: none !important;
+}
+
+#dhs_profile-detail {
+    display: block !important;
+}
+
+#dhs_profile-detail-responsive {
+    display: none !important;
+}
+
+
+/* Additional button for responsive */
+
+#dhs_bottom-btn {
+    display: none !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    #dhs_pp {
+        display: none !important;
+    }
+
+    #dhs_pp-responsive {
+        display: block !important;
+        -ms-flex: 0 0 41.666667% !important;
+        flex: 0 0 41.666667% !important;
+        max-width: 41.666667% !important;
+    }
+
+    #dhs_profile-detail {
+        display: none !important;
+    }
+
+    #dhs_profile-detail-responsive {
+        display: block !important;
+        -ms-flex: 0 0 58.333333% !important;
+        flex: 0 0 58.333333% !important;
+        max-width: 58.333333% !important;
+    }
+
+    #dhs_right-btn {
+        display: none !important;
+    }
+
+    #dhs_bottom-btn {
+        display: flex !important;
+    }
 }
