@@ -11,21 +11,21 @@
                 </div>
             </div>
             <div class="row">
-                <a href="https://deckiherdiawans.blogspot.com" target="_blank">
-                    <div class="blog-item padd-15">
-                        <div class="blog-item-inner shadow-dark">
-                            <div class="blog-image">
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-image">
+                            <a href="https://deckiherdiawans.blogspot.com" target="_blank">
                                 <img src="{{ url('/assets/images/Blogspot.jpg') }}">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">My Diary</h4>
-                                <p class="blog-description">
-                                    Articles about me, my lifetime experiences, my thoughts about everything I've been through.
-                                </p>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="blog-info">
+                            <h4 class="blog-title">My Diary</h4>
+                            <p class="blog-description">
+                                Articles about me, my lifetime experiences, my thoughts about everything I've been through.
+                            </p>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>

@@ -11,19 +11,28 @@
                 </div>
             </div>
             <div class="row">
-                <a href="/students" target="_blank">
-                    <div class="portfolio-item padd-15">
-                        <div class="portfolio-item-inner shadow-dark">
-                            <div class="portfolio-image">
-                                <img src="{{ url('/assets/images/Students.jpg') }}">
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Students</h4>
-                                <p class="portfolio-description">A fundamental Students CRUD system with Laravel framework.</p>
-                            </div>
+                <div class="portfolio-item padd-15">
+                    <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-image">
+                            <a href="/students" target="_blank"><img src="{{ url('/assets/images/Students.jpg') }}"></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Students</h4>
+                            <p class="portfolio-description">A fundamental Students CRUD system with Laravel framework.</p>
                         </div>
                     </div>
-                </a>
+                </div>
+                <div class="portfolio-item padd-15">
+                    <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-image">
+                            <a href="/instadeck" target="_blank"><img src="{{ url('/assets/images/Instadeck.jpg') }}"></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">InstaDeck</h4>
+                            <p class="portfolio-description">An Instagram clone website, build with Laravel framework & Vue.js Example Component.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

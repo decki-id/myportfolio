@@ -514,11 +514,14 @@ body {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .portfolios .portfolio-item-inner {
     overflow: hidden;
     border: 1px solid #d4d4e3;
+    background-color: #fff;
 }
 
 .portfolios .portfolio-item-inner .portfolio-image {
@@ -567,11 +570,14 @@ body {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .blogs .blog-item-inner {
     overflow: hidden;
     border: 1px solid #d4d4e3;
+    background-color: #fff;
 }
 
 .blogs .blog-item-inner .blog-image {
