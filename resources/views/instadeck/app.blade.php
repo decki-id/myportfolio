@@ -15,8 +15,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
 
     <!-- Styles -->
@@ -25,23 +23,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm" id="dhs_navbar">
             <div class="container">
-                <a class="navbar-brand" href="/instadeck">InstaDeck</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
+                <div id="dhs_navbar-brand"><a class="navbar-brand" href="/instadeck">InstaDeck</a></div>
+                    @guest
+                        <div class="navbar-nav ml-auto">
                             @if (Route::currentRouteName() == 'instadeck.login')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('instadeck.register') }}">{{ __('Register') }}</a>
@@ -56,35 +42,76 @@
                                     <a class="nav-link" href="{{ route('instadeck.register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        </div>
+                    @else
+                        <div class="navbar-nav ml-auto" id="dhs_navbar-dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
                                     {{ Auth::user()->username }}
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu" id="dhs_dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item dhs_dropdown-item" href="/instadeck">
+                                        <i class="fas fa-fw fa-home mr-3"></i>{{ __('Home') }}
+                                    </a>
+                                    <!-- <a class="dropdown-item dhs_dropdown-item" href="/instadeck/post/browse">
+                                        <i class="fas fa-fw fa-search mr-3"></i>{{ __('Browse') }}
+                                    </a> -->
                                     <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->id }}">
-                                        {{ __('Profile') }}
+                                        <i class="fas fa-fw fa-user mr-3"></i>{{ __('Profile') }}
                                     </a>
-
                                     <a class="dropdown-item dhs_dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i class="fas fa-fw fa-power-off mr-3"></i>{{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                        @endguest
-                    </ul>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto" id="dhs_navbar-nav">
+                            <div class="dropdown" id="dhs_dropdown">{{ Auth::user()->username }}</div>
+                        </div>
+                    @endguest
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="dhs_main-page pb-5 mb-5">
             @yield('content')
         </main>
+
+        @if (Auth::user(['id']))
+            <div class="shadow-lg" id="dhs_mobile-button">
+                <div class="col text-center">
+                    <a href="/instadeck" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'instadeck.home' ? 'active' : '' }}" title="Home">
+                        <i class="fas fa-fw fa-home"></i>
+                    </a>
+                </div>
+                <!-- <div class="col text-center">
+                    <a href="/instadeck/post/browse" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'post.browse' ? 'active' : '' }}" title="Browse">
+                        <i class="fas fa-fw fa-search"></i>
+                    </a>
+                </div> -->
+                <div class="col text-center">
+                    <a href="/instadeck/post/create" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'post.create' ? 'active' : '' }}" title="Create New Post">
+                        <i class="fas fa-fw fa-plus-square"></i>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a href="/instadeck/profile/{{ Auth::user()->id }}" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'profile.show' ? 'active' : '' }}" title="Profile">
+                        <i class="fas fa-fw fa-user"></i>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a href="{{ route('logout') }}" class="dhs_mobile-link-dark" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i class="fas fa-fw fa-power-off"></i>
+                    </a>
+                </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
+        @endif
     </div>
 </body>
 </html>

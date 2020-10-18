@@ -44,6 +44,7 @@ Route::get('/instadeck/login', 'Auth\LoginController@showLoginForm')->name('inst
 Route::post('login', 'Auth\LoginController@login')->name('login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/instadeck', 'InstadeckPostsController@index')->name('instadeck.home');
+Route::get('/instadeck/post/browse', 'InstadeckPostsController@browse')->name('post.browse');
 Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('post.create');
 Route::post('/instadeck/post', 'InstadeckPostsController@store')->name('post.store');
 Route::get('/instadeck/post/{post}', 'InstadeckPostsController@show')->name('post.show');

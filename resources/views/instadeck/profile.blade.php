@@ -4,11 +4,11 @@
 
 @section('content')
     <div class="container">
-        <div class="row pt-3 pb-3 d-flex justify-content-center">
-            <div class="col-3 pl-5 pr-5 text-center" id="dhs_pp">
+        <div class="row pt-3 pb-4 d-flex justify-content-center">
+            <div class="col-3 pl-5 pr-5 text-center" id="dhs_pp-div">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
-            <div class="col-3 pr-5 text-center" id="dhs_pp-responsive">
+            <div class="col-3 text-center" id="dhs_pp-div-responsive">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
             <div class="col-6" id="dhs_profile-detail">
@@ -39,9 +39,11 @@
                     <div class="mr-5"><strong>{{ $followersCount }}</strong> Followers</div>
                     <div class="mr-5"><strong>{{ $followingCount }}</strong> Following</div>
                 </div>
-                <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
-                <div>{{ $user->profile->description }}</div>
-                <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
+                <div id="dhs_profile1">
+                    <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
+                    <div>{{ $user->profile->description }}</div>
+                    <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
+                </div>
             </div>
             <div class="col-3" id="dhs_right-btn">
                 @can ('update', $user->profile)
@@ -52,17 +54,19 @@
                 @endcan
             </div>
         </div>
+        <div class="pb-4" id="dhs_profile2">
+            <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
+        </div>
         <div class="row" id="dhs_bottom-btn">
             @can ('update', $user->profile)
-                <div class="col">
-                    <a href="/instadeck/post/create" class="form-control btn btn-primary mr-3">Create New Post</a>
-                </div>
                 <div class="col">
                     <a href="/instadeck/profile/{{ $user->id }}/edit" class="form-control btn btn-success">Edit Profile</a>
                 </div>
             @endcan
         </div>
-        <div class="row pt-5">
+        <div class="row pt-4">
             @foreach($user->posts as $post)
                 <div class="col-4 pb-4">
                     <a href="/instadeck/post/{{ $post->id }}">

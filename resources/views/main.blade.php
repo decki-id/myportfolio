@@ -85,10 +85,6 @@
        </div>
 
         <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="{{url('assets/jquery/jquery-3.4.1.min.js')}}"></script>
-        <script src="{{url('assets/popper/popper.min.js')}}"></script>
-        <script src="{{url('assets/bootstrap-441/js/bootstrap.min.js')}}"></script>
         <script src="{{url('js/script.js')}}"></script>
     </body>
 </html>
