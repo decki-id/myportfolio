@@ -4,14 +4,11 @@
 
 @section('content')
     <div class="container">
-        <div class="row pt-3 pb-4 d-flex justify-content-center">
-            <div class="col-3 pl-5 pr-5 text-center" id="dhs_pp-div">
+        <div class="row d-flex pt-3 pb-4" id="dhs_row-default">
+            <div class="col-3 pl-5 pr-5 text-center">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
-            <div class="col-3 text-center" id="dhs_pp-div-responsive">
-                <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
-            </div>
-            <div class="col-6" id="dhs_profile-detail">
+            <div class="col-6">
                 <div class="d-flex justify-content-start align-items-center">
                     <h5 class="dhs_h5">{{ $user->username }}</h5>
                     @if ($user->id != auth()->user()->id)
@@ -26,6 +23,19 @@
                 <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
                 <div>{{ $user->profile->description }}</div>
                 <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
+            </div>
+            <div class="col-3">
+                @can ('update', $user->profile)
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
+                        <a href="/instadeck/profile/{{ $user->id }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
+                    </div>
+                @endcan
+            </div>
+        </div>
+        <div class="row d-flex pt-3 pb-4" id="dhs_row-responsive">
+            <div class="text-center" id="dhs_pp-div-responsive">
+                <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
             <div id="dhs_profile-detail-responsive">
                 <div class="d-flex justify-content-start align-items-center">
@@ -44,14 +54,6 @@
                     <div>{{ $user->profile->description }}</div>
                     <div><a href="https://{{ $user->profile->url }}" class="dhs_link">{{ $user->profile->url }}</a></div>
                 </div>
-            </div>
-            <div class="col-3" id="dhs_right-btn">
-                @can ('update', $user->profile)
-                    <div class="d-flex justify-content-end align-items-center">
-                        <a href="/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
-                        <a href="/instadeck/profile/{{ $user->id }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
-                    </div>
-                @endcan
             </div>
         </div>
         <div class="pb-4" id="dhs_profile2">
