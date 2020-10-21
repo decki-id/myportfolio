@@ -37,7 +37,10 @@ Route::get('/helpdeck', 'HelpdeckController@index');
 
 // InstaDeck portfolio
 // Auth::routes();
-// Route::get('/instadeck/email', function () { return new InstadeckNewUserWelcomeMail(); });
+Route::get('/instadeck/email', function () {
+    Mail::to('herdiawand@yahoo.co.id')->send(new InstadeckNewUserWelcomeMail());
+    return new InstadeckNewUserWelcomeMail(); 
+});
 Route::get('/instadeck/register', 'Auth\RegisterController@showRegistrationForm')->name('instadeck.register');
 Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::get('/instadeck/login', 'Auth\LoginController@showLoginForm')->name('instadeck.login');

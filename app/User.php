@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Mail;
-use app\Mail\InstadeckNewUserWelcomeMail;
+use App\Mail\InstadeckNewUserWelcomeMail;
 
 class User extends Authenticatable {
     use Notifiable;
@@ -46,8 +46,6 @@ class User extends Authenticatable {
             $user->profile()->create([
                 'title' => $user->username,
             ]);
-            
-            Mail::to($user->email)->send(new InstadeckNewUserWelcomeMail());
         });
 
     }

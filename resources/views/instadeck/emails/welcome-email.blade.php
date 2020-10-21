@@ -2,12 +2,8 @@
 # Welcome to InstaDeck!
 
 This is one of the portfolio websites made by Decki Herdiawan Soepandi and I thank you for checking this one out.<br>
-Click the button below to login to InstaDeck.
-
-@component('mail::button', ['url' => '/instadeck'])
-Click me!
-@endcomponent
+Go check another portfolio in <a href="https://deckiherdiawans.com" style="text-decoration: none;">deckiherdiawans.com</a>!
 
 Best regards,<br>
-Decki Herdiawan Soepandi, A.Md.Kom
+{{ env('MAIL_FROM_NAME') }}
 @endcomponent

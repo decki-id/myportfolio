@@ -70,6 +70,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        Mail::to($data['email'])->send(new InstadeckNewUserWelcomeMail());
         return User::create([
             'username' => $data['username'],
             'fullname' => $data['fullname'],

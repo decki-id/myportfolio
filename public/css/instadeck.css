@@ -105,9 +105,9 @@
 #dhs_row-responsive {
     display: -ms-flexbox !important;
     display: flex !important;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    flex-wrap: wrap !important;
+    margin-right: -15px !important;
+    margin-left: -15px !important;
 }
 
 #dhs_pp-div-responsive {
@@ -168,9 +168,9 @@
     #dhs_row-default {
         display: -ms-flexbox !important;
         display: flex !important;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
+        flex-wrap: wrap !important;
+        margin-right: -15px !important;
+        margin-left: -15px !important;
     }
 
     #dhs_navbar-nav, #dhs_row-responsive, #dhs_profile2, #dhs_bottom-btn, #dhs_mobile-button {
