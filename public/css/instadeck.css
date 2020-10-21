@@ -152,7 +152,7 @@
         display: block !important;
     }
 
-    #dhs_row-default, #dhs_profile2 {
+    #dhs_profile2 {
         display: none !important;
     }
 }

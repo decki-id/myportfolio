@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row d-flex pt-3 pb-4" id="dhs_row-default">
+        <div class="row pt-3 pb-4" id="dhs_row-default">
             <div class="col-3 pl-5 pr-5 text-center">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
@@ -33,7 +33,7 @@
                 @endcan
             </div>
         </div>
-        <div class="row d-flex pt-3 pb-4" id="dhs_row-responsive">
+        <div class="row pt-3 pb-4" id="dhs_row-responsive">
             <div class="text-center" id="dhs_pp-div-responsive">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
