@@ -68,8 +68,7 @@
 
 /* Dropdown take over */
 
-.dhs_dropdown-item.active,
-.dhs_dropdown-item:active {
+.dhs_dropdown-item.active, .dhs_dropdown-item:active {
     color: #16181b !important;
     text-decoration: none !important;
     background-color: #f8f9fa !important;
@@ -153,7 +152,7 @@
         display: block !important;
     }
 
-    #dhs_profile2 {
+    #dhs_row-default, #dhs_profile2 {
         display: none !important;
     }
 }
