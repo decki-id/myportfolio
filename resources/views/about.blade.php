@@ -62,7 +62,7 @@
                                     <h4 class="timeline-title">Associate/Diploma of Information Systems</h4>
                                     <ul class="timeline-text">
                                         <li>Polytechnic LPKIA, Bandung</li>
-                                        <li>Management of Informatics Major</li>
+                                        <li>Management of Information Systems Major</li>
                                         <li>Information Systems Concentration</li>
                                         <li>GPA 3.26</li>
                                     </ul>
