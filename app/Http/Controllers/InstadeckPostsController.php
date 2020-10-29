@@ -16,8 +16,10 @@ class InstadeckPostsController extends Controller
     public function index()
     {
         $users = auth()->user()->following()->pluck('instadeck_profiles.user_id');
+
         // $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
         $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(5);
+
         return view('/instadeck/index', compact('posts'));
     }
     
@@ -48,6 +50,8 @@ class InstadeckPostsController extends Controller
 
     public function show(InstadeckPost $post)
     {
-        return view('/instadeck/show', compact('post'));
+        $follows = (auth()->user()) ? auth()->user()->following->contains($post->user->id) : false;
+
+        return view('/instadeck/show', compact('post', 'follows'));
     }
 }

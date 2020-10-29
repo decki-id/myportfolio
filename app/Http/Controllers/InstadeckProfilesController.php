@@ -12,7 +12,7 @@ class InstadeckProfilesController extends Controller
     public function index(User $user)
     {
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
-        
+
         // WITHOUT using Illuminate\Support\Facades\Cache
         // $postsCount = $user->posts->count();
         // $followersCount = $user->profile->followers->count();

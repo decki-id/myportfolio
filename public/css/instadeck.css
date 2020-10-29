@@ -112,18 +112,18 @@
 
 #dhs_pp-div-responsive {
     display: block !important;
-    padding: 0 auto 0 auto !important;
-    -ms-flex: 0 0 41.666667% !important;
-    flex: 0 0 41.666667% !important;
-    max-width: 41.666667% !important;
+    padding: auto !important;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
 }
 
 #dhs_profile-detail-responsive {
     display: block !important;
-    -ms-flex: 0 0 58.333333% !important;
-    flex: 0 0 58.333333% !important;
-    max-width: 58.333333% !important;
     margin: auto 0 !important;
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
 }
 
 #dhs_mobile-button {
@@ -146,11 +146,6 @@
 /* Responsive */
 
 @media only screen and (min-width: 600px) {
-    #dhs_profile-picture {
-        width: 166px;
-        height: 166px;
-    }
-
     #dhs_profile1 {
         display: block !important;
     }
@@ -161,6 +156,11 @@
 }
 
 @media only screen and (min-width: 992px) {
+    #dhs_profile-picture {
+        width: 166px;
+        height: 166px;
+    }
+
     #dhs_navbar-dropdown {
         display: block !important;
     }

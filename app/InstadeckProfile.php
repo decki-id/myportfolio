@@ -8,6 +8,10 @@ class InstadeckProfile extends Model
 {
     protected $guarded = [];
 
+    protected $keyType = 'string';
+
+    public $incrementing = false;
+
     public function profileImage()
     {
         $dhsImagePath = ($this->image) ? $this->image : '/profile/user.jpg';

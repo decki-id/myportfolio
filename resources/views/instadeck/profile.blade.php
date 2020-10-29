@@ -5,20 +5,24 @@
 @section('content')
     <div class="container">
         <div class="pt-3 pb-4" id="dhs_row-default">
-            <div class="col-3 pl-5 pr-5 text-center">
+            <div class="col-3 pl-5 pr-5 mt-auto mb-auto text-center">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
             <div class="col-6">
                 <div class="d-flex justify-content-start align-items-center">
-                    <h5 class="dhs_h5">{{ $user->username }}</h5>
-                    @if ($user->id != auth()->user()->id)
+                    <h5 class="dhs_h5">{{ $user->id }}</h5>
+                    @guest
                         <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
-                    @endif
+                    @else
+                        @if ($user->id != auth()->user()->id)
+                            <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                        @endif
+                    @endguest
                 </div>
                 <div class="d-flex pt-2">
                     <div class="mr-5"><strong>{{ $postsCount }}</strong> Posts</div>
                     <div class="mr-5"><strong>{{ $followersCount }}</strong> Followers</div>
-                    <div class="mr-5"><strong>{{ $followingCount }}</strong> Following</div>
+                    <div><strong>{{ $followingCount }}</strong> Following</div>
                 </div>
                 <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>
                 <div>{{ $user->profile->description }}</div>
@@ -34,20 +38,24 @@
             </div>
         </div>
         <div class="pt-3 pb-4" id="dhs_row-responsive">
-            <div class="text-center" id="dhs_pp-div-responsive">
+            <div class="text-center mt-auto mb-auto" id="dhs_pp-div-responsive">
                 <img src="{{ $user->profile->profileImage() }}" class="rounded-circle" id="dhs_profile-picture">
             </div>
             <div id="dhs_profile-detail-responsive">
                 <div class="d-flex justify-content-start align-items-center">
-                    <h5 class="dhs_h5">{{ $user->username }}</h5>
-                    @if ($user->id != auth()->user()->id)
+                    <h5 class="dhs_h5">{{ $user->id }}</h5>
+                    @guest
                         <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
-                    @endif
+                    @else
+                        @if ($user->id != auth()->user()->id)
+                            <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                        @endif
+                    @endguest
                 </div>
                 <div class="d-flex pt-2">
-                    <div class="mr-5"><strong>{{ $postsCount }}</strong> Posts</div>
-                    <div class="mr-5"><strong>{{ $followersCount }}</strong> Followers</div>
-                    <div class="mr-5"><strong>{{ $followingCount }}</strong> Following</div>
+                    <div class="mr-2"><strong>{{ $postsCount }}</strong> Posts</div>
+                    <div class="mr-2"><strong>{{ $followersCount }}</strong> Followers</div>
+                    <div><strong>{{ $followingCount }}</strong> Following</div>
                 </div>
                 <div id="dhs_profile1">
                     <div class="pt-2 font-weight-bold">{{ $user->profile->title }}</div>

@@ -5,8 +5,6 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\InstadeckNewUserWelcomeMail;
 
 class User extends Authenticatable {
     use Notifiable;
@@ -17,7 +15,7 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'username', 'fullname', 'email', 'password',
+        'id', 'fullname', 'email', 'password',
     ];
 
     /**
@@ -38,16 +36,20 @@ class User extends Authenticatable {
         'email_verified_at' => 'datetime',
     ];
 
+    protected $keyType = 'string';
+
+    public $incrementing = false;
+
     protected static function boot()
     {
         parent::boot();
 
         static::created(function ($user) {
             $user->profile()->create([
-                'title' => $user->username,
+                'id' => $user->id,
+                'title' => $user->fullname,
             ]);
         });
-
     }
 
     public function posts()

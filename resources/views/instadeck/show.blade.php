@@ -18,10 +18,10 @@
                     </div>
                     <div>
                         <div class="font-weight-bold d-flex">
-                            <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark mr-1">{{ $post->user->username }}</a>
+                            <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark mr-1">{{ $post->user->id }}</a>
                             @if ($post->user->id != auth()->user()->id)
                                 |
-                                <follow-link user-id="{{ $post->user->id }}" follows="{{ auth()->user()->following }}"></follow-link>
+                                <follow-link user-id="{{ $post->user->id }}" follows="{{ $follows }}"></follow-link>
                             @endif
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                 <hr>
                 <p>
                     <span class="font-weight-bold">
-                        <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark">{{ $post->user->username }}</a>
+                        <a href="/instadeck/profile/{{ $post->user->id }}" class="dhs_link-dark">{{ $post->user->id }}</a>
                     </span> {{ $post->caption }}
                 </p>
             </div>

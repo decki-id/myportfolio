@@ -47,7 +47,7 @@
                     <div class="navbar-nav ml-auto" id="dhs_navbar-dropdown">
                         <div class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
-                                {{ Auth::user()->username }}
+                                {{ Auth::user()->id }}
                             </a>
                             <div class="dropdown-menu" id="dhs_dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item dhs_dropdown-item" href="/instadeck">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="navbar-nav ml-auto" id="dhs_navbar-nav">
-                        <div class="dropdown" id="dhs_dropdown">{{ Auth::user()->username }}</div>
+                        <div class="dropdown" id="dhs_dropdown">{{ Auth::user()->id }}</div>
                     </div>
                 @endguest
             </div>
@@ -97,7 +97,7 @@
                     </a>
                 </div>
                 <div class="col text-center">
-                    <a href="/instadeck/profile/{{ Auth::user()->id }}" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'profile.show' ? 'active' : '' }}" title="Profile">
+                    <a href="/instadeck/profile/{{ Auth::user()->id }}" class="dhs_mobile-link-dark {{ Request::segment(3) == Auth::user()->id && Route::currentRouteName() == 'profile.show' ? 'active' : '' }}" title="Profile">
                         <i class="fas fa-fw fa-user"></i>
                     </a>
                 </div>
