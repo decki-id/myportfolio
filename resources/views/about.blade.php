@@ -30,24 +30,25 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="personal-info">
+                            <div class="info-item padd-15">
+                                <p>
+                                    Address: <span>Perumahan Citra Padalarang Indah Blok B-11 RT. 04 RW. 20,
+                                    Jayamekar, Padalarang, West Bandung, West Java, Indonesia, 40553</span>
+                                </p>
+                            </div>
+                        </div>
                         <div class="personal-info1 padd-15">
                             <div class="row">
-                                <div class="info-item padd-15">
-                                    <p>
-                                        Address: <span>Perumahan Citra Padalarang Indah Blok B-11 RT. 04 RW. 20,
-                                        Desa Jayamekar, Padalarang, West Bandung, West Java, Indonesia</span>
-                                    </p>
-                                </div>
-                                <div class="info-item padd-15"><p>Email: <span>d.herdiawan.s@gmail.com</span></p></div>
-                                <div class="info-item padd-15"><p>Website: <span>deckiherdiawans.com</span></p></div>
-                                <div class="info-item padd-15"><p>Phone: <span>+62 822 1666 8131</span></p></div>
+                                <div class="info-item padd-15"><p>Birthday: <span>20 November 1993</span></p></div>
+                                <div class="info-item padd-15"><p>Marital Status: <span>Single</span></p></div>
+                                <div class="info-item padd-15"><p>Degree: <span>Associate/Diploma of Information Systems</span></p></div>
                             </div>
                         </div>
                         <div class="personal-info2 padd-15">
                             <div class="row">
-                                <div class="info-item padd-15"><p>Birthday: <span>20 November 1993</span></p></div>
-                                <div class="info-item padd-15"><p>Degree: <span>Associate/Diploma of Information Systems</span></p></div>
-                                <div class="info-item padd-15"><p>Marital Status: <span>Single</span></p></div>
+                                <div class="info-item padd-15"><p>Email: <span>d.herdiawan.s@gmail.com</span></p></div>
+                                <div class="info-item padd-15"><p>Phone: <span>+62 822 1666 8131</span></p></div>
                                 <div class="info-item padd-15"><p>Availability: <span>Freelance only</span></p></div>
                             </div>
                         </div>

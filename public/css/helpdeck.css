@@ -40,7 +40,7 @@ a {
     left: 0;
     height: 50px;
     padding: 0 20px;
-    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, .1);
+    border-bottom: 1px solid #cfd7df;
     background-color: #fff;
     display: -ms-flexbox;
     display: flex;
@@ -69,8 +69,8 @@ a {
 }
 
 .dhs-topbar .dhs-logo {
-    position: absolute;
-    padding: 0 0 0 60px;
+    position: static;
+    padding: 0;
 }
 
 .dhs-topbar .dhs-usericon {
@@ -159,11 +159,13 @@ a {
     position: fixed;
     background-color: #fff;
     top: 50px;
-    left: 0;
+    left: -250px;
     bottom: 0;
     width: 250px;
     font-family: Roboto;
-    box-shadow: 10px 0 5px -5px rgba(128, 128, 128, .1);
+    border-right: 1px solid #cfd7df;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .dhs-sidebar.show {
@@ -202,20 +204,20 @@ a {
     display: none;
 }
 
+.dhs-sidebar.mobile {
+    left: 0;
+}
+
 
 /* Responsive */
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
     .dhs-topbar .dhs-logo {
-        position: static;
-        padding: 0;
+        position: absolute;
+        padding: 0 0 0 60px;        
     }
 
     .dhs-sidebar {
-        left: -250px;
-    }
-
-    .dhs-sidebar.mobile {
         left: 0;
     }
 }
