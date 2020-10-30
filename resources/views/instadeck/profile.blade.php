@@ -52,7 +52,12 @@
                         @endif
                     @endguest
                 </div>
-                <div class="d-flex pt-2">
+                <div class="pt-2" id="dhs_pff-phone">
+                    <div class="text-center mr-2"><strong>{{ $postsCount }}</strong><br> Posts</div>
+                    <div class="text-center mr-2"><strong>{{ $followersCount }}</strong><br> Followers</div>
+                    <div class="text-center"><strong>{{ $followingCount }}</strong><br> Following</div>
+                </div>
+                <div class="pt-2" id="dhs_pff-tab">
                     <div class="mr-2"><strong>{{ $postsCount }}</strong> Posts</div>
                     <div class="mr-2"><strong>{{ $followersCount }}</strong> Followers</div>
                     <div><strong>{{ $followingCount }}</strong> Following</div>

@@ -94,12 +94,19 @@
 
 /* Additional divs for responsive */
 
-#dhs_navbar-dropdown, #dhs_row-default, #dhs_profile1 {
+#dhs_navbar-dropdown, #dhs_row-default,
+#dhs_profile1, #dhs_show-post-default, #dhs_pff-tab {
     display: none !important;
 }
 
-#dhs_navbar-nav, #dhs_profile2, #dhs_bottom-btn {
+#dhs_navbar-nav, #dhs_profile2, #dhs_bottom-btn,
+#dhs_show-post-responsive {
     display: block !important;
+}
+
+#dhs_pff-phone {
+    display: -ms-flexbox !important;
+    display: flex !important;
 }
 
 #dhs_row-responsive {
@@ -150,8 +157,13 @@
         display: block !important;
     }
 
-    #dhs_profile2 {
+    #dhs_pff-phone, #dhs_profile2 {
         display: none !important;
+    }
+
+    #dhs_pff-tab {
+        display: -ms-flexbox !important;
+        display: flex !important;
     }
 }
 
@@ -161,8 +173,13 @@
         height: 166px;
     }
 
-    #dhs_navbar-dropdown {
+    #dhs_navbar-dropdown, #dhs_show-post-default {
         display: block !important;
+    }
+
+    #dhs_navbar-nav, #dhs_row-responsive, #dhs_bottom-btn,
+    #dhs_mobile-button, #dhs_show-post-responsive {
+        display: none !important;
     }
 
     #dhs_row-default {
@@ -171,9 +188,5 @@
         flex-wrap: wrap !important;
         margin-right: -15px !important;
         margin-left: -15px !important;
-    }
-
-    #dhs_navbar-nav, #dhs_row-responsive, #dhs_profile2, #dhs_bottom-btn, #dhs_mobile-button {
-        display: none !important;
     }
 }
