@@ -795,6 +795,7 @@ body {
 body.dark .sidebar,
 body.dark .style-switcher,
 body.dark .about .about-content .edex .timeline,
+body.dark .portfolios .portfolio-item-inner,
 body.dark .portfolios .portfolio-item-inner .portfolio-info,
 body.dark .blogs .blog-item-inner .blog-info {
     background-color: #222222;
@@ -815,6 +816,7 @@ body.dark .home .intro p,
 body.dark .about .about-content .about-text h3,
 body.dark .about .about-content .about-text a,
 body.dark .about .about-content .about-text p,
+body.dark .about .about-content .personal-info .info-item p,
 body.dark .about .about-content .personal-info1 .info-item p,
 body.dark .about .about-content .personal-info2 .info-item p,
 body.dark .about .about-content .edex .timeline .edex-title,
@@ -827,6 +829,7 @@ body.dark .copyright {
     border-color: #393939;
 }
 
+body.dark .about .about-content .personal-info .info-item p span,
 body.dark .about .about-content .personal-info1 .info-item p span,
 body.dark .about .about-content .personal-info2 .info-item p span,
 body.dark .about .about-content .edex .timeline .timeline-subtitle,
@@ -878,12 +881,14 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
         margin-right: -50%;
         transform: translate(-50%, -50%);
     }
-
+    
+    .about .about-content .personal-info .info-item p span,
     .about .about-content .personal-info1 .info-item p span,
     .about .about-content .personal-info2 .info-item p span {
         margin-left: 0;
     }
-
+    
+    .about .about-content .personal-info,
     .about .about-content .personal-info1,
     .about .about-content .personal-info2,
     .about .about-content .edex,

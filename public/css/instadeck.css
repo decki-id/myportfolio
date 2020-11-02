@@ -84,11 +84,13 @@
 #dhs_profile-picture {
     width: 100px;
     height: 100px;
+    border: 1px solid #cfd7df;
 }
 
 .dhs_pp-post-detail {
     width: 50px;
     height: 50px;
+    border: 1px solid #cfd7df;
 }
 
 
