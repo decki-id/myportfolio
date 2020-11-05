@@ -28,7 +28,7 @@ Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 // Route::post('/students', 'StudentsController@store');
 // Route::get('/students/{student}', 'StudentsController@show');
 // Route::get('/students/{student}/edit', 'StudentsController@edit');
-// Route::patch('students/{student}', 'StudentsController@update');
+// Route::patch('/students/{student}', 'StudentsController@update');
 // Route::delete('/students/{student}', 'StudentsController@destroy');
 Route::resource('/students', 'StudentsController');
 
@@ -39,7 +39,7 @@ Route::get('/helpdeck', 'HelpdeckController@index');
 // Auth::routes();
 Route::get('/instadeck/email', function () {
     Mail::to('herdiawand@yahoo.co.id')->send(new InstadeckNewUserWelcomeMail());
-    return new InstadeckNewUserWelcomeMail(); 
+    return new InstadeckNewUserWelcomeMail();
 });
 Route::get('/instadeck/register', 'Auth\RegisterController@showRegistrationForm')->name('instadeck.register');
 Route::post('register', 'Auth\RegisterController@register')->name('register');
