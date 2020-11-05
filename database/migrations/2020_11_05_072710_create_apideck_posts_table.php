@@ -16,7 +16,7 @@ class CreateApideckPostsTable extends Migration
         Schema::create('apideck_posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->integer('likes')->default(0);
             $table->string('content')->nullable();            
 

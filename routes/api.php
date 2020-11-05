@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\ApideckPost;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,10 @@ use App\ApideckPost;
 //     return $post;
 // });
 
-// API Deck
-Route::resource('/apideck/posts', 'ApideckPostsController');
+Route::prefix('apideck')->group(function () {
+    Route::apiResource('users', 'ApideckUserController');
+    Route::apiResource('posts', 'ApideckPostsController');
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

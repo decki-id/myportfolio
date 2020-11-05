@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ApideckPost;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 
-class ApideckPostsController extends Controller
+class ApideckUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class ApideckPostsController extends Controller
      */
     public function index()
     {
-        return ApideckPost::all();
+        return User::all();
     }
 
     /**
@@ -26,9 +27,17 @@ class ApideckPostsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required'
+            'id' => ['required', 'string', 'max:255', 'unique:users'],
+            'fullname' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
-        return ApideckPost::create($request->all());
+        return User::create([
+            'id' => $request['id'],
+            'fullname' => $request['fullname'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
     }
 
     /**
@@ -39,7 +48,7 @@ class ApideckPostsController extends Controller
      */
     public function show($id)
     {
-        return ApideckPost::find($id);
+        return User::find($id);
     }
 
     /**
@@ -51,7 +60,7 @@ class ApideckPostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post = ApideckPost::find($id);
+        $post = User::find($id);
         $post->update($request->all());
         return $post;
     }
@@ -64,6 +73,6 @@ class ApideckPostsController extends Controller
      */
     public function destroy($id)
     {
-        return ApideckPost::destroy($id);
+        return User::destroy($id);
     }
 }
