@@ -97,8 +97,8 @@
                     </a>
                 </div>
                 <div class="col text-center">
-                    <a href="/instadeck/profile/{{ Auth::user()->id }}" class="dhs_mobile-link-dark {{ Request::segment(3) == Auth::user()->id && Route::currentRouteName() == 'profile.show' ? 'active' : '' }}" title="Profile">
-                        <i class="fas fa-fw fa-user"></i>
+                    <a href="/instadeck/profile/{{ Auth::user()->id }}" title="Profile">
+                        <img src="{{ Auth::user()->profile->profileImage() }}" class="rounded-circle dhs_mobile-nav {{ Request::segment(3) == Auth::user()->id && Route::currentRouteName() == 'profile.show' ? 'active' : '' }}">
                     </a>
                 </div>
                 <div class="col text-center">
