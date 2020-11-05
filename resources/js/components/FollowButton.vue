@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="btn btn-sm btn-info ml-3 dhs_btn-text-white"
+      class="btn btn-sm btn-info dhs_btn-text-white"
       @click="followUser"
       v-text="buttonText"
     ></button>

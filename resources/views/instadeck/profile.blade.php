@@ -10,7 +10,7 @@
             </div>
             <div class="col-6">
                 <div class="d-flex justify-content-start align-items-center">
-                    <h5 class="dhs_h5">{{ $user->id }}</h5>
+                    <h5 class="pr-3 dhs_h5">{{ $user->id }}</h5>
                     @guest
                         <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                     @else
@@ -43,7 +43,6 @@
             </div>
             <div id="dhs_profile-detail-responsive">
                 <div class="d-flex justify-content-start align-items-center">
-                    <h5 class="dhs_h5">{{ $user->id }}</h5>
                     @guest
                         <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                     @else
@@ -53,13 +52,13 @@
                     @endguest
                 </div>
                 <div class="pt-2" id="dhs_pff-phone">
-                    <div class="text-center mr-2"><strong>{{ $postsCount }}</strong><br> Posts</div>
-                    <div class="text-center mr-2"><strong>{{ $followersCount }}</strong><br> Followers</div>
+                    <div class="text-center mr-3"><strong>{{ $postsCount }}</strong><br> Posts</div>
+                    <div class="text-center mr-3"><strong>{{ $followersCount }}</strong><br> Followers</div>
                     <div class="text-center"><strong>{{ $followingCount }}</strong><br> Following</div>
                 </div>
                 <div class="pt-2" id="dhs_pff-tab">
-                    <div class="mr-2"><strong>{{ $postsCount }}</strong> Posts</div>
-                    <div class="mr-2"><strong>{{ $followersCount }}</strong> Followers</div>
+                    <div class="mr-3"><strong>{{ $postsCount }}</strong> Posts</div>
+                    <div class="mr-3"><strong>{{ $followersCount }}</strong> Followers</div>
                     <div><strong>{{ $followingCount }}</strong> Following</div>
                 </div>
                 <div id="dhs_profile1">

@@ -37585,7 +37585,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("button", {
-      staticClass: "btn btn-sm btn-info ml-3 dhs_btn-text-white",
+      staticClass: "btn btn-sm btn-info dhs_btn-text-white",
       domProps: { textContent: _vm._s(_vm.buttonText) },
       on: { click: _vm.followUser }
     })

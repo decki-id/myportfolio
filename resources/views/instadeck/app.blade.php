@@ -68,9 +68,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-nav ml-auto" id="dhs_navbar-nav">
-                        <div class="dropdown" id="dhs_dropdown">{{ Auth::user()->id }}</div>
-                    </div>
+                    @if (Route::currentRouteName() == 'profile.show')
+                        <div class="navbar-nav ml-auto" id="dhs_navbar-nav">
+                            <div class="dropdown" id="dhs_dropdown">{{ Request::segment(3) }}</div>
+                        </div>
+                    @endif
                 @endguest
             </div>
         </nav>
