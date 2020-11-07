@@ -8,8 +8,6 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\InstadeckNewUserWelcomeMail;
 
 class RegisterController extends Controller
 {
@@ -31,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/instadeck';
+    protected $redirectTo = HOME;
 
     /**
      * Create a new controller instance.
@@ -41,11 +39,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-    }
-
-    public function showRegistrationForm()
-    {
-        return view('/instadeck/auth/register');
     }
 
     /**
@@ -72,7 +65,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Mail::to($data['email'])->send(new InstadeckNewUserWelcomeMail());
         return User::create([
             'id' => $data['id'],
             'fullname' => $data['fullname'],

@@ -16,7 +16,7 @@ use App\User;
 |
 */
 
-// Route::get('/apideck/posts', function () {
+// Route::get('/deck/posts', function () {
 //     $post = ApideckPost::create([
 //         'title' => 'My First Post',
 //         'slug' => 'my-first-post'
@@ -24,11 +24,13 @@ use App\User;
 //     return $post;
 // });
 
-Route::prefix('apideck')->group(function () {
-    Route::apiResource('users', 'ApideckUserController');
+Route::prefix('deck')->group(function () {
+    Route::post('login', 'ApideckUsersController@login');
+    Route::get('user', 'ApideckUsersController@getLoggedIn');
+    Route::apiResource('users', 'ApideckUsersController');
     Route::apiResource('posts', 'ApideckPostsController');
 });
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
