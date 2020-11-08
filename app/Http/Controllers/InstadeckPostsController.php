@@ -10,7 +10,7 @@ class InstadeckPostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('instadeck.auth');
     }
 
     public function index()

@@ -40,7 +40,7 @@ class InstadeckRegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('instadeck.guest');
     }
 
     public function showRegistrationForm()
