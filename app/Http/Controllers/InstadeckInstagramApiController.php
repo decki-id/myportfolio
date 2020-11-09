@@ -20,7 +20,6 @@ class InstadeckInstagramApiController extends Controller
         $appId = config('services.facebook.client_id');
         $secret = config('services.facebook.client_secret');
         $redirectUri = config('services.facebook.redirect_uri');
-        $instaId = config('services.facebook.instagram_id');
         $code = $request->code;
         if (empty($code)) return redirect()->route('home')->with('error', 'Failed to login with Instagram.');
 
@@ -33,8 +32,8 @@ class InstadeckInstagramApiController extends Controller
         $content = $response->getBody()->getContents();
         $token = json_decode($content);
 
+        $instaId = config('services.facebook.instagram_id');
         $accessToken = $token->access_token;
-        $userId = $token->user_id;
 
         $getProfile = $client->request('GET', "https://graph.facebook.com/v8.0/{$InstaId}?fields=id,ig_id,profile_picture_url,username,media_count,followers_count,follows_count,name,biography,website&access_token={$accessToken}");
         $profileData = $getProfile->getBody()->getContents();
