@@ -7,22 +7,22 @@ use GuzzleHttp\Client;
 
 class InstadeckInstagramApiController extends Controller
 {
-    $appId = config('services.facebook.client_id');
-    $secret = config('services.facebook.client_secret');
-    $redirectUri = config('services.facebook.redirect_uri');
-    $instaId = config('services.facebook.instagram_id');
-
     public function index()
     {
+        $appId = config('services.facebook.client_id');
+        $redirectUri = config('services.facebook.redirect_uri');
         return redirect()->to("https://www.facebook.com/v8.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=pages_read_engagement,instagram_basic,ads_management,business_management,pages_show_list");
     }
 
     public function callback(Request $request)
     {
+        $client = new Client();
+        $appId = config('services.facebook.client_id');
+        $secret = config('services.facebook.client_secret');
+        $redirectUri = config('services.facebook.redirect_uri');
+        $instaId = config('services.facebook.instagram_id');
         $code = $request->code;
         if (empty($code)) return redirect()->route('home')->with('error', 'Failed to login with Instagram.');
-
-        $client = new Client();
 
         $response = $client->request('GET', "https://graph.facebook.com/v8.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
 
