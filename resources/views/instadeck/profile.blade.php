@@ -3,7 +3,7 @@
 @section('title', 'InstaDeck || Profile')
 
 @section('content')
-    @if ($user != null)
+    @if ($user)
         <div class="container">
             <div class="pt-3 pb-4" id="dhs_row-default">
                 <div class="col-3 pl-5 pr-5 mt-auto mb-auto text-center">
