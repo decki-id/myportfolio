@@ -36,7 +36,7 @@ class InstadeckLoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('instadeck.guest')->except('logout');
     }
 
     public function showLoginForm()
