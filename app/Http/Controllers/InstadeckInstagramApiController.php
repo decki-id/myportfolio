@@ -7,10 +7,10 @@ use GuzzleHttp\Client;
 
 class InstadeckInstagramApiController extends Controller
 {
-    public $appId = config('services.facebook.client_id');
-    public $secret = config('services.facebook.client_secret');
-    public $redirectUri = config('services.facebook.redirect_uri');
-    public $instaId = config('services.facebook.instagram_id');
+    const $appId = config('services.facebook.client_id');
+    const $secret = config('services.facebook.client_secret');
+    const $redirectUri = config('services.facebook.redirect_uri');
+    const $instaId = config('services.facebook.instagram_id');
 
     public function index()
     {
