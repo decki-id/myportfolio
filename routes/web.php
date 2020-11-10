@@ -45,8 +45,8 @@ Route::get('/instadeck/register', 'InstadeckRegisterController@showRegistrationF
 Route::post('register', 'InstadeckRegisterController@register')->name('register');
 Route::get('/instadeck/login', 'InstadeckLoginController@showLoginForm')->name('instadeck.login');
 Route::post('login', 'InstadeckLoginController@login')->name('login');
-Route::get('/instadeck/instagram-api-login', 'InstadeckInstagramApiController@index')->name('instadeck.api.login');
-Route::get('/instadeck/instagram-api-login/callback', 'InstadeckInstagramApiController@callback')->name('instadeck.api.callback');
+Route::get('/instadeck/instagram-api', 'InstadeckInstagramApiController@index')->name('instadeck.api');
+Route::get('/instadeck/instagram-api/callback', 'InstadeckInstagramApiController@callback')->name('instadeck.api.callback');
 Route::post('logout', 'InstadeckLoginController@logout')->name('logout');
 Route::get('/instadeck', 'InstadeckPostsController@index')->name('instadeck.home');
 Route::get('/instadeck/post/browse', 'InstadeckPostsController@browse')->name('post.browse');
