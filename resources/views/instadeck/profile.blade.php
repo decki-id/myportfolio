@@ -139,10 +139,10 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             <div class="row pt-4">
-                @foreach($media as $post)
+                @foreach($media->data[0] as $post)
                     <div class="col-4 pb-4">
-                        <a href="/instadeck/post/{{ $post->data[&quot;id&quot;] }}">
-                            <img src="/storage/{{ $post->data }}" class="w-100">
+                        <a href="/instadeck/post/{{ $post->id }}">
+                            <img src="/storage/{{ $post->id }}" class="w-100">
                         </a>
                     </div>
                 @endforeach
