@@ -141,8 +141,8 @@
             <div class="row pt-4">
                 @foreach($media as $post)
                     <div class="col-4 pb-4">
-                        <a href="{{ $post->data[0]->id }}">
-                            <img src="{{ $post->data[0]->id }}" class="w-100">
+                        <a href="{{ $post->data[1]->id }}">
+                            <img src="{{ $post->data[1]->id }}" class="w-100">
                         </a>
                     </div>
                 @endforeach
