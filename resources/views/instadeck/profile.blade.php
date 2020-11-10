@@ -3,7 +3,7 @@
 @section('title', 'InstaDeck || Profile')
 
 @section('content')
-    @if ($user)
+    @if (isset($user))
         <div class="container">
             <div class="pt-3 pb-4" id="dhs_row-default">
                 <div class="col-3 pl-5 pr-5 mt-auto mb-auto text-center">
@@ -95,53 +95,55 @@
         <div class="container">
             <div class="pt-3 pb-4" id="dhs_row-default">
                 <div class="col-3 pl-5 pr-5 mt-auto mb-auto text-center">
-                    <img src="{{ $profile['profile_picture_url'] }}" class="rounded-circle" id="dhs_profile-picture">
+                    <img src="{{ $profile->profile_picture_url }}" class="rounded-circle" id="dhs_profile-picture">
                 </div>
                 <div class="col-6">
                     <div class="d-flex justify-content-start align-items-center">
-                        <h5 class="pr-3 dhs_h5">{{ $profile['username'] }}</h5>
+                        <h5 class="pr-3 dhs_h5">{{ $profile->username }}</h5>
                     </div>
                     <div class="d-flex pt-2">
-                        <div class="mr-5"><strong>{{ $profile['media_count'] }}</strong> Posts</div>
-                        <div class="mr-5"><strong>{{ $profile['followers_count'] }}</strong> Followers</div>
-                        <div><strong>{{ $profile['follows_count'] }}</strong> Following</div>
+                        <div class="mr-5"><strong>{{ $profile->media_count }}</strong> Posts</div>
+                        <div class="mr-5"><strong>{{ $profile->followers_count }}</strong> Followers</div>
+                        <div><strong>{{ $profile->follows_count }}</strong> Following</div>
                     </div>
-                    <div class="pt-2 font-weight-bold">{{ $profile['name'] }}</div>
-                    <div>{{ $profile['biography'] }}</div>
-                    <div><a href="{{ $profile['website'] }}" class="dhs_link">{{ $profile['website'] }}</a></div>
+                    <div class="pt-2 font-weight-bold">{{ $profile->name }}</div>
+                    <div>{{ $profile->biography }}</div>
+                    <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
                 </div>
             </div>
             <div class="pt-3 pb-4" id="dhs_row-responsive">
                 <div class="text-center mt-auto mb-auto" id="dhs_pp-div-responsive">
-                    <img src="{{ $profile['profile_picture_url'] }}" class="rounded-circle" id="dhs_profile-picture">
+                    <img src="{{ $profile->profile_picture_url }}" class="rounded-circle" id="dhs_profile-picture">
                 </div>
                 <div id="dhs_profile-detail-responsive">
                     <div class="pt-2" id="dhs_pff-phone">
-                        <div class="text-center mr-3"><strong>{{ $profile['media_count'] }}</strong><br> Posts</div>
-                        <div class="text-center mr-3"><strong>{{ $profile['followers_count'] }}</strong><br> Followers</div>
-                        <div class="text-center"><strong>{{ $profile['follows_count'] }}</strong><br> Following</div>
+                        <div class="text-center mr-3"><strong>{{ $profile->media_count }}</strong><br> Posts</div>
+                        <div class="text-center mr-3"><strong>{{ $profile->followers_count }}</strong><br> Followers</div>
+                        <div class="text-center"><strong>{{ $profile->follows_count }}</strong><br> Following</div>
                     </div>
                     <div class="pt-2" id="dhs_pff-tab">
-                        <div class="mr-3"><strong>{{ $profile['media_count'] }}</strong> Posts</div>
-                        <div class="mr-3"><strong>{{ $profile['followers_count'] }}</strong> Followers</div>
-                        <div><strong>{{ $profile['follows_count'] }}</strong> Following</div>
+                        <div class="mr-3"><strong>{{ $profile->media_count }}</strong> Posts</div>
+                        <div class="mr-3"><strong>{{ $profile->followers_count }}</strong> Followers</div>
+                        <div><strong>{{ $profile->follows_count }}</strong> Following</div>
                     </div>
                     <div id="dhs_profile1">
-                        <div class="pt-2 font-weight-bold">{{ $profile['name'] }}</div>
-                        <div>{{ $profile['biography'] }}</div>
-                        <div><a href="{{ $profile['website'] }}" class="dhs_link">{{ $profile['website'] }}</a></div>
+                        <div class="pt-2 font-weight-bold">{{ $profile->name }}</div>
+                        <div>{{ $profile->biography }}</div>
+                        <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
                     </div>
                 </div>
             </div>
             <div class="pb-4" id="dhs_profile2">
-                <div class="pt-2 font-weight-bold">{{ $profile['name'] }}</div>
-                <div>{{ $profile['biography'] }}</div>
-                <div><a href="https://{{ $profile['website'] }}" class="dhs_link">{{ $profile['website'] }}</a></div>
+                <div class="pt-2 font-weight-bold">{{ $profile->name }}</div>
+                <div>{{ $profile->biography }}</div>
+                <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             <div class="row pt-4">
-                @foreach($media['data'] as $media)
+                @foreach($media as $post)
                     <div class="col-4 pb-4">
-                        <a href="/instadeck/post/{{ $media['id'] }}"></a>
+                        <a href="/instadeck/post/{{ $post->data[&quot;id&quot;] }}">
+                            <img src="/storage/{{ $post->data }}" class="w-100">
+                        </a>
                     </div>
                 @endforeach
             </div>
