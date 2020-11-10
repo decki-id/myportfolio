@@ -140,7 +140,7 @@
             </div>
             <div class="row pt-4">
                 @foreach($media as $post)
-                    {{ dd($post) }}
+                    {{ dd($post->0->id) }}
                     <div class="col-4 pb-4">
                         <a href="{{ $post->id }}">
                             <img src="{{ $post->id }}" class="w-100">
