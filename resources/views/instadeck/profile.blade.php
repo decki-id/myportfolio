@@ -140,10 +140,9 @@
             </div>
             <div class="row pt-4">
                 @for ($a = 0; $a < $media->data; $a++)
-                    {{ dd($a) }}
                     <div class="col-4 pb-4">
-                        <a href="{{ $post[0]->id }}">
-                            <img src="{{ $post[0]->id }}" class="w-100">
+                        <a href="{{ $media->data[$a]->id }}">
+                            <img src="{{ $media->data[$a]->id }}" class="w-100">
                         </a>
                     </div>
                 @endfor
