@@ -140,10 +140,10 @@
             </div>
             <div class="row pt-4">
                 @for ($a = 0; $a <= $media->data; $a++)
-                    @foreach ($media->data[$a] as $post)
+                    @foreach ($media->data[$a]->id as $post)
                         <div class="col-4 pb-4">
-                            <a href="{{ $post->id }}">
-                                <img src="{{ $post->id }}" class="w-100">
+                            <a href="{{ $post }}">
+                                <img src="{{ $post }}" class="w-100">
                             </a>
                         </div>
                     @endforeach
