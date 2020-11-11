@@ -139,8 +139,8 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             <div class="row pt-4">
-                @for (a == 0; a < $media->data; a++)
-                    {{ dd(a) }}
+                @for ($a = 0; $a < $media->data; $a++)
+                    {{ dd($a) }}
                     <div class="col-4 pb-4">
                         <a href="{{ $post[0]->id }}">
                             <img src="{{ $post[0]->id }}" class="w-100">
