@@ -139,12 +139,14 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             <div class="row pt-4">
-                @for ($a = 0; $a < $media->data; $a++)
-                    <div class="col-4 pb-4">
-                        <a href="{{ $media->data[$a]->id }}">
-                            <img src="{{ $media->data[$a]->id }}" class="w-100">
-                        </a>
-                    </div>
+                @for ($a = 0; $a <= $media->data; $a++)
+                    @foreach ($media->data[$a] as $post)
+                        <div class="col-4 pb-4">
+                            <a href="{{ $post->id }}">
+                                <img src="{{ $post->id }}" class="w-100">
+                            </a>
+                        </div>
+                    @endforeach
                 @endfor
             </div>
         </div>
