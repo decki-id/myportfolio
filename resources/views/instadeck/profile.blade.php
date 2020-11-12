@@ -147,8 +147,8 @@
                             </a>
                         </div>
                     @endif
-                @endfor
-            @endforeach
+                @endforeach
+            @endfor
         </div>
     @endif
 @endsection
