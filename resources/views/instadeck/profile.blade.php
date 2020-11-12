@@ -142,7 +142,7 @@
                 @foreach($media["data"][$a] as $post)
                     <div class="col-4 pb-4">
                         <a href="#">
-                            <img src="{{ $post[&quot;media_url&quot; }}" class="w-100">
+                            <img src="{{ $post[&quot;media_url&quot;] }}" class="w-100">
                         </a>
                     </div>
                 @endforeach
