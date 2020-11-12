@@ -140,9 +140,10 @@
             </div>
             @for($a = 0; $a <= $media["data"]; $a++)
                 @foreach($media["data"][$a] as $post)
+                    {{ dd($post["media_url"]) }}
                     <div class="col-4 pb-4">
                         <a href="#">
-                            <img src="{{ $post[\"media_url\"] }}" class="w-100">
+                            <img src="" class="w-100">
                         </a>
                     </div>
                 @endforeach
