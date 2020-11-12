@@ -156,13 +156,13 @@
                     @endforeach
                 @endfor
             </div>
-            <nav class="row" aria-label="Page navigation example">
-                <ul class="pagination text-center">
+            <div class="row" aria-label="Page navigation example">
+                <div class="pagination text-center">
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['before'] }}">Before</a></li>
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['after'] }}">After</a></li>
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['next'] }}">Next</a></li>
-                </ul>
-            </nav>
+                </div>
+            </div>
         </div>
     @endif
 @endsection
