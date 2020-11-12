@@ -140,6 +140,7 @@
             </div>
             @for($a = 0; $a < count($media->data); $a++)
                 @foreach($media as $post)
+                    {{ json_decode($post) }}
                     @if(isset($post[$a]))
                         <div class="col-4 pb-4">
                             <a href="#">
