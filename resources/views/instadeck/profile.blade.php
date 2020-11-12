@@ -139,17 +139,13 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             <div class="row pt-4">
-                @for($a = 0; $a < count($media["data"]); $a++)
-                    @foreach($media as $post)
-                        @if(isset($post[$a]))
-                            <div class="col-4 pb-4">
-                                <a href="#">
-                                    <img src="{{ $post[$a]['media_url'] }}" class="w-100">
-                                </a>
-                            </div>
-                        @endif
-                    @endforeach
-                @endfor
+                @foreach($media as $posts)
+                    <div class="col-4 pb-4">
+                        <a href="#">
+                            <img src="{{ $posts[$a]['media_url'] }}" class="w-100">
+                        </a>
+                    </div>
+                @endforeach
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
