@@ -151,6 +151,11 @@
                     @endforeach
                 @endfor
             </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    {{ $media["paging"]("pagination::bootstrap-4") }}
+                </div>
+            </div>
         </div>
     @endif
 @endsection
