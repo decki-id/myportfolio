@@ -143,7 +143,7 @@
                     @if(isset($post))
                         <div class="col-4 pb-4">
                             <a href="#">
-                                <img src="{{ $post[$a]->media_url }}" class="w-100">
+                                <img src="{{ $post->$a->media_url }}" class="w-100">
                             </a>
                         </div>
                     @endif
