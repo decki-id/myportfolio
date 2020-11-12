@@ -21,6 +21,11 @@
     padding-top: 80px;
 }
 
+.dhs_user-media {
+    display: -ms-flex;
+    display: flex;
+}
+
 
 /* Link take over */
 

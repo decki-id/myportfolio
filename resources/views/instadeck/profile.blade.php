@@ -147,7 +147,7 @@
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
-                            <div class="col-4 pb-4">
+                            <div class="col-4 pb-4 dhs_user-media">
                                 <a href="#">
                                     <img src="{{ $posts[$a]['media_url'] }}" class="w-100">
                                 </a>
