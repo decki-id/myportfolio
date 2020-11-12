@@ -140,11 +140,13 @@
             </div>
             @foreach($media as $post)
                 @for($a = 0; $a <= count($post); $a++)
-                    <div class="col-4 pb-4">
-                        <a href="#">
-                            <img src="{{ $post[$a]->media_url }}" class="w-100">
-                        </a>
-                    </div>
+                    @if(isset($post))
+                        <div class="col-4 pb-4">
+                            <a href="#">
+                                <img src="{{ $post[$a]->media_url }}" class="w-100">
+                            </a>
+                        </div>
+                    @endif
                 @endfor
             @endforeach
         </div>
