@@ -146,8 +146,8 @@
                                 <img src="{{ $post[$a]->media_url }}" class="w-100">
                             </a>
                         </div>
-                    @endfor
-                @endif
+                    @endif
+                @endfor
             @endforeach
         </div>
     @endif
