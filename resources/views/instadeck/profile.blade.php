@@ -138,9 +138,9 @@
                 <div>{{ $profile->biography }}</div>
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
-            @for($a = 0; $a <= $media; $a++)
+            @for($a = 0; $a <= $media->data; $a++)
                 @foreach($media as $post)
-                    {{ dd($post["data"][$a]["media_url"]) }}
+                    {{ dd($post->data[$a]->media_url) }}
                     <div class="col-4 pb-4">
                         <a href="#">
                             <img src="{{ $post["media_url"] }}" class="w-100">
