@@ -139,8 +139,8 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             @for($a = 0; $a < count($media->data); $a++)
+                {{ json_decode($media) }}
                 @foreach($media as $post)
-                    {{ json_decode($post) }}
                     @if(isset($post[$a]))
                         <div class="col-4 pb-4">
                             <a href="#">
