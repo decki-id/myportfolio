@@ -139,14 +139,14 @@
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
             @for($a = 0; $a <= count($media->data); $a++)
-                {{ dd($a) }}
-                @foreach($media as $post)
+                @foreach($media->data as $post)
                     <div class="col-4 pb-4">
                         <a href="#">
-                            <img src="{{ $media->data[$a]->media_url->paginate(25) }}" class="w-100">
+                            <img src="{{ $post[$a]->media_url }}" class="w-100">
                         </a>
                     </div>
                 @endforeach
+            @endfor
         </div>
     @endif
 @endsection
