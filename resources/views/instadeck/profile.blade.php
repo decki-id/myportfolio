@@ -156,8 +156,8 @@
                     @endforeach
                 @endfor
             </div>
-            <nav class="row" aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
+            <nav class="row justify-content-center" aria-label="Page navigation example">
+                <ul class="pagination">
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['before'] }}">Before</a></li>
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['after'] }}">After</a></li>
                     <li class="page-item"><a class="page-link" href="{{ $media['paging']['next'] }}">Next</a></li>
