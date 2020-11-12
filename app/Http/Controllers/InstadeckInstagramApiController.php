@@ -43,7 +43,7 @@ class InstadeckInstagramApiController extends Controller
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData);
 
-        for ($a = 0; $a <= $media->data[]; $a++)
+        for ($a = 0; $a <= 25; $a++)
         {
             return $a;
         }
