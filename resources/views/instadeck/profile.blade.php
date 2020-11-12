@@ -138,15 +138,6 @@
                 <div>{{ $profile->biography }}</div>
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
-            <!-- <div class="row pt-4">
-                @for ($a = 0; $a <= $media->data; $a++)
-                    <div class="col-4 pb-4">
-                        <a href="{{ $media->data[$a]->id }}">
-                            <img src="{{ $media->data[$a]->id }}" class="w-100">
-                        </a>
-                    </div>
-                @endfor
-            </div> -->
         </div>
     @endif
 @endsection
