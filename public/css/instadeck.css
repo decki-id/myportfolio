@@ -24,6 +24,10 @@
 
 /* Link take over */
 
+.nav-link {
+    padding: 8px !important;
+}
+
 .dhs_link:hover {
     color: #007bff !important;
     text-decoration: none !important;
