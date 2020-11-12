@@ -116,6 +116,11 @@
                     <img src="{{ $profile->profile_picture_url }}" class="rounded-circle" id="dhs_profile-picture">
                 </div>
                 <div id="dhs_profile-detail-responsive">
+                    @if(Request::segment(2) == 'instagram-api')
+                        <div class="d-flex justify-content-start align-items-center">
+                            <h5 class="pr-3 dhs_h5">{{ $profile->username }}</h5>
+                        </div>
+                    @endif
                     <div class="pt-2" id="dhs_pff-phone">
                         <div class="text-center mr-3"><strong>{{ $profile->media_count }}</strong><br> Posts</div>
                         <div class="text-center mr-3"><strong>{{ $profile->followers_count }}</strong><br> Followers</div>
