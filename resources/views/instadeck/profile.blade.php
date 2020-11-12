@@ -138,15 +138,13 @@
                 <div>{{ $profile->biography }}</div>
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
             </div>
-            @for($a = 0; $a <= $media->data; $a++)
-                @foreach($media as $post)
-                    <div class="col-4 pb-4">
-                        <a href="#">
-                            <img src="{{ $media->data[$a]->media_url->paginate(25) }}" class="w-100">
-                        </a>
-                    </div>
-                @endforeach
-            @endfor
+            @foreach($media as $post)
+                <div class="col-4 pb-4">
+                    <a href="#">
+                        <img src="{{ $media->data[$a]->media_url->paginate(25) }}" class="w-100">
+                    </a>
+                </div>
+            @endforeach
         </div>
     @endif
 @endsection
