@@ -47,6 +47,7 @@ class InstadeckInstagramApiController extends Controller
         for ($a = 0; $a <= $b; $a++)
         {
             return $a . "\n";
+            $a++;
         }
 
         return view('/instadeck/profile', compact('profile', 'media'));
