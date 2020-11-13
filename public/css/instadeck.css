@@ -80,8 +80,8 @@
 /* Profile picture take over and responsive */
 
 #dhs_profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border: 1px solid #cfd7df;
 }
 
@@ -164,6 +164,12 @@
 /* Responsive */
 
 @media only screen and (min-width: 600px) {
+    #dhs_profile-picture {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #cfd7df;
+    }
+    
     #dhs_profile1 {
         display: block !important;
     }
