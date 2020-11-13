@@ -159,34 +159,34 @@
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
-                            @if($posts[$a]['media_type'] == 'IMAGE')
-                                <div class="col-4 pb-4">
+                            <div class="col-4 pb-4">
+                                @if($posts[$a]['media_type'] == 'IMAGE')
                                     <a href="#">
                                         <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                     </a>
-                                </div>
-                            @elseif($posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                <div class="col-4 pb-4">
-                                    <a href="#">
-                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
-                                    </a>
+                                @elseif($posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
+                                    <div class="col">
+                                        <a href="#">
+                                            <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
+                                        </a>
+                                    </div>
                                     @for($b = 0; $b < count($posts[$a]['children']['data']); $b++)
                                         @foreach($posts[$a]['children'] as $children)
                                             @if(isset($children[$b]))
-                                                <a href="#">
-                                                    <img src="{{ $children[$b]['media_url'] }}">
-                                                </a>
+                                                <div class="col">
+                                                    <a href="#">
+                                                        <img src="{{ $children[$b]['media_url'] }}">
+                                                    </a>
+                                                </div>
                                             @endif
                                         @endforeach
                                     @endfor
-                                </div>
-                            @else
-                                <div class="col-4 pb-4">
+                                @else
                                     <video class="w-100 h-100" controls>
                                         <source src="{{ $posts[$a]['media_url'] }}">
                                     </video>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         @endif
                     @endforeach
                 @endfor
