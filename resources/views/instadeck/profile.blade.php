@@ -170,7 +170,7 @@
                                     <a href="#">
                                         <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                     </a>
-                                    @for($b = 0; $b < count(isset($posts[$a]['children']['data'])); $b++)
+                                    @for($b = 0; $b < count($posts[$a]['children']['data']); $b++)
                                         @foreach($posts[$a]['children'] as $children)
                                             @if(isset($children[$b]))
                                                 <a href="#">
