@@ -166,17 +166,17 @@
                                     </a>
                                 @elseif($posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                     <div class="row">
-                                        <div class="col-6">
-                                            @for($b = 0; $b < count($posts[$a]['children']['data']); $b++)
-                                                @foreach($posts[$a]['children'] as $children)
-                                                    @if(isset($children[$b]))
+                                        @for($b = 0; $b < count($posts[$a]['children']['data']); $b++)
+                                            @foreach($posts[$a]['children'] as $children)
+                                                @if(isset($children[$b]))
+                                                    <div class="col-6">
                                                         <a href="#">
                                                             <img src="{{ $children[$b]['media_url'] }}" class="w-100">
                                                         </a>
-                                                    @endif
-                                                @endforeach
-                                            @endfor
-                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        @endfor
                                     </div>
                                 @else
                                     <video class="w-100 h-100" controls>
