@@ -150,9 +150,9 @@
                             <div class="col-4 pb-4">
                                 <a href="#">
                                     @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-auto">
+                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                     @else
-                                        <video class="w-100 h-auto" controls>
+                                        <video class="w-100 h-100" controls>
                                             <source src="{{ $posts[$a]['media_url'] }}">
                                         </video>
                                     @endif
