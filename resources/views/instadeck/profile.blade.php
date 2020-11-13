@@ -174,7 +174,7 @@
                                         @foreach($posts[$a]['children'] as $children)
                                             @if(isset($children[$b]))
                                                 <a href="#">
-                                                    <img src="{{ $children[$b]['media_url'] }}" class="w-100 h-100">
+                                                    <img src="{{ $children[$b]['media_url'] }}">
                                                 </a>
                                             @endif
                                         @endforeach
