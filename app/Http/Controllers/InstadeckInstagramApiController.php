@@ -43,14 +43,6 @@ class InstadeckInstagramApiController extends Controller
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
 
-        for ($z = 0; $z < count($media['data']); $z++) {
-            if (isset($media['data'][$z]['children'])) {
-                $children = $media['data'][$z]['children'];
-            }
-        }
-
-        return $children;
-
-        // return view('/instadeck/profile', compact('profile', 'media'));
+        return view('/instadeck/profile', compact('profile', 'media'));
     }
 }
