@@ -44,7 +44,9 @@ class InstadeckInstagramApiController extends Controller
         $media = json_decode($mediaData, true);
 
         for ($z = 0; $z < count($media['data']); $z++) {
-            $children = $media['data'][$z]['children'];
+            if (isset($media['data'][$z]['children'])) {
+                $children = $media['data'][$z]['children'];
+            }
         }
 
         dd($children);
