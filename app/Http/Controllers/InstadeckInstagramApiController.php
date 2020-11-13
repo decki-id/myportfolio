@@ -44,9 +44,7 @@ class InstadeckInstagramApiController extends Controller
         $media = json_decode($mediaData, true);
 
         for ($z = 0; $z < count($media['data']); $z++) {
-            if ($media['data'][$z]['media_type'] == 'CAROUSEL_ALBUM') {
-                $children = $media['data'][$z]['children'];
-            }
+            $children = $media['data'][$z]['children'];
         }
 
         dd($children);
