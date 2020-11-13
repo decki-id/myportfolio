@@ -101,7 +101,7 @@
                     <div class="d-flex justify-content-start align-items-center">
                         <h5 class="pr-3 dhs_h5">{{ $profile->username }}</h5>
                         <a href="https://instagram.com/deckiherdiawans" target="_blank" class="btn btn-sm btn-info dhs_btn-text-white">
-                            Follow
+                            Follow Me on Instagram
                         </a>
                     </div>
                     <div class="d-flex pt-2">
