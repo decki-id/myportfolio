@@ -49,8 +49,8 @@ class InstadeckInstagramApiController extends Controller
             }
         }
 
-        dd($children);
+        return $children;
 
-        return view('/instadeck/profile', compact('profile', 'media'));
+        // return view('/instadeck/profile', compact('profile', 'media'));
     }
 }
