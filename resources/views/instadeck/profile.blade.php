@@ -170,12 +170,12 @@
                                             @if(isset($children[$b]))
                                                 <div class="col">
                                                     <a href="#">
-                                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
+                                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-25 h-25">
                                                     </a>
                                                 </div>
                                                 <div class="col">
                                                     <a href="#">
-                                                        <img src="{{ $children[$b]['media_url'] }}">
+                                                        <img src="{{ $children[$b]['media_url'] }}" class="w-25 h-25">
                                                     </a>
                                                 </div>
                                             @endif
