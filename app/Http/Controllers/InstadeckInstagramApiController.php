@@ -11,7 +11,7 @@ class InstadeckInstagramApiController extends Controller
     {
         $appId = config('services.facebook.client_id');
         $redirectUri = config('services.facebook.redirect_uri');
-        return redirect()->to("https://www.facebook.com/v8.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=pages_read_engagement,instagram_basic,ads_management,business_management,pages_show_list");
+        return redirect()->to("https://www.facebook.com/v9.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=pages_read_engagement,instagram_basic,ads_management,business_management,pages_show_list");
     }
 
     public function callback(Request $request)
@@ -23,7 +23,7 @@ class InstadeckInstagramApiController extends Controller
         $code = $request->code;
         if (empty($code)) return redirect()->route('home')->with('error', 'Failed to login with Instagram.');
 
-        $response = $client->request('GET', "https://graph.facebook.com/v8.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
+        $response = $client->request('GET', "https://graph.facebook.com/v9.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
 
         if ($response->getStatusCode() != 200) {
             return redirect()->route('home')->with('error', 'Unauthorized login to Instagram.');
@@ -35,13 +35,19 @@ class InstadeckInstagramApiController extends Controller
         $instaId = config('services.facebook.instagram_id');
         $accessToken = $token->access_token;
 
-        $getProfile = $client->request('GET', "https://graph.facebook.com/v8.0/{$instaId}?fields=id,ig_id,profile_picture_url,username,media_count,followers_count,follows_count,name,biography,website&access_token={$accessToken}");
+        $getProfile = $client->request('GET', "https://graph.facebook.com/v9.0/{$instaId}?fields=id,ig_id,profile_picture_url,username,media_count,followers_count,follows_count,name,biography,website&access_token={$accessToken}");
         $profileData = $getProfile->getBody()->getContents();
         $profile = json_decode($profileData);
 
-        $getMedia = $client->request('GET', "https://graph.facebook.com/v8.0/{$instaId}/media?fields=id,media_type,media_url,caption,timestamp,permalink&access_token={$accessToken}");
+        $getMedia = $client->request('GET', "https://graph.facebook.com/v9.0/{$instaId}/media?fields=id,media_type,media_url,caption,timestamp,permalink&access_token={$accessToken}");
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
+
+        $getInsight = $client->request('GET', "https://graph.facebook.com/v9.0/{$instaId}/insights?metric=impressions,reach,profile_views&period=day&access_token={$accessToken}");
+        $insightData = $getInsight->getBody()->getContents();
+        $insight = json_decode($insightData, true);
+
+        dd($insight);
 
         return view('/instadeck/profile', compact('profile', 'media'));
     }
