@@ -167,9 +167,6 @@
                                 @elseif($posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                     <div class="row">
                                         <div class="col-6">
-                                            <a href="#">
-                                                <img src="{{ $posts[$a]['media_url'] }}" class="w-100">
-                                            </a>
                                             @for($b = 0; $b < count($posts[$a]['children']['data']); $b++)
                                                 @foreach($posts[$a]['children'] as $children)
                                                     @if(isset($children[$b]))
