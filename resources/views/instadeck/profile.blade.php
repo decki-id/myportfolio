@@ -100,6 +100,9 @@
                 <div class="col-6">
                     <div class="d-flex justify-content-start align-items-center">
                         <h5 class="pr-3 dhs_h5">{{ $profile->username }}</h5>
+                        <a href="https://instagram.com/deckiherdiawans" target="_blank" class="btn btn-sm btn-info dhs_btn-text-white">
+                            Follow
+                        </a>
                     </div>
                     <div class="d-flex pt-2">
                         <div class="mr-5"><strong>{{ $profile->media_count }}</strong> Posts</div>
@@ -162,13 +165,6 @@
                     @endforeach
                 @endfor
             </div>
-            <nav class="row justify-content-center" aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['before'] }}">Before</a></li>
-                    <li class="page-item"><a class="page-link" href="{{ $media['paging']['cursors']['after'] }}">After</a></li>
-                    <li class="page-item"><a class="page-link" href="{{ $media['paging']['next'] }}">Next</a></li>
-                </ul>
-            </nav>
         </div>
     @endif
 @endsection
