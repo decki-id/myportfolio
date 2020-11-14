@@ -53,9 +53,6 @@
                                 <a class="dropdown-item dhs_dropdown-item" href="/instadeck">
                                     <i class="fas fa-fw fa-home mr-3"></i>{{ __('Home') }}
                                 </a>
-                                <!-- <a class="dropdown-item dhs_dropdown-item" href="/instadeck/post/browse">
-                                    <i class="fas fa-fw fa-search mr-3"></i>{{ __('Browse') }}
-                                </a> -->
                                 <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->id }}">
                                     <i class="fas fa-fw fa-user mr-3"></i>{{ __('Profile') }}
                                 </a>
@@ -88,11 +85,6 @@
                         <i class="fas fa-fw fa-home"></i>
                     </a>
                 </div>
-                <!-- <div class="col text-center">
-                    <a href="/instadeck/post/browse" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'post.browse' ? 'active' : '' }}" title="Browse">
-                        <i class="fas fa-fw fa-search"></i>
-                    </a>
-                </div> -->
                 <div class="col text-center">
                     <a href="/instadeck/post/create" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'post.create' ? 'active' : '' }}" title="Create New Post">
                         <i class="fas fa-fw fa-plus-square"></i>
