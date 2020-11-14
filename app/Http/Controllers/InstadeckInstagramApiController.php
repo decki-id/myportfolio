@@ -13,7 +13,7 @@ class InstadeckInstagramApiController extends Controller
     {
         $appId = config('services.facebook.client_id');
         $redirectUri = config('services.facebook.redirect_uri');
-        return redirect()->to("https://www.facebook.com/v9.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=pages_read_engagement,instagram_basic,ads_management,business_management,pages_show_list");
+        return redirect()->to("https://www.facebook.com/v9.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=instagram_basic,instagram_manage_insights,ads_management,business_management,pages_show_list,pages_read_engagement");
     }
 
     public function callback(Request $request)
