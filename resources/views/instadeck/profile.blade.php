@@ -93,7 +93,7 @@
         </div>
     @else
         <div class="container">
-            <div class="pt-3 pb-4" id="dhs_row-default">
+            <div class="pt-3 pb-3" id="dhs_row-default">
                 <div class="col-3 pl-5 pr-5 mt-auto mb-auto text-center">
                     <img src="{{ $profile->profile_picture_url }}" class="rounded-circle" id="dhs_profile-picture">
                 </div>
@@ -114,7 +114,7 @@
                     <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
                 </div>
             </div>
-            <div class="pt-3 pb-4" id="dhs_row-responsive">
+            <div class="pt-3 pb-3" id="dhs_row-responsive">
                 <div class="text-center mt-auto mb-auto" id="dhs_pp-div-responsive">
                     <img src="{{ $profile->profile_picture_url }}" class="rounded-circle" id="dhs_profile-picture">
                 </div>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pb-4" id="dhs_profile2">
+            <div class="pb-3" id="dhs_profile2">
                 <div class="pt-2 font-weight-bold">{{ $profile->name }}</div>
                 <div>{{ $profile->biography }}</div>
                 <div><a href="{{ $profile->website }}" class="dhs_link">{{ $profile->website }}</a></div>
@@ -155,7 +155,7 @@
                     </div>
                 </div>
             @endif
-            <div class="row pt-3">
+            <div class="row pt-4">
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
