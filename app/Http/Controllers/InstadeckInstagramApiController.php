@@ -43,7 +43,7 @@ class InstadeckInstagramApiController extends Controller
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
 
-        $reload = isset($_SERVER['HTTP_CACHE_CONTROL']) && ($_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0' || $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
+        $reload = isset($_SERVER['HTTP_CACHE_CONTROL']) && ($_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0' || $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
 
         return view('/instadeck/profile', compact('profile', 'media', 'reload'));
     }
