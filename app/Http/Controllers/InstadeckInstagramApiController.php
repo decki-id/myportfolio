@@ -43,14 +43,11 @@ class InstadeckInstagramApiController extends Controller
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
 
-        $pageRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) &&($_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0' ||  $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
-        dd($pageRefreshed);
-        // if($pageRefreshed == 1){
-        //     echo "Yes page Refreshed";
-        // }else{
-        //     //enter code here
-        //     echo "No";
-        // }
+        $pageRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && ($_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0' || $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
+
+        if ($pageRefreshed == 1) {
+            return redirect()->to("https://deckiherdiawans.com/instadeck");
+        }
 
         return view('/instadeck/profile', compact('profile', 'media'));
     }
