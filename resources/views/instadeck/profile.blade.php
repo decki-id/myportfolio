@@ -155,7 +155,7 @@
                     </div>
                 </div>
             @endif
-            <div class="row pt-4">
+            <div class="row pt-3">
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
