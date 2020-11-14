@@ -47,6 +47,6 @@ class InstadeckLoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/instadeck/login');
+        return redirect('/instadeck');
     }
 }
