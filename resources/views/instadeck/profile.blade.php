@@ -177,8 +177,5 @@
                 @endfor
             </div>
         </div>
-        @if($reload == 1 || $reload == true)
-            redirect()->to("https://deckiherdiawans.com/instadeck");
-        @endif
     @endif
 @endsection

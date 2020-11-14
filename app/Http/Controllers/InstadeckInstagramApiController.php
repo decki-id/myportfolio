@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\RequestException;
 
 class InstadeckInstagramApiController extends Controller
 {
@@ -21,12 +23,16 @@ class InstadeckInstagramApiController extends Controller
         $secret = config('services.facebook.client_secret');
         $redirectUri = config('services.facebook.redirect_uri');
         $code = $request->code;
-        if (empty($code)) return redirect()->route('home')->with('error', 'Failed to login with Instagram.');
+        if (empty($code)) return redirect()->route('instadeck.home')->with('error', 'Failed to login with Instagram.');
 
-        $response = $client->request('GET', "https://graph.facebook.com/v9.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
+        try {
+            $response = $client->request('GET', "https://graph.facebook.com/v9.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
+        } catch (RequestException $e) {
+            return redirect()->route('instadeck.home');
+        }
 
         if ($response->getStatusCode() != 200) {
-            return redirect()->route('home')->with('error', 'Unauthorized login to Instagram.');
+            return redirect()->route('instadeck.home')->with('error', 'Unauthorized login to Instagram.');
         }
 
         $content = $response->getBody()->getContents();
@@ -42,14 +48,6 @@ class InstadeckInstagramApiController extends Controller
         $getMedia = $client->request('GET', "https://graph.facebook.com/v9.0/{$instaId}/media?fields=id,media_type,media_url,children{id,media_type,media_url},username,like_count,comments_count,caption,timestamp,permalink&access_token={$accessToken}");
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
-
-        $pageRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && ($_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0' || $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
-
-        if ($pageRefreshed == 1) {
-            echo "Yes page Refreshed";
-        } else {
-            echo "No";
-        }
 
         return view('/instadeck/profile', compact('profile', 'media'));
     }
