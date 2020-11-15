@@ -159,19 +159,21 @@
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
-                            @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                <div class="col-4 pb-4">
+                            <div class="col-4 pb-4">
+                                @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                     <a href="#">
                                         <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                     </a>
-                                </div>
-                            @else
-                                <div class="col-4 pb-4">
-                                    <video class="w-100 h-100" controls>
+                                @else
+                                    <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
                                         <source src="{{ $posts[$a]['media_url'] }}">
                                     </video>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
+                            <div class="col-4 pb-4 d-flex justify-content-center">
+                                <i class="fas fa-fw fa-heart text-white mr-1"></i>{{ $posts[$a]['like_count'] }}
+                                <i class="fas fa-fw fa-comment text-white mr-1"></i>{{ $posts[$a]['comments_count'] }}
+                            </div>
                         @endif
                     @endforeach
                 @endfor
