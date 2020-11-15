@@ -173,8 +173,8 @@
                                         </div>
                                     @endif
                                     <div class="dhs_posts-info text-white d-flex justify-content-center">
-                                        <i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}
-                                        <i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}
+                                        <div><i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}</div>
+                                        <div><i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}</div>
                                     </div>
                                 </div>
                             </div>
