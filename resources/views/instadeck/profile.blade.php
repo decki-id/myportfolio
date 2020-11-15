@@ -160,19 +160,23 @@
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
                             <div class="col-4 pb-4">
-                                @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                    <a href="#">
-                                        <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
-                                    </a>
-                                @else
-                                    <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
-                                        <source src="{{ $posts[$a]['media_url'] }}">
-                                    </video>
-                                @endif
-                            </div>
-                            <div class="col-4 pb-4 d-flex justify-content-center text-white dhs_posts-info">
-                                <i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}
-                                <i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}
+                                <div class="dhs_posts-item-inner">
+                                    @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
+                                        <div class="dhs_posts">
+                                            <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
+                                        </div>
+                                    @else
+                                        <div class="dhs_posts">
+                                            <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
+                                                <source src="{{ $posts[$a]['media_url'] }}">
+                                            </video>
+                                        </div>
+                                    @endif
+                                    <div class="dhs_posts-info">
+                                        <i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}
+                                        <i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}
+                                    </div>
+                                </div>
                             </div>
                         @endif
                     @endforeach

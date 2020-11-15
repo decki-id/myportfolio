@@ -105,6 +105,11 @@
 
 /* Whatever */
 
+.dhs_posts-item-inner {
+    position: relative;
+    cursor: pointer;
+}
+
 .dhs_posts-info {
     position: absolute;
     left: 0;
