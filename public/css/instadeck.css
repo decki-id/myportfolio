@@ -107,8 +107,12 @@
 
 .dhs_posts-item-inner {
     position: relative;
-    overflow: hidden;
     cursor: pointer;
+}
+
+.dhs_posts-item-inner .dhs_posts img,
+.dhs_posts-item-inner .dhs_posts video {
+    display: block;
 }
 
 .dhs_posts-info {
