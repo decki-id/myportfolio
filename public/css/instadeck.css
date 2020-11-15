@@ -107,6 +107,7 @@
 
 .dhs_posts-item-inner {
     position: relative;
+    overflow: hidden;
     cursor: pointer;
 }
 
