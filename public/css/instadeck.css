@@ -107,11 +107,11 @@
 
 .dhs_posts-item .dhs_posts-item-inner {
     position: relative;
-    cursor: pointer;
 }
 
+.dhs_posts-item .dhs_posts-item-inner .dhs_posts img,
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts video {
-    z-index: 5;
+    z-index: 50;
 }
 
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts-info {
