@@ -111,6 +111,11 @@
     cursor: pointer;
 }
 
+.dhs_posts {
+    height: 100%;
+    width: 100%;
+}
+
 .dhs_posts-info {
     position: absolute;
     left: 0;

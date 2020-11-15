@@ -163,18 +163,18 @@
                                 <div class="dhs_posts-item-inner">
                                     @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                         <div class="dhs_posts">
-                                            <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
+                                            <img src="{{ $posts[$a]['media_url'] }}">
                                         </div>
                                     @else
                                         <div class="dhs_posts">
-                                            <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
+                                            <video preload="auto" autobuffer playsinline controls>
                                                 <source src="{{ $posts[$a]['media_url'] }}">
                                             </video>
                                         </div>
                                     @endif
                                     <div class="dhs_posts-info text-white d-flex justify-content-center">
-                                        <div class="mr-1"><i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}</div>
-                                        <div class="ml-1"><i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}</div>
+                                        <div class="mr-3"><i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}</div>
+                                        <div class="ml-3"><i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}</div>
                                     </div>
                                 </div>
                             </div>
