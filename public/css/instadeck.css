@@ -105,14 +105,8 @@
 
 /* Whatever */
 
-.dhs_posts-item {
-    display: -ms-flexbox;
-    display: flex;
-}
-
 .dhs_posts-item-inner {
     position: relative;
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -120,6 +114,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, .7);
 }
 
