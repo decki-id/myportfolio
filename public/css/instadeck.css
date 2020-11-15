@@ -103,6 +103,18 @@
 }
 
 
+/* Whatever */
+
+.dhs_posts-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+
 /* Additional divs for responsive */
 
 #dhs_navbar-dropdown, #dhs_row-default,
