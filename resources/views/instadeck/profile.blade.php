@@ -163,11 +163,11 @@
                                 <div class="dhs_posts-item-inner">
                                     @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                         <div class="dhs_posts">
-                                            <img src="{{ $posts[$a]['media_url'] }}">
+                                            <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                         </div>
                                     @else
                                         <div class="dhs_posts">
-                                            <video preload="auto" autobuffer playsinline controls>
+                                            <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
                                                 <source src="{{ $posts[$a]['media_url'] }}">
                                             </video>
                                         </div>
