@@ -160,13 +160,13 @@
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
                             <div class="col-4 pb-4 dhs_posts-item">
-                                <div class="dhs_posts-item-inner">
+                                <div class="dhs_posts-item-inner w-100 h-100">
                                     @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                        <div class="dhs_posts">
+                                        <div class="dhs_posts w-100 h-100">
                                             <img src="{{ $posts[$a]['media_url'] }}" class="w-100 h-100">
                                         </div>
                                     @else
-                                        <div class="dhs_posts">
+                                        <div class="dhs_posts w-100 h-100">
                                             <video class="w-100 h-100" preload="auto" autobuffer playsinline controls>
                                                 <source src="{{ $posts[$a]['media_url'] }}">
                                             </video>

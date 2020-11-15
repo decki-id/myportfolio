@@ -105,11 +105,6 @@
 
 /* Whatever */
 
-.dhs_posts-item {
-    display: -ms-flexbox !important;
-    display: flex !important;
-}
-
 .dhs_posts-item-inner {
     position: relative;
     cursor: pointer;
