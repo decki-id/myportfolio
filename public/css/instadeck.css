@@ -105,12 +105,12 @@
 
 /* Whatever */
 
-.dhs_posts-item-inner {
+.dhs_posts-item .dhs_posts-item-inner {
     position: relative;
     cursor: pointer;
 }
 
-.dhs_posts-info {
+.dhs_posts-item .dhs_posts-item-inner .dhs_posts-info {
     position: absolute;
     left: 0;
     top: 0;
@@ -122,7 +122,7 @@
     transition: all .3s ease;
 }
 
-.dhs_posts-item-inner:hover .dhs_posts-info {
+.dhs_posts-item .dhs_posts-item-inner:hover .dhs_posts-info {
     opacity: 1;
 }
 
