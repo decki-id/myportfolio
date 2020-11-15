@@ -107,6 +107,8 @@
 
 .dhs_posts-item-inner {
     position: relative;
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer;
 }
 
