@@ -105,6 +105,11 @@
 
 /* Whatever */
 
+.dhs_posts-item {
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .dhs_posts-item-inner {
     position: relative;
     overflow: hidden;

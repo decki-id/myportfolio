@@ -159,7 +159,7 @@
                 @for($a = 0; $a < count($media["data"]); $a++)
                     @foreach($media as $posts)
                         @if(isset($posts[$a]))
-                            <div class="col-4 pb-4">
+                            <div class="col-4 pb-4 dhs_posts-item">
                                 <div class="dhs_posts-item-inner">
                                     @if($posts[$a]['media_type'] == 'IMAGE' || $posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
                                         <div class="dhs_posts">
