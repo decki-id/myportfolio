@@ -111,7 +111,7 @@
 
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts img,
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts video {
-    z-index: 50;
+    z-index: 5;
 }
 
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts-info {
@@ -124,6 +124,7 @@
     opacity: 0;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    z-index: 1;
 }
 
 .dhs_posts-item .dhs_posts-item-inner:hover .dhs_posts-info {
