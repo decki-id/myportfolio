@@ -117,6 +117,13 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.dhs_posts-item-inner:hover .dhs_posts-info {
+    opacity: 1;
 }
 
 
