@@ -162,7 +162,7 @@
                             <div class="col-4 pb-4 dhs_posts-item">
                                 <div class="dhs_posts-item-inner w-100 h-100">
                                     @if($posts[$a]['media_type'] == 'CAROUSEL_ALBUM')
-                                        <div class="position-absolute float-right">
+                                        <div class="dhs_carousel-icon">
                                             <i class="fas fa-fw fa-images text-white"></i>
                                         </div>
                                     @endif

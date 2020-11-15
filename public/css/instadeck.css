@@ -126,6 +126,11 @@
     opacity: 1;
 }
 
+.dhs_carousel-icon {
+    position: absolute;
+    right: 5px;
+}
+
 
 /* Additional divs for responsive */
 
