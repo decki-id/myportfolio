@@ -110,6 +110,11 @@
     cursor: pointer;
 }
 
+.dhs_posts-item .dhs_posts-item-inner .dhs_posts img,
+.dhs_posts-item .dhs_posts-item-inner .dhs_posts video {
+    z-index: 1;
+}
+
 .dhs_posts-item .dhs_posts-item-inner .dhs_posts-info {
     position: absolute;
     left: 0;
