@@ -170,9 +170,9 @@
                                     </video>
                                 @endif
                             </div>
-                            <div class="col-4 pb-4 d-flex justify-content-center">
-                                <i class="fas fa-fw fa-heart text-white mr-1"></i>{{ $posts[$a]['like_count'] }}
-                                <i class="fas fa-fw fa-comment text-white mr-1"></i>{{ $posts[$a]['comments_count'] }}
+                            <div class="col-4 pb-4 d-flex justify-content-center text-white dhs_posts-info">
+                                <i class="fas fa-fw fa-heart mr-1"></i>{{ $posts[$a]['like_count'] }}
+                                <i class="fas fa-fw fa-comment mr-1"></i>{{ $posts[$a]['comments_count'] }}
                             </div>
                         @endif
                     @endforeach
