@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-use App\User;
+use App\Models\User;
 
 class InstadeckProfilesController extends Controller
 {
-    public function index(User $user)
+    public function index(Request $request, $username)
     {
+        $user = User::whereUsername($username)->firstOrFail();
+
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
         // Using Illuminate\Support\Facades\Cache
@@ -34,14 +36,19 @@ class InstadeckProfilesController extends Controller
         return view('/instadeck/profile', compact('user', 'follows', 'postsCount', 'followersCount', 'followingCount'));
     }
 
-    public function edit(User $user)
+    public function edit(Request $request, $username)
     {
+        $user = User::whereUsername($username)->firstOrFail();
+
         $this->authorize('update', $user->profile);
+
         return view('/instadeck/edit', compact('user'));
     }
 
-    public function update(User $user)
+    public function update(Request $request, $username)
     {
+        $user = User::whereUsername($username)->firstOrFail();
+
         $this->authorize('update', $user->profile);
 
         $dhsData = request()->validate([
@@ -52,6 +59,11 @@ class InstadeckProfilesController extends Controller
         ]);
         
         if (request('image')) {
+            if ($user->profile->image != 'profile/default_user.png') {
+                $dhsImageDestroy = public_path("storage/{$user->profile->image}");
+                unlink($dhsImageDestroy);
+            }
+            
             $dhsImagePath = request('image')->store('profile', 'public');
             $dhsImage = Image::make(public_path("storage/{$dhsImagePath}"));
             $dhsImage->save();
@@ -64,6 +76,6 @@ class InstadeckProfilesController extends Controller
             auth()->user()->profile()->update($dhsData);
         }
 
-        return redirect("/instadeck/profile/{$user->id}");
+        return redirect("/instadeck/profile/{$username}");
     }
 }

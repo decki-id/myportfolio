@@ -14,8 +14,8 @@ class CreateInstadeckProfilesTable extends Migration
     public function up()
     {
         Schema::create('instadeck_profiles', function (Blueprint $table) {
-            $table->string('id');
-            $table->string('user_id');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();

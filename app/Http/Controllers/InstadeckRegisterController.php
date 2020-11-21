@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use App\User;
+use App\Models\User;
+use App\Mail\InstadeckNewUserWelcomeMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\InstadeckNewUserWelcomeMail;
 
 class InstadeckRegisterController extends Controller
 {
@@ -57,8 +56,8 @@ class InstadeckRegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'id' => ['required', 'string', 'max:255', 'unique:users'],
-            'fullname' => ['required', 'string', 'max:255', 'unique:users'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'fullname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -74,7 +73,7 @@ class InstadeckRegisterController extends Controller
     {
         Mail::to($data['email'])->send(new InstadeckNewUserWelcomeMail());
         return User::create([
-            'id' => $data['id'],
+            'username' => $data['username'],
             'fullname' => $data['fullname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

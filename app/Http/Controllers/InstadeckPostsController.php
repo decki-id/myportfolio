@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-use App\InstadeckPost;
+use App\Models\InstadeckPost;
 
 class InstadeckPostsController extends Controller
 {
@@ -45,7 +45,7 @@ class InstadeckPostsController extends Controller
             'caption' => $dhsData['caption'],
         ]);
 
-        return redirect('/instadeck/profile/' . auth()->user()->id);
+        return redirect('/instadeck/profile/' . auth()->user()->username);
     }
 
     public function show(InstadeckPost $post)
@@ -53,5 +53,12 @@ class InstadeckPostsController extends Controller
         $follows = (auth()->user()) ? auth()->user()->following->contains($post->user->id) : false;
 
         return view('/instadeck/show', compact('post', 'follows'));
+    }
+
+    public function explore()
+    {
+        $posts = InstadeckPost::all();
+
+        return view('/instadeck/explore', compact('posts'));
     }
 }

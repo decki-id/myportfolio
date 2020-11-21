@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = HOME;
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -42,6 +42,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/instadeck/login');
+        return redirect('/welcome');
     }
 }

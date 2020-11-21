@@ -1,20 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class InstadeckProfile extends Model
 {
     protected $guarded = [];
-
-    protected $keyType = 'string';
-
-    public $incrementing = false;
-
+    
     public function profileImage()
     {
-        $dhsImagePath = ($this->image) ? $this->image : '/profile/user.jpg';
+        $dhsImagePath = ($this->image) ? $this->image : '/profile/default_user.png';
         return '/storage/' . $dhsImagePath;
     }
 

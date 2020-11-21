@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\InstadeckProfile;
-use App\User;
+use App\Models\InstadeckProfile;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class InstadeckProfilePolicy

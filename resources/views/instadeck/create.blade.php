@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group row pt-3">
                     <div class="col"><button class="form-control btn btn-primary">Post</button></div>
-                    <div class="col"><a href="/instadeck/profile/{{ Auth::user()->id }}" class="form-control btn btn-danger">Cancel</a></div>
+                    <div class="col"><a href="/instadeck/profile/{{ Auth::user()->username }}" class="form-control btn btn-danger">Cancel</a></div>
                 </div>
             </form>
         </div>

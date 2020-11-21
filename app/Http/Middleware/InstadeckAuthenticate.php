@@ -15,7 +15,7 @@ class InstadeckAuthenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('instadeck.login');
+            return route('instadeck.login.form');
         }
     }
 }

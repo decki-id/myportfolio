@@ -15,8 +15,8 @@ class CreatesInstadeckProfileUserPivotTable extends Migration
     {
         Schema::create('instadeck_profile_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('instadeck_profile_id');
-            $table->string('user_id');
+            $table->unsignedBigInteger('instadeck_profile_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

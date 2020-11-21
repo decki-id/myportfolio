@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-6">
                     <div class="d-flex justify-content-start align-items-center">
-                        <h5 class="pr-3 dhs_h5">{{ $user->id }}</h5>
+                        <h5 class="pr-3 dhs_h5">{{ $user->username }}</h5>
                         @guest
                             <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                         @else
@@ -33,7 +33,7 @@
                     @can ('update', $user->profile)
                         <div class="d-flex justify-content-end align-items-center">
                             <a href="/instadeck/post/create" class="btn btn-sm btn-primary mr-3">Create New Post</a>
-                            <a href="/instadeck/profile/{{ $user->id }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
+                            <a href="/instadeck/profile/{{ $user->username }}/edit" class="btn btn-sm btn-success">Edit Profile</a>
                         </div>
                     @endcan
                 </div>
@@ -45,6 +45,7 @@
                 <div id="dhs_profile-detail-responsive">
                     <div class="d-flex justify-content-start align-items-center">
                         @guest
+                            <h5 class="pr-3 dhs_h5">{{ $user->username }}</h5> 
                             <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                         @else
                             @if ($user->id != auth()->user()->id)
@@ -77,7 +78,7 @@
             <div class="row" id="dhs_bottom-btn">
                 @can ('update', $user->profile)
                     <div class="col">
-                        <a href="/instadeck/profile/{{ $user->id }}/edit" class="form-control btn btn-success">Edit Profile</a>
+                        <a href="/instadeck/profile/{{ $user->username }}/edit" class="form-control btn btn-success">Edit Profile</a>
                     </div>
                 @endcan
             </div>

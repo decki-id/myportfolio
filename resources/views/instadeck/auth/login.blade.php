@@ -10,7 +10,7 @@
                 <div class="card-header text-center">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('instadeck.login') }}">
                         @csrf
 
                         <div class="form-group row">

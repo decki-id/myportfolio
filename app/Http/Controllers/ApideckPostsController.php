@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ApideckPost;
+use App\Models\ApideckPost;
 
 class ApideckPostsController extends Controller
 {
