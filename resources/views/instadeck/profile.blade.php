@@ -11,11 +11,12 @@
                 </div>
                 <div class="col-6">
                     <div class="d-flex justify-content-start align-items-center">
-                        <h5 class="pr-3 dhs_h5">{{ $user->username }}</h5>
                         @guest
+                            <h5 class="pr-3 dhs_h5">{{ $user->username }}</h5>
                             <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                         @else
                             @if ($user->id != auth()->user()->id)
+                                <h5 class="pr-3 dhs_h5">{{ $user->username }}</h5>
                                 <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                             @endif
                         @endguest
