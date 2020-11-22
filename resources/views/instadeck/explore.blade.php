@@ -11,23 +11,26 @@
             </div>
         </div>
         <div class="row pt-4">
-            @foreach($posts as $post)
-                <div class="col-4 pb-4">
-                    <a href="/instadeck/post/{{ $post->id }}">
-                        <img src="/storage/{{ $post->image }}" class="w-100">
-                    </a>
-                    @if(empty($post))
-                        @for($a = 0; $a < count($unsplashApi); $a++)
-                        {{ dd($unsplashApi) }}
-                            @foreach($unsplashApi as $unsplash)
-                                <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
-                                    <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
-                                </a>
-                            @endforeach
-                        @endfor
-                    @endif
-                </div>
-            @endforeach
+            @if(!empty($posts))
+                @foreach($posts as $post)
+                    <div class="col-4 pb-4">
+                        <a href="/instadeck/post/{{ $post->id }}">
+                            <img src="/storage/{{ $post->image }}" class="w-100">
+                        </a>
+                    </div>
+                @endforeach
+            @else
+                @for($a = 0; $a < count($unsplashApi); $a++)
+                    {{ dd($unsplashApi) }}
+                    @foreach($unsplashApi as $unsplash)
+                        <div class="col-4 pb-4">
+                            <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
+                                <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
+                            </a>
+                        </div>
+                    @endforeach
+                @endfor
+            @endif
         </div>
     </div>
 @endsection
