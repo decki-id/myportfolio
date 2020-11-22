@@ -53,6 +53,7 @@ Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('i
 Route::post('/instadeck/post', 'InstadeckPostsController@store')->name('instadeck.post.store');
 Route::get('/instadeck/post/{post}', 'InstadeckPostsController@show')->name('instadeck.post.show');
 Route::get('/instadeck/explore', 'InstadeckPostsController@explore')->name('instadeck.explore');
+Route::post('/instadeck/search/{search}', 'InstadeckSearchController@index')->name('instadeck.search');
 Route::get('/instadeck/profile/{username}', 'InstadeckProfilesController@index')->name('instadeck.profile.show');
 Route::get('/instadeck/profile/{username}/edit', 'InstadeckProfilesController@edit')->name('instadeck.profile.edit');
 Route::patch('/instadeck/profile/{username}', 'InstadeckProfilesController@update')->name('instadeck.profile.update');

@@ -28,9 +28,9 @@
             <div class="container">
                 <div id="dhs_navbar-brand"><a class="navbar-brand" href="/instadeck">InstaDeck</a></div>
                 @if (Route::currentRouteName() == 'instadeck.explore')
-                    <a href="#" class="navbar-toggler" onclick="searchBar()"><i class="fas fa-fw fa-search"></i></a>
+                    <a href="#" class="navbar-toggler" onclick="searchToggle()"><i class="fas fa-fw fa-search"></i></a>
                     <div class="input-group" id="dhs_search-bar">
-                        <input type="text" class="form-control rounded-left">
+                        <input name="search" type="text" class="form-control rounded-left dhs_search-input" value="{{ old('search') }}" autocomplete="search" placeholder="Search..." onkeyup="searchBar()">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-fw fa-search"></i></span>
                         </div>

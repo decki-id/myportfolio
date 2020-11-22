@@ -5,13 +5,12 @@
 @section('content')
     <div class="container">
         <div class="input-group" id="dhs_search-bar-responsive">
-            <input type="text" class="form-control rounded-left">
+            <input name="search" type="text" class="form-control rounded-left dhs_search-input" value="{{ old('search') }}" autocomplete="search" placeholder="Search..." onkeyup="searchBar()">
             <div class="input-group-append">
                 <span class="input-group-text"><i class="fas fa-fw fa-search"></i></span>
             </div>
         </div>
         <div class="row pt-4">
-            @if(!empty($posts))
                 @foreach($posts as $post)
                     <div class="col-4 pb-4">
                         <a href="/instadeck/post/{{ $post->id }}">
@@ -19,19 +18,6 @@
                         </a>
                     </div>
                 @endforeach
-            @else
-                @for($a = 0; $a < $unsplashApi; $a++)
-                    @foreach($unsplashApi as $unsplash)
-                        @if(isset($unsplash[$a]))
-                            <div class="col-4 pb-4">
-                                <a href="{{ $unsplash[$a]['urls']['regular'] }}">
-                                    <img src="{{ $unsplash[$a]['urls']['regular'] }}" class="w-100 h-100">
-                                </a>
-                            </div>
-                        @endif
-                    @endforeach
-                @endfor
-            @endif
         </div>
     </div>
 @endsection

@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 use App\Models\InstadeckPost;
 
 class InstadeckPostsController extends Controller
@@ -61,16 +59,6 @@ class InstadeckPostsController extends Controller
     {
         $posts = InstadeckPost::all();
 
-        $client = new Client();
-
-        $response = $client->request('GET', "https://api.unsplash.com/photos/random/?count=30&client_id=0sYAE26S0cpbfLbSE5EaVuA6cpE91GOpU1OhlQ1IKDs");
-
-        $content = $response->getBody()->getContents();
-
-        $unsplashApi = json_decode($content, true);
-
-        dd($unsplashApi);
-
-        return view('/instadeck/explore', compact('posts', 'unsplashApi'));
+        return view('/instadeck/explore', compact('posts'));
     }
 }
