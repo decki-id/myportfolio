@@ -16,7 +16,7 @@
                     @if(isset($unsplash[$a]))
                         <div class="col-4 pb-4">
                             <a href="{{ $unsplash[$a]['urls']['small'] }}">
-                                <img src="{{ $unsplash[$a]['urls']['small'] }}" class="w-100 h-100">
+                                <img src="{{ $unsplash[$a]['id'] }}" class="w-100 h-100">
                             </a>
                         </div>
                     @endif
