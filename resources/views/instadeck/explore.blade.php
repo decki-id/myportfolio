@@ -16,13 +16,15 @@
                     <a href="/instadeck/post/{{ $post->id }}">
                         <img src="/storage/{{ $post->image }}" class="w-100">
                     </a>
-                    @for($a = 0; $a < count($unsplashApi); $a++)
-                        @foreach($unsplashApi as $unsplash)
-                            <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
-                                <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
-                            </a>
-                        @endforeach
-                    @endfor
+                    @if(empty($post))
+                        @for($a = 0; $a < count($unsplashApi); $a++)
+                            @foreach($unsplashApi as $unsplash)
+                                <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
+                                    <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
+                                </a>
+                            @endforeach
+                        @endfor
+                    @endif
                 </div>
             @endforeach
         </div>
