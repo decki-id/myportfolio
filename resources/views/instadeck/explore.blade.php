@@ -19,9 +19,13 @@
                                 <img src="/storage/{{ $post->image }}" class="w-100">
                             </a>
                         @else
-                            <a href="#">
-                                <img src="https://source.unsplash.com/random/800x800" class="w-100">
-                            </a>
+                            @for($a = 0; $a < count($unsplashApi); $a++)
+                                @foreach($unsplashApi as $unsplash)
+                                    <a href="#">
+                                        <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
+                                    </a>
+                                @endforeach
+                            @endfor
                         @endif
                     </div>
                 @endforeach
