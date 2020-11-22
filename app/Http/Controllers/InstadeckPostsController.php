@@ -63,11 +63,7 @@ class InstadeckPostsController extends Controller
 
         $client = new Client();
 
-        try {
-            $response = $client->request('GET', "https://api.unsplash.com/photos/random/?count=30&client_id=0sYAE26S0cpbfLbSE5EaVuA6cpE91GOpU1OhlQ1IKDs");
-        } catch (RequestException $e) {
-            return redirect()->route('instadeck.explore');
-        }
+        $response = $client->request('GET', "https://api.unsplash.com/photos/random/?count=30&client_id=0sYAE26S0cpbfLbSE5EaVuA6cpE91GOpU1OhlQ1IKDs");
 
         $content = $response->getBody()->getContents();
 
