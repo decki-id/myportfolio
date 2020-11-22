@@ -11,20 +11,27 @@
             </div>
         </div>
         <div class="row pt-4">
-            @foreach($posts as $post)
-                <div class="col-4 pb-4">
-                    <a href="/instadeck/post/{{ $post->id }}">
-                        <img src="/storage/{{ $post->image }}" class="w-100 h-100">
-                    </a>
-                </div>
-            @endforeach
-        </div>
-        <div class="row">
-            <div class="col-12 pb-4">
-                <a href="{{ $unsplashApi[0]['urls']['regular'] }}">
-                    <img src="{{ $unsplashApi[0]['urls']['regular'] }}" class="w-100 h-100">
-                </a>
-            </div>
+            @if(!empty($posts))
+                @foreach($posts as $post)
+                    <div class="col-4 pb-4">
+                        <a href="/instadeck/post/{{ $post->id }}">
+                            <img src="/storage/{{ $post->image }}" class="w-100 h-100">
+                        </a>
+                    </div>
+                @endforeach
+            @else
+                @for($a = 0; $a < $unsplashApi; $a++)
+                    @foreach($unsplashApi as $unsplash)
+                        @if(isset($unsplash[$a]))
+                            <div class="col-4 pb-4">
+                                <a href="{{ $unsplash[$a]['urls']['regular'] }}">
+                                    <img src="{{ $unsplash[$a]['urls']['regular'] }}" class="w-100 h-100">
+                                </a>
+                            </div>
+                        @endif
+                    @endforeach
+                @endfor
+            @endif
         </div>
     </div>
 @endsection
