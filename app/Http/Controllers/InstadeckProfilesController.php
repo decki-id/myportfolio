@@ -65,7 +65,7 @@ class InstadeckProfilesController extends Controller
             }
             
             $dhsImagePath = request('image')->store('profile', 'public');
-            $dhsImage = Image::make(public_path("storage/{$dhsImagePath}"));
+            $dhsImage = Image::make(public_path("storage/{$dhsImagePath}"))->fit(800, 800);
             $dhsImage->save();
 
             auth()->user()->profile()->update(array_merge(
