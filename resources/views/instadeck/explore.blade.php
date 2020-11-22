@@ -14,6 +14,7 @@
             @for($a = 0; $a < count($unsplashApi); $a++)
                 @foreach($unsplashApi as $unsplash)
                     @if(isset($unsplash[$a]))
+                        {{ dd($unsplash[$a]['urls']['small']) }}
                         <div class="col-4 pb-4">
                             <a href="{{ $unsplash[$a]['urls']['small'] }}">
                                 <img src="{{ $unsplash[$a]['urls']['small'] }}" class="w-100">
