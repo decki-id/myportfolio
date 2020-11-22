@@ -3,7 +3,7 @@
 @section('title', 'InstaDeck || Explore')
 
 @section('content')
-    @if (isset($posts))
+    @if(isset($posts))
         <div class="container">
             <div class="input-group" id="dhs_search-bar-responsive">
                 <input type="text" class="form-control rounded-left">
@@ -14,9 +14,15 @@
             <div class="row pt-4">
                 @foreach($posts as $post)
                     <div class="col-4 pb-4">
-                        <a href="/instadeck/post/{{ $post->id }}">
-                            <img src="/storage/{{ $post->image }}" class="w-100">
-                        </a>
+                        @if(isset($post))
+                            <a href="/instadeck/post/{{ $post->id }}">
+                                <img src="/storage/{{ $post->image }}" class="w-100">
+                            </a>
+                        @else
+                            <a href="#">
+                                <img src="https://source.unsplash.com/random/800x800" class="w-100">
+                            </a>
+                        @endif
                     </div>
                 @endforeach
             </div>

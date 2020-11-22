@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use App\Models\InstadeckPost;
 
 class InstadeckPostsController extends Controller
@@ -17,8 +19,8 @@ class InstadeckPostsController extends Controller
     {
         $users = auth()->user()->following()->pluck('instadeck_profiles.user_id');
 
-        // $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
-        $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(5);
+        // $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(5);
+        $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
 
         return view('/instadeck/index', compact('posts'));
     }
@@ -59,6 +61,20 @@ class InstadeckPostsController extends Controller
     {
         $posts = InstadeckPost::all();
 
-        return view('/instadeck/explore', compact('posts'));
+        $client = new Client();
+
+        try {
+            $response = $client->request('GET', "https://api.unsplash.com/photos/random/?count=30&client_id=0sYAE26S0cpbfLbSE5EaVuA6cpE91GOpU1OhlQ1IKDs");
+        } catch (RequestException $e) {
+            return redirect()->route('instadeck.explore');
+        }
+
+        $content = $response->getBody()->getContents();
+
+        $unsplashApi = json_decode($content);
+
+        dd($unsplashApi);
+
+        return view('/instadeck/explore', compact('posts', 'unsplashApi'));
     }
 }

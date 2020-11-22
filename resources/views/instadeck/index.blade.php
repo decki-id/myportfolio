@@ -39,10 +39,10 @@
             </div>
         @endforeach
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                {{ $posts->links("pagination::bootstrap-4") }}
+                $posts->links("pagination::bootstrap-4")
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection
