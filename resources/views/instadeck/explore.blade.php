@@ -22,17 +22,13 @@
             </div>
         @else
             @for($a = 0; $a < count($unsplashApi); $a++)
-                <div class="row pt-4">
-                    @foreach($unsplashApi as $unsplash)
-                        @if(isset($unsplash[$a]))
-                            <div class="col-12 pb-4">
-                                <a href="{{ $unsplash[$a]['urls']['regular'] }}">
-                                    <img src="{{ $unsplash[$a]['urls']['regular'] }}" class="w-100 h-100">
-                                </a>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
+                @if(isset($unsplash[$a]))
+                    <div class="row pt-4">
+                        <a href="{{ $unsplashApi[$a]['urls']['regular'] }}">
+                            <img src="{{ $unsplashApi[$a]['urls']['regular'] }}" class="w-100 h-100">
+                        </a>
+                    </div>
+                @endif
             @endfor
         @endif
     </div>
