@@ -12,7 +12,7 @@
         </div>
         <div class="row pt-4">
             @foreach($posts as $post)
-                <div class="col-4 pb-4">
+                <div class="col-4">
                     <a href="/instadeck/post/{{ $post->id }}">
                         <img src="/storage/{{ $post->image }}" class="w-100 h-100">
                     </a>
