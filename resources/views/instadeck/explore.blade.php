@@ -20,9 +20,11 @@
             @endforeach
         </div>
         <div class="row pt-4">
-            <a href="{{ $unsplashApi[0]['urls']['regular'] }}">
-                <img src="{{ $unsplashApi[0]['urls']['regular'] }}" class="w-100 h-100">
-            </a>
+            <div class="col-12 pb-4">
+                <a href="{{ $unsplashApi[0]['urls']['regular'] }}">
+                    <img src="{{ $unsplashApi[0]['urls']['regular'] }}" class="w-100 h-100">
+                </a>
+            </div>
         </div>
     </div>
 @endsection
