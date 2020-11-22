@@ -13,7 +13,7 @@
         <div class="row pt-4">
             @for($a = 0; $a < count($unsplashApi); $a++)
                 @foreach($unsplashApi as $unsplash)
-                    @if(isset($unsplash))
+                    @if(isset($unsplash[$a]))
                         <div class="col-4 pb-4">
                             <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
                                 <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
