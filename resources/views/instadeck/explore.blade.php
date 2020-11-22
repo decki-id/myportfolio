@@ -18,6 +18,7 @@
                     </a>
                     @if(empty($post))
                         @for($a = 0; $a < count($unsplashApi); $a++)
+                        {{ dd($unsplashApi) }}
                             @foreach($unsplashApi as $unsplash)
                                 <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
                                     <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
