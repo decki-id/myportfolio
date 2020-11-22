@@ -73,6 +73,10 @@ class InstadeckPostsController extends Controller
 
         $unsplashApi = json_decode($content, true);
 
+        for ($a = 0; $a < count($unsplashApi); $a++) {
+            dd($unsplashApi[$a]['urls']['raw'] . '&w=800&h=800');
+        }
+
         return view('/instadeck/explore', compact('posts', 'unsplashApi'));
     }
 }
