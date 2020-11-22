@@ -24,8 +24,8 @@
                     @foreach($unsplashApi as $unsplash)
                         @if(isset($unsplash[$a]))
                             <div class="col-4 pb-4">
-                                <a href="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}">
-                                    <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100 h-100">
+                                <a href="{{ $unsplash[$a]['urls']['regular'] }}">
+                                    <img src="{{ $unsplash[$a]['urls']['regular'] }}" class="w-100 h-100">
                                 </a>
                             </div>
                         @endif
