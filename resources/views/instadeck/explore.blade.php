@@ -21,6 +21,7 @@
                         @else
                             @for($a = 0; $a < count($unsplashApi); $a++)
                                 @foreach($unsplashApi as $unsplash)
+                                {{ dd($unsplash); }}
                                     <a href="#">
                                         <img src="{{ $unsplash[$a]['urls']['raw'] . '&w=800&h=800' }}" class="w-100">
                                     </a>
