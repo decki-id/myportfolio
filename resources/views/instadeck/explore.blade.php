@@ -4,13 +4,30 @@
 
 @section('content')
     <div class="container">
-        <div class="input-group" id="dhs_search-bar-responsive">
-            <input name="search" type="text" class="form-control rounded-left dhs_search-input" value="{{ old('search') }}" autocomplete="search" placeholder="Search..." onkeyup="searchBar()">
-            <div class="input-group-append">
-                <span class="input-group-text"><i class="fas fa-fw fa-search"></i></span>
-            </div>
+        <div class="input-group dhs_search-bar-responsive">
+            <input id="mobile-search" name="search" type="text" spellcheck="false" class="form-control dhs_search-input" placeholder="Search Users...">
+            <i class="fas fa-fw fa-search dhs_pixel-right-12 dhs_search-icon"></i>
         </div>
-        <div class="row pt-4">
+        @if(isset($user))
+            <div class="row pt-4">
+                @foreach($user as $users)
+                    <div class="col-4 offset-4 d-flex align-items-center bg-white rounded pt-2 pb-2 mb-2" id="dhs_result">
+                        <div class="pr-3">
+                            <a href="/instadeck/profile/{{ $users->username }}" class="dhs_link-dark">
+                                <img src="/storage/{{ $users->user->profile->profileImage() ? $users->user->profile->profileImage() : 'profile/default_user.png' }}" class="rounded-circle dhs_pp-post-detail">
+                            </a>
+                        </div>
+                        <div>
+                            <div class="font-weight-bold d-flex">
+                                <a href="/instadeck/profile/{{ $users->username }}" class="dhs_link-dark mr-1">{{ $users->username }}</a>
+                            </div>
+                            <div>{{ $users->fullname }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @else
+            <div class="row pt-4">
                 @foreach($posts as $post)
                     <div class="col-4 pb-4">
                         <a href="/instadeck/post/{{ $post->id }}">
@@ -18,6 +35,7 @@
                         </a>
                     </div>
                 @endforeach
-        </div>
+            </div>            
+        @endif
     </div>
 @endsection

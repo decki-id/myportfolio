@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ url('assets/jquery/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url('js/instadeck.js') }}"></script>
 
     <!-- Fonts -->
@@ -27,14 +28,18 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-white" id="dhs_navbar">
             <div class="container">
                 <div id="dhs_navbar-brand"><a class="navbar-brand" href="/instadeck">InstaDeck</a></div>
-                @if (Route::currentRouteName() == 'instadeck.explore')
+                @if (Route::currentRouteName() == 'instadeck.explore' || Route::currentRouteName() == 'instadeck.search')
                     <a href="#" class="navbar-toggler" onclick="searchToggle()"><i class="fas fa-fw fa-search"></i></a>
-                    <div class="input-group" id="dhs_search-bar">
-                        <input name="search" type="text" class="form-control rounded-left dhs_search-input" value="{{ old('search') }}" autocomplete="search" placeholder="Search..." onkeyup="searchBar()">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-fw fa-search"></i></span>
+                    <form action="/instadeck/search" method="get">
+                        <div class="input-group" id="dhs_search-bar">
+                            <input id="desktop-search" name="search" type="text" spellcheck="false" class="form-control dhs_search-input" placeholder="Search Users...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary dhs_search-button" type="submit">
+                                    <i class="fas fa-fw fa-search mr-3"></i>{{ __('Search') }}
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 @endif
                 @guest
                     <div class="navbar-nav">

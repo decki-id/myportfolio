@@ -3,26 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use App\Models\InstadeckPost;
+use App\Models\User;
+use App\Models\InstadeckProfile;
 
 class InstadeckSearchController extends Controller
 {
-    public function index(Request $request, $search)
+    public function index()
     {
-        if ($search->ajax()) {
-            $result = User::where(function ($q) use ($search) {
-                $q->where('users.username', 'like', "%{$search}%")
-                ->orwhere('users.fullname', 'like', "%{$search}%");
-            });
+        $posts = InstadeckPost::all();
 
-            if ($result == 'null') {
-                $result = InstadeckPost::where(function ($q) use ($search) {
-                    $q->where('instadeck_posts.caption', 'like', "%{$search}%");
-                });
-            }
-        }
+        return view('/instadeck/explore', compact('posts'));
+    }
 
-        return view('/instadeck/explore', compact('result'))->render();
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+
+        $data = User::where('username', 'like', "%{$search}%")
+                    ->orwhere('fullname', 'like', "%{$search}%")
+                    ->with('user')->get();
+
+        $user = json_decode($data);
+
+        return view('/instadeck/explore', compact('user', 'profileImage'));
     }
 }

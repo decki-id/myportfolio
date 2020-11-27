@@ -54,11 +54,4 @@ class InstadeckPostsController extends Controller
 
         return view('/instadeck/show', compact('post', 'follows'));
     }
-
-    public function explore()
-    {
-        $posts = InstadeckPost::all();
-
-        return view('/instadeck/explore', compact('posts'));
-    }
 }

@@ -1,17 +1,43 @@
+.dhs_pixel-right-20 {
+    right: 20px;
+}
+
+.dhs_pixel-right-12 {
+    right: 12px;
+}
+
+
 /* Search Bar */
 
 #dhs_search-bar {
-    padding: 0 8px;
     display: none !important;
 }
 
-#dhs_search-bar-responsive {
+.dhs_search-bar-responsive {
     display: none !important;
 }
 
-#dhs_search-bar-responsive.show {
+.dhs_search-bar-responsive.show {
     display: -ms-flexbox !important;
     display: flex !important;
+}
+
+.dhs_search-input, .dhs_search-button {
+    border-radius: 0 !important;
+}
+
+.dhs_search-input:focus {
+    box-shadow: none !important;
+}
+
+.dhs_search-icon {
+    position: absolute;
+    top: 30%;
+    z-index: 5;
+}
+
+#dhs_result {
+    border: 1px solid #cfd7df;
 }
 
 
@@ -236,7 +262,7 @@
     }
 
     #dhs_pff-phone, #dhs_profile2,
-    #dhs_search-bar-responsive.show {
+    .dhs_search-bar-responsive.show {
         display: none !important;
     }
 
