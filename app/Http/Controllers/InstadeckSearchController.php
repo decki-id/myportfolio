@@ -18,14 +18,14 @@ class InstadeckSearchController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->search;
 
         $data = User::where('username', 'like', "%{$search}%")
                     ->orwhere('fullname', 'like', "%{$search}%")
-                    ->with('user')->get();
+                    ->with('profile')->get();
 
         $user = json_decode($data);
 
-        return view('/instadeck/explore', compact('user', 'profileImage'));
+        return view('/instadeck/explore', compact('user'));
     }
 }

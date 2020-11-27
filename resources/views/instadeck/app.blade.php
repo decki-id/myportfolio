@@ -30,14 +30,10 @@
                 <div id="dhs_navbar-brand"><a class="navbar-brand" href="/instadeck">InstaDeck</a></div>
                 @if (Route::currentRouteName() == 'instadeck.explore' || Route::currentRouteName() == 'instadeck.search')
                     <a href="#" class="navbar-toggler" onclick="searchToggle()"><i class="fas fa-fw fa-search"></i></a>
-                    <form action="/instadeck/search" method="get">
-                        <div class="input-group" id="dhs_search-bar">
-                            <input id="desktop-search" name="search" type="text" spellcheck="false" class="form-control dhs_search-input" placeholder="Search Users...">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary dhs_search-button" type="submit">
-                                    <i class="fas fa-fw fa-search mr-3"></i>{{ __('Search') }}
-                                </button>
-                            </div>
+                    <form action="/instadeck/search" method="get" class="dhs_search-form">
+                        <div class="input-group dhs_search-bar">
+                            <input id="desktop-search" name="search" type="text" spellcheck="false" autocomplete="off" class="form-control dhs_search-input" placeholder="Search Users...">
+                            <i class="fas fa-fw fa-search dhs_search-icon"></i>
                         </div>
                     </form>
                 @endif
@@ -101,7 +97,7 @@
                     </a>
                 </div>
                 <div class="col text-center">
-                    <a href="/instadeck/explore" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'instadeck.explore' ? 'active' : '' }}" title="Explore">
+                    <a href="/instadeck/explore" class="dhs_mobile-link-dark {{ Route::currentRouteName() == 'instadeck.explore' || Route::currentRouteName() == 'instadeck.search' ? 'active' : '' }}" title="Explore">
                         <i class="fas fa-fw fa-search"></i>
                     </a>
                 </div>
