@@ -37,17 +37,27 @@
 .dhs_search-result {
     border: 1px solid #cfd7df;
     background-color: #fff;
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
     align-items: center;
     display: -ms-flexbox;
     display: flex;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0.5rem 0;
 }
 
 .dhs_search-not-found {
     border: 1px solid #cfd7df;
     background-color: #fff;
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
     text-align: center;
     justify-content: center;
     display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0.5rem 0;
 }
 
 
@@ -307,5 +317,31 @@
         flex-wrap: wrap !important;
         margin-right: -15px !important;
         margin-left: -15px !important;
+    }
+
+    .dhs_search-result {
+        border: 1px solid #cfd7df;
+        background-color: #fff;
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+        align-items: center;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem 0.5rem 0.25rem;
+    }
+
+    .dhs_search-not-found {
+        border: 1px solid #cfd7df;
+        background-color: #fff;
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+        text-align: center;
+        justify-content: center;
+        display: block;
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem 0.5rem 0.25rem;
     }
 }

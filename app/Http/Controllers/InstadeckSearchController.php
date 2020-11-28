@@ -9,6 +9,11 @@ use App\Models\InstadeckProfile;
 
 class InstadeckSearchController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('instadeck.auth');
+    }
+
     public function index()
     {
         $posts = InstadeckPost::all();

@@ -13,7 +13,7 @@
         @if(isset($user))
             <div class="row justify-content-center pt-4">
                 @foreach($user as $users)
-                    <div class="col-5 pt-2 pb-2 ml-1 mr-1 mb-2 dhs_search-result">
+                    <div class="dhs_search-result">
                         <div class="pr-3">
                             <a href="/instadeck/profile/{{ $users->username }}" class="dhs_link-dark">
                                 <img src="/storage/{{ $users->profile->image ? $users->profile->image : 'profile/default_user.png' }}" class="rounded-circle dhs_pp-post-detail">
@@ -28,13 +28,13 @@
                     </div>
                 @endforeach
                 @if(!$user)
-                    <div class="col-5 pt-2 pb-2 ml-1 mr-1 mb-2 dhs_search-not-found">
+                    <div class="dhs_search-not-found">
                         User not found.
                     </div>
                 @endif
             </div>
             <div class="row justify-content-center pt-5 pb-5">
-                <div class="col-5 pt-2 pb-2 ml-1 mr-1 mb-2 dhs_search-not-found">
+                <div class="dhs_search-not-found">
                     <a href="/instadeck/explore">Back to Explore page</a>
                 </div>
             </div>
