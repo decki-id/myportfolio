@@ -18,7 +18,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">Students</h4>
-                            <p class="portfolio-description">A fundamental Students CRUD system with Laravel framework.</p>
+                            <p class="portfolio-description">A fundamental Students CRUD system, built with the Laravel framework.</p>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">InstaDeck</h4>
-                            <p class="portfolio-description">An Instagram clone website, build with Laravel framework & Vue.js Example Component.</p>
+                            <p class="portfolio-description">An Instagram clone website, built with the Laravel framework & Vue.js Example Component.</p>
                         </div>
                     </div>
                 </div>

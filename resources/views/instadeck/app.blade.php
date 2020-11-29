@@ -37,55 +37,36 @@
                         </div>
                     </form>
                 @endif
-                @guest
-                    <div class="navbar-nav">
-                        @if (Route::currentRouteName() == 'instadeck.login.form')
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('instadeck.register.form') }}">{{ __('Register') }}</a>
-                            </li>
-                        @elseif (Route::currentRouteName() == 'instadeck.register.form')
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('instadeck.login.form') }}">{{ __('Login') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item d-flex">
-                                <a class="nav-link" href="{{ route('instadeck.login.form') }}">{{ __('Login') }}</a>
-                                <a class="nav-link" href="{{ route('instadeck.register.form') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    </div>
-                @else
-                    <div class="navbar-nav" id="dhs_navbar-dropdown">
-                        <div class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
-                                {{ Auth::user()->username }}
+                <div class="navbar-nav" id="dhs_navbar-dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                            {{ Auth::user()->username }}
+                        </a>
+                        <div class="dropdown-menu" id="dhs_dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item dhs_dropdown-item" href="/instadeck">
+                                <i class="fas fa-fw fa-home mr-3"></i>{{ __('Home') }}
                             </a>
-                            <div class="dropdown-menu" id="dhs_dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item dhs_dropdown-item" href="/instadeck">
-                                    <i class="fas fa-fw fa-home mr-3"></i>{{ __('Home') }}
-                                </a>
-                                <a class="dropdown-item dhs_dropdown-item" href="/instadeck/explore">
-                                    <i class="fas fa-fw fa-search mr-3"></i>{{ __('Explore') }}
-                                </a>
-                                <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->username }}">
-                                    <i class="fas fa-fw fa-user mr-3"></i>{{ __('Profile') }}
-                                </a>
-                                <a class="dropdown-item dhs_dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-fw fa-power-off mr-3"></i>{{ __('Logout') }}
-                                </a>
-                            </div>
+                            <a class="dropdown-item dhs_dropdown-item" href="/instadeck/explore">
+                                <i class="fas fa-fw fa-search mr-3"></i>{{ __('Explore') }}
+                            </a>
+                            <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->username }}">
+                                <i class="fas fa-fw fa-user mr-3"></i>{{ __('Profile') }}
+                            </a>
+                            <a class="dropdown-item dhs_dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fas fa-fw fa-power-off mr-3"></i>{{ __('Logout') }}
+                            </a>
                         </div>
                     </div>
-                    @if (Route::currentRouteName() == 'instadeck.profile.show')
-                        <div class="navbar-nav" id="dhs_navbar-nav">
-                            <div class="dropdown" id="dhs_dropdown">{{ Request::segment(3) }}</div>
-                        </div>
-                    @endif
-                @endguest
+                </div>
+                @if (Route::currentRouteName() == 'instadeck.profile.show')
+                    <div class="navbar-nav" id="dhs_navbar-nav">
+                        <div class="dropdown" id="dhs_dropdown">{{ Request::segment(3) }}</div>
+                    </div>
+                @endif
             </div>
         </nav>
 
-        <main class="dhs_main-page pb-5 mb-5">
+        <main class="dhs_main-page">
             @yield('content')
         </main>
 

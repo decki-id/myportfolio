@@ -1,3 +1,35 @@
+.bg-instagram {
+    background: #833ab4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dhs_dark-banner {
+    background-color: black;
+    opacity: .7;
+    padding: 20px 40px;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+
+.dhs_dark-banner h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.dhs_dark-banner hr {
+    border-top: 3px dotted #fff;
+}
+
+.dhs_dark-banner p {
+    text-align: justify;
+    color: #fff;
+    line-height: 2;
+    font-size: 16px;
+    margin: 0;
+}
+
+
 /* Search Bar */
 
 .dhs_search-form {
@@ -97,9 +129,14 @@
 
 /* Main page style take over */
 
+.dhs_auth-page {
+    position: relative !important;
+    padding: 80px 0 0 0;
+}
+
 .dhs_main-page {
     position: relative !important;
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 

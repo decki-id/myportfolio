@@ -43,10 +43,10 @@ Route::get('/instadeck/test-email', function () {
 });
 Route::get('/instadeck/instagram-api', 'InstadeckInstagramApiController@index')->name('instadeck.api');
 Route::get('/instadeck/instagram-api/callback', 'InstadeckInstagramApiController@callback')->name('instadeck.api.callback');
-Route::get('/instadeck/register', 'InstadeckRegisterController@showRegistrationForm')->name('instadeck.register.form');
-Route::post('instadeck-register', 'InstadeckRegisterController@register')->name('instadeck.register');
 Route::get('/instadeck/login', 'InstadeckLoginController@showLoginForm')->name('instadeck.login.form');
 Route::post('instadeck-login', 'InstadeckLoginController@login')->name('instadeck.login');
+Route::get('/instadeck/register', 'InstadeckRegisterController@showRegistrationForm')->name('instadeck.register.form');
+Route::post('instadeck-register', 'InstadeckRegisterController@register')->name('instadeck.register');
 Route::post('logout', 'InstadeckLoginController@logout')->name('logout');
 Route::get('/instadeck', 'InstadeckPostsController@index')->name('instadeck.home');
 Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('instadeck.post.create');
