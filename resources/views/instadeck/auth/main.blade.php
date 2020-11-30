@@ -25,7 +25,7 @@
 </head>
 <body class="bg-instagram">
     <div class="row w-100 mx-0" id="app">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <div class="dhs_auth-page">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <main class="dhs_main-page">
                 @yield('content')
             </main>
