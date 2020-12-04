@@ -40,7 +40,7 @@
                         </div>
                         <div class="personal-info1 padd-15">
                             <div class="row">
-                                <div class="info-item padd-15"><p>Birthday: <span>20 November 1993</span></p></div>
+                                <div class="info-item padd-15"><p>Birthdate: <span>20 November 1993</span></p></div>
                                 <div class="info-item padd-15"><p>Marital Status: <span>Single</span></p></div>
                                 <div class="info-item padd-15"><p>Degree: <span>Associate/Diploma of Information Systems</span></p></div>
                             </div>
