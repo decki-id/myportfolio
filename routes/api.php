@@ -2,8 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\ApideckPost;
-use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +22,12 @@ use App\User;
 //     return $post;
 // });
 
-Route::prefix('deck')->group(function () {
-    Route::post('login', 'ApideckUsersController@login');
-    Route::get('user', 'ApideckUsersController@getLoggedIn');
-    Route::apiResource('users', 'ApideckUsersController');
-    Route::apiResource('posts', 'ApideckPostsController');
-});
+// Route::prefix('deck')->group(function () {
+//     Route::post('login', 'ApideckUsersController@login');
+//     Route::get('user', 'ApideckUsersController@getLoggedIn');
+//     Route::apiResource('users', 'ApideckUsersController');
+//     Route::apiResource('posts', 'ApideckPostsController');
+// });
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();

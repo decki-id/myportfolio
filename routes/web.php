@@ -22,15 +22,15 @@ Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
 Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 
-// Students portfolio
-// Route::get('/students', 'StudentsController@index');
-// Route::get('/students/create', 'StudentsController@create');
-// Route::post('/students', 'StudentsController@store');
-// Route::get('/students/{student}', 'StudentsController@show');
-// Route::get('/students/{student}/edit', 'StudentsController@edit');
-// Route::patch('/students/{student}', 'StudentsController@update');
-// Route::delete('/students/{student}', 'StudentsController@destroy');
-Route::resource('/students', 'StudentsController');
+// SisDeck portfolio
+// Route::resource('/sisdeck', 'SisdeckController');
+Route::get('/sisdeck', 'SisdeckController@index');
+Route::get('/sisdeck/create', 'SisdeckController@create');
+Route::post('/sisdeck', 'SisdeckController@store');
+Route::get('/sisdeck/{student}', 'SisdeckController@show');
+Route::get('/sisdeck/{student}/edit', 'SisdeckController@edit');
+Route::patch('/sisdeck/{student}', 'SisdeckController@update');
+Route::delete('/sisdeck/{student}', 'SisdeckController@destroy');
 
 // HelpDeck portfolio
 Route::get('/helpdeck', 'HelpdeckController@index');
