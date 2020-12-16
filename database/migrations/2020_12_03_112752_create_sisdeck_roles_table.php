@@ -14,7 +14,9 @@ class CreateSisdeckRolesTable extends Migration
     public function up()
     {
         Schema::create('sisdeck_roles', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

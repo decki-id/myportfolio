@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSisdeckAdmissionsTable extends Migration
+class CreateSisdeckStudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateSisdeckAdmissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sisdeck_admissions', function (Blueprint $table) {
+        Schema::create('sisdeck_students', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('guardian_name');
-            $table->string('guardian_relation');
-            $table->string('guardian_phone');
             $table->date('birthdate');
             $table->string('gender');
             $table->string('phone')->unique();
@@ -31,11 +28,15 @@ class CreateSisdeckAdmissionsTable extends Migration
             $table->string('nationality');
             $table->integer('post_code');
             $table->text('current_address')->nullable();
+            $table->string('guardian_name');
+            $table->string('guardian_relation');
+            $table->string('guardian_phone');
             $table->tinyInteger('status');
             $table->date('date_registered');
             $table->integer('user_id');
             $table->integer('class_id');
             $table->string('image')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -47,6 +48,6 @@ class CreateSisdeckAdmissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sisdeck_admissions');
+        Schema::dropIfExists('sisdeck_students');
     }
 }

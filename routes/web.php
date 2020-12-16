@@ -22,8 +22,15 @@ Route::get('/portfolios', 'PagesController@portfolios')->name('portfolios');
 Route::get('/blogs', 'PagesController@blogs')->name('blogs');
 Route::get('/welcome', 'PagesController@welcome')->name('welcome');
 
+// Students portfolio
+Route::resource('/students', 'StudentsController');
+
 // SisDeck portfolio
-// Route::resource('/sisdeck', 'SisdeckController');
+Route::get('/sisdeck/login', 'SisdeckLoginController@showLoginForm')->name('sisdeck.login.form');
+Route::post('sisdeck-login', 'SisdeckLoginController@login')->name('sisdeck.login');
+Route::get('/sisdeck/register', 'SisdeckRegisterController@showRegistrationForm')->name('sisdeck.register.form');
+Route::post('sisdeck-register', 'SisdeckRegisterController@register')->name('sisdeck.register');
+Route::post('sisdeck-logout', 'SisdeckLoginController@logout')->name('sisdeck.logout');
 Route::get('/sisdeck', 'SisdeckController@index');
 Route::get('/sisdeck/create', 'SisdeckController@create');
 Route::post('/sisdeck', 'SisdeckController@store');
@@ -47,7 +54,7 @@ Route::get('/instadeck/login', 'InstadeckLoginController@showLoginForm')->name('
 Route::post('instadeck-login', 'InstadeckLoginController@login')->name('instadeck.login');
 Route::get('/instadeck/register', 'InstadeckRegisterController@showRegistrationForm')->name('instadeck.register.form');
 Route::post('instadeck-register', 'InstadeckRegisterController@register')->name('instadeck.register');
-Route::post('logout', 'InstadeckLoginController@logout')->name('logout');
+Route::post('instadeck-logout', 'InstadeckLoginController@logout')->name('instadeck.logout');
 Route::get('/instadeck', 'InstadeckPostsController@index')->name('instadeck.home');
 Route::get('/instadeck/post/create', 'InstadeckPostsController@create')->name('instadeck.post.create');
 Route::post('/instadeck/post', 'InstadeckPostsController@store')->name('instadeck.post.store');

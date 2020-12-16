@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 
-class InstadeckLoginController extends Controller
+class SisdeckLoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ class InstadeckLoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/instadeck';
+    protected $redirectTo = '/sisdeck';
 
     /**
      * Create a new controller instance.
@@ -35,17 +35,17 @@ class InstadeckLoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('instadeck.guest')->except('logout');
+        $this->middleware('sisdeck.guest')->except('logout');
     }
 
     public function showLoginForm()
     {
-        return view('/instadeck/auth/login');
+        return view('/sisdeck/auth/login');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('/instadeck');
+        return redirect('/sisdeck');
     }
 }

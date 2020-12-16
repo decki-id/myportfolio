@@ -52,7 +52,7 @@
                             <a class="dropdown-item dhs_dropdown-item" href="/instadeck/profile/{{ Auth::user()->username }}">
                                 <i class="fas fa-fw fa-user mr-3"></i>{{ __('Profile') }}
                             </a>
-                            <a class="dropdown-item dhs_dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item dhs_dropdown-item" href="{{ route('instadeck.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fas fa-fw fa-power-off mr-3"></i>{{ __('Logout') }}
                             </a>
                         </div>
@@ -93,12 +93,12 @@
                     </a>
                 </div>
                 <div class="col text-center">
-                    <a href="{{ route('logout') }}" class="dhs_mobile-link-dark" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a href="{{ route('instadeck.logout') }}" class="dhs_mobile-link-dark" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="fas fa-fw fa-power-off"></i>
                     </a>
                 </div>
             </div>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            <form id="logout-form" action="{{ route('instadeck.logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
         @endif

@@ -5,7 +5,7 @@
 @section('section')
     <div class="students">
         <h3 class="text-center mt-3 mb-3">Student Form</h3>
-        <form method="post" action="/sisdeck">
+        <form method="post" action="/students">
             @csrf
             <div class="form-group">
                 <label for="name">Name</label>
@@ -35,7 +35,7 @@
                 </select>
                 @error('majors') <div class="invalid-feedback">{{$message}}</div> @enderror
             </div>
-            <a href="/sisdeck" class="btn btn-secondary float-right ml-1">Cancel</a>
+            <a href="/students" class="btn btn-secondary float-right ml-1">Cancel</a>
             <button type="submit" class="btn btn-primary float-right">Submit</button>
         </form>
     </div>

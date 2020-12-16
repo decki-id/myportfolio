@@ -59,8 +59,7 @@
                     </ul>
                 </div>
                 <div class="copyright">
-                    <?php $year = date('Y'); ?>
-                    &copy <?= $year; ?><br>Deckiherdiawans.<br>All Rights Reserved.
+                    &copy {{ date('Y') }}<br>Deckiherdiawans.<br>All Rights Reserved.
                 </div>
             </div>
         </div>
