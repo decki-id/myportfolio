@@ -18,7 +18,7 @@
         <div class="dhs-topbar">
             <div class="dhs-navtoggler"><i class="fas fa-fw fa-bars"></i></div>
             <a href="#" class="dhs-logo"><h1>HelpDeck</h1></a>
-            <div class="dhs-usericon"><img src="{{url('assets/images/user.jpg')}}" class="dhs-profilepicture"></div>
+            <div class="dhs-usericon"><img src="{{url('assets/images/default_user2.jpg')}}" class="dhs-profilepicture"></div>
         </div>
         <div class="dhs-userdropdownmenu">
             <div class="dhs-userinfo">
