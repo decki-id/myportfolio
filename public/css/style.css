@@ -217,16 +217,16 @@ body {
     line-height: 50px;
     display: block;
     border-bottom: 1px solid #e3dfec;
+}
+
+.sidebar .nav li a i {
+    margin-right: 10px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 
-.sidebar .nav li a:not(.active):hover {
-    padding-left: 10px;
-}
-
-.sidebar .nav li a i {
-    margin-right: 5px;
+.sidebar .nav li a:not(.active):hover i {
+    margin-right: 20px;
 }
 
 .copyright {
