@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <main class="dhs_main-page">
+            <main class="dhs_auth-form">
                 @yield('content')
             </main>
         </div>
