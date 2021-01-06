@@ -10,12 +10,12 @@
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
-                    <p>InfyOm</p>
+                    <p>SisDeck</p>
                 @else
                     <p>{{ Auth::user()->username }}</p>
                 @endif
                 <!-- Status -->
-                <a href="#"><i class="fas fa-circle text-success"></i> Online</a>
+                <a href="#"><i class="fas fa-fw fa-circle text-success mr-1"></i>Online</a>
             </div>
         </div>
 

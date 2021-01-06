@@ -33,7 +33,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/sisdeck') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/sisdeck') }}">SisDeck</a>
     </div>
 
     <div class="register-box-body">

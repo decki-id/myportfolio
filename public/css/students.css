@@ -101,6 +101,10 @@ body {
     display: block;
 }
 
+.col-header h3 {
+    margin: 0;
+}
+
 .col-button {
     text-align: right;
 }
@@ -159,8 +163,16 @@ body {
         text-align: center;
     }
 
+    .col-header h3 {
+        margin: 0 0 8px 0;
+    }
+
     .col-button {
         text-align: center;
+    }
+
+    .dhs_button {
+        display: block;
     }
 }
 

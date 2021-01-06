@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <link rel="icon" type="image/png" href="{{ url('assets/images/decki-revota.jpg') }}">
     <title>@yield('title')</title>
 
     <!-- Bootstrap 4.4.1 -->
@@ -34,9 +36,9 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b class="logo-lg">InfyOm</b>
+                <b class="logo-lg">SisDeck</b>
                 <div class="logo-mini">
-                    <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" id="dhs_image" alt="User Image"/>
+                    <img src="{{ url('assets/images/DeckiRevota.jpg') }}" id="dhs_image" alt="User Image"/>
                 </div>
             </a>
 

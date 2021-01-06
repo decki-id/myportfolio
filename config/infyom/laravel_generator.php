@@ -174,7 +174,7 @@ return [
 
             'enabled'       => true,
 
-            'menu_file'     => 'layouts/menu.blade.php',
+            'menu_file'     => 'sisdeck/layouts/menu.blade.php',
         ],
     ],
 
