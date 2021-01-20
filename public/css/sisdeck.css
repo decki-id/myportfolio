@@ -64,6 +64,10 @@ body {
     text-align: center;
 }
 
+.sidebar-menu {
+    overflow-y: auto;
+}
+
 @media (min-width: 580px) {
     .dhs_col-header {
         text-align: left;

@@ -3,7 +3,7 @@
 @section('title', 'SisDeck | Update Course')
 
 @section('content')
-    <section class="content-header text-center"><h3 class="mb-0">Course</h3></section>
+    <section class="content-header text-center"><h3 class="mb-0">Update Course</h3></section>
     <div class="content">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary">

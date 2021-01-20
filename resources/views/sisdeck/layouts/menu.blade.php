@@ -16,3 +16,18 @@
 <li class="{{ Route::currentRouteName() == 'sisdeck.courses.index' || Route::currentRouteName() == 'sisdeck.courses.create' || Route::currentRouteName() == 'sisdeck.courses.show' || Route::currentRouteName() == 'sisdeck.courses.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.courses.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Courses</span></a>
 </li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.faculties.index' || Route::currentRouteName() == 'sisdeck.faculties.create' || Route::currentRouteName() == 'sisdeck.faculties.show' || Route::currentRouteName() == 'sisdeck.faculties.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.faculties.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Faculties</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.times.index' || Route::currentRouteName() == 'sisdeck.times.create' || Route::currentRouteName() == 'sisdeck.times.show' || Route::currentRouteName() == 'sisdeck.times.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.times.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Times</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.attendances.index' || Route::currentRouteName() == 'sisdeck.attendances.create' || Route::currentRouteName() == 'sisdeck.attendances.show' || Route::currentRouteName() == 'sisdeck.attendances.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.attendances.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Attendances</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.academics.index' || Route::currentRouteName() == 'sisdeck.academics.create' || Route::currentRouteName() == 'sisdeck.academics.show' || Route::currentRouteName() == 'sisdeck.academics.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.academics.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Academics</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.days.index' || Route::currentRouteName() == 'sisdeck.days.create' || Route::currentRouteName() == 'sisdeck.days.show' || Route::currentRouteName() == 'sisdeck.days.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.days.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Days</span></a>
+</li>

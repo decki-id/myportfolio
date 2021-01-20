@@ -30,9 +30,9 @@
         </form>
         <!-- Sidebar Menu -->
 
-        <ul class="sidebar-menu" data-widget="tree">
+        <div class="sidebar-menu" data-widget="tree">
             @include('/sisdeck/layouts/menu')
-        </ul>
+        </div>
         <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
