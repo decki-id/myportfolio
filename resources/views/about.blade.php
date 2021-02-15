@@ -20,12 +20,12 @@
                             </h3>
                             <p>
                                 Hi! My name is Decki Herdiawan Soepandi. I currently work as a Customer Support at PT. Ava Revota, an IT 
-                                consultant company, for more than two years and a half. My last education degree for now is an Associate/Diploma 
-                                of Information Systems, graduated in March 2020 from LPKIA. I want to start my job as a programmer, whether it 
-                                freelance or a full-time job. I can build a website or a web-based software with PHP (CodeIgniter & Laravel 
-                                framework) or NodeJS for the back-end, and CSS & JavaScript for the front-end. I can also build a mobile/desktop 
-                                software with Java (NetBeans & Android Studio), Visual Basic & C# (Visual Studio 2019). I live in Padalarang, 
-                                but my activities mostly based in Bandung city.
+                                consultant for apparel industry, for more than three years. My last education degree for now is an
+                                Associate/Diploma of Information Systems, graduated in March 2020 from LPKIA. I want to start my job as a
+                                programmer, whether it freelance or a full-time job. I can build a website or a web-based software with PHP
+                                (CodeIgniter and Laravel framework), Python, and NodeJS for the back-end. For the front-end, I am familiar
+                                with CSS and JavaScript. I can also build a mobile/desktop software with Java (NetBeans and Android Studio),
+                                and C# (Visual Studio 2019). I live in Padalarang, but my activities mostly based in Bandung city.
                             </p>
                         </div>
                     </div>
