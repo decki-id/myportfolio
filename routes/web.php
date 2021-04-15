@@ -133,6 +133,27 @@ Route::get('/sisdeck/days/{day}', 'SisdeckDayController@show')->name('sisdeck.da
 Route::delete('/sisdeck/days/{day}', 'SisdeckDayController@destroy')->name('sisdeck.days.destroy');
 Route::patch('/sisdeck/days/{day}', 'SisdeckDayController@update')->name('sisdeck.days.update');
 Route::get('/sisdeck/days/{day}/edit', 'SisdeckDayController@edit')->name('sisdeck.days.edit');
+Route::get('/sisdeck/class_assignings', 'SisdeckClassAssigningController@index')->name('sisdeck.class_assignings.index');
+Route::post('/sisdeck/class_assignings', 'SisdeckClassAssigningController@store')->name('sisdeck.class_assignings.store');
+Route::get('/sisdeck/class_assignings/create', 'SisdeckClassAssigningController@create')->name('sisdeck.class_assignings.create');
+Route::get('/sisdeck/class_assignings/{class_assigning}', 'SisdeckClassAssigningController@show')->name('sisdeck.class_assignings.show');
+Route::delete('/sisdeck/class_assignings/{class_assigning}', 'SisdeckClassAssigningController@destroy')->name('sisdeck.class_assignings.destroy');
+Route::patch('/sisdeck/class_assignings/{class_assigning}', 'SisdeckClassAssigningController@update')->name('sisdeck.class_assignings.update');
+Route::get('/sisdeck/class_assignings/{class_assigning}/edit', 'SisdeckClassAssigningController@edit')->name('sisdeck.class_assignings.edit');
+Route::get('/sisdeck/class_schedulings', 'SisdeckClassSchedulingController@index')->name('sisdeck.class_schedulings.index');
+Route::post('/sisdeck/class_schedulings', 'SisdeckClassSchedulingController@store')->name('sisdeck.class_schedulings.store');
+Route::get('/sisdeck/class_schedulings/create', 'SisdeckClassSchedulingController@create')->name('sisdeck.class_schedulings.create');
+Route::get('/sisdeck/class_schedulings/{class_scheduling}', 'SisdeckClassSchedulingController@show')->name('sisdeck.class_schedulings.show');
+Route::delete('/sisdeck/class_schedulings/{class_scheduling}', 'SisdeckClassSchedulingController@destroy')->name('sisdeck.class_schedulings.destroy');
+Route::patch('/sisdeck/class_schedulings/{class_scheduling}', 'SisdeckClassSchedulingController@update')->name('sisdeck.class_schedulings.update');
+Route::get('/sisdeck/class_schedulings/{class_scheduling}/edit', 'SisdeckClassSchedulingController@edit')->name('sisdeck.class_schedulings.edit');
+Route::get('/sisdeck/transactions', 'SisdeckTransactionController@index')->name('sisdeck.transactions.index');
+Route::post('/sisdeck/transactions', 'SisdeckTransactionController@store')->name('sisdeck.transactions.store');
+Route::get('/sisdeck/transactions/create', 'SisdeckTransactionController@create')->name('sisdeck.transactions.create');
+Route::get('/sisdeck/transactions/{transaction}', 'SisdeckTransactionController@show')->name('sisdeck.transactions.show');
+Route::delete('/sisdeck/transactions/{transaction}', 'SisdeckTransactionController@destroy')->name('sisdeck.transactions.destroy');
+Route::patch('/sisdeck/transactions/{transaction}', 'SisdeckTransactionController@update')->name('sisdeck.transactions.update');
+Route::get('/sisdeck/transactions/{transaction}/edit', 'SisdeckTransactionController@edit')->name('sisdeck.transactions.edit');
 
 // HelpDeck portfolio
 Route::get('/helpdeck', 'HelpdeckController@index');

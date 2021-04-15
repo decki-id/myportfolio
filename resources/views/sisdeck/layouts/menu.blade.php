@@ -31,3 +31,12 @@
 <li class="{{ Route::currentRouteName() == 'sisdeck.days.index' || Route::currentRouteName() == 'sisdeck.days.create' || Route::currentRouteName() == 'sisdeck.days.show' || Route::currentRouteName() == 'sisdeck.days.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.days.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Days</span></a>
 </li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.class_assignings.index' || Route::currentRouteName() == 'sisdeck.class_assignings.create' || Route::currentRouteName() == 'sisdeck.class_assignings.show' || Route::currentRouteName() == 'sisdeck.class_assignings.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.class_assignings.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Class Assignings</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.class_schedulings.index' || Route::currentRouteName() == 'sisdeck.class_schedulings.create' || Route::currentRouteName() == 'sisdeck.class_schedulings.show' || Route::currentRouteName() == 'sisdeck.class_schedulings.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.class_schedulings.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Class Schedulings</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.transactions.index' || Route::currentRouteName() == 'sisdeck.transactions.create' || Route::currentRouteName() == 'sisdeck.transactions.show' || Route::currentRouteName() == 'sisdeck.transactions.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.transactions.index') }}"><i class="fas fa-fw fa-edit mr-2"></i><span>Transactions</span></a>
+</li>
