@@ -17,6 +17,7 @@ class SisdeckTransactionController extends AppBaseController
 
     public function __construct(SisdeckTransactionRepository $sisdeckTransactionRepo)
     {
+        $this->middleware('sisdeck.auth');
         $this->sisdeckTransactionRepository = $sisdeckTransactionRepo;
     }
 

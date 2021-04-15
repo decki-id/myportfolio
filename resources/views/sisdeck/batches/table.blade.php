@@ -13,7 +13,7 @@
                 <td>
                     {!! Form::open(['route' => ['sisdeckBatches.destroy', $sisdeckBatch->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('sisdeck.batches.show', [$sisdeckBatch->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye-open"></i></a>
+                        <a href="{{ route('sisdeck.batches.show', [$sisdeckBatch->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
                         <a href="{{ route('sisdeck.batches.edit', [$sisdeckBatch->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>

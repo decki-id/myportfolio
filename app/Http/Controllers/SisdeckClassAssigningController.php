@@ -17,6 +17,7 @@ class SisdeckClassAssigningController extends AppBaseController
 
     public function __construct(SisdeckClassAssigningRepository $sisdeckClassAssigningRepo)
     {
+        $this->middleware('sisdeck.auth');
         $this->sisdeckClassAssigningRepository = $sisdeckClassAssigningRepo;
     }
 

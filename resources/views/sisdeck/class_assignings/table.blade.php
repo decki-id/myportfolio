@@ -25,7 +25,7 @@
                 <td>
                     {!! Form::open(['route' => ['sisdeck.class_assignings.destroy', $sisdeckClassAssigning->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('sisdeck.class_assignings.show', [$sisdeckClassAssigning->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye-open"></i></a>
+                        <a href="{{ route('sisdeck.class_assignings.show', [$sisdeckClassAssigning->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
                         <a href="{{ route('sisdeck.class_assignings.edit', [$sisdeckClassAssigning->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>

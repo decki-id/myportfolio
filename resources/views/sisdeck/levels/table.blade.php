@@ -17,7 +17,7 @@
                 <td>
                     {!! Form::open(['route' => ['sisdeck.levels.destroy', $sisdeckLevel->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('sisdeck.levels.show', [$sisdeckLevel->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye-open"></i></a>
+                        <a href="{{ route('sisdeck.levels.show', [$sisdeckLevel->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
                         <a href="{{ route('sisdeck.levels.edit', [$sisdeckLevel->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>

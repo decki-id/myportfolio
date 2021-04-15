@@ -19,7 +19,7 @@
                 <td>
                     {!! Form::open(['route' => ['sisdeck.faculties.destroy', $sisdeckFaculty->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('sisdeck.faculties.show', [$sisdeckFaculty->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye-open"></i></a>
+                        <a href="{{ route('sisdeck.faculties.show', [$sisdeckFaculty->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
                         <a href="{{ route('sisdeck.faculties.edit', [$sisdeckFaculty->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>

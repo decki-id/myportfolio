@@ -17,6 +17,7 @@ class SisdeckClassSchedulingController extends AppBaseController
 
     public function __construct(SisdeckClassSchedulingRepository $sisdeckClassSchedulingRepo)
     {
+        $this->middleware('sisdeck.auth');
         $this->sisdeckClassSchedulingRepository = $sisdeckClassSchedulingRepo;
     }
 
