@@ -32,15 +32,10 @@
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
-        <header class="main-header">
+        <header class="main-header position-fixed">
 
             <!-- Logo -->
-            <a href="#" class="logo">
-                <b class="logo-lg">SisDeck</b>
-                <div class="logo-mini">
-                    <img src="{{ url('assets/images/DeckiRevota.jpg') }}" id="dhs_image" alt="User Image"/>
-                </div>
-            </a>
+            <a href="#" class="logo"><b class="logo-lg">SisDeck</b></a>
 
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -97,13 +92,12 @@
 
         <div class="content-wrapper">
             @yield('content')
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com">Deckiherdiawans</a>.</strong> All rights reserved.
+            </footer>
         </div>
-
-        <!-- Main Footer -->
-        <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com">Deckiherdiawans</a>.</strong> All rights reserved.
-        </footer>
-
     </div>
 @else
     <nav class="navbar navbar-default navbar-static-top">
