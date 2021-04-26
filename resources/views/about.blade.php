@@ -33,8 +33,7 @@
                         <div class="personal-info">
                             <div class="info-item padd-15">
                                 <p>
-                                    Address: <span>Perumahan Citra Padalarang Indah Blok B-11 RT. 04 RW. 20,
-                                    Jayamekar, Padalarang, Bandung Barat, Jawa Barat, Indonesia, 40553</span>
+                                    Address: <span>Citra Padalarang Indah B-11 RT. 04 RW. 20, Jayamekar, Padalarang, West Bandung, West Java, Indonesia, 40553</span>
                                 </p>
                             </div>
                         </div>
