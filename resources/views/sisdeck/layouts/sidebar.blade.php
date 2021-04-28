@@ -1,7 +1,6 @@
 <aside class="main-sidebar position-fixed" id="sidebar-wrapper">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-
+    <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
@@ -33,6 +32,6 @@
             @include('/sisdeck/layouts/menu')
         </div>
         <!-- /.sidebar-menu -->
-    </section>
+    </div>
     <!-- /.sidebar -->
 </aside>

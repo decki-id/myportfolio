@@ -94,9 +94,9 @@
             @yield('content')
 
             <!-- Main Footer -->
-            <footer class="main-footer">
+            <div class="main-footer">
                 <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com">Deckiherdiawans</a>.</strong> All rights reserved.
-            </footer>
+            </div>
         </div>
     </div>
 @else
