@@ -1,4 +1,4 @@
-<aside class="main-sidebar position-fixed" id="sidebar-wrapper">
+<aside class="main-sidebar" id="sidebar-wrapper">
     <!-- sidebar: style can be found in sidebar.less -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
