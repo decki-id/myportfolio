@@ -23,9 +23,9 @@
                                 consultant for apparel industry, for more than three years. My last education degree for now is an
                                 Associate/Diploma of Information Systems, graduated in March 2020 from LPKIA. I want to start my job as a
                                 programmer, whether it freelance or a full-time job. I can build a website or a web-based software with PHP
-                                (CodeIgniter and Laravel framework), Python, and NodeJS for the back-end. For the front-end, I am familiar
-                                with CSS and JavaScript. I can also build a mobile/desktop software with Java (NetBeans and Android Studio),
-                                and C# (Visual Studio 2019). I live in Padalarang, but my activities mostly based in Bandung city.
+                                (CodeIgniter and Laravel framework), JavaScript (NodeJS), and Python for the back-end. For the front-end, I am 
+                                familiar with CSS and JavaScript. I can also build a mobile/desktop software with Java (NetBeans and Android Studio). 
+                                I live in Padalarang, but my activities mostly based in Bandung city.
                             </p>
                         </div>
                     </div>
