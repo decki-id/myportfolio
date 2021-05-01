@@ -154,8 +154,4 @@
     .sidebar-menu::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
-
-    .sidebar-collapse .sidebar-menu::-webkit-scrollbar {
-        display: none;
-    }
 }
