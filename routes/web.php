@@ -161,6 +161,3 @@ Route::get('/sisdeck/users/{user}', 'SisdeckUserController@show')->name('sisdeck
 Route::delete('/sisdeck/users/{user}', 'SisdeckUserController@destroy')->name('sisdeck.users.destroy');
 Route::patch('/sisdeck/users/{user}', 'SisdeckUserController@update')->name('sisdeck.users.update');
 Route::get('/sisdeck/users/{user}/edit', 'SisdeckUserController@edit')->name('sisdeck.users.edit');
-
-// HelpDeck portfolio
-Route::get('/helpdeck', 'HelpdeckController@index');
