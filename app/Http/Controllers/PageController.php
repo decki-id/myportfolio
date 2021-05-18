@@ -25,6 +25,10 @@ class PageController extends Controller {
         return view('blogs');
     }
 
+    public function resume() {
+        return view('resume');
+    }
+
     public function welcome() {
         return view('welcome');
     }   

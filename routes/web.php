@@ -20,6 +20,7 @@ Route::get('/about', 'PageController@about')->name('about');
 Route::get('/certificates', 'PageController@certificates')->name('certificates');
 Route::get('/portfolios', 'PageController@portfolios')->name('portfolios');
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
+Route::get('/resume', 'PageController@resume')->name('resume');
 Route::get('/welcome', 'PageController@welcome')->name('welcome');
 
 // Students portfolio

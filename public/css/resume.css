@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Viga;
+    src: url(../assets/fonts/Viga-Regular.otf) format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.section {
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    -webkit-animation: slideSectionX 1s ease;
+    animation: slideSectionX 1s ease;
+}
+
+body .section {
+    background-color: #151515;
+}
+
+.section .container {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+}
+
+.home {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.home .intro {
+    text-align: center;
+}
+
+.home .intro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 8px solid #fff;
+}
+
+.home .intro h1 {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.home .intro p {
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.shadow-dark {
+    -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
