@@ -792,6 +792,10 @@ body {
 
 /* Dark Body */
 
+body.dark {
+    background-color: #151515;
+}
+
 body.dark .sidebar,
 body.dark .style-switcher,
 body.dark .about .about-content .edex .timeline,
