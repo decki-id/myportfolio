@@ -35,9 +35,9 @@
                             <div class="row">
                                 <div class="personal-info pl-custom">
                                     <p>
-                                        Currently Customer Support for PT. Ava Revota Indonesia, with broad experiences in the Customer 
-                                        Relationship Management for the past 3 years. Has basic understanding of database management, 
-                                        Windows OS troubleshooting, desktop based software development, and web based software development.
+                                        Currently Customer Support for PT. Ava Revota Indonesia, with broad experience in Customer 
+                                        Relationship Management for the past 3 years. Has a basic understanding of database management, 
+                                        Windows OS troubleshooting, desktop-based software development, and web-based software development.
                                     </p>
                                 </div>
                                 <div class="personal-info pr-custom">
