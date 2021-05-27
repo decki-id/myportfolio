@@ -1,6 +1,6 @@
 <div class="table-responsive">
-    <table class="table text-center" id="dhs_users-table">
-        <thead>
+    <table class="table" id="dhs_users-table">
+        <thead class="text-center">
             <tr>
                 <th>Role Id</th>
                 <th>Username or First Name</th>
@@ -12,11 +12,11 @@
         <tbody>
             @foreach($sisdeckUsers as $sisdeckUser)
             <tr>
-                <td>{{ $sisdeckUser->role_id }}</td>
+                <td class="text-center">{{ $sisdeckUser->role_id }}</td>
                 <td>{{ $sisdeckUser->username }}</td>
                 <td>{{ $sisdeckUser->fullname }}</td>
                 <td>{{ $sisdeckUser->email }}</td>
-                <td>
+                <td class="text-center">
                     {!! Form::open(['route' => ['sisdeck.users.destroy', $sisdeckUser->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a href="{{ route('sisdeck.users.show', [$sisdeckUser->id]) }}" class='btn btn-default btn-xs disabled'><i class="fas fa-fw fa-eye"></i></a>
