@@ -14,7 +14,7 @@
 }
 
 .sidebar-collapse .sidebar-menu li a {
-    padding-left: 10px;
+    padding-left: 12px;
 }
 
 .form-group:not(.has-error) #username:focus+#username-icon,
@@ -126,7 +126,7 @@
     }
 }
 
-@media (max-height: 911px) {
+/* @media (max-height: 911px) {
     .sidebar-menu {
         position: absolute;
         width: 100%;
@@ -159,4 +159,4 @@
     .sidebar-collapse .sidebar-menu {
         overflow-x: hidden;
     }
-}
+} */
