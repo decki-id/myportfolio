@@ -38,7 +38,7 @@
             <a href="#" class="logo"><b class="logo-lg">SisDeck</b></a>
 
             <!-- Header Navbar -->
-            <nav class="navbar navbar-static-top" role="navigation">
+            <nav class="navbar" role="navigation">
                 <!-- Sidebar toggle button-->
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <i class="fas fa-fw fa-bars dhs_bars"></i>

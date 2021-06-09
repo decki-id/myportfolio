@@ -36,6 +36,9 @@
         </li>
     </ul>
 </li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.roles.index' || Route::currentRouteName() == 'sisdeck.roles.create' || Route::currentRouteName() == 'sisdeck.roles.show' || Route::currentRouteName() == 'sisdeck.roles.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.roles.index') }}" title="Roles"><i class="fas fa-fw fa-user-tag mr-3"></i><span>Roles</span></a>
+</li>
 <li class="treeview {{ Route::currentRouteName() == 'sisdeck.class_assignings.index' || Route::currentRouteName() == 'sisdeck.class_assignings.create' || Route::currentRouteName() == 'sisdeck.class_assignings.show' || Route::currentRouteName() == 'sisdeck.class_assignings.edit' || Route::currentRouteName() == 'sisdeck.class_schedulings.index' || Route::currentRouteName() == 'sisdeck.class_schedulings.create' || Route::currentRouteName() == 'sisdeck.class_schedulings.show' || Route::currentRouteName() == 'sisdeck.class_schedulings.edit' ? 'active' : '' }}">
     <a href="#"><i class="fas fa-fw fa-calendar mr-3"></i><span class="label">Schedule</span><span class="pull-right-container"><i class="fas fa-fw fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
@@ -46,6 +49,12 @@
             <a href="{{ route('sisdeck.class_schedulings.index') }}" title="Class Schedulings"><i class="fas fa-fw fa-edit mr-3"></i><span>Class Schedulings</span></a>
         </li>
     </ul>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.students.index' || Route::currentRouteName() == 'sisdeck.students.create' || Route::currentRouteName() == 'sisdeck.students.show' || Route::currentRouteName() == 'sisdeck.students.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.students.index') }}" title="Students"><i class="fas fa-fw fa-user-graduate mr-3"></i><span>Students</span></a>
+</li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.teachers.index' || Route::currentRouteName() == 'sisdeck.teachers.create' || Route::currentRouteName() == 'sisdeck.teachers.show' || Route::currentRouteName() == 'sisdeck.teachers.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.teachers.index') }}" title="Teachers"><i class="fas fa-fw fa-user-circle mr-3"></i><span>Teachers</span></a>
 </li>
 <li class="{{ Route::currentRouteName() == 'sisdeck.transactions.index' || Route::currentRouteName() == 'sisdeck.transactions.create' || Route::currentRouteName() == 'sisdeck.transactions.show' || Route::currentRouteName() == 'sisdeck.transactions.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.transactions.index') }}" title="Transactions"><i class="fas fa-fw fa-money-bill mr-3"></i><span>Transactions</span></a>

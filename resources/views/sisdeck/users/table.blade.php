@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table" id="dhs_users-table">
+    <table class="table table-bordered table-hover" id="dhs_users-table">
         <thead class="text-center">
             <tr>
                 <th>Role Id</th>
