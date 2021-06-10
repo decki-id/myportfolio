@@ -63,12 +63,16 @@
     border-left: none;
 }
 
-.dhs_col-header {
+.dhs_col-header,
+.dhs_col-button {
     text-align: center;
 }
 
-.dhs_col-button {
-    text-align: center;
+.table thead tr th,
+.table thead tr th,
+.table tbody tr td,
+.table tbody tr td {
+    vertical-align: middle;
 }
 
 @media (min-width: 580px) {

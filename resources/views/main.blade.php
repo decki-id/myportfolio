@@ -59,7 +59,7 @@
                     </ul>
                 </div>
                 <div class="copyright">
-                    &copy {{ date('Y') }}<br>Deckiherdiawans.<br>All Rights Reserved.
+                    &copy {{ date('Y') }}<br>Deckiherdiawans.<br>All rights reserved.
                 </div>
             </div>
         </div>

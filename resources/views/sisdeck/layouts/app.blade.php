@@ -27,16 +27,13 @@
 
     @yield('css')
 </head>
-
 <body class="skin-blue sidebar-mini">
-@if (!Auth::guest())
+    <!-- @if (!Auth::guest()) -->
     <div class="wrapper">
         <!-- Main Header -->
-        <header class="main-header position-fixed">
-
+        <header class="main-header">
             <!-- Logo -->
             <a href="#" class="logo"><b class="logo-lg">SisDeck</b></a>
-
             <!-- Header Navbar -->
             <nav class="navbar" role="navigation">
                 <!-- Sidebar toggle button-->
@@ -95,16 +92,42 @@
 
             <!-- Main Footer -->
             <div class="main-footer">
-                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com">Deckiherdiawans</a>.</strong> All rights reserved.
+                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com" target="_blank">Deckiherdiawans</a>.</strong> All rights reserved.
             </div>
         </div>
     </div>
-@else
+
+    <!-- Add Role Modal -->
+    <div class="modal fade left" id="add-role_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hiden="true">
+        <div class="modal-dialog modal-notify modal-ms modal-right" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white align-items-center">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Role</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                {!! Form::open(['route' => 'sisdeck.roles.store']) !!}
+                <div class="modal-body">
+                    <div class="form-group col-sm-12">
+                        {!! Form::label('role_name', 'Role Name') !!}
+                        {!! Form::text('role_name', null, ['class' => 'form-control', 'id' => 'role-name', 'maxlength' => 191]) !!}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+    <!-- End of Add Role Modal -->
+
+    <!-- @else
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
+                Collapsed Hamburger
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
@@ -112,21 +135,21 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <!-- Branding Image -->
+                Branding Image
                 <a class="navbar-brand" href="{{ url('/') }}">
                     InfyOm Generator
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
+                Left Side Of Navbar
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/sisdeck') }}">Home</a></li>
                 </ul>
 
-                <!-- Right Side Of Navbar -->
+                Right Side Of Navbar
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
+                    Authentication Links
                     <li><a href="{{ url('/sisdeck/login') }}">Login</a></li>
                     <li><a href="{{ url('/sisdeck/register') }}">Register</a></li>
                 </ul>
@@ -143,7 +166,7 @@
             </div>
         </div>
     </div>
-    @endif
+    @endif -->
 
     <script src="{{ url('assets/jquery/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url('assets/bootstrap-441/js/bootstrap.js') }}"></script>

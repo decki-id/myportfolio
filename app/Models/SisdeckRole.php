@@ -20,6 +20,8 @@ class SisdeckRole extends Model
     use HasFactory;
 
     public $table = 'sisdeck_roles';
+
+    protected $primaryKey = 'id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

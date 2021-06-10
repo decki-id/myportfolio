@@ -8,7 +8,7 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
-                    @include('sisdeck.users.show_fields')
+                    @include('/sisdeck/users/show_fields')
                     <a href="{{ route('sisdeck.users.index') }}" class="btn btn-default">Back</a>
                 </div>
             </div>
