@@ -81,7 +81,7 @@ class SisdeckUserController extends AppBaseController
             return redirect(route('sisdeck.users.index'));
         }
 
-        return view('sisdeck/users/show')->with('sisdeckUser', $sisdeckUser);
+        return view('sisdeck/users/read')->with('sisdeckUser', $sisdeckUser);
     }
 
     /**
@@ -101,7 +101,7 @@ class SisdeckUserController extends AppBaseController
             return redirect(route('sisdeck.users.index'));
         }
 
-        return view('sisdeck/users/edit')->with('sisdeckUser', $sisdeckUser);
+        return view('sisdeck/users/update')->with('sisdeckUser', $sisdeckUser);
     }
 
     /**

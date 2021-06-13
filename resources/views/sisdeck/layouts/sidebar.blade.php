@@ -22,15 +22,15 @@
             <div class="input-group">
                 <input type="text" name="q" class="form-control dhs_search-input" placeholder="Search..."/>
                 <span class="input-group-btn">
-                    <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                    <button type='submit' title="Search" name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
                 </span>
             </div>
         </form>
         <!-- Sidebar Menu -->
 
-        <div class="sidebar-menu" data-widget="tree">
+        <ul class="sidebar-menu" data-widget="tree">
             @include('/sisdeck/layouts/menu')
-        </div>
+        </ul>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

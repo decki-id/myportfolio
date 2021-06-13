@@ -81,7 +81,7 @@ class SisdeckRoleController extends AppBaseController
             return redirect(route('sisdeck.roles.index'));
         }
 
-        return view('/sisdeck/roles/show')->with('sisdeckRole', $sisdeckRole);
+        return view('/sisdeck/roles/read')->with('sisdeckRole', $sisdeckRole);
     }
 
     /**
@@ -101,7 +101,7 @@ class SisdeckRoleController extends AppBaseController
             return redirect(route('sisdeck.roles.index'));
         }
 
-        return view('/sisdeck/roles/edit')->with('sisdeckRole', $sisdeckRole);
+        return view('/sisdeck/roles/update')->with('sisdeckRole', $sisdeckRole);
     }
 
     /**

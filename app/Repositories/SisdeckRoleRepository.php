@@ -20,6 +20,8 @@ class SisdeckRoleRepository extends BaseRepository
         'name'
     ];
 
+    protected $primaryKey = 'id';
+
     /**
      * Return searchable fields
      *

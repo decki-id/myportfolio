@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <link rel="icon" type="image/png" href="{{ url('assets/images/decki-revota.jpg') }}">
     <title>@yield('title')</title>
@@ -37,7 +37,7 @@
             <!-- Header Navbar -->
             <nav class="navbar" role="navigation">
                 <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <a href="#" title="Sidebar Toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <i class="fas fa-fw fa-bars dhs_bars"></i>
                 </a>
                 <!-- Navbar Right Menu -->
@@ -71,7 +71,7 @@
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Sign out
                                         </a>
-                                        <form id="logout-form" action="{{ url('/sisdeck-logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ url('/sisdeck-logout') }}" method="POST">
                                             @csrf
                                         </form>
                                     </div>
@@ -92,35 +92,16 @@
 
             <!-- Main Footer -->
             <div class="main-footer">
-                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com" target="_blank">Deckiherdiawans</a>.</strong> All rights reserved.
+                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com" target="_blank">Deckiherdiawans</a>.</strong> All Rights Reserved.
             </div>
         </div>
     </div>
 
-    <!-- Add Role Modal -->
-    <div class="modal fade left" id="add-role_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hiden="true">
-        <div class="modal-dialog modal-notify modal-ms modal-right" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white align-items-center">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Role</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                {!! Form::open(['route' => 'sisdeck.roles.store']) !!}
-                <div class="modal-body">
-                    <div class="form-group col-sm-12">
-                        {!! Form::label('role_name', 'Role Name') !!}
-                        {!! Form::text('role_name', null, ['class' => 'form-control', 'id' => 'role-name', 'maxlength' => 191]) !!}
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>
-    <!-- End of Add Role Modal -->
+    @include('/sisdeck/roles/create')
+    @include('/sisdeck/roles/update')
+    @include('/sisdeck/users/create')
+    @include('/sisdeck/users/update')
+    @include('/sisdeck/users/read')
 
     <!-- @else
     <nav class="navbar navbar-default navbar-static-top">

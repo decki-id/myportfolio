@@ -26,6 +26,8 @@ class SisdeckUser extends Model
     use HasFactory;
 
     public $table = 'users';
+
+    protected $primaryKey = 'id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -36,9 +38,9 @@ class SisdeckUser extends Model
 
 
     public $fillable = [
-        'role_id',
         'username',
         'fullname',
+        'role_name',
         'email',
         'email_verified_at',
         'password',
@@ -52,9 +54,9 @@ class SisdeckUser extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'role_id' => 'integer',
         'username' => 'string',
         'fullname' => 'string',
+        'role_name' => 'string',
         'email' => 'string',
         'email_verified_at' => 'datetime',
         'password' => 'string',
@@ -67,9 +69,9 @@ class SisdeckUser extends Model
      * @var array
      */
     public static $rules = [
-        'role_id' => 'required|integer',
         'username' => 'required|string|max:191',
         'fullname' => 'required|string|max:191',
+        'role_name' => 'required|string|max:191',
         'email' => 'required|string|max:191',
         'email_verified_at' => 'nullable',
         'password' => 'required|string|max:191',

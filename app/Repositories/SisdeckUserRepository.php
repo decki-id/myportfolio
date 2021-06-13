@@ -17,14 +17,16 @@ class SisdeckUserRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'role_id',
         'username',
         'fullname',
+        'role_name',
         'email',
         'email_verified_at',
         'password',
         'remember_token'
     ];
+
+    protected $primaryKey = 'id';
 
     /**
      * Return searchable fields

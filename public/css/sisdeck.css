@@ -29,6 +29,21 @@
     border-color: #dd4b39;
 }
 
+.form-label {
+    margin-bottom: 0 !important;
+}
+
+#logout-form {
+    display: none;
+}
+
+.table thead tr th,
+.table thead tr th,
+.table tbody tr td,
+.table tbody tr td {
+    vertical-align: middle;
+}
+
 #dhs_image {
     width: 50px;
     height: 50px;
@@ -66,13 +81,6 @@
 .dhs_col-header,
 .dhs_col-button {
     text-align: center;
-}
-
-.table thead tr th,
-.table thead tr th,
-.table tbody tr td,
-.table tbody tr td {
-    vertical-align: middle;
 }
 
 @media (min-width: 580px) {
