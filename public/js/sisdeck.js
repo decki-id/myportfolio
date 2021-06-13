@@ -5,7 +5,7 @@ const
 if (createRoleButton) {
     createRoleButton.addEventListener("click", () => {
         setTimeout(function () {
-            document.querySelector("#role-name_create").focus();
+            document.querySelector("#role_name-create").focus();
         }, 100);
     });
 }

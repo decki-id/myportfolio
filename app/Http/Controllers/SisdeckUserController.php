@@ -112,9 +112,9 @@ class SisdeckUserController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckUserRequest $request)
+    public function update(UpdateSisdeckUserRequest $request)
     {
-        $sisdeckUser = $this->sisdeckUserRepository->find($id);
+        $sisdeckUser = $this->sisdeckUserRepository->find($request->id);
 
         if (empty($sisdeckUser)) {
             Flash::error('User not found.');
@@ -122,7 +122,7 @@ class SisdeckUserController extends AppBaseController
             return redirect(route('sisdeck.users.index'));
         }
 
-        $sisdeckUser = $this->sisdeckUserRepository->update($request->all(), $id);
+        $sisdeckUser = $this->sisdeckUserRepository->update($request->all(), $request->id);
 
         Flash::success('User updated successfully.');
 

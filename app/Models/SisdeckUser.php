@@ -74,11 +74,9 @@ class SisdeckUser extends Model
         'role_name' => 'required|string|max:191',
         'email' => 'required|string|max:191',
         'email_verified_at' => 'nullable',
-        'password' => 'required|string|max:191',
+        'password' => 'string|max:191',
         'remember_token' => 'nullable|string|max:191',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];
-
-    
+    ];   
 }

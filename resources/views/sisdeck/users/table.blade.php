@@ -17,12 +17,12 @@
                         <a href="#" data-user_id="{{ $sisdeckUser->id }}" data-username="{{ $sisdeckUser->username }}"
                            data-fullname="{{ $sisdeckUser->fullname }}" data-role_name="{{ $sisdeckUser->role_name }}"
                            data-email="{{ $sisdeckUser->email }}" data-toggle="modal" data-target="#read-user_modal"
-                           title="Detail" class="btn btn-success btn-xs"><i class="fas fa-fw fa-eye"></i>
+                           title="Detail" class="btn btn-success btn-xs mr-1"><i class="fas fa-fw fa-eye"></i>
                         </a>
-                        <a href="#" data-username="{{ $sisdeckUser->username }}" data-fullname="{{ $sisdeckUser->fullname }}"
-                           data-role_name="{{ $sisdeckUser->role_name }}" data-email="{{ $sisdeckUser->email }}" data-toggle="modal"
-                           data-target="#update-user_modal" title="Update" class="btn btn-warning btn-xs text-white update-user_button">
-                           <i class="fas fa-fw fa-edit"></i>
+                        <a href="#" data-user_id="{{ $sisdeckUser->id }}" data-username="{{ $sisdeckUser->username }}"
+                           data-fullname="{{ $sisdeckUser->fullname }}" data-role_name="{{ $sisdeckUser->role_name }}"
+                           data-email="{{ $sisdeckUser->email }}" data-toggle="modal" data-target="#update-user_modal"
+                           title="Update" class="btn btn-warning btn-xs text-white mr-1"><i class="fas fa-fw fa-edit"></i>
                         </a>
                         {!! Form::open(['route' => ['sisdeck.users.destroy', $sisdeckUser->id], 'method' => 'delete']) !!}
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'title' => 'Delete', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
@@ -57,19 +57,21 @@
         $('#update-user_modal').on('show.bs.modal', function (event) {
             const
                 button = $(event.relatedTarget),
+                user_id = button.data('user_id'),
                 username = button.data('username'),
                 fullname = button.data('fullname'),
                 role_name = button.data('role_name'),
                 email = button.data('email'),
                 modal = $(this);
 
-            modal.find('.modal-body #user-username_update').val(username);
-            modal.find('.modal-body #user-fullname_update').val(fullname);
-            modal.find('.modal-body #user-role-name_update').val(role_name);
-            modal.find('.modal-body #user-email_update').val(email);
+            modal.find('.modal-body #id').val(user_id);
+            modal.find('.modal-body #username-update').val(username);
+            modal.find('.modal-body #fullname-update').val(fullname);
+            modal.find('.modal-body #role-update').val(role_name);
+            modal.find('.modal-body #email-update').val(email);
 
             setTimeout(function () {
-                modal.find('.modal-body #user-username_update').focus();
+                modal.find('.modal-body #username-update').focus();
             }, 100);
         });
     </script>

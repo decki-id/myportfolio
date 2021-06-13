@@ -13,7 +13,7 @@
                         {!! Form::label('role_name', 'Role Name', ['class' => 'form-label']) !!}
                     </div>
                     <div class="form-group col-sm-9">
-                        {!! Form::text('role_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role-name_create', 'placeholder' => 'Insert role name']) !!}
+                        {!! Form::text('role_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role_name-create', 'title' => 'Role Name', 'placeholder' => 'Insert role name']) !!}
                     </div>
                 </div>
             </div>

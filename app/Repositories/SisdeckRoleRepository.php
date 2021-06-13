@@ -17,10 +17,10 @@ class SisdeckRoleRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'name'
+        'role_name'
     ];
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'role_id';
 
     /**
      * Return searchable fields

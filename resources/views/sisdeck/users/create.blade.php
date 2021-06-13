@@ -48,7 +48,7 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="form-group col-sm-3">
-                        {!! Form::label('password_validation', 'Re-Enter Password', ['class' => 'form-label']) !!}
+                        {!! Form::label('password_validation', 'Confirm Password', ['class' => 'form-label']) !!}
                     </div>
                     <div class="form-group col-sm-9">
                         {!! Form::password('password_validation', ['class' => 'form-control','maxlength' => 191]) !!}

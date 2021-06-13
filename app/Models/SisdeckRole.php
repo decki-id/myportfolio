@@ -21,7 +21,7 @@ class SisdeckRole extends Model
 
     public $table = 'sisdeck_roles';
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'role_id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -32,7 +32,7 @@ class SisdeckRole extends Model
 
 
     public $fillable = [
-        'name'
+        'role_name'
     ];
 
     /**
@@ -41,8 +41,8 @@ class SisdeckRole extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'name' => 'string'
+        'role_id' => 'integer',
+        'role_name' => 'string'
     ];
 
     /**
@@ -51,7 +51,7 @@ class SisdeckRole extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|string|max:191',
+        'role_name' => 'required|string|max:191',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

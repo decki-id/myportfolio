@@ -67,13 +67,13 @@ class SisdeckRoleController extends AppBaseController
     /**
      * Display the specified SisdeckRole.
      *
-     * @param int $id
+     * @param int $role_id
      *
      * @return Response
      */
-    public function show($id)
+    public function show($role_id)
     {
-        $sisdeckRole = $this->sisdeckRoleRepository->find($id);
+        $sisdeckRole = $this->sisdeckRoleRepository->find($role_id);
 
         if (empty($sisdeckRole)) {
             Flash::error('Role not found.');
@@ -87,13 +87,13 @@ class SisdeckRoleController extends AppBaseController
     /**
      * Show the form for editing the specified SisdeckRole.
      *
-     * @param int $id
+     * @param int $role_id
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($role_id)
     {
-        $sisdeckRole = $this->sisdeckRoleRepository->find($id);
+        $sisdeckRole = $this->sisdeckRoleRepository->find($role_id);
 
         if (empty($sisdeckRole)) {
             Flash::error('Role not found.');
@@ -107,14 +107,14 @@ class SisdeckRoleController extends AppBaseController
     /**
      * Update the specified SisdeckRole in storage.
      *
-     * @param int $id
+     * @param int $role_id
      * @param UpdateSisdeckRoleRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckRoleRequest $request)
+    public function update(UpdateSisdeckRoleRequest $request)
     {
-        $sisdeckRole = $this->sisdeckRoleRepository->find($id);
+        $sisdeckRole = $this->sisdeckRoleRepository->find($request->role_id);
 
         if (empty($sisdeckRole)) {
             Flash::error('Role not found.');
@@ -122,7 +122,7 @@ class SisdeckRoleController extends AppBaseController
             return redirect(route('sisdeck.roles.index'));
         }
 
-        $sisdeckRole = $this->sisdeckRoleRepository->update($request->all(), $id);
+        $sisdeckRole = $this->sisdeckRoleRepository->update($request->all(), $request->role_id);
 
         Flash::success('Role updated successfully.');
 
@@ -132,15 +132,15 @@ class SisdeckRoleController extends AppBaseController
     /**
      * Remove the specified SisdeckRole from storage.
      *
-     * @param int $id
+     * @param int $role_id
      *
      * @throws \Exception
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($role_id)
     {
-        $sisdeckRole = $this->sisdeckRoleRepository->find($id);
+        $sisdeckRole = $this->sisdeckRoleRepository->find($role_id);
 
         if (empty($sisdeckRole)) {
             Flash::error('Role not found.');
@@ -148,7 +148,7 @@ class SisdeckRoleController extends AppBaseController
             return redirect(route('sisdeck.roles.index'));
         }
 
-        $this->sisdeckRoleRepository->delete($id);
+        $this->sisdeckRoleRepository->delete($role_id);
 
         Flash::success('Role deleted successfully.');
 
