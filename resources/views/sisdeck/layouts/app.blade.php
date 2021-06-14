@@ -89,11 +89,6 @@
 
         <div class="content-wrapper">
             @yield('content')
-
-            <!-- Main Footer -->
-            <div class="main-footer">
-                <strong>Copyright © {{ date('Y') }} <a href="https://deckiherdiawans.com" target="_blank">Deckiherdiawans</a>.</strong> All Rights Reserved.
-            </div>
         </div>
     </div>
 

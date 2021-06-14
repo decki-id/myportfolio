@@ -26,12 +26,16 @@
                 </span>
             </div>
         </form>
-        <!-- Sidebar Menu -->
 
+        <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             @include('/sisdeck/layouts/menu')
         </ul>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
+
+    <div id="copyright">
+        &copy {{ date('Y') }}<br>Deckiherdiawans.<br>All Rights Reserved.
+    </div>
 </aside>
