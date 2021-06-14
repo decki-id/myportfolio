@@ -18,7 +18,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-info" id="reset_button-roles">Reset</button>
                 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
             </div>
             {!! Form::close() !!}
@@ -26,3 +27,13 @@
     </div>
 </div>
 <!-- End of Create Role Modal -->
+
+@push('scripts')
+    <script>
+        $('#reset_button-roles').on('click', function (event) {
+            var modal = $('#create-role_modal');
+            modal.find('.modal-body #role_name-create').val("");
+            modal.find('.modal-body #role_name-create').focus();
+        });
+    </script>
+@endpush

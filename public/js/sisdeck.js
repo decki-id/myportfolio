@@ -13,7 +13,7 @@ if (createRoleButton) {
 if (createUserButton) {
     createUserButton.addEventListener("click", () => {
         setTimeout(function () {
-            document.querySelector("#user-username_create").focus();
+            document.querySelector("#username-create").focus();
         }, 100);
     });
 }

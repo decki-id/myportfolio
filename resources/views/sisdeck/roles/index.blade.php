@@ -6,7 +6,7 @@
     <div class="row align-items-center px-3 pt-3">
         <div class="col-sm-6 dhs_col-header"><h3>Roles</h3></div>
         <div class="col-sm-6 dhs_col-button">
-            <a href="#" data-toggle="modal" data-target="#create-role_modal" class="btn btn-primary dhs_button" id="create-role_button">
+            <a href="#" data-toggle="modal" data-target="#create-role_modal" class="btn btn-primary-lte dhs_button" id="create-role_button">
                 <i class="fas fa-fw fa-plus-circle mr-2"></i>Add New Role
             </a>
         </div>
