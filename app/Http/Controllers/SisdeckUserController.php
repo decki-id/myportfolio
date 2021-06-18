@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateSisdeckUserRequest;
 use App\Repositories\SisdeckUserRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\SisdeckRole;
 use Flash;
 use Response;
 
@@ -31,9 +32,10 @@ class SisdeckUserController extends AppBaseController
     public function index(Request $request)
     {
         $sisdeckUsers = $this->sisdeckUserRepository->all();
+        $role = SisdeckRole::pluck('role_name', 'role_id');
+        $sisdeckRoles = SisdeckRole::all();
 
-        return view('sisdeck/users/index')
-            ->with('sisdeckUsers', $sisdeckUsers);
+        return view('sisdeck/users/index', compact('sisdeckUsers', 'role', 'sisdeckRoles'));
     }
 
     /**

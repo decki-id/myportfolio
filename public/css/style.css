@@ -789,6 +789,23 @@ body {
     margin: 5px 0 6px 0;
 }
 
+#color_toggle-red {
+    background-color: red;
+}
+
+#color_toggle-yellow {
+    background-color: yellow;
+}
+
+#color_toggle-green {
+    background-color: lime;
+}
+
+#color_toggle-blue {
+    background-color: dodgerblue;
+}
+
+
 
 /* Dark Body */
 

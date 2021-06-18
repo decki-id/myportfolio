@@ -14,11 +14,11 @@ class CreateSisdeckCoursesTable extends Migration
     public function up()
     {
         Schema::create('sisdeck_courses', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('code')->unique();
-            $table->longText('description');
-            $table->tinyInteger('status')->default(1);
+            $table->bigIncrements('course_id');
+            $table->string('course_code')->unique();
+            $table->string('course_name');
+            $table->longText('course_description');
+            $table->tinyInteger('course_status')->default(1);
             $table->softDeletes();
             $table->timestamps();
         });

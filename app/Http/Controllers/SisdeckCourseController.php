@@ -67,13 +67,13 @@ class SisdeckCourseController extends AppBaseController
     /**
      * Display the specified SisdeckCourse.
      *
-     * @param int $id
+     * @param int $course_id
      *
      * @return Response
      */
-    public function show($id)
+    public function show($course_id)
     {
-        $sisdeckCourse = $this->sisdeckCourseRepository->find($id);
+        $sisdeckCourse = $this->sisdeckCourseRepository->find($course_id);
 
         if (empty($sisdeckCourse)) {
             Flash::error('Course not found.');
@@ -87,13 +87,13 @@ class SisdeckCourseController extends AppBaseController
     /**
      * Show the form for editing the specified SisdeckCourse.
      *
-     * @param int $id
+     * @param int $course_id
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($course_id)
     {
-        $sisdeckCourse = $this->sisdeckCourseRepository->find($id);
+        $sisdeckCourse = $this->sisdeckCourseRepository->find($course_id);
 
         if (empty($sisdeckCourse)) {
             Flash::error('Course not found.');
@@ -107,14 +107,14 @@ class SisdeckCourseController extends AppBaseController
     /**
      * Update the specified SisdeckCourse in storage.
      *
-     * @param int $id
+     * @param int $course_id
      * @param UpdateSisdeckCourseRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckCourseRequest $request)
+    public function update(UpdateSisdeckCourseRequest $request)
     {
-        $sisdeckCourse = $this->sisdeckCourseRepository->find($id);
+        $sisdeckCourse = $this->sisdeckCourseRepository->find($request->course_id);
 
         if (empty($sisdeckCourse)) {
             Flash::error('Course not found.');
@@ -122,7 +122,7 @@ class SisdeckCourseController extends AppBaseController
             return redirect(route('sisdeck.courses.index'));
         }
 
-        $sisdeckCourse = $this->sisdeckCourseRepository->update($request->all(), $id);
+        $sisdeckCourse = $this->sisdeckCourseRepository->update($request->all(), $request->course_id);
 
         Flash::success('Course updated successfully.');
 
@@ -132,15 +132,15 @@ class SisdeckCourseController extends AppBaseController
     /**
      * Remove the specified SisdeckCourse from storage.
      *
-     * @param int $id
+     * @param int $course_id
      *
      * @throws \Exception
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($course_id)
     {
-        $sisdeckCourse = $this->sisdeckCourseRepository->find($id);
+        $sisdeckCourse = $this->sisdeckCourseRepository->find($course_id);
 
         if (empty($sisdeckCourse)) {
             Flash::error('Course not found.');
@@ -148,7 +148,7 @@ class SisdeckCourseController extends AppBaseController
             return redirect(route('sisdeck.courses.index'));
         }
 
-        $this->sisdeckCourseRepository->delete($id);
+        $this->sisdeckCourseRepository->delete($course_id);
 
         Flash::success('Course deleted successfully.');
 

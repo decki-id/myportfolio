@@ -6,52 +6,44 @@
                 <h5 class="modal-title" id="createUserHeaderModal">Create User</h5>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
-            {!! Form::open(['route' => 'sisdeck.roles.store']) !!}
+            {!! Form::open(['route' => 'sisdeck.users.store']) !!}
             <div class="modal-body">
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('username', 'Username', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::text('username', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'username-create', 'placeholder' => 'Insert username']) !!}
                     </div>
-                    <div class="form-group col-sm-3">
+                </div>
+                <div class="row align-items-center">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('fullname', 'Fullname', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::text('fullname', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'fullname-create', 'placeholder' => 'Insert fullname']) !!}
                     </div>
                 </div>
+                @if(!empty($role))
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
-                        {!! Form::label('role_name', 'Role', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
-                        {!! Form::text('role_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role-create', 'placeholder' => 'Insert role']) !!}
+                    <div class="form-group col-sm-12">
+                        {!! Form::label('role_id', 'Role', ['class' => 'form-label']) !!}
+                        {!! Form::select('role_id', $role, 'null', ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role-create', 'title' => 'User Role', 'placeholder' => 'Choose role']) !!}
                     </div>
                 </div>
+                @endif
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('email', 'Email', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::email('email', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'email-create', 'placeholder' => 'Insert email address']) !!}
                     </div>
                 </div>
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('password', 'Password', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::password('password', ['class' => 'form-control', 'maxlength' => 191, 'id' => 'password-create', 'placeholder' => 'Insert password']) !!}
                     </div>
                 </div>
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('password_validation', 'Confirm Password', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
-                        {!! Form::password('password_validation', ['class' => 'form-control', 'maxlength' => 191, 'id' => 'confirm_password-create']) !!}
+                        {!! Form::password('password_validation', ['class' => 'form-control', 'maxlength' => 191, 'title' => 'Confirm Password', 'id' => 'confirm_password-create']) !!}
                     </div>
                 </div>
             </div>

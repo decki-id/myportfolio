@@ -22,10 +22,10 @@ class SisdeckCourseFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
-        'code' => $this->faker->word,
-        'description' => $this->faker->text,
-        'status' => $this->faker->word,
+        'course_code' => $this->faker->word,
+        'course_name' => $this->faker->word,
+        'course_description' => $this->faker->text,
+        'course_status' => $this->faker->word,
         'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')

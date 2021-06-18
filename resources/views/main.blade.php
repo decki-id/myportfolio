@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,10 +9,10 @@
         <link rel="stylesheet" href="{{url('css/red.css')}}">
 
         <!-- Color Switcher -->
-        <link rel="stylesheet" class="alternative-color" id="Red" title="Red" href="{{url('css/red.css')}}" disabled>
-        <link rel="stylesheet" class="alternative-color" id="Yellow" title="Yellow" href="{{url('css/yellow.css')}}" disabled>
-        <link rel="stylesheet" class="alternative-color" id="Green" title="Green" href="{{url('css/green.css')}}" disabled>
-        <link rel="stylesheet" class="alternative-color" id="Blue" title="Blue" href="{{url('css/blue.css')}}" disabled>
+        <link rel="stylesheet" class="alternative-color" id="Red" title="Red" href="{{url('css/red.css')}}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Yellow" title="Yellow" href="{{url('css/yellow.css')}}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Green" title="Green" href="{{url('css/green.css')}}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Blue" title="Blue" href="{{url('css/blue.css')}}" disabled="true">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
@@ -72,10 +71,10 @@
            <div class="switcher-toggle"><i class="fas fa-cog fa-spin"></i></div>
            <h5>Color Switcher</h5>
            <ul>
-               <li><a href="javascript:void(0);" title="Red" style="background-color: red" onclick="setActiveColor('Red')"></a></li>
-               <li><a href="javascript:void(0);" title="Yellow" style="background-color: yellow" onclick="setActiveColor('Yellow')"></a></li>
-               <li><a href="javascript:void(0);" title="Green" style="background-color: lime" onclick="setActiveColor('Green')"></a></li>
-               <li><a href="javascript:void(0);" title="Blue" style="background-color: dodgerblue" onclick="setActiveColor('Blue')"></a></li>
+               <li><a href="javascript:void(0);" title="Red" id="color_toggle-red" onclick="setActiveColor('Red')"></a></li>
+               <li><a href="javascript:void(0);" title="Yellow" id="color_toggle-yellow" onclick="setActiveColor('Yellow')"></a></li>
+               <li><a href="javascript:void(0);" title="Green" id="color_toggle-green" onclick="setActiveColor('Green')"></a></li>
+               <li><a href="javascript:void(0);" title="Blue" id="color_toggle-blue" onclick="setActiveColor('Blue')"></a></li>
            </ul>
            <hr>
            <h5>Body Skin</h5>

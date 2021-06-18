@@ -201,13 +201,13 @@ function setActiveColor(color) {
 }
 
 if (localStorage.getItem("Red")) {
-    document.querySelector("#Red").removeAttribute("disabled");
+    document.querySelector("#Red").setAttribute("disabled", false);
 } else if (localStorage.getItem("Yellow")) {
-    document.querySelector("#Yellow").removeAttribute("disabled");
+    document.querySelector("#Yellow").setAttribute("disabled", false);
 } else if (localStorage.getItem("Green")) {
-    document.querySelector("#Green").removeAttribute("disabled");
+    document.querySelector("#Green").setAttribute("disabled", false);
 } else if (localStorage.getItem("Blue")) {
-    document.querySelector("#Blue").removeAttribute("disabled");
+    document.querySelector("#Blue").setAttribute("disabled", false);
 }
 
 const

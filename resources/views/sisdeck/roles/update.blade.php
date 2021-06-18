@@ -11,18 +11,14 @@
             @method('PATCH')
             <div class="modal-body">
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('role_id', 'Role ID', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::text('role_id', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role_id-update', 'title' => 'Role ID', 'placeholder' => 'Insert role id', 'readonly']) !!}
                     </div>
                 </div>
                 <div class="row align-items-center">
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-12">
                         {!! Form::label('role_name', 'Role Name', ['class' => 'form-label']) !!}
-                    </div>
-                    <div class="form-group col-sm-9">
                         {!! Form::text('role_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role_name-update', 'title' => 'Role Name', 'placeholder' => 'Insert role name']) !!}
                     </div>
                 </div>

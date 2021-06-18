@@ -22,9 +22,9 @@ class SisdeckUserFactory extends Factory
     public function definition()
     {
         return [
-            'role_id' => $this->faker->randomDigitNotNull,
         'username' => $this->faker->word,
         'fullname' => $this->faker->word,
+        'role_id' => $this->faker->randomDigitNotNull,
         'email' => $this->faker->word,
         'email_verified_at' => $this->faker->date('Y-m-d H:i:s'),
         'password' => $this->faker->word,

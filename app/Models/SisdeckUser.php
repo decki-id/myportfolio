@@ -32,15 +32,12 @@ class SisdeckUser extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'username',
         'fullname',
-        'role_name',
+        'role_id',
         'email',
         'email_verified_at',
         'password',
@@ -56,7 +53,7 @@ class SisdeckUser extends Model
         'id' => 'integer',
         'username' => 'string',
         'fullname' => 'string',
-        'role_name' => 'string',
+        'role_id' => 'integer',
         'email' => 'string',
         'email_verified_at' => 'datetime',
         'password' => 'string',
@@ -71,7 +68,7 @@ class SisdeckUser extends Model
     public static $rules = [
         'username' => 'required|string|max:191',
         'fullname' => 'required|string|max:191',
-        'role_name' => 'required|string|max:191',
+        'role_id' => 'required|integer',
         'email' => 'required|string|max:191',
         'email_verified_at' => 'nullable',
         'password' => 'string|max:191',

@@ -19,7 +19,7 @@ class SisdeckUserRepository extends BaseRepository
     protected $fieldSearchable = [
         'username',
         'fullname',
-        'role_name',
+        'role_id',
         'email',
         'email_verified_at',
         'password',

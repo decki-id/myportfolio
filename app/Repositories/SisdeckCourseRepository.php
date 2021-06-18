@@ -17,11 +17,13 @@ class SisdeckCourseRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'name',
-        'code',
-        'description',
-        'status'
+        'course_code',
+        'course_name',
+        'course_description',
+        'course_status'
     ];
+
+    protected $primaryKey = 'course_id';
 
     /**
      * Return searchable fields

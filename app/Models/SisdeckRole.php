@@ -26,10 +26,7 @@ class SisdeckRole extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'role_name'
@@ -55,7 +52,5 @@ class SisdeckRole extends Model
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];
-
-    
+    ];   
 }
