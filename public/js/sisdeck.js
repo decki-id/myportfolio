@@ -1,12 +1,14 @@
 const
     createCourseButton = document.querySelector("#create-course_button"),
     createRoleButton = document.querySelector("#create-role_button"),
-    createUserButton = document.querySelector("#create-user_button");
+    createUserButton = document.querySelector("#create-user_button"),
+    courseCodeCreate = document.querySelector("#course_code-create"),
+    courseNameCreate = document.querySelector("#course_name-create");
 
 if (createCourseButton) {
     createCourseButton.addEventListener("click", () => {
         setTimeout(function () {
-            document.querySelector("#course_name-create").focus();
+            courseNameCreate.focus();
         }, 100);
     });
 }
@@ -25,4 +27,15 @@ if (createUserButton) {
             document.querySelector("#username-create").focus();
         }, 100);
     });
+}
+
+function codeValue() {
+    var courseName = courseNameCreate.value.toUpperCase();
+    var matches = courseName.match(/\b(\w)/g);
+    if (matches != null) {
+        var acronym = matches.join('');
+    }
+    if (acronym != null) {
+        courseCodeCreate.value = acronym;
+    }
 }

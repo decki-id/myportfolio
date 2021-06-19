@@ -17,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
                         {!! Form::label('fullname', 'Fullname', ['class' => 'form-label']) !!}
-                        {!! Form::text('fullname', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'fullname-create', 'placeholder' => 'Insert fullname']) !!}
+                        {!! Form::text('fullname', null, ['class' => 'form-control text-capitalize', 'maxlength' => 191, 'id' => 'fullname-create', 'placeholder' => 'Insert fullname']) !!}
                     </div>
                 </div>
                 @if(!empty($role))

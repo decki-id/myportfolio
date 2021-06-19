@@ -6,7 +6,7 @@
                 <h5 class="modal-title" id="updateUserHeaderModal">Update User</h5>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
-            {!! Form::open(['route' => ['sisdeck.users.update', 'id'], 'method' => 'post']) !!}
+            {!! Form::open(['route' => ['sisdeck.users.update', 'id'], 'method' => 'POST']) !!}
             @csrf
             @method('PATCH')
             <div class="modal-body">
@@ -20,7 +20,7 @@
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
                         {!! Form::label('fullname', 'Fullname', ['class' => 'form-label']) !!}
-                        {!! Form::text('fullname', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'fullname-update', 'title' => 'Fullname', 'placeholder' => 'Insert fullname']) !!}
+                        {!! Form::text('fullname', null, ['class' => 'form-control text-capitalize', 'maxlength' => 191, 'id' => 'fullname-update', 'title' => 'Fullname', 'placeholder' => 'Insert fullname']) !!}
                     </div>
                 </div>
                 @if(!empty($role))
