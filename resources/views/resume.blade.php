@@ -24,7 +24,7 @@
                         <p>Citra Padalarang Indah B-11 RT. 04 RW. 20,<br> Jayamekar, Padalarang, West Bandung, West Java, Indonesia, 40553</p>
                         <p><span>Phone/WhatsApp:</span> +62 822 1666 8131</p>
                         <p><span>Email:</span> d.herdiawan.s@gmail.com</p>
-                        <p><span>Website:</span> deckiherdiawans.com</p>
+                        <!-- <p><span>Website:</span> deckiherdiawans.com</p> -->
                     </div>
                 </div>
             </section>
