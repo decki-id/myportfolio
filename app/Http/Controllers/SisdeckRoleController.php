@@ -32,8 +32,7 @@ class SisdeckRoleController extends AppBaseController
     {
         $sisdeckRoles = $this->sisdeckRoleRepository->all();
 
-        return view('/sisdeck/roles/index')
-            ->with('sisdeckRoles', $sisdeckRoles);
+        return view('/sisdeck/roles/index')->with('sisdeckRoles', $sisdeckRoles);
     }
 
     /**

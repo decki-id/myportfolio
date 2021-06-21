@@ -32,8 +32,7 @@ class SisdeckCourseController extends AppBaseController
     {
         $sisdeckCourses = $this->sisdeckCourseRepository->all();
 
-        return view('/sisdeck/courses/index')
-            ->with('sisdeckCourses', $sisdeckCourses);
+        return view('/sisdeck/courses/index')->with('sisdeckCourses', $sisdeckCourses);
     }
 
     /**
