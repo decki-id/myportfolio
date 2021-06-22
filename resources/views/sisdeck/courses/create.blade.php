@@ -17,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
                         {!! Form::label('course_name', 'Course Name', ['class' => 'form-label']) !!}
-                        {!! Form::text('course_name', null, ['class' => 'form-control text-capitalize', 'maxlength' => 191, 'id' => 'course_name-create', 'title' => 'Course Name', 'placeholder' => 'Insert course name', 'oninput' => "codeValue()"]) !!}
+                        {!! Form::text('course_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'course_name-create', 'title' => 'Course Name', 'placeholder' => 'Insert course name', 'oninput' => "codeValue()"]) !!}
                     </div>
                 </div>
                 <div class="row align-items-center">

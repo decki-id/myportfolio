@@ -55,6 +55,7 @@ class SisdeckRoleController extends AppBaseController
     public function store(CreateSisdeckRoleRequest $request)
     {
         $input = $request->all();
+        $input['role_name'] = ucwords(strtolower($input['role_name']));
 
         $sisdeckRole = $this->sisdeckRoleRepository->create($input);
 
@@ -121,7 +122,10 @@ class SisdeckRoleController extends AppBaseController
             return redirect(route('sisdeck.roles.index'));
         }
 
-        $sisdeckRole = $this->sisdeckRoleRepository->update($request->all(), $request->role_id);
+        $input = $request->all();
+        $input['role_name'] = ucwords(strtolower($input['role_name']));
+
+        $sisdeckRole = $this->sisdeckRoleRepository->update($input, $request->role_id);
 
         Flash::success('Role updated successfully.');
 

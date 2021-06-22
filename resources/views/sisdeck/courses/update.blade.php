@@ -20,7 +20,7 @@
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
                         {!! Form::label('course_name', 'Course Name', ['class' => 'form-label']) !!}
-                        {!! Form::text('course_name', null, ['class' => 'form-control text-capitalize', 'maxlength' => 191, 'id' => 'course_name-update', 'title' => 'Role Name', 'placeholder' => 'Insert role name']) !!}
+                        {!! Form::text('course_name', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'course_name-update', 'title' => 'Role Name', 'placeholder' => 'Insert role name']) !!}
                     </div>
                 </div>
                 <div class="row align-items-center">

@@ -55,6 +55,8 @@ class SisdeckCourseController extends AppBaseController
     public function store(CreateSisdeckCourseRequest $request)
     {
         $input = $request->all();
+        $input['course_name'] = ucwords(strtolower($input['course_name']));
+        $input['course_description'] = ucfirst(strtolower($input['course_description']));
 
         $sisdeckCourse = $this->sisdeckCourseRepository->create($input);
 
@@ -121,7 +123,11 @@ class SisdeckCourseController extends AppBaseController
             return redirect(route('sisdeck.courses.index'));
         }
 
-        $sisdeckCourse = $this->sisdeckCourseRepository->update($request->all(), $request->course_id);
+        $input = $request->all();
+        $input['course_name'] = ucwords(strtolower($input['course_name']));
+        $input['course_description'] = ucfirst(strtolower($input['course_description']));
+
+        $sisdeckCourse = $this->sisdeckCourseRepository->update($input, $request->course_id);
 
         Flash::success('Course updated successfully.');
 

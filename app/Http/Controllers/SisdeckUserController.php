@@ -6,6 +6,7 @@ use App\Http\Requests\CreateSisdeckUserRequest;
 use App\Http\Requests\UpdateSisdeckUserRequest;
 use App\Repositories\SisdeckUserRepository;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\SisdeckRole;
 use Flash;
@@ -58,6 +59,8 @@ class SisdeckUserController extends AppBaseController
     public function store(CreateSisdeckUserRequest $request)
     {
         $input = $request->all();
+        $input['fullname'] = ucwords(strtolower($input['fullname']));
+        $input['password'] = Hash::make($input['password']);
 
         $sisdeckUser = $this->sisdeckUserRepository->create($input);
 
@@ -124,7 +127,10 @@ class SisdeckUserController extends AppBaseController
             return redirect(route('sisdeck.users.index'));
         }
 
-        $sisdeckUser = $this->sisdeckUserRepository->update($request->all(), $request->id);
+        $input = $request->all();
+        $input['fullname'] = ucwords(strtolower($input['fullname']));
+
+        $sisdeckUser = $this->sisdeckUserRepository->update($input, $request->id);
 
         Flash::success('User updated successfully.');
 
