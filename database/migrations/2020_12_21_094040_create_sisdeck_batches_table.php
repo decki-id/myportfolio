@@ -14,8 +14,8 @@ class CreateSisdeckBatchesTable extends Migration
     public function up()
     {
         Schema::create('sisdeck_batches', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('batch');
+            $table->bigIncrements('batch_id');
+            $table->string('year');
             $table->softDeletes();
             $table->timestamps();
         });

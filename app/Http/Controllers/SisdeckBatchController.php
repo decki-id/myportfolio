@@ -112,9 +112,9 @@ class SisdeckBatchController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckBatchRequest $request)
+    public function update(UpdateSisdeckBatchRequest $request)
     {
-        $sisdeckBatch = $this->sisdeckBatchRepository->find($id);
+        $sisdeckBatch = $this->sisdeckBatchRepository->find($request->batch_id);
 
         if (empty($sisdeckBatch)) {
             Flash::error('Batch not found.');
@@ -122,7 +122,7 @@ class SisdeckBatchController extends AppBaseController
             return redirect(route('sisdeck.batches.index'));
         }
 
-        $sisdeckBatch = $this->sisdeckBatchRepository->update($request->all(), $id);
+        $sisdeckBatch = $this->sisdeckBatchRepository->update($request->all(), $request->batch_id);
 
         Flash::success('Batch updated successfully.');
 

@@ -1,9 +1,19 @@
 const
+    createBatchButton = document.querySelector("#create-batch_button"),
     createCourseButton = document.querySelector("#create-course_button"),
     createRoleButton = document.querySelector("#create-role_button"),
     createUserButton = document.querySelector("#create-user_button"),
+    batchYearCreate = document.querySelector("#year-create"),
     courseCodeCreate = document.querySelector("#course_code-create"),
     courseNameCreate = document.querySelector("#course_name-create");
+
+if (createBatchButton) {
+    createBatchButton.addEventListener("click", () => {
+        setTimeout(function () {
+            batchYearCreate.focus();
+        }, 100);
+    });
+}
 
 if (createCourseButton) {
     createCourseButton.addEventListener("click", () => {

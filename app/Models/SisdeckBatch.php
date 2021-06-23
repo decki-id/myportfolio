@@ -20,17 +20,16 @@ class SisdeckBatch extends Model
     use HasFactory;
 
     public $table = 'sisdeck_batches';
+
+    protected $primaryKey = 'batch_id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
 
-
-
     public $fillable = [
-        'batch'
+        'year'
     ];
 
     /**
@@ -39,8 +38,8 @@ class SisdeckBatch extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'batch' => 'string'
+        'batch_id' => 'integer',
+        'year' => 'string'
     ];
 
     /**
@@ -49,7 +48,7 @@ class SisdeckBatch extends Model
      * @var array
      */
     public static $rules = [
-        'batch' => 'required|string|max:191',
+        'year' => 'required|string|max:191',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

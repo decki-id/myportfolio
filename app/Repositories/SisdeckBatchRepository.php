@@ -17,7 +17,7 @@ class SisdeckBatchRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'batch'
+        'batch_name'
     ];
 
     /**

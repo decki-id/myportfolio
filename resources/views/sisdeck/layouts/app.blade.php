@@ -94,17 +94,9 @@
         <div class="content-wrapper">
             @yield('content')
         </div>
+
+        @include('/sisdeck/layouts/modals')
     </div>
-
-    @include('/sisdeck/users/create')
-    @include('/sisdeck/users/read')
-    @include('/sisdeck/users/update')
-
-    @include('/sisdeck/roles/create')
-    @include('/sisdeck/roles/update')
-    
-    @include('/sisdeck/courses/create')
-    @include('/sisdeck/courses/update')
 
     <!-- @else
     <nav class="navbar navbar-default navbar-static-top">
