@@ -32,7 +32,7 @@
     @yield('css')
 </head>
 <body class="skin-blue sidebar-mini">
-    <!-- @if (!Auth::guest()) -->
+    {{-- <!-- @if (!Auth::guest()) --> --}}
     <div class="wrapper">
         <!-- Main Header -->
         <header class="main-header">
@@ -98,7 +98,7 @@
         @include('/sisdeck/layouts/modals')
     </div>
 
-    <!-- @else
+    {{-- <!-- @else
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -142,7 +142,7 @@
             </div>
         </div>
     </div>
-    @endif -->
+    @endif --> --}}
 
     <script src="{{ url('assets/jquery/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url('assets/bootstrap-441/js/bootstrap.js') }}"></script>
