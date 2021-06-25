@@ -52,14 +52,22 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle dhs_dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
+                                @if(!empty(Auth::user()->profile->image))
                                 <img src="/storage/{{ Auth::user()->profile->image }}" class="user-image dhs_user-image" alt="User Image"/>
+                                @else
+                                <img src="{{ url('assets/images/default_user.png') }}" class="user-image dhs_user-image" alt="User Image"/>
+                                @endif
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs dhs_username-toggle">{{ Auth::user()->username }}</span>
                             </a>
                             <ul class="dropdown-menu dhs_dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
+                                    @if(!empty(Auth::user()->profile->image))
                                     <img src="/storage/{{ Auth::user()->profile->image }}" class="rounded-circle" alt="User Image"/>
+                                    @else
+                                    <img src="{{ url('assets/images/default_user.png') }}" class="rounded-circle" alt="User Image"/>
+                                    @endif
                                     <p>
                                         {{ Auth::user()->username }}
                                         <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
@@ -94,9 +102,23 @@
         <div class="content-wrapper">
             @yield('content')
         </div>
-
-        @include('/sisdeck/layouts/modals')
     </div>
+
+    @include('/sisdeck/batches/create')
+    @include('/sisdeck/batches/update')
+
+    @include('/sisdeck/classes/create')
+    @include('/sisdeck/classes/update')
+
+    @include('/sisdeck/courses/create')
+    @include('/sisdeck/courses/update')
+
+    @include('/sisdeck/roles/create')
+    @include('/sisdeck/roles/update')
+
+    @include('/sisdeck/users/create')
+    @include('/sisdeck/users/read')
+    @include('/sisdeck/users/update')
 
     {{-- <!-- @else
     <nav class="navbar navbar-default navbar-static-top">

@@ -2,14 +2,14 @@
     <table class="table table-bordered" id="dhs_batches-table">
         <thead>
             <tr>
-                <th>Year</th>
+                <th class="text-center">Year</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach($sisdeckBatches as $sisdeckBatch)
             <tr>
-                <td>{{ $sisdeckBatch->year }}</td>
+                <td class="text-center">{{ $sisdeckBatch->year }}</td>
                 <td class="text-center">
                     <div class='btn-group'>
                         <a href="#" data-batch_id="{{ $sisdeckBatch->batch_id }}" data-year="{{ $sisdeckBatch->year }}" data-toggle="modal"

@@ -17,8 +17,8 @@ class SisdeckClassRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'name',
-        'code'
+        'class_code',
+        'class_name'
     ];
 
     /**

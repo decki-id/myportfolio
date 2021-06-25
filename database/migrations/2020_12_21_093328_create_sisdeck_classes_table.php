@@ -14,9 +14,9 @@ class CreateSisdeckClassesTable extends Migration
     public function up()
     {
         Schema::create('sisdeck_classes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('code')->unique();
+            $table->bigIncrements('class_id');
+            $table->string('class_code')->unique();
+            $table->string('class_name');
             $table->softDeletes();
             $table->timestamps();
         });

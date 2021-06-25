@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="{{url('css/style.css')}}">
-        <link rel="stylesheet" href="{{url('css/red.css')}}">
+        <link rel="stylesheet" href="{{ url('css/style.css') }}">
+        <link rel="stylesheet" href="{{ url('css/red.css') }}">
 
         <!-- Color Switcher -->
-        <link rel="stylesheet" class="alternative-color" id="Red" title="Red" href="{{url('css/red.css')}}" disabled="true">
-        <link rel="stylesheet" class="alternative-color" id="Yellow" title="Yellow" href="{{url('css/yellow.css')}}" disabled="true">
-        <link rel="stylesheet" class="alternative-color" id="Green" title="Green" href="{{url('css/green.css')}}" disabled="true">
-        <link rel="stylesheet" class="alternative-color" id="Blue" title="Blue" href="{{url('css/blue.css')}}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Red" title="Red" href="{{ url('css/red.css') }}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Yellow" title="Yellow" href="{{ url('css/yellow.css') }}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Green" title="Green" href="{{ url('css/green.css') }}" disabled="true">
+        <link rel="stylesheet" class="alternative-color" id="Blue" title="Blue" href="{{ url('css/blue.css') }}" disabled="true">
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{url('assets/fontawesome-513/css/all.css')}}">
+        <link rel="stylesheet" href="{{ url('assets/fontawesome-513/css/all.css') }}">
 
-        <link rel="icon" type="image/jpg" href="{{url('assets/images/decki-revota.jpg')}}">
+        <link rel="icon" type="image/jpg" href="{{ url('assets/images/decki-revota.jpg') }}">
         <title>@yield('title')</title>
     </head>
     <body>
@@ -83,6 +83,6 @@
        </div>
 
         <!-- Optional JavaScript -->
-        <script src="{{url('js/script.js')}}"></script>
+        <script src="{{ url('js/script.js') }}"></script>
     </body>
 </html>

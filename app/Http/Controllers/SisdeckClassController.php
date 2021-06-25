@@ -55,6 +55,7 @@ class SisdeckClassController extends AppBaseController
     public function store(CreateSisdeckClassRequest $request)
     {
         $input = $request->all();
+        $input['class_name'] = ucwords(strtolower($input['class_name']));
 
         $sisdeckClass = $this->sisdeckClassRepository->create($input);
 
@@ -111,9 +112,9 @@ class SisdeckClassController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckClassRequest $request)
+    public function update(UpdateSisdeckClassRequest $request)
     {
-        $sisdeckClass = $this->sisdeckClassRepository->find($id);
+        $sisdeckClass = $this->sisdeckClassRepository->find($request->class_id);
 
         if (empty($sisdeckClass)) {
             Flash::error('Class not found.');
@@ -121,7 +122,10 @@ class SisdeckClassController extends AppBaseController
             return redirect(route('sisdeck.classes.index'));
         }
 
-        $sisdeckClass = $this->sisdeckClassRepository->update($request->all(), $id);
+        $input = $request->all();
+        $input['class_name'] = ucwords(strtolower($input['class_name']));
+
+        $sisdeckClass = $this->sisdeckClassRepository->update($input, $request->class_id);
 
         Flash::success('Class updated successfully.');
 

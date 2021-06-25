@@ -21,18 +21,17 @@ class SisdeckClass extends Model
     use HasFactory;
 
     public $table = 'sisdeck_classes';
+
+    protected $primaryKey = 'class_id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
 
-
-
     public $fillable = [
-        'name',
-        'code'
+        'class_code',
+        'class_name'
     ];
 
     /**
@@ -41,9 +40,9 @@ class SisdeckClass extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'name' => 'string',
-        'code' => 'string'
+        'class_id' => 'integer',
+        'class_code' => 'string',
+        'class_name' => 'string'
     ];
 
     /**
@@ -52,12 +51,10 @@ class SisdeckClass extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|string|max:191',
-        'code' => 'required|string|max:191',
+        'class_code' => 'required|string|max:191',
+        'class_name' => 'required|string|max:191',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];
-
-    
+    ];   
 }
