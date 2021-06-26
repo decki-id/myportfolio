@@ -112,9 +112,9 @@ class SisdeckDayController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckDayRequest $request)
+    public function update(UpdateSisdeckDayRequest $request)
     {
-        $sisdeckDay = $this->sisdeckDayRepository->find($id);
+        $sisdeckDay = $this->sisdeckDayRepository->find($request->id);
 
         if (empty($sisdeckDay)) {
             Flash::error('Day not found.');
@@ -122,7 +122,7 @@ class SisdeckDayController extends AppBaseController
             return redirect(route('sisdeck.days.index'));
         }
 
-        $sisdeckDay = $this->sisdeckDayRepository->update($request->all(), $id);
+        $sisdeckDay = $this->sisdeckDayRepository->update($request->all(), $request->id);
 
         Flash::success('Day updated successfully.');
 

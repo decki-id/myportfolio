@@ -17,7 +17,7 @@ class SisdeckDayRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'name'
+        'day'
     ];
 
     /**

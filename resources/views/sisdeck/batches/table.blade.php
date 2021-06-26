@@ -13,7 +13,7 @@
                 <td class="text-center">
                     <div class='btn-group'>
                         <a href="#" data-batch_id="{{ $sisdeckBatch->batch_id }}" data-year="{{ $sisdeckBatch->year }}" data-toggle="modal"
-                           data-target="#update-batch_modal" title="Update" class='btn btn-warning btn-xs text-white update-batch_button mr-1'>
+                           data-target="#update-batch_modal" title="Update" class='btn btn-warning btn-xs text-white mr-1'>
                            <i class="fas fa-fw fa-edit"></i>
                         </a>
                         {!! Form::open(['route' => ['sisdeck.batches.destroy', $sisdeckBatch->batch_id], 'method' => 'delete']) !!}

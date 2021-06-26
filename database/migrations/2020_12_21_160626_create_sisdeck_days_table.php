@@ -15,7 +15,7 @@ class CreateSisdeckDaysTable extends Migration
     {
         Schema::create('sisdeck_days', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('day');
             $table->softDeletes();
             $table->timestamps();
         });

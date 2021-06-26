@@ -20,17 +20,16 @@ class SisdeckDay extends Model
     use HasFactory;
 
     public $table = 'sisdeck_days';
+
+    protected $primaryKey = 'id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
 
-
-
     public $fillable = [
-        'name'
+        'day'
     ];
 
     /**
@@ -40,7 +39,7 @@ class SisdeckDay extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string'
+        'day' => 'string'
     ];
 
     /**
@@ -49,7 +48,7 @@ class SisdeckDay extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|string|max:191',
+        'day' => 'required|string|max:191',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

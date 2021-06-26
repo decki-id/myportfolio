@@ -15,10 +15,10 @@ class CreateSisdeckClassroomsTable extends Migration
     {
         Schema::create('sisdeck_classrooms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->string('code')->unique();
+            $table->string('name');
             $table->text('description');
-            $table->tinyInteger('status')->default(1);
+            $table->tinyInteger('status');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -18,7 +18,7 @@ class CreateSisdeckCoursesTable extends Migration
             $table->string('course_code')->unique();
             $table->string('course_name');
             $table->longText('course_description');
-            $table->tinyInteger('course_status')->default(1);
+            $table->tinyInteger('course_status');
             $table->softDeletes();
             $table->timestamps();
         });

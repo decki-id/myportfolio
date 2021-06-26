@@ -110,8 +110,14 @@
     @include('/sisdeck/classes/create')
     @include('/sisdeck/classes/update')
 
+    @include('/sisdeck/classrooms/create')
+    @include('/sisdeck/classrooms/update')
+
     @include('/sisdeck/courses/create')
     @include('/sisdeck/courses/update')
+
+    @include('/sisdeck/days/create')
+    @include('/sisdeck/days/update')
 
     @include('/sisdeck/roles/create')
     @include('/sisdeck/roles/update')

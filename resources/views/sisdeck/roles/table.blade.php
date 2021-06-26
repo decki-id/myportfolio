@@ -15,7 +15,7 @@
                 <td class="text-center">
                     <div class='btn-group'>
                         <a href="#" data-role_id="{{ $sisdeckRole->role_id }}" data-role_name="{{ $sisdeckRole->role_name }}" data-toggle="modal"
-                           data-target="#update-role_modal" title="Update" class="btn btn-warning btn-xs text-white update-role_button mr-1">
+                           data-target="#update-role_modal" title="Update" class="btn btn-warning btn-xs text-white mr-1">
                            <i class="fas fa-fw fa-edit"></i>
                         </a>
                         {!! Form::open(['route' => ['sisdeck.roles.destroy', $sisdeckRole->role_id], 'method' => 'delete']) !!}

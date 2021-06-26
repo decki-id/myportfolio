@@ -23,18 +23,17 @@ class SisdeckClassroom extends Model
     use HasFactory;
 
     public $table = 'sisdeck_classrooms';
+
+    protected $primaryKey = 'id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
 
-
-
     public $fillable = [
-        'name',
         'code',
+        'name',
         'description',
         'status'
     ];
@@ -46,8 +45,8 @@ class SisdeckClassroom extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string',
         'code' => 'string',
+        'name' => 'string',
         'description' => 'string',
         'status' => 'boolean'
     ];
@@ -65,7 +64,5 @@ class SisdeckClassroom extends Model
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];
-
-    
+    ];   
 }

@@ -26,7 +26,7 @@
                         <a href="#" data-course_id="{{ $sisdeckCourse->course_id }}" data-course_code="{{ $sisdeckCourse->course_code }}"
                            data-course_name="{{ $sisdeckCourse->course_name }}" data-course_description="{{ $sisdeckCourse->course_description }}"
                            data-course_status="{{ $sisdeckCourse->course_status }}" data-toggle="modal" data-target="#update-course_modal" title="Update"
-                           class='btn btn-warning btn-xs text-white update-course_button mr-1'><i class="fas fa-fw fa-edit"></i>
+                           class='btn btn-warning btn-xs text-white mr-1'><i class="fas fa-fw fa-edit"></i>
                         </a>
                         {!! Form::open(['route' => ['sisdeck.courses.destroy', $sisdeckCourse->course_id], 'method' => 'delete']) !!}
                         {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'title' => 'Delete', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}

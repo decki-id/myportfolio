@@ -56,6 +56,8 @@ class SisdeckClassroomController extends AppBaseController
     public function store(CreateSisdeckClassroomRequest $request)
     {
         $input = $request->all();
+        $input['name'] = ucwords(strtolower($input['name']));
+        $input['description'] = ucfirst(strtolower($input['description']));
 
         $sisdeckClassroom = $this->sisdeckClassroomRepository->create($input);
 
@@ -112,9 +114,9 @@ class SisdeckClassroomController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckClassroomRequest $request)
+    public function update(UpdateSisdeckClassroomRequest $request)
     {
-        $sisdeckClassroom = $this->sisdeckClassroomRepository->find($id);
+        $sisdeckClassroom = $this->sisdeckClassroomRepository->find($request->id);
 
         if (empty($sisdeckClassroom)) {
             Flash::error('Classroom not found.');
@@ -122,7 +124,11 @@ class SisdeckClassroomController extends AppBaseController
             return redirect(route('sisdeck.classrooms.index'));
         }
 
-        $sisdeckClassroom = $this->sisdeckClassroomRepository->update($request->all(), $id);
+        $input = $request->all();
+        $input['name'] = ucwords(strtolower($input['name']));
+        $input['description'] = ucfirst(strtolower($input['description']));
+
+        $sisdeckClassroom = $this->sisdeckClassroomRepository->update($input, $request->id);
 
         Flash::success('Classroom updated successfully.');
 

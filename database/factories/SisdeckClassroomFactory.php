@@ -22,8 +22,8 @@ class SisdeckClassroomFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
         'code' => $this->faker->word,
+        'name' => $this->faker->word,
         'description' => $this->faker->text,
         'status' => $this->faker->word,
         'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
