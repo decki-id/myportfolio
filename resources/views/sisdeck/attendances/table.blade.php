@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table" id="dhs_attendances-table">
+    <table class="table table-bordered table-hover" id="dhs_attendances-table">
         <thead>
             <tr>
                 <th class="text-center">Student Id</th>

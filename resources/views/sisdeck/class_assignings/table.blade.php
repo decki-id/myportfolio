@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table" id="dhs_classassignings-table">
+    <table class="table table-bordered table-hover" id="dhs_classassignings-table">
         <thead>
             <tr>
                 <th>Course Id</th>

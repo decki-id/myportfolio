@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-bordered" id="dhs_days-table">
+    <table class="table table-bordered table-hover" id="dhs_days-table">
         <thead>
             <tr>
                 <th>Day</th>

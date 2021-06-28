@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table" id="dhs_shifts-table">
+    <table class="table table-bordered table-hover" id="dhs_shifts-table">
         <thead>
             <tr>
                 <th class="text-center">Shift</th>

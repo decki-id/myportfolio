@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-bordered" id="dhs_classrooms-table">
+    <table class="table table-bordered table-hover" id="dhs_classrooms-table">
         <thead>
             <tr>
                 <th class="text-center">Code</th>
