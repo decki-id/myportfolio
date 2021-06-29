@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
     <title>SisDeck | Login Page</title>
 
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="icon" type="image/png" href="{{ url('assets/images/decki-revota.jpg') }}">
 
     <!-- Bootstrap 4.4.1 -->
     <link rel="stylesheet" href="{{ url('assets/bootstrap-441/css/bootstrap.css') }}">
@@ -31,71 +31,69 @@
     <![endif]-->
 </head>
 <body class="hold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
-        <a href="{{ url('/sisdeck') }}">SisDeck</a>
-    </div>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="{{ url('/sisdeck') }}">SisDeck</a>
+        </div>
 
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
 
-        <form method="post" action="{{ url('/sisdeck-login') }}">
-            @csrf
+            <form method="post" action="{{ url('/sisdeck-login') }}">
+                @csrf
 
-            <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <div class="input-group">
-                    <input type="email" class="form-control dhs_input-bar" id="email" name="email" value="{{ old('email') }}" placeholder="Email" autofocus>
-                    <span class="input-group-text dhs_input-icon" id="email-icon"><i class="fas fa-fw fa-envelope"></i></span>
+                <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
+                    <div class="input-group">
+                        <input type="email" class="form-control dhs_input-bar" id="email" name="email" value="{{ old('email') }}" placeholder="Email" autofocus>
+                        <span class="input-group-text dhs_input-icon" id="email-icon"><i class="fas fa-fw fa-envelope"></i></span>
+                    </div>
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
                 </div>
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
-            </div>
 
-            <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <div class="input-group">
-                    <input type="password" class="form-control dhs_input-bar" id="password" name="password" placeholder="Password">
-                    <span class="input-group-text dhs_input-icon" id="password-icon"><i class="fas fa-fw fa-lock"></i></span>
+                <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <div class="input-group">
+                        <input type="password" class="form-control dhs_input-bar" id="password" name="password" placeholder="Password">
+                        <span class="input-group-text dhs_input-icon" id="password-icon"><i class="fas fa-fw fa-lock"></i></span>
+                    </div>
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+
                 </div>
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                    </span>
-                @endif
-
-            </div>
-            <div class="form-group">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <input type="checkbox" name="remember"> Remember Me
+                <div class="form-group">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <input type="checkbox" name="remember"> Remember Me
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                <div class="form-group">
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
+            </form>
+            <hr>
+            <div class="text-center">
+                <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+                <a href="{{ url('/sisdeck/register') }}">Register a new membership</a>
             </div>
-        </form>
-        <hr>
-        <div class="text-center">
-            <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-            <a href="{{ url('/sisdeck/register') }}">Register a new membership</a>
         </div>
+        <!-- /.login-box-body -->
     </div>
-    <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
+    <!-- /.login-box -->
 
-<script src="{{ url('assets/jquery/jquery-3.4.1.min.js') }}"></script>
-<script src="{{ url('assets/bootstrap-441/js/bootstrap.js') }}"></script>
-
-<!-- AdminLTE App -->
-<script src="{{ url('js/adminlte.js') }}"></script>
+    <script type="text/javascript" src="{{ url('js/adminlte.js') }}"></script>
+    <script type="text/javascript" src="{{ url('assets/jquery/jquery-3.4.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('assets/bootstrap-441/js/bootstrap.js') }}"></script>
 </body>
 </html>

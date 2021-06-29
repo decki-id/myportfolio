@@ -51,7 +51,7 @@
                 status = button.data('status'),
                 modal = $(this);
                 
-            modal.find('.modal-body #id-update').val(id);
+            modal.find('.modal-body #cr_id-update').val(id);
             modal.find('.modal-body #code-update').val(code);
             modal.find('.modal-body #name-update').val(name);
             modal.find('.modal-body #description-update').val(description);

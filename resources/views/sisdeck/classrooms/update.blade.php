@@ -10,7 +10,7 @@
             @csrf
             @method('PATCH')
             <div class="modal-body">
-                {!! Form::hidden('id', null, ['id' => 'id-update']) !!}
+                {!! Form::hidden('id', null, ['id' => 'cr_id-update']) !!}
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
                         {!! Form::label('code', 'Classroom Code', ['class' => 'form-label']) !!}
