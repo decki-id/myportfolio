@@ -50,6 +50,9 @@
 <li class="{{ Route::currentRouteName() == 'sisdeck.attendances.index' || Route::currentRouteName() == 'sisdeck.attendances.create' || Route::currentRouteName() == 'sisdeck.attendances.show' || Route::currentRouteName() == 'sisdeck.attendances.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.attendances.index') }}" title="Attendances"><i class="fas fa-fw fa-concierge-bell mr-3"></i><span>Attendances</span></a>
 </li>
+<li class="{{ Route::currentRouteName() == 'sisdeck.transactions.index' || Route::currentRouteName() == 'sisdeck.transactions.create' || Route::currentRouteName() == 'sisdeck.transactions.show' || Route::currentRouteName() == 'sisdeck.transactions.edit' ? 'active' : '' }}">
+    <a href="{{ route('sisdeck.transactions.index') }}" title="Transactions"><i class="fas fa-fw fa-money-bill mr-3"></i><span>Transactions</span></a>
+</li>
 <li class="{{ Route::currentRouteName() == 'sisdeck.roles.index' || Route::currentRouteName() == 'sisdeck.roles.create' || Route::currentRouteName() == 'sisdeck.roles.show' || Route::currentRouteName() == 'sisdeck.roles.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.roles.index') }}" title="Roles"><i class="fas fa-fw fa-user-tag mr-3"></i><span>Roles</span></a>
 </li>
@@ -58,9 +61,6 @@
 </li>
 <li class="{{ Route::currentRouteName() == 'sisdeck.teachers.index' || Route::currentRouteName() == 'sisdeck.teachers.create' || Route::currentRouteName() == 'sisdeck.teachers.show' || Route::currentRouteName() == 'sisdeck.teachers.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.teachers.index') }}" title="Teachers"><i class="fas fa-fw fa-user-circle mr-3"></i><span>Teachers</span></a>
-</li>
-<li class="{{ Route::currentRouteName() == 'sisdeck.transactions.index' || Route::currentRouteName() == 'sisdeck.transactions.create' || Route::currentRouteName() == 'sisdeck.transactions.show' || Route::currentRouteName() == 'sisdeck.transactions.edit' ? 'active' : '' }}">
-    <a href="{{ route('sisdeck.transactions.index') }}" title="Transactions"><i class="fas fa-fw fa-money-bill mr-3"></i><span>Transactions</span></a>
 </li>
 <li class="{{ Route::currentRouteName() == 'sisdeck.users.index' || Route::currentRouteName() == 'sisdeck.users.create' || Route::currentRouteName() == 'sisdeck.users.show' || Route::currentRouteName() == 'sisdeck.users.edit' ? 'active' : '' }}">
     <a href="{{ route('sisdeck.users.index') }}" title="Users"><i class="fas fa-fw fa-user mr-3"></i><span>Users</span></a>
