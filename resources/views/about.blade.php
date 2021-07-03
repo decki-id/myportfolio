@@ -23,8 +23,9 @@
                                 consultant for apparel industry, for more than three years. My last education degree is an Associate/Diploma 
                                 of Information Systems, graduated in March 2020 from LPKIA. I want to start my job as a programmer, whether it 
                                 freelance or a full-time job. I can build a website or a web-based software with PHP (CodeIgniter and Laravel 
-                                framework), JavaScript (NodeJS), and Python for the back-end. For the front-end, I am familiar with CSS (Bootstrap) 
-                                and JavaScript. I live in Padalarang, but my activities mostly based in Bandung city.
+                                framework), JavaScript (NodeJS), and Python (Flask and FastAPI framework) for the back-end. For the front-end, 
+                                I am familiar with CSS (Bootstrap) and JavaScript (Vanilla and JQuery). I live in Padalarang, but my activities 
+                                mostly based in Bandung city.
                             </p>
                         </div>
                     </div>
@@ -94,8 +95,17 @@
                                 <h3 class="edex-title padd-15">Experience</h3><br>
                                 <div class="timeline-item">
                                     <div class="circle-dot"></div>
-                                    <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>3 January 2018 - Now</h6>
-                                    <h4 class="timeline-title">Customer Support at PT. Ava Revota</h4>
+                                    <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>10 Juni 2021 - Present</h6>
+                                    <h4 class="timeline-title"><span>Full Stack Web Developer</span> at Kamar Pelajar</h4>
+                                    <p class="timeline-subtitle">Internship</p>
+                                    <ul class="timeline-text">
+                                        <li>Freelance remote work</li>
+                                    </ul>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="circle-dot"></div>
+                                    <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>3 January 2018 - Present</h6>
+                                    <h4 class="timeline-title"><span>Customer Support</span> at PT. Ava Revota</h4>
                                     <p class="timeline-subtitle">IT consultant for apparel industry based in Bandung city.</p>
                                     <ul class="timeline-text">
                                         <li>System installation and configuration</li>
@@ -106,7 +116,7 @@
                                 <div class="timeline-item">
                                     <div class="circle-dot"></div>
                                     <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>February - Juli 2017</h6>
-                                    <h4 class="timeline-title">Logistic Administrator at CV. Surya Glass</h4>
+                                    <h4 class="timeline-title"><span>Logistic Administrator</span> at CV. Surya Glass</h4>
                                     <p class="timeline-subtitle">Distribution for every kind of glasses.</p>
                                     <ul class="timeline-text">
                                         <li>Data entry</li>
@@ -117,7 +127,7 @@
                                 <div class="timeline-item">
                                     <div class="circle-dot"></div>
                                     <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>October 2014 - January 2016</h6>
-                                    <h4 class="timeline-title">Engineering Staff at Kartika Sari</h4>
+                                    <h4 class="timeline-title"><span>Engineering Staff</span> at Kartika Sari</h4>
                                     <p class="timeline-subtitle">Food and beverages industry.</p>
                                     <ul class="timeline-text">
                                         <li>Maintenance of Air Conditioners / Cooling Machines, Electricity and Plumbing Installations</li>
@@ -128,7 +138,7 @@
                                 <div class="timeline-item item-last-child">
                                     <div class="circle-dot"></div>
                                     <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>March 2013 - January 2014</h6>
-                                    <h4 class="timeline-title">Logistic Administrator at PT. Bersama Zatta Jaya (Elzatta brand)</h4>
+                                    <h4 class="timeline-title"><span>Logistic Administrator</span> at PT. Bersama Zatta Jaya (Elzatta brand)</h4>
                                     <p class="timeline-subtitle">Apparel industry.</p>
                                     <ul class="timeline-text">
                                         <li>Data entry</li>

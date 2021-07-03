@@ -4,6 +4,7 @@
 body.dark .sidebar .nav li a:hover,
 body.dark .sidebar .nav li a.active,
 .about .about-content .about-text span,
+.about .about-content .edex .timeline .timeline-title span,
 .style-switcher .switcher-toggle .fas {
     color: dodgerblue;
 }
