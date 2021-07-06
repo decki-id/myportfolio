@@ -112,9 +112,9 @@ class SisdeckAcademicController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSisdeckAcademicRequest $request)
+    public function update(UpdateSisdeckAcademicRequest $request)
     {
-        $sisdeckAcademic = $this->sisdeckAcademicRepository->find($id);
+        $sisdeckAcademic = $this->sisdeckAcademicRepository->find($request->id);
 
         if (empty($sisdeckAcademic)) {
             Flash::error('Academic not found.');
@@ -122,7 +122,7 @@ class SisdeckAcademicController extends AppBaseController
             return redirect(route('sisdeck.academics.index'));
         }
 
-        $sisdeckAcademic = $this->sisdeckAcademicRepository->update($request->all(), $id);
+        $sisdeckAcademic = $this->sisdeckAcademicRepository->update($request->all(), $request->id);
 
         Flash::success('Academic updated successfully.');
 

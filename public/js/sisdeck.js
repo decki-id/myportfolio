@@ -1,4 +1,5 @@
 const
+    createAcademicButton = document.querySelector("#create-academic_button"),
     createBatchButton = document.querySelector("#create-batch_button"),
     createClassButton = document.querySelector("#create-class_button"),
     createClassroomButton = document.querySelector("#create-classroom_button"),
@@ -6,6 +7,7 @@ const
     createDayButton = document.querySelector("#create-day_button"),
     createRoleButton = document.querySelector("#create-role_button"),
     createUserButton = document.querySelector("#create-user_button"),
+    academicFromCreate = document.querySelector("#ac_from-create"),
     batchYearCreate = document.querySelector("#year-create"),
     classCodeCreate = document.querySelector("#class_code-create"),
     classNameCreate = document.querySelector("#class_name-create"),
@@ -16,6 +18,14 @@ const
     dayCreate = document.querySelector("#day-create"),
     roleNameCreate = document.querySelector("#role_name-create"),
     usernameCreate = document.querySelector("#username-create");
+
+if (createAcademicButton) {
+    createAcademicButton.addEventListener("click", () => {
+        setTimeout(function () {
+            academicFromCreate.focus();
+        }, 100);
+    });
+}
 
 if (createBatchButton) {
     createBatchButton.addEventListener("click", () => {

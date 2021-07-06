@@ -22,7 +22,8 @@ class SisdeckAcademicFactory extends Factory
     public function definition()
     {
         return [
-            'academic_year' => $this->faker->word,
+        'from' => $this->faker->word,
+        'until' => $this->faker->word,
         'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')

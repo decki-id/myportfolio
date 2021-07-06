@@ -2,7 +2,7 @@
     <table class="table table-bordered table-hover" id="dhs_batches-table">
         <thead>
             <tr>
-                <th class="text-center">Year</th>
+                <th class="text-center">Batch Year</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>

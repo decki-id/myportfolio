@@ -20,17 +20,17 @@ class SisdeckAcademic extends Model
     use HasFactory;
 
     public $table = 'sisdeck_academics';
+
+    protected $primaryKey = 'id';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
 
-
-
     public $fillable = [
-        'academic_year'
+        'from',
+        'until'
     ];
 
     /**
@@ -40,7 +40,8 @@ class SisdeckAcademic extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'academic_year' => 'string'
+        'from' => 'string',
+        'until' => 'string'
     ];
 
     /**
@@ -49,7 +50,8 @@ class SisdeckAcademic extends Model
      * @var array
      */
     public static $rules = [
-        'academic_year' => 'required|string|max:191',
+        'from' => 'required|string|max:191',
+        'until' => 'required|string|max:191',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

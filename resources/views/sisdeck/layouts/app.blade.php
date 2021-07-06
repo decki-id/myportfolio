@@ -102,6 +102,9 @@
         </div>
     </div>
 
+    @include('/sisdeck/academics/create')
+    @include('/sisdeck/academics/update')
+
     @include('/sisdeck/batches/create')
     @include('/sisdeck/batches/update')
 

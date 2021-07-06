@@ -17,7 +17,8 @@ class SisdeckAcademicRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'academic_year'
+        'from',
+        'until'
     ];
 
     /**
