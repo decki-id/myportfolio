@@ -10,8 +10,8 @@ class InstadeckInstagramApiController extends Controller
 {
     public function index()
     {
-        public $appId = config('services.facebook.client_id');
-        public $redirectUri = config('services.facebook.redirect_uri');
+        $appId = config('services.facebook.client_id');
+        $redirectUri = config('services.facebook.redirect_uri');
 
         return redirect()->to("https://www.facebook.com/v8.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=instagram_basic,instagram_manage_insights,ads_management,business_management,pages_show_list,pages_read_engagement");
     }
@@ -19,7 +19,9 @@ class InstadeckInstagramApiController extends Controller
     public function callback(Request $request)
     {
         $client = new Client();
+        $appId = config('services.facebook.client_id');
         $secret = config('services.facebook.client_secret');
+        $redirectUri = config('services.facebook.redirect_uri');
         $code = $request->code;
         
         if (empty($code)) return redirect()->route('instadeck.home')->with('error', 'Failed to login with Instagram.');
