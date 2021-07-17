@@ -8,18 +8,18 @@ use GuzzleHttp\Exception\RequestException;
 
 class InstadeckInstagramApiController extends Controller
 {
-    $appId = config('services.facebook.client_id');
-    $redirectUri = config('services.facebook.redirect_uri');
-    $secret = config('services.facebook.client_secret');
-
     public function index()
     {
+        public $appId = config('services.facebook.client_id');
+        public $redirectUri = config('services.facebook.redirect_uri');
+
         return redirect()->to("https://www.facebook.com/v8.0/dialog/oauth?client_id={$appId}&redirect_uri={$redirectUri}&scope=instagram_basic,instagram_manage_insights,ads_management,business_management,pages_show_list,pages_read_engagement");
     }
 
     public function callback(Request $request)
     {
         $client = new Client();
+        $secret = config('services.facebook.client_secret');
         $code = $request->code;
         
         if (empty($code)) return redirect()->route('instadeck.home')->with('error', 'Failed to login with Instagram.');
