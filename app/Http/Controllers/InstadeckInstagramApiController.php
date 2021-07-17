@@ -23,11 +23,12 @@ class InstadeckInstagramApiController extends Controller
         $secret = config('services.facebook.client_secret');
         $redirectUri = config('services.facebook.redirect_uri');
         $code = $request->code;
+        dd($code);
         
         if (empty($code)) return redirect()->route('instadeck.home')->with('error', 'Failed to login with Instagram.');
 
         try {
-            $response = $client->request('GET', "http://graph.facebook.com/v8.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
+            $response = $client->request('GET', "http://graph.facebook.com/v9.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
             $content = $response->getBody()->getContents();
             $token = json_decode($content);
             dd($token);
@@ -45,11 +46,11 @@ class InstadeckInstagramApiController extends Controller
         $instaId = config('services.facebook.instagram_id');
         $accessToken = $token->access_token;
 
-        $getProfile = $client->request('GET', "http://graph.facebook.com/v8.0/{$instaId}?fields=id,ig_id,profile_picture_url,username,media_count,followers_count,follows_count,name,biography,website&access_token={$accessToken}");
+        $getProfile = $client->request('GET', "http://graph.facebook.com/v9.0/{$instaId}?fields=id,ig_id,profile_picture_url,username,media_count,followers_count,follows_count,name,biography,website&access_token={$accessToken}");
         $profileData = $getProfile->getBody()->getContents();
         $profile = json_decode($profileData);
 
-        $getMedia = $client->request('GET', "http://graph.facebook.com/v8.0/{$instaId}/media?fields=id,media_type,media_url,children{id,media_type,media_url},username,like_count,comments_count,caption,timestamp,permalink&access_token={$accessToken}");
+        $getMedia = $client->request('GET', "http://graph.facebook.com/v9.0/{$instaId}/media?fields=id,media_type,media_url,children{id,media_type,media_url},username,like_count,comments_count,caption,timestamp,permalink&access_token={$accessToken}");
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
 
