@@ -19,9 +19,7 @@ class InstadeckInstagramApiController extends Controller
     public function callback(Request $request)
     {
         $client = new Client();
-        $appId = config('services.facebook.client_id');
         $secret = config('services.facebook.client_secret');
-        $redirectUri = config('services.facebook.redirect_uri');
         $code = $request->code;
         
         if (empty($code)) return redirect()->route('instadeck.home')->with('error', 'Failed to login with Instagram.');
