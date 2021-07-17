@@ -4,6 +4,12 @@
 
 @section('content')
     <div class="container">
+        @if(session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error')}}
+            </div>
+        @endif
+
         @foreach($posts as $post)
             <div class="row">
                 <div class="col-6 offset-3 d-flex align-items-center pb-2">

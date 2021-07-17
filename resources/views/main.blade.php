@@ -17,7 +17,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{ url('assets/fontawesome-513/css/all.css') }}">
 
-        <link rel="icon" type="image/jpg" href="{{ url('assets/images/decki-revota.jpg') }}">
+        <link rel="icon" type="image/jpg" href="{{ url('assets/images/DeckiRevota.jpg') }}">
         <title>@yield('title')</title>
     </head>
     <body>
