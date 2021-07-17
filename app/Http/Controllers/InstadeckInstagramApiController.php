@@ -28,18 +28,20 @@ class InstadeckInstagramApiController extends Controller
 
         try {
             $response = $client->request('GET', "http://graph.facebook.com/v8.0/oauth/access_token?client_id={$appId}&client_secret={$secret}&redirect_uri={$redirectUri}&code={$code}");
-            dd($response);
+            $content = $response->getBody()->getContents();
+            $token = json_decode($content);
+            dd($token);
         } catch (RequestException $e) {
             return redirect()->route('instadeck.home');
         }
-
+        
         if ($response->getStatusCode() != 200) {
             return redirect()->route('instadeck.home')->with('error', 'Unauthorized login to Instagram.');
         }
-
+        
         $content = $response->getBody()->getContents();
         $token = json_decode($content);
-
+        
         $instaId = config('services.facebook.instagram_id');
         $accessToken = $token->access_token;
 
