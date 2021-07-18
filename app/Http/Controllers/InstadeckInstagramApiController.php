@@ -8,6 +8,11 @@ use GuzzleHttp\Exception\RequestException;
 
 class InstadeckInstagramApiController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('instadeck.auth');
+    }
+    
     public function index()
     {
         $appId = config('services.facebook.client_id');
