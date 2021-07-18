@@ -54,7 +54,6 @@ class InstadeckInstagramApiController extends Controller
         $getMedia = $client->request('GET', "https://graph.facebook.com/v8.0/{$instaId}/media?access_token={$accessToken}&fields=id,media_type,media_url,children{id,media_type,media_url},username,like_count,comments_count,caption,timestamp,permalink&limit=1000");
         $mediaData = $getMedia->getBody()->getContents();
         $media = json_decode($mediaData, true);
-        dd($media);
 
         return view('/instadeck/profile', compact('profile', 'media'));
     }
