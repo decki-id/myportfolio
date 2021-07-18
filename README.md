@@ -13,7 +13,7 @@
 
 ## About Deckiherdiawans Portfolio
 
-A repository of personal website that containing web applications built with the Laravel framework.
+A repository of personal website that contains web applications built with the Laravel framework.
 By far, there are three web applications.
 
 - [Students](https://deckidecki.com/students), a basic CRUD (Create Read Update Delete) system.
