@@ -37,6 +37,7 @@
                         </div>
                     </form>
                 @endif
+                @if (isset(Auth::user()))
                 <div class="navbar-nav" id="dhs_navbar-dropdown">
                     <div class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
@@ -58,6 +59,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 @if (Route::currentRouteName() == 'instadeck.profile.show')
                     <div class="navbar-nav" id="dhs_navbar-nav">
                         <div class="dropdown" id="dhs_dropdown">{{ Request::segment(3) }}</div>
