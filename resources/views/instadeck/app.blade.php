@@ -37,7 +37,7 @@
                         </div>
                     </form>
                 @endif
-                @if (isset(Auth::user()))
+                @if (Auth::user())
                 <div class="navbar-nav" id="dhs_navbar-dropdown">
                     <div class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
