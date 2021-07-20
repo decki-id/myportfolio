@@ -123,6 +123,9 @@
     @include('/sisdeck/roles/create')
     @include('/sisdeck/roles/update')
 
+    @include('/sisdeck/semesters/create')
+    @include('/sisdeck/semesters/update')
+
     @include('/sisdeck/users/create')
     @include('/sisdeck/users/read')
     @include('/sisdeck/users/update')

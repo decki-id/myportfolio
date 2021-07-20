@@ -41,7 +41,7 @@
                                 to open the real Instagram account of the creator for presentation purposes only.
                                 <br>Thank you for visiting this project.
                                 <br>See more project portfolio created by <strong>Decki Herdiawan Soepandi</strong> 
-                                <a href="https://deckiherdiawans.com/portfolios">here</a>.
+                                <a href="https://deckidecki.com/portfolios">here</a>.
                             </p>
                         </div>
                     </div>

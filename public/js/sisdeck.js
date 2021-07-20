@@ -6,6 +6,7 @@ const
     createCourseButton = document.querySelector("#create-course_button"),
     createDayButton = document.querySelector("#create-day_button"),
     createRoleButton = document.querySelector("#create-role_button"),
+    createSemesterButton = document.querySelector("#create-semester_button"),
     createUserButton = document.querySelector("#create-user_button"),
     academicFromCreate = document.querySelector("#ac_from-create"),
     batchYearCreate = document.querySelector("#year-create"),
@@ -17,6 +18,8 @@ const
     courseNameCreate = document.querySelector("#course_name-create"),
     dayCreate = document.querySelector("#day-create"),
     roleNameCreate = document.querySelector("#role_name-create"),
+    semesterCodeCreate = document.querySelector("#semester_code-create"),
+    semesterNameCreate = document.querySelector("#semester_name-create"),
     usernameCreate = document.querySelector("#username-create");
 
 if (createAcademicButton) {
@@ -75,6 +78,14 @@ if (createRoleButton) {
     });
 }
 
+if (createSemesterButton) {
+    createSemesterButton.addEventListener("click", () => {
+        setTimeout(function () {
+            semesterNameCreate.focus();
+        }, 100);
+    });
+}
+
 if (createUserButton) {
     createUserButton.addEventListener("click", () => {
         setTimeout(function () {
@@ -107,5 +118,14 @@ function courseCodeValue() {
     if (matches != null) {
         var acronym = matches.join('');
         courseCodeCreate.value = acronym;
+    }
+}
+
+function semesterCodeValue() {
+    var semesterName = semesterNameCreate.value.toUpperCase();
+    var matches = semesterName.match(/\b(\w)/g);
+    if (matches != null) {
+        var acronym = matches.join('');
+        semesterCodeCreate.value = acronym;
     }
 }

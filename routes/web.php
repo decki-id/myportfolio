@@ -142,6 +142,13 @@ Route::get('/sisdeck/roles/{role}', 'SisdeckRoleController@show')->name('sisdeck
 Route::delete('/sisdeck/roles/{role}', 'SisdeckRoleController@destroy')->name('sisdeck.roles.destroy');
 Route::patch('/sisdeck/roles/{role}', 'SisdeckRoleController@update')->name('sisdeck.roles.update');
 Route::get('/sisdeck/roles/{role}/edit', 'SisdeckRoleController@edit')->name('sisdeck.roles.edit');
+Route::get('/sisdeck/semesters', 'SisdeckSemesterController@index')->name('sisdeck.semesters.index');
+Route::post('/sisdeck/semesters', 'SisdeckSemesterController@store')->name('sisdeck.semesters.store');
+Route::get('/sisdeck/semesters/create', 'SisdeckSemesterController@create')->name('sisdeck.semesters.create');
+Route::get('/sisdeck/semesters/{semester}', 'SisdeckSemesterController@show')->name('sisdeck.semesters.show');
+Route::delete('/sisdeck/semesters/{semester}', 'SisdeckSemesterController@destroy')->name('sisdeck.semesters.destroy');
+Route::patch('/sisdeck/semesters/{semester}', 'SisdeckSemesterController@update')->name('sisdeck.semesters.update');
+Route::get('/sisdeck/semesters/{semester}/edit', 'SisdeckSemesterController@edit')->name('sisdeck.semesters.edit');
 Route::get('/sisdeck/shifts', 'SisdeckShiftController@index')->name('sisdeck.shifts.index');
 Route::post('/sisdeck/shifts', 'SisdeckShiftController@store')->name('sisdeck.shifts.store');
 Route::get('/sisdeck/shifts/create', 'SisdeckShiftController@create')->name('sisdeck.shifts.create');
