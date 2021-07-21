@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\SisdeckClassAssigning;
+use App\Models\SisdeckClassSchedule;
 
-class CreateSisdeckClassAssigningRequest extends FormRequest
+class CreateSisdeckClassScheduleRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class CreateSisdeckClassAssigningRequest extends FormRequest
      */
     public function rules()
     {
-        return SisdeckClassAssigning::$rules;
+        return SisdeckClassSchedule::$rules;
     }
 }

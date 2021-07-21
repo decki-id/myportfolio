@@ -75,5 +75,15 @@ class SisdeckUser extends Model
         'remember_token' => 'nullable|string|max:191',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];   
+    ];
+
+    public function role()
+    {
+        return $this->belongsTo(SisdeckRole::class);
+    }
+
+    public function roleName()
+    {
+        return $this->hasOne(SisdeckRole::class, 'role_id', 'role_id');
+    }
 }

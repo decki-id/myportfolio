@@ -52,5 +52,10 @@ class SisdeckRole extends Model
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
-    ];   
+    ];
+
+    public function user()
+    {
+        return $this->hasMany(SisdeckUser::class);
+    }
 }

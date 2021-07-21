@@ -8,9 +8,9 @@
             <div class="intro">
                 <img src="{{ url('/assets/images/DeckiRevota.jpg') }}" alt="profile" class="shadow-dark">
                 <h1>Decki Herdiawan Soepandi</h1>
-                <p>Customer Support | Programmer | Movie Buff</p>
+                <p>Customer Support | Full Stack Web Developer | Movie Buff</p>
                 <div class="social-links">
-                    <a href="https://api.whatsapp.com/send?phone=6282216668131" target="_blank" title="WhatsApp">
+                    <a href="https://wa.me/6282216668131" target="_blank" title="WhatsApp">
                         <i class="fab fa-fw fa-whatsapp"></i>
                     </a>
                     <a href="https://instagram.com/deckiherdiawans" target="_blank" title="Instagram">
@@ -22,7 +22,7 @@
                     <a href="https://github.com/deckiherdiawans" target="_blank" title="GitHub">
                         <i class="fab fa-fw fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/decki-herdiawan-soepandi-8a2a99131" target="_blank" title="LinkedIn">
+                    <a href="https://linkedin.com/in/deckiherdiawans" target="_blank" title="LinkedIn">
                         <i class="fab fa-fw fa-linkedin"></i>
                     </a>
                 </div>

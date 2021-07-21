@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\SisdeckClassAssigning;
+use App\Models\SisdeckClassAssignment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SisdeckClassAssigningFactory extends Factory
+class SisdeckClassAssignmentFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = SisdeckClassAssigning::class;
+    protected $model = SisdeckClassAssignment::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class SisdeckClassAssigningFactory extends Factory
     public function definition()
     {
         return [
-            'course_id' => $this->faker->randomDigitNotNull,
+        'course_id' => $this->faker->randomDigitNotNull,
         'level_id' => $this->faker->randomDigitNotNull,
         'shift_id' => $this->faker->randomDigitNotNull,
         'classroom_id' => $this->faker->randomDigitNotNull,

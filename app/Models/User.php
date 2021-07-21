@@ -74,9 +74,4 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasOne(InstadeckProfile::class);
     }
-
-    public function role()
-    {
-        return $this->hasOne(SisdeckRole::class, 'role_id', 'role_id');
-    }
 }

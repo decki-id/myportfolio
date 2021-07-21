@@ -2,29 +2,30 @@
 
 namespace App\Repositories;
 
-use App\Models\SisdeckClassScheduling;
+use App\Models\SisdeckClassSchedule;
 use App\Repositories\BaseRepository;
 
 /**
- * Class SisdeckClassSchedulingRepository
+ * Class SisdeckClassScheduleRepository
  * @package App\Repositories
  * @version April 15, 2021, 9:53 am WIB
 */
 
-class SisdeckClassSchedulingRepository extends BaseRepository
+class SisdeckClassScheduleRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
         'course_id',
+        'class_id',
         'level_id',
         'shift_id',
         'classroom_id',
+        'semester_id',
         'batch_id',
         'day_id',
         'time_id',
-        'teacher_id',
         'start_time',
         'end_time',
         'status'
@@ -45,6 +46,6 @@ class SisdeckClassSchedulingRepository extends BaseRepository
      **/
     public function model()
     {
-        return SisdeckClassScheduling::class;
+        return SisdeckClassSchedule::class;
     }
 }

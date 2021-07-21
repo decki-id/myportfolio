@@ -3,6 +3,7 @@ const
     createBatchButton = document.querySelector("#create-batch_button"),
     createClassButton = document.querySelector("#create-class_button"),
     createClassroomButton = document.querySelector("#create-classroom_button"),
+    createClassScheduleButton = document.querySelector("#create-class-schedule_button"),
     createCourseButton = document.querySelector("#create-course_button"),
     createDayButton = document.querySelector("#create-day_button"),
     createRoleButton = document.querySelector("#create-role_button"),
@@ -14,6 +15,7 @@ const
     classNameCreate = document.querySelector("#class_name-create"),
     classroomCodeCreate = document.querySelector("#code-create"),
     classroomNameCreate = document.querySelector("#name-create"),
+    classScheduleCourseCreate = document.querySelector("#class_schedule_course-create"),
     courseCodeCreate = document.querySelector("#course_code-create"),
     courseNameCreate = document.querySelector("#course_name-create"),
     dayCreate = document.querySelector("#day-create"),
@@ -50,6 +52,14 @@ if (createClassroomButton) {
     createClassroomButton.addEventListener("click", () => {
         setTimeout(function () {
             classroomNameCreate.focus();
+        }, 100);
+    });
+}
+
+if (createClassScheduleButton) {
+    createClassScheduleButton.addEventListener("click", () => {
+        setTimeout(function () {
+            classScheduleCourseCreate.focus();
         }, 100);
     });
 }

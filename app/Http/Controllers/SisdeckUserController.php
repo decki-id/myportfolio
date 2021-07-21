@@ -34,9 +34,8 @@ class SisdeckUserController extends AppBaseController
     {
         $sisdeckUsers = $this->sisdeckUserRepository->all();
         $role = SisdeckRole::pluck('role_name', 'role_id');
-        $sisdeckRoles = SisdeckRole::all();
 
-        return view('sisdeck/users/index', compact('sisdeckUsers', 'role', 'sisdeckRoles'));
+        return view('sisdeck/users/index', compact('sisdeckUsers', 'role'));
     }
 
     /**

@@ -14,16 +14,12 @@
                 <td>{{ $sisdeckUser->fullname }}</td>
                 <td class="text-center">
                     <div class='btn-group'>
-                        @foreach($sisdeckRoles as $sisdeckRole)
-                        @if($sisdeckUser->role_id == $sisdeckRole->role_id)
-                        @php $roleName = $sisdeckRole->role_name @endphp
+                        @php $roleName = $sisdeckUser->roleName->role_name @endphp
                         <a href="#" data-user_id="{{ $sisdeckUser->id }}" data-username="{{ $sisdeckUser->username }}"
                            data-fullname="{{ $sisdeckUser->fullname }}" data-role_id="{{ $roleName }}" data-email="{{ $sisdeckUser->email }}"
                            data-toggle="modal" data-target="#read-user_modal" title="Detail" class="btn btn-success btn-xs mr-1">
                            <i class="fas fa-fw fa-eye"></i>
                         </a>
-                        @endif
-                        @endforeach
                         <a href="#" data-user_id="{{ $sisdeckUser->id }}" data-username="{{ $sisdeckUser->username }}"
                            data-fullname="{{ $sisdeckUser->fullname }}" data-role_id="{{ $sisdeckUser->role_id }}"
                            data-email="{{ $sisdeckUser->email }}"data-toggle="modal" data-target="#update-user_modal" title="Update"

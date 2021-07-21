@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class SisdeckClassAssigning
+ * Class SisdeckClassAssignment
  * @package App\Models
  * @version April 15, 2021, 8:37 am WIB
  *
@@ -19,21 +19,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property integer $day_id
  * @property integer $time_id
  */
-class SisdeckClassAssigning extends Model
+class SisdeckClassAssignment extends Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
-    public $table = 'sisdeck_class_assignings';
+    public $table = 'sisdeck_class_assignments';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'course_id',
@@ -78,6 +75,4 @@ class SisdeckClassAssigning extends Model
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
-
-    
 }
