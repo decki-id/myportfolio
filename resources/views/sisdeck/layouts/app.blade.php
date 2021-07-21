@@ -108,6 +108,10 @@
     @include('/sisdeck/batches/create')
     @include('/sisdeck/batches/update')
 
+    @include('/sisdeck/class_schedules/create')
+    @include('/sisdeck/class_schedules/read')
+    @include('/sisdeck/class_schedules/update')
+
     @include('/sisdeck/classes/create')
     @include('/sisdeck/classes/update')
 
