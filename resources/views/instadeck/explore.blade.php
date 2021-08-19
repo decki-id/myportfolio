@@ -28,9 +28,7 @@
                     </div>
                 @endforeach
                 @if(!$user)
-                    <div class="dhs_search-not-found">
-                        User not found.
-                    </div>
+                    <div class="dhs_search-not-found">User not found.</div>
                 @endif
             </div>
             <div class="row justify-content-center pt-5 pb-5">

@@ -15,7 +15,7 @@ const
     classNameCreate = document.querySelector("#class_name-create"),
     classroomCodeCreate = document.querySelector("#code-create"),
     classroomNameCreate = document.querySelector("#name-create"),
-    classScheduleCourseCreate = document.querySelector("#class_schedule_course-create"),
+    classScheduleCourseCreate = document.querySelector("#schedule_course-create"),
     courseCodeCreate = document.querySelector("#course_code-create"),
     courseNameCreate = document.querySelector("#course_name-create"),
     dayCreate = document.querySelector("#day-create"),

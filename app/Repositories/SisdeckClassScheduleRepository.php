@@ -26,8 +26,8 @@ class SisdeckClassScheduleRepository extends BaseRepository
         'batch_id',
         'day_id',
         'time_id',
-        'start_time',
-        'end_time',
+        'start_date',
+        'end_date',
         'status'
     ];
 

@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\SisdeckClassAssigning;
+use App\Models\SisdeckClassAssignment;
 use App\Repositories\BaseRepository;
 
 /**
- * Class SisdeckClassAssigningRepository
+ * Class SisdeckClassAssignmentRepository
  * @package App\Repositories
  * @version April 15, 2021, 8:37 am WIB
 */
 
-class SisdeckClassAssigningRepository extends BaseRepository
+class SisdeckClassAssignmentRepository extends BaseRepository
 {
     /**
      * @var array
@@ -41,6 +41,6 @@ class SisdeckClassAssigningRepository extends BaseRepository
      **/
     public function model()
     {
-        return SisdeckClassAssigning::class;
+        return SisdeckClassAssignment::class;
     }
 }

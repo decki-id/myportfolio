@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-bordered table-hover" id="dhs_classassignings-table">
+    <table class="table table-bordered table-hover" id="dhs_classassignments-table">
         <thead>
             <tr>
                 <th>Course Id</th>
@@ -9,27 +9,27 @@
                 <th>Batch Id</th>
                 <th>Day Id</th>
                 <th>Time Id</th>
-                <th colspan="3">Action</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($sisdeckClassAssignings as $sisdeckClassAssigning)
+            @foreach($sisdeckClassAssignments as $sisdeckClassAssignment)
             <tr>
-                <td>{{ $sisdeckClassAssigning->course_id }}</td>
-                <td>{{ $sisdeckClassAssigning->level_id }}</td>
-                <td>{{ $sisdeckClassAssigning->shift_id }}</td>
-                <td>{{ $sisdeckClassAssigning->classroom_id }}</td>
-                <td>{{ $sisdeckClassAssigning->batch_id }}</td>
-                <td>{{ $sisdeckClassAssigning->day_id }}</td>
-                <td>{{ $sisdeckClassAssigning->time_id }}</td>
+                <td>{{ $sisdeckClassAssignment->course_id }}</td>
+                <td>{{ $sisdeckClassAssignment->level_id }}</td>
+                <td>{{ $sisdeckClassAssignment->shift_id }}</td>
+                <td>{{ $sisdeckClassAssignment->classroom_id }}</td>
+                <td>{{ $sisdeckClassAssignment->batch_id }}</td>
+                <td>{{ $sisdeckClassAssignment->day_id }}</td>
+                <td>{{ $sisdeckClassAssignment->time_id }}</td>
                 <td>
-                    {!! Form::open(['route' => ['sisdeck.class_assignings.destroy', $sisdeckClassAssigning->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('sisdeck.class_assignings.show', [$sisdeckClassAssigning->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
-                        <a href="{{ route('sisdeck.class_assignings.edit', [$sisdeckClassAssigning->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
-                        {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        <a href="{{ route('sisdeck.class_assignments.show', [$sisdeckClassAssignment->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-eye"></i></a>
+                        <a href="{{ route('sisdeck.class_assignments.edit', [$sisdeckClassAssignment->id]) }}" class='btn btn-default btn-xs'><i class="fas fa-fw fa-edit"></i></a>
+                        {!! Form::open(['route' => ['sisdeck.class_assignments.destroy', $sisdeckClassAssignment->id], 'method' => 'delete']) !!}
+                        {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'title' => 'Delete', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::close() !!}
                     </div>
-                    {!! Form::close() !!}
                 </td>
             </tr>
             @endforeach

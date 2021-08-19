@@ -20,8 +20,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property integer $batch_id
  * @property integer $day_id
  * @property integer $time_id
- * @property time $start_time
- * @property time $end_time
+ * @property time $start_date
+ * @property time $end_date
  * @property boolean $status
  */
 class SisdeckClassSchedule extends Model
@@ -49,8 +49,8 @@ class SisdeckClassSchedule extends Model
         'batch_id',
         'day_id',
         'time_id',
-        'start_time',
-        'end_time',
+        'start_date',
+        'end_date',
         'status'
     ];
 
@@ -70,6 +70,8 @@ class SisdeckClassSchedule extends Model
         'batch_id' => 'integer',
         'day_id' => 'integer',
         'time_id' => 'integer',
+        'start_date' => 'string',
+        'end_date' => 'string',
         'status' => 'boolean'
     ];
 
@@ -88,8 +90,8 @@ class SisdeckClassSchedule extends Model
         'batch_id' => 'required|integer',
         'day_id' => 'required|integer',
         'time_id' => 'required|integer',
-        'start_time' => 'required',
-        'end_time' => 'required',
+        'start_date' => 'required',
+        'end_date' => 'required',
         'status' => 'required|boolean',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',

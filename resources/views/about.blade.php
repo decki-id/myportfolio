@@ -95,16 +95,6 @@
                                 <h3 class="edex-title padd-15">Experience</h3><br>
                                 <div class="timeline-item">
                                     <div class="circle-dot"></div>
-                                    <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>10 June 2021 - Present</h6>
-                                    <h4 class="timeline-title"><span>Full Stack Web Developer</span></h4>
-                                    <h4 class="timeline-title">Kamar Pelajar || Internship (freelance remote work)</h4>
-                                    <p class="timeline-subtitle">An online marketplace startup for lodging, primary homestays for vacation rentals, and tourism activities.</p>
-                                    <ul class="timeline-text">
-                                        <li>Web development using Laravel 7, Bootstrap 5, and MySQL</li>
-                                    </ul>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
                                     <h6 class="timeline-date"><i class="fas fa-fw fa-calendar-alt"></i>3 January 2018 - Present</h6>
                                     <h4 class="timeline-title"><span>Customer Support</span></h4>
                                     <h4 class="timeline-title">PT. Ava Revota || Full Time</h4>
