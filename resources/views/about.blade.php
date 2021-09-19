@@ -19,13 +19,13 @@
                                 <span>Customer Support</span> at <a href="http://revota.com" target="_blank">PT. Ava Revota</a>.
                             </h3>
                             <p>
-                                Hi! My name is Decki Herdiawan Soepandi. I currently work as a Customer Support at PT. Ava Revota, an IT 
-                                consultant for apparel industry, for more than three years. My last education degree is an Associate/Diploma 
-                                of Information Systems, graduated in March 2020 from LPKIA. I want to start my job as a programmer, whether it 
-                                freelance or a full-time job. I can build a website or a web-based software with PHP (CodeIgniter and Laravel 
-                                framework), JavaScript (NodeJS), and Python (Flask and FastAPI framework) for the back-end. For the front-end, 
-                                I am familiar with CSS (Bootstrap) and JavaScript (Vanilla and JQuery). I live in Padalarang, but my activities 
-                                mostly based in Bandung city.
+                                Hi! My name is Decki Herdiawan Soepandi. I currently work as a Customer Support at PT. Ava Revota,
+                                an IT consultant for the apparel industry, for almost four years. My last education degree is an
+                                Associate/Diploma of Information Systems, graduated in March 2020 from LPKIA. I want to start my
+                                job as a programmer, whether it freelance or a full-time job. I can build a website or a web-based
+                                software with PHP (CodeIgniter and Laravel framework), JavaScript (NodeJS), and Python (Flask and
+                                FastAPI framework) for the back-end. As for the front-end, I am familiar with CSS (Bootstrap) and
+                                JavaScript (Vanilla and JQuery). I live in Padalarang, but I spend most of my time in Bandung.
                             </p>
                         </div>
                     </div>
