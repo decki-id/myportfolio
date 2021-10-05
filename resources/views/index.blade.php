@@ -10,10 +10,10 @@
                 <h1>Decki Herdiawan Soepandi</h1>
                 <p>Customer Support | Full Stack Web Developer | Movie Buff</p>
                 <div class="social-links">
-                    <a href="https://wa.me/6282216668131" target="_blank" title="WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=6282216668131" target="_blank" title="WhatsApp">
                         <i class="fab fa-fw fa-whatsapp"></i>
                     </a>
-                    <a href="https://instagram.com/deckiherdiawans" target="_blank" title="Instagram">
+                    <a href="https://instagram.com/deckideckidecki" target="_blank" title="Instagram">
                         <i class="fab fa-fw fa-instagram"></i>
                     </a>
                     <a href="https://facebook.com/deckiherdiawans" target="_blank" title="Facebook">
