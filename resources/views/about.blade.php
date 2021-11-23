@@ -22,7 +22,7 @@
                                 Hi! My name is Decki Herdiawan Soepandi. I currently work as a Customer Support at PT. Ava Revota,
                                 an IT consultant for the apparel industry, for almost four years. My last education degree is an
                                 Associate/Diploma of Information Systems, graduated in March 2020 from LPKIA. I want to start my
-                                job as a programmer, whether it freelance or a full-time job. I can build a website or a web-based
+                                job as a programmer, whether it's freelance or a full-time job. I can build a website or a web-based
                                 software with PHP (CodeIgniter and Laravel framework), JavaScript (NodeJS), and Python (Flask and
                                 FastAPI framework) for the back-end. As for the front-end, I am familiar with CSS (Bootstrap) and
                                 JavaScript (Vanilla and JQuery). I live in Padalarang, but I spend most of my time in Bandung.
@@ -48,7 +48,7 @@
                             <div class="row">
                                 <div class="info-item padd-15"><p>Email: <span>d.herdiawan.s@gmail.com</span></p></div>
                                 <div class="info-item padd-15"><p>Phone: <span>+62 822 1666 8131</span></p></div>
-                                <div class="info-item padd-15"><p>Availability: <span>Freelance only</span></p></div>
+                                <div class="info-item padd-15"><p>Status: <span>Open for freelance work and casually looking for a job, both as a programmer.</span></p></div>
                             </div>
                         </div>
                     </div>

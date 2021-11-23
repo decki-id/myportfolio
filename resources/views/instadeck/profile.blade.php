@@ -102,7 +102,7 @@
                 <div class="col-6">
                     <div class="d-flex justify-content-start align-items-center">
                         <h5 class="pr-3 dhs_h5">{{ $profile->username }}</h5>
-                        <a href="https://instagram.com/deckiherdiawans" target="_blank" class="btn btn-sm btn-info dhs_btn-text-white">
+                        <a href="https://instagram.com/deckideckidecki" target="_blank" class="btn btn-sm btn-info dhs_btn-text-white">
                             Follow Me on Instagram
                         </a>
                     </div>
@@ -151,7 +151,7 @@
             @if(Request::segment(2) == 'instagram-api')
                 <div class="row" id="dhs_bottom-btn">
                     <div class="col">
-                        <a href="https://instagram.com/deckiherdiawans" target="_blank" class="form-control btn btn-info dhs_btn-text-white">
+                        <a href="https://instagram.com/deckideckidecki" target="_blank" class="form-control btn btn-info dhs_btn-text-white">
                             Follow Me on Instagram
                         </a>
                     </div>
