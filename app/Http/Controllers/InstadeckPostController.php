@@ -20,6 +20,8 @@ class InstadeckPostController extends Controller
         // $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->paginate(5);
         $posts = InstadeckPost::whereIn('user_id', $users)->with('user')->orderBy('created_at', 'DESC')->get();
 
+        dd($posts);
+
         return view('/instadeck/index', compact('posts'));
     }
     
