@@ -25,12 +25,6 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="form-group col-sm-12">
-                        {!! Form::label('role_id', 'Role', ['class' => 'form-label']) !!}
-                        {!! Form::select('role_id', $role, 'null', ['class' => 'form-control', 'maxlength' => 191, 'id' => 'role-update', 'title' => 'User Role', 'placeholder' => 'Choose role']) !!}
-                    </div>
-                </div>
-                <div class="row align-items-center">
-                    <div class="form-group col-sm-12">
                         {!! Form::label('email', 'Email', ['class' => 'form-label']) !!}
                         {!! Form::email('email', null, ['class' => 'form-control', 'maxlength' => 191, 'id' => 'email-update', 'title' => 'Email', 'placeholder' => 'Insert email']) !!}
                     </div>
