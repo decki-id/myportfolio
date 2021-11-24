@@ -1,58 +1,32 @@
 <div class="table-responsive">
-    <table class="table" id="sisdeckTeachers-table">
+    <table class="table table-bordered table-hover" id="dhs_teachers-table">
         <thead>
             <tr>
-                <th>First Name</th>
-        <th>Last Name</th>
-        <th>Birthdate</th>
-        <th>Gender</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Sub District</th>
-        <th>District</th>
-        <th>Province</th>
-        <th>Nationality</th>
-        <th>Post Code</th>
-        <th>Status</th>
-        <th>Date Registered</th>
-        <th>User Id</th>
-        <th>Semester Id</th>
-        <th>Image</th>
-                <th colspan="3">Action</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
-        @foreach($sisdeckTeachers as $sisdeckTeacher)
+            @foreach($sisdeckTeachers as $sisdeckTeacher)
             <tr>
-                <td>{{ $sisdeckTeacher->first_name }}</td>
-            <td>{{ $sisdeckTeacher->last_name }}</td>
-            <td>{{ $sisdeckTeacher->birthdate }}</td>
-            <td>{{ $sisdeckTeacher->gender }}</td>
-            <td>{{ $sisdeckTeacher->phone }}</td>
-            <td>{{ $sisdeckTeacher->email }}</td>
-            <td>{{ $sisdeckTeacher->address }}</td>
-            <td>{{ $sisdeckTeacher->sub_district }}</td>
-            <td>{{ $sisdeckTeacher->district }}</td>
-            <td>{{ $sisdeckTeacher->province }}</td>
-            <td>{{ $sisdeckTeacher->nationality }}</td>
-            <td>{{ $sisdeckTeacher->post_code }}</td>
-            <td>{{ $sisdeckTeacher->status }}</td>
-            <td>{{ $sisdeckTeacher->date_registered }}</td>
-            <td>{{ $sisdeckTeacher->user_id }}</td>
-            <td>{{ $sisdeckTeacher->semester_id }}</td>
-            <td>{{ $sisdeckTeacher->image }}</td>
-                <td>
-                    {!! Form::open(['route' => ['sisdeckTeachers.destroy', $sisdeckTeacher->id], 'method' => 'delete']) !!}
-                    <div class='btn-group'>
-                        <a href="{{ route('sisdeckTeachers.show', [$sisdeckTeacher->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a href="{{ route('sisdeckTeachers.edit', [$sisdeckTeacher->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                <td>{{ $sisdeckTeacher->first_name }} . " " . {{ $sisdeckTeacher->last_name }}</td>
+                <td>{{ $sisdeckTeacher->phone }}</td>
+                <td>{{ $sisdeckTeacher->email }}</td>
+                <td>{{ $sisdeckTeacher->status }}</td>
+                <td class="text-center">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-success btn-xs mr-1"><i class="fas fa-fw fa-eye"></i></a>
+                        <a href="#" class="btn btn-warning btn-xs text-white mr-1"><i class="fas fa-fw fa-edit"></i></a>
+                        {!! Form::open(['route' => ['sisdeck.teachers.destroy', $sisdeckTeacher->id], 'method' => 'delete']) !!}
+                        {!! Form::button('<i class="fas fa-fw fa-trash"></i>', ['type' => 'submit', 'title' => 'Delete', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::close() !!}
                     </div>
-                    {!! Form::close() !!}
                 </td>
             </tr>
-        @endforeach
+            @endforeach
         </tbody>
     </table>
 </div>

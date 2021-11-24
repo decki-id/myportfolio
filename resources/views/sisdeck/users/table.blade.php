@@ -13,7 +13,7 @@
                 <td>{{ $sisdeckUser->username }}</td>
                 <td>{{ $sisdeckUser->fullname }}</td>
                 <td class="text-center">
-                    <div class='btn-group'>
+                    <div class="btn-group">
                         @php $roleName = $sisdeckUser->roleName->role_name @endphp
                         <a href="#" data-user_id="{{ $sisdeckUser->id }}" data-username="{{ $sisdeckUser->username }}"
                            data-fullname="{{ $sisdeckUser->fullname }}" data-role_id="{{ $roleName }}" data-email="{{ $sisdeckUser->email }}"
