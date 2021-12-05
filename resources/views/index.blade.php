@@ -8,7 +8,7 @@
             <div class="intro">
                 <img src="{{ url('/assets/images/DeckiRevota.jpg') }}" alt="profile" class="shadow-dark">
                 <h1>Decki Herdiawan Soepandi</h1>
-                <p>Customer Support | Full Stack Web Developer | Movie Buff</p>
+                <p>Customer Support | Full Stack Web Developer | Movie Enthusiast</p>
                 <div class="social-links">
                     <a href="https://api.whatsapp.com/send?phone=6282216668131" target="_blank" title="WhatsApp">
                         <i class="fab fa-fw fa-whatsapp"></i>
