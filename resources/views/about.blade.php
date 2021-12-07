@@ -41,14 +41,14 @@
                             <div class="row">
                                 <div class="info-item padd-15"><p>Birthdate: <span>20 November 1993</span></p></div>
                                 <div class="info-item padd-15"><p>Marital Status: <span>Single</span></p></div>
-                                <div class="info-item padd-15"><p>Degree: <span class="responsive-break">Associate/Diploma of Information Systems</span></p></div>
+                                <div class="info-item padd-15"><p>Degree: <span>Associate/Diploma of Information Systems</span></p></div>
                             </div>
                         </div>
                         <div class="personal-info2 padd-15">
                             <div class="row">
                                 <div class="info-item padd-15"><p>Email: <span>d.herdiawan.s@gmail.com</span></p></div>
                                 <div class="info-item padd-15"><p>Phone: <span>+62 822 1666 8131</span></p></div>
-                                <div class="info-item padd-15"><p>Status: <span class="responsive-break">Open for freelance work and casually looking for a job</span></p></div>
+                                <div class="info-item padd-15"><p>Status: <span>Open for freelance work and casually looking for a job</span></p></div>
                             </div>
                         </div>
                     </div>

@@ -500,10 +500,6 @@ body {
     padding: 0 0 0 20px;
 }
 
-.responsive-break {
-    display: block;
-}
-
 
 /* Certificates */
 
@@ -868,10 +864,6 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
 /* Responsive */
 
 @media (max-width: 991px) {
-    .responsive-break {
-        display: inline-block;
-    }
-
     .content {
         padding-left: 0;
     }
