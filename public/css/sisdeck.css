@@ -1,9 +1,10 @@
-.register-page {
-    margin: 0 0 50px 0;
+.login-page, .register-page {
+    padding: 1px 0;
 }
 
 .login-box, .register-box {
-    margin: 25px auto;
+    margin: 25px auto 0 auto;
+    padding: 0 0 30px 0;
 }
 
 .image {
@@ -135,12 +136,8 @@
 }
 
 @media (min-width: 769px) {
-    .login-box {
-        width: 360px;
-    }
-
-    .register-box {
-        width: 615px;
+    .login-box, .register-box {
+        width: 600px;
     }
 }
 

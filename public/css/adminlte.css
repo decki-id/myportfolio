@@ -3802,21 +3802,32 @@ table.text-center th {
     background: #d2d6de;
 }
 
+@media (max-width: 600px) {
+    .login-box-body {
+        padding: 20px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .login-box,
     .register-box {
         width: 90%;
-        margin-top: 20px;
     }
-
 }
 
 .login-box-body,
 .register-box-body {
     background: #fff;
-    padding: 20px;
     border-top: 0;
     color: #666;
+}
+
+.login-box-body {
+    padding: 20px 120px;
+}
+
+.register-box-body {
+    padding: 20px;
 }
 
 .login-box-body .form-control-feedback,
