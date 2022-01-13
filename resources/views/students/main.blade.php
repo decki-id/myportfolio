@@ -28,7 +28,6 @@
                             <h6 class="mb-0 text-white">Decki Herdiawan Soepandi</h6>
                             <span>d.herdiawan.s@gmail.com</span>
                         </div>
-                        <a href="#" class="dropdown-item"><i class="fas fa-fw fa-user mr-2"></i>Profile</a>
                         <a href="/" class="dropdown-item"><i class="fas fa-fw fa-power-off mr-2"></i>Log Out</a>
                     </div>
                 </div>
@@ -37,8 +36,6 @@
         <ul class="nav students-sidebar flex-column navbar-dark bg-dark">
             <a class="navbar-brand text-center" href="/students">Deckiherdiawans<br>Students</a>
             <a class="nav-link side-link active" href="#"><i class="fas fa-fw fa-user-graduate mr-2"></i>Students</a>
-            <a class="nav-link side-link" href="#">Link</a>
-            <a class="nav-link side-link" href="#">Link</a>
         </ul>
 
         @yield('section')
