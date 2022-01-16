@@ -24,9 +24,6 @@ Route::get('/certificates', 'PageController@certificates')->name('certificates')
 Route::get('/portfolios', 'PageController@portfolios')->name('portfolios');
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
 
-// Students portfolio
-Route::resource('/students', 'StudentController');
-
 // InstaDeck portfolio
 // Auth::routes();
 Route::get('/instadeck/test-email', function () {
