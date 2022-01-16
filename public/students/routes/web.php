@@ -14,9 +14,6 @@ use App\Mail\InstadeckNewUserWelcomeMail;
 |
 */
 
-//Laravel Welcome Page
-Route::get('/welcome', 'PageController@welcome')->name('welcome');
-
 // Students portfolio
 Route::resource('/', 'StudentController');
 Route::get('/{student}', 'StudentController@show')->name('show');
