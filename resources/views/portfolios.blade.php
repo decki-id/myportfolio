@@ -14,7 +14,7 @@
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-image">
-                            <a href="/students" target="_blank"><img src="{{ url('/assets/images/Students.jpg') }}"></a>
+                            <a href="https://students.deckidecki.com" target="_blank"><img src="{{ url('/assets/images/Students.jpg') }}"></a>
                         </div>
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">Students</h4>
