@@ -14,17 +14,6 @@
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-image">
-                            <a href="https://students.deckidecki.com" target="_blank"><img src="{{ url('/assets/images/Students.jpg') }}"></a>
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 class="portfolio-title">Students</h4>
-                            <p class="portfolio-description">A fundamental Students CRUD system, built with the Laravel framework.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-image">
                             <a href="/instadeck" target="_blank"><img src="{{ url('/assets/images/InstaDeck.jpg') }}"></a>
                         </div>
                         <div class="portfolio-info">
