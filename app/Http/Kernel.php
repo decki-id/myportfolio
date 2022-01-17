@@ -52,8 +52,6 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'instadeck.auth' => \App\Http\Middleware\InstadeckAuthenticate::class,
-        'instadeck.guest' => \App\Http\Middleware\InstadeckRedirectIfAuthenticated::class,
         'sisdeck.auth' => \App\Http\Middleware\SisdeckAuthenticate::class,
         'sisdeck.guest' => \App\Http\Middleware\SisdeckRedirectIfAuthenticated::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
