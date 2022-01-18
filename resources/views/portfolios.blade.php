@@ -25,7 +25,7 @@
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-image">
-                            <a href="/sisdeck" target="_blank"><img src="{{ url('/assets/images/SisDeck.jpg') }}"></a>
+                            <a href="https://sisdeck.deckidecki.com" target="_blank"><img src="{{ url('/assets/images/SisDeck.jpg') }}"></a>
                         </div>
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">SisDeck</h4>
