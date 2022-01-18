@@ -14,13 +14,10 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
         "laravel/framework": "8.75.0",
-        "laravel/telescope": "^4.1",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "tymon/jwt-auth": "^1.0",
-        "infyomlabs/laravel-generator": "8.0.x-dev",
         "laravelcollective/html": "^6.0",
-        "infyomlabs/adminlte-templates": "8.0.x-dev",
         "doctrine/dbal": "~2.3"
     },
     "require-dev": {

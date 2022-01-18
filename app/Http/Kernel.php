@@ -52,8 +52,6 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'sisdeck.auth' => \App\Http\Middleware\SisdeckAuthenticate::class,
-        'sisdeck.guest' => \App\Http\Middleware\SisdeckRedirectIfAuthenticated::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
