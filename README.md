@@ -16,6 +16,5 @@
 A repository of personal website that contains web applications built with the Laravel framework.
 <br>By far, there are three web applications.
 
-- [Students](https://deckidecki.com/students), a basic CRUD (Create Read Update Delete) system.
-- [InstaDeck](https://deckidecki.com/instadeck), an Instagram clone website with CRUD feature and Instagram API that shows a page of creator's Instagram account.
-- [SisDeck](https://deckidecki.com/sisdeck), a Student Information System website (still in development).
+- [InstaDeck](https://instadeck.deckidecki.com), an Instagram clone website with CRUD feature and Instagram API that shows a page of creator's Instagram account.
+- [SisDeck](https://sisdeck.deckidecki.com), a Student Information System website (still in development).
