@@ -29,7 +29,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">SisDeck</h4>
-                            <p class="portfolio-description">Student Information Systems website, built with the Laravel framework, InfyOm Laravel Generator tool, and AdminLTE template.</p>
+                            <p class="portfolio-description">A web-based Students Information System, built with the Laravel framework, InfyOm Laravel Generator tool, and AdminLTE template.</p>
                         </div>
                     </div>
                 </div>
