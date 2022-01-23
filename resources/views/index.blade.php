@@ -22,7 +22,7 @@
                     <a href="https://github.com/deckiherdiawans" target="_blank" title="GitHub">
                         <i class="fab fa-fw fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/deckiherdiawans" target="_blank" title="LinkedIn">
+                    <a href="https://linkedin.com/in/decki/" target="_blank" title="LinkedIn">
                         <i class="fab fa-fw fa-linkedin"></i>
                     </a>
                 </div>
