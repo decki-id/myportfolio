@@ -266,7 +266,6 @@ document.addEventListener("keydown", function (event) {
   if (navTogglerButton.classList.contains("open") && event.which == 27) {
     navTogglerButton.classList.remove("open")
   }
-
   if (sidebar.classList.contains("open") && event.which == 27) {
     sidebar.classList.remove("open")
   }
@@ -284,6 +283,11 @@ const blogLink = document.getElementById("blog-link")
 
 if (currentUrl === "/" || currentUrl === "") {
   document.title = "Decki ID | Home"
+  homeLink.classList.add("active")
+  aboutLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  blogLink.classList.remove("active")
 }
 
 
