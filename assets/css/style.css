@@ -22,7 +22,7 @@ body {
     box-sizing: border-box;
 }
 
-.content {
+#content {
     padding-left: 200px;
 }
 
@@ -864,7 +864,7 @@ body.dark .blogs .blog-item-inner .blog-info .blog-description {
 /* Responsive */
 
 @media (max-width: 991px) {
-    .content {
+    #content {
         padding-left: 0;
     }
 
