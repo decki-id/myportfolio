@@ -57,9 +57,6 @@ body {
 }
 
 .section-title {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
     margin-bottom: 70px;
 }
 
@@ -295,18 +292,6 @@ body {
 
 /* About */
 
-.about .about-content {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.about .about-content .about-text {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
 .about .about-content .about-text h3 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -336,19 +321,26 @@ body {
 }
 
 .about .about-content .personal-info {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
     margin-top: 40px;
 }
 
-.about .about-content .personal-info .info-item {
+.section-title,
+.about .about-content,
+.about .about-content .about-text,
+.about .about-content .personal-info,
+.about .about-content .personal-info .info-item,
+.about .about-content .personal-info1 .info-item,
+.about .about-content .personal-info2 .info-item,
+.about .about-content .personal-info3 .info-item {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-.about .about-content .personal-info .info-item p {
+.about .about-content .personal-info .info-item p,
+.about .about-content .personal-info1 .info-item p,
+.about .about-content .personal-info2 .info-item p,
+.about .about-content .personal-info3 .info-item p {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: 15px;
@@ -357,67 +349,23 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-.about .about-content .personal-info .info-item p span {
+.about .about-content .personal-info .info-item p span,
+.about .about-content .personal-info1 .info-item p span,
+.about .about-content .personal-info2 .info-item p span,
+.about .about-content .personal-info3 .info-item p span {
     font-weight: 400;
     color: #e9e9e9;
 }
 
-.about .about-content .personal-info1 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.about .about-content .personal-info1 .info-item {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.about .about-content .personal-info1 .info-item p {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 10px 0;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-
-.about .about-content .personal-info1 .info-item p span {
-    font-weight: 400;
-    color: #e9e9e9;
-}
-
-.about .about-content .personal-info2 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.about .about-content .personal-info2 .info-item {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.about .about-content .personal-info2 .info-item p {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 10px 0;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-
-.about .about-content .personal-info2 .info-item p span {
-    font-weight: 400;
-    color: #e9e9e9;
-}
-
+.about .about-content .personal-info1,
+.about .about-content .personal-info2,
 .about .about-content .edex {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+}
+
+.about .about-content .edex {
     margin-top: 60px;
     display: -ms-flexbox;
     display: flex;
@@ -428,7 +376,6 @@ body {
     margin-bottom: 10px;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    color: #302e4d;
     text-align: center;
 }
 
