@@ -213,6 +213,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
+    border-bottom: 1px solid #ffffff;
     text-decoration: none;
     line-height: 50px;
     display: block;
@@ -251,7 +252,7 @@ body {
     height: 200px;
     border-radius: 50%;
     display: inline-block;
-    border: 8px solid #fff;
+    border: 8px solid #ffffff;
 }
 
 .home .intro h1 {
@@ -278,7 +279,7 @@ body {
     display: inline-block;
     text-align: center;
     line-height: 35px;
-    color: #fff;
+    color: #ffffff;
     margin: 0 4px;
     border-radius: 50%;
     text-decoration: none;
@@ -353,7 +354,7 @@ body {
     font-size: 15px;
     padding: 10px 0;
     color: #ffffff;
-    border-color: #393939;
+    border-bottom: 1px solid #ffffff;
 }
 
 .about .about-content .personal-info .info-item p span {
@@ -379,7 +380,7 @@ body {
     font-size: 15px;
     padding: 10px 0;
     color: #ffffff;
-    border-color: #393939;
+    border-bottom: 1px solid #ffffff;
 }
 
 .about .about-content .personal-info1 .info-item p span {
@@ -405,7 +406,7 @@ body {
     font-size: 15px;
     padding: 10px 0;
     color: #ffffff;
-    border-color: #393939;
+    border-bottom: 1px solid #ffffff;
 }
 
 .about .about-content .personal-info2 .info-item p span {
@@ -521,7 +522,7 @@ body {
 }
 
 .certificates .certificate-item-inner {
-    border: 5px solid #fff;
+    border: 5px solid #ffffff;
     overflow: hidden;
     cursor: pointer;
 }
@@ -686,7 +687,7 @@ body {
     right: 0;
     font-size: 30px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     line-height: 35px;
     z-index: 105;
     cursor: pointer;
@@ -706,7 +707,7 @@ body {
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
     font-size: 16px;
     font-weight: 450;
-    color: #fff;
+    color: #ffffff;
 }
 
 .lightbox .lightbox-controls .prev-item,
@@ -844,10 +845,7 @@ body.light .section {
     background-color: #f2f2fc;
 }
 
-body.light .sidebar .nav li a {
-    border-bottom: 1px solid #e3dfec;
-}
-
+body.light .sidebar .nav li a,
 body.light .about .about-content .personal-info .info-item p,
 body.light .about .about-content .personal-info1 .info-item p,
 body.light .about .about-content .personal-info2 .info-item p {
