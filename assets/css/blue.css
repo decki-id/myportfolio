@@ -1,8 +1,8 @@
 .sidebar .nav-toggler .fas,
 .sidebar .nav li a:hover,
 .sidebar .nav li a.active,
-body.dark .sidebar .nav li a:hover,
-body.dark .sidebar .nav li a.active,
+body.light .sidebar .nav li a:hover,
+body.light .sidebar .nav li a.active,
 .about .about-content .about-text span,
 .about .about-content .edex .timeline .timeline-title span,
 .style-switcher .switcher-toggle .fas {
