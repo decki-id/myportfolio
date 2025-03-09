@@ -288,6 +288,49 @@ if (currentUrl === "/" || currentUrl === "") {
   certLink.classList.remove("active")
   portLink.classList.remove("active")
   blogLink.classList.remove("active")
+  fetch("/pages/home.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/about") {
+  document.title = "Decki ID | About"
+  homeLink.classList.remove("active")
+  aboutLink.classList.add("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  blogLink.classList.remove("active")
+  fetch("/pages/about.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/certificates") {
+  document.title = "Decki ID | Certificates"
+  homeLink.classList.remove("active")
+  aboutLink.classList.remove("active")
+  certLink.classList.add("active")
+  portLink.classList.remove("active")
+  blogLink.classList.remove("active")
+  fetch("/pages/certificates.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/portfolios") {
+  document.title = "Decki ID | Portfolios"
+  homeLink.classList.remove("active")
+  aboutLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.add("active")
+  blogLink.classList.remove("active")
+  fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/blogs") {
+  document.title = "Decki ID | Blogs"
+  homeLink.classList.remove("active")
+  aboutLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  blogLink.classList.add("active")
+  fetch("/pages/blogs.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
 }
 
 
