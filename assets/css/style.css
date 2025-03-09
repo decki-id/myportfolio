@@ -324,6 +324,10 @@ body {
     margin-top: 40px;
 }
 
+.about .about-content .personal-info3 {
+    width: 100%;
+}
+
 .section-title,
 .about .about-content,
 .about .about-content .about-text,
@@ -795,7 +799,8 @@ body.light .section {
 body.light .sidebar .nav li a,
 body.light .about .about-content .personal-info .info-item p,
 body.light .about .about-content .personal-info1 .info-item p,
-body.light .about .about-content .personal-info2 .info-item p {
+body.light .about .about-content .personal-info2 .info-item p,
+body.light .about .about-content .personal-info3 .info-item p {
     border-bottom: 1px solid #e8defc;
 }
 
@@ -813,6 +818,7 @@ body.light .about .about-content .about-text p,
 body.light .about .about-content .personal-info .info-item p,
 body.light .about .about-content .personal-info1 .info-item p,
 body.light .about .about-content .personal-info2 .info-item p,
+body.light .about .about-content .personal-info3 .info-item p,
 body.light .about .about-content .edex .timeline .edex-title,
 body.light .about .about-content .edex .timeline .timeline-date,
 body.light .about .about-content .edex .timeline .timeline-title,
@@ -826,6 +832,7 @@ body.light .copyright {
 body.light .about .about-content .personal-info .info-item p span,
 body.light .about .about-content .personal-info1 .info-item p span,
 body.light .about .about-content .personal-info2 .info-item p span,
+body.light .about .about-content .personal-info3 .info-item p span,
 body.light .about .about-content .edex .timeline .timeline-subtitle,
 body.light .about .about-content .edex .timeline .timeline-text,
 body.light .portfolios .portfolio-item-inner .portfolio-info .portfolio-description,
