@@ -128,7 +128,7 @@ body {
 
 .sidebar .logo {
     font-family: Viga;
-    padding: 0 0 15px 0;
+    padding: 0 0 0 0;
 }
 
 .sidebar .logo a {
@@ -139,23 +139,23 @@ body {
     position: relative;
 }
 
-.sidebar .logo #decki::before {
-    content: '';
-    height: 4px;
-    width: 93px;
-    position: absolute;
-    top: 34px;
-    left: 0;
-}
-
-.sidebar .logo #decki::after {
+/* .sidebar .logo #decki::before {
     content: '';
     height: 4px;
     width: 60px;
     position: absolute;
-    top: 42px;
+    top: -12px;
     left: 0;
-}
+} */
+
+/* .sidebar .logo #decki::after {
+    content: '';
+    height: 4px;
+    width: 93px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+} */
 
 .sidebar .logo #herdiawans {
     top: -10px;
