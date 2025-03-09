@@ -289,7 +289,7 @@ if (currentUrl === "/" || currentUrl === "") {
   portLink.classList.remove("active")
   blogLink.classList.remove("active")
   fetch("/pages/home.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
+    document.getElementByClassName("content").innerHTML = html
   })
 } else if (currentUrl === "/about") {
   document.title = "Decki ID | About"
@@ -299,7 +299,7 @@ if (currentUrl === "/" || currentUrl === "") {
   portLink.classList.remove("active")
   blogLink.classList.remove("active")
   fetch("/pages/about.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
+    document.getElementByClassName("content").innerHTML = html
   })
 } else if (currentUrl === "/certificates") {
   document.title = "Decki ID | Certificates"
@@ -309,7 +309,7 @@ if (currentUrl === "/" || currentUrl === "") {
   portLink.classList.remove("active")
   blogLink.classList.remove("active")
   fetch("/pages/certificates.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
+    document.getElementByClassName("content").innerHTML = html
   })
 } else if (currentUrl === "/portfolios") {
   document.title = "Decki ID | Portfolios"
@@ -319,7 +319,7 @@ if (currentUrl === "/" || currentUrl === "") {
   portLink.classList.add("active")
   blogLink.classList.remove("active")
   fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
+    document.getElementByClassName("content").innerHTML = html
   })
 } else if (currentUrl === "/blogs") {
   document.title = "Decki ID | Blogs"
@@ -329,7 +329,7 @@ if (currentUrl === "/" || currentUrl === "") {
   portLink.classList.remove("active")
   blogLink.classList.add("active")
   fetch("/pages/blogs.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
+    document.getElementByClassName("content").innerHTML = html
   })
 }
 
