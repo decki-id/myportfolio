@@ -128,7 +128,7 @@ body {
 
 .sidebar .logo {
     font-family: Viga;
-    padding: 15px 0 0 0;
+    padding: 0 0 15px 0;
 }
 
 .sidebar .logo a {
@@ -142,18 +142,18 @@ body {
 .sidebar .logo #decki::before {
     content: '';
     height: 4px;
-    width: 60px;
+    width: 93px;
     position: absolute;
-    top: -12px;
+    top: 4px;
     left: 0;
 }
 
 .sidebar .logo #decki::after {
     content: '';
     height: 4px;
-    width: 93px;
+    width: 60px;
     position: absolute;
-    top: -4px;
+    top: 12px;
     left: 0;
 }
 
