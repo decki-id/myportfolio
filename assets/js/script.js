@@ -282,4 +282,11 @@ const certLink = document.getElementById("cert-link")
 const portLink = document.getElementById("port-link")
 const blogLink = document.getElementById("blog-link")
 
+if (currentUrl === "/" || currentUrl === "") {
+  document.title = "Decki ID | Home"
+}
+
+
+// Copyright
+
 document.getElementById("year").innerHTML = new Date().getFullYear()
