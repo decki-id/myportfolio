@@ -277,7 +277,7 @@ const homeLink = document.getElementById("home-link")
 const aboutLink = document.getElementById("about-link")
 const certLink = document.getElementById("cert-link")
 const portLink = document.getElementById("port-link")
-const blogLink = document.getElementById("blog-link")
+// const blogLink = document.getElementById("blog-link")
 
 if (currentUrl === "/" || currentUrl === "") {
   document.title = `${document.title} | Home`
@@ -285,7 +285,7 @@ if (currentUrl === "/" || currentUrl === "") {
   aboutLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.remove("active")
-  blogLink.classList.remove("active")
+  // blogLink.classList.remove("active")
   fetch("/pages/home.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
@@ -295,7 +295,7 @@ if (currentUrl === "/" || currentUrl === "") {
   aboutLink.classList.add("active")
   certLink.classList.remove("active")
   portLink.classList.remove("active")
-  blogLink.classList.remove("active")
+  // blogLink.classList.remove("active")
   fetch("/pages/about.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
@@ -305,7 +305,7 @@ if (currentUrl === "/" || currentUrl === "") {
   aboutLink.classList.remove("active")
   certLink.classList.add("active")
   portLink.classList.remove("active")
-  blogLink.classList.remove("active")
+  // blogLink.classList.remove("active")
   fetch("/pages/certificates.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
@@ -315,11 +315,11 @@ if (currentUrl === "/" || currentUrl === "") {
   aboutLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.add("active")
-  blogLink.classList.remove("active")
+  // blogLink.classList.remove("active")
   fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
-} else if (currentUrl === "/blogs") {
+} /* else if (currentUrl === "/blogs") {
   document.title = `${document.title} | Blogs`
   homeLink.classList.remove("active")
   aboutLink.classList.remove("active")
@@ -329,7 +329,7 @@ if (currentUrl === "/" || currentUrl === "") {
   fetch("/pages/blogs.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
-}
+} */
 
 
 // Copyright
