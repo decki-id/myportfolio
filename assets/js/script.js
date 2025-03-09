@@ -282,7 +282,7 @@ const portLink = document.getElementById("port-link")
 const blogLink = document.getElementById("blog-link")
 
 if (currentUrl === "/" || currentUrl === "") {
-  document.title = "Decki ID | Home"
+  document.title = `${document.title} | Home`
   homeLink.classList.add("active")
   aboutLink.classList.remove("active")
   certLink.classList.remove("active")
@@ -292,7 +292,7 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
   })
 } else if (currentUrl === "/about") {
-  document.title = "Decki ID | About"
+  document.title = `${document.title} | About`
   homeLink.classList.remove("active")
   aboutLink.classList.add("active")
   certLink.classList.remove("active")
@@ -302,7 +302,7 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
   })
 } else if (currentUrl === "/certificates") {
-  document.title = "Decki ID | Certificates"
+  document.title = `${document.title} | Certificates`
   homeLink.classList.remove("active")
   aboutLink.classList.remove("active")
   certLink.classList.add("active")
@@ -312,7 +312,7 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
   })
 } else if (currentUrl === "/portfolios") {
-  document.title = "Decki ID | Portfolios"
+  document.title = `${document.title} | Portfolios`
   homeLink.classList.remove("active")
   aboutLink.classList.remove("active")
   certLink.classList.remove("active")
@@ -322,7 +322,7 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
   })
 } else if (currentUrl === "/blogs") {
-  document.title = "Decki ID | Blogs"
+  document.title = `${document.title} | Blogs`
   homeLink.classList.remove("active")
   aboutLink.classList.remove("active")
   certLink.classList.remove("active")
