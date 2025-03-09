@@ -830,6 +830,7 @@ body.light {
 }
 
 body.light .sidebar,
+body.light .sidebar .nav-toggler,
 body.light .style-switcher,
 body.light .style-switcher .switcher-toggle,
 body.light .about .about-content .edex .timeline,
