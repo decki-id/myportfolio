@@ -14,7 +14,7 @@
 ## About Deckiherdiawans Portfolio
 
 A repository of personal website that contains web applications built with the Laravel framework.
-<br>By far, there are three web applications.
+<br>By far, there are two web applications.
 
 - [InstaDeck](https://instadeck.deckidecki.com), an Instagram clone website with CRUD feature and Instagram API that shows a page of creator's Instagram account.
 - [SisDeck](https://sisdeck.deckidecki.com), a Student Information System website (still in development).
