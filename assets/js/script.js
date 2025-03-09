@@ -91,25 +91,24 @@ document.addEventListener("keydown", function (event) {
 
 function setActiveColor(color) {
   const links = document.querySelectorAll(".alternative-color")
-  const totalLinks = links.length
 
-  for (let i = 0; i < totalLinks; i++) {
+  for (let i = 0; i < links.length; i++) {
     if (color === links[i].getAttribute("title")) {
       if (color == "Red") {
         localStorage.removeItem("Yellow")
         localStorage.removeItem("Green")
         localStorage.removeItem("Blue")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Red", this.checked)
+          localStorage.setItem("Red", true)
           links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Red", this.checked)
+          localStorage.setItem("Red", true)
           links[i].removeAttribute("disabled")
-          document.body.className = ""
+          document.body.className = "light"
         } else {
           localStorage.clear()
-          localStorage.setItem("Red", this.checked)
+          localStorage.setItem("Red", true)
           links[i].removeAttribute("disabled")
         }
       } else if (color == "Yellow") {
@@ -117,16 +116,16 @@ function setActiveColor(color) {
         localStorage.removeItem("Green")
         localStorage.removeItem("Blue")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Yellow", this.checked)
+          localStorage.setItem("Yellow", true)
           links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Yellow", this.checked)
+          localStorage.setItem("Yellow", true)
           links[i].removeAttribute("disabled")
-          document.body.className = ""
+          document.body.className = "light"
         } else {
           localStorage.clear()
-          localStorage.setItem("Yellow", this.checked)
+          localStorage.setItem("Yellow", true)
           links[i].removeAttribute("disabled")
         }
       } else if (color == "Green") {
@@ -134,16 +133,16 @@ function setActiveColor(color) {
         localStorage.removeItem("Red")
         localStorage.removeItem("Blue")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Green", this.checked)
+          localStorage.setItem("Green", true)
           links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Green", this.checked)
+          localStorage.setItem("Green", true)
           links[i].removeAttribute("disabled")
-          document.body.className = ""
+          document.body.className = "light"
         } else {
           localStorage.clear()
-          localStorage.setItem("Green", this.checked)
+          localStorage.setItem("Green", true)
           links[i].removeAttribute("disabled")
         }
       } else {
@@ -151,16 +150,16 @@ function setActiveColor(color) {
         localStorage.removeItem("Green")
         localStorage.removeItem("Red")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Blue", this.checked)
+          localStorage.setItem("Blue", true)
           links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Blue", this.checked)
+          localStorage.setItem("Blue", true)
           links[i].removeAttribute("disabled")
-          document.body.className = ""
+          document.body.className = "light"
         } else {
           localStorage.clear()
-          localStorage.setItem("Blue", this.checked)
+          localStorage.setItem("Blue", true)
           links[i].removeAttribute("disabled")
         }
       }
@@ -170,7 +169,7 @@ function setActiveColor(color) {
         document.body.className = "dark"
       } else {
         links[i].setAttribute("disabled", true)
-        document.body.className = ""
+        document.body.className = "light"
       }
     }
   }
@@ -187,9 +186,8 @@ if (localStorage.getItem("Red")) {
 }
 
 const bodySkin = document.querySelectorAll(".body-skin")
-const totalBodySkin = bodySkin.length
 
-for (let i = 0; i < totalBodySkin; i++) {
+for (let i = 0; i < bodySkin.length; i++) {
   bodySkin[i].addEventListener("change", function () {
     if (this.value === "dark") {
       localStorage.removeItem("light")
@@ -218,24 +216,24 @@ for (let i = 0; i < totalBodySkin; i++) {
       localStorage.removeItem("dark")
       if (localStorage.getItem("Red")) {
         localStorage.setItem("light", this.checked)
-        document.body.className = ""
+        document.body.className = "light"
         document.querySelector("#Red").removeAttribute("disabled")
       } else if (localStorage.getItem("Yellow")) {
         localStorage.setItem("light", this.checked)
-        document.body.className = ""
+        document.body.className = "light"
         document.querySelector("#Yellow").removeAttribute("disabled")
       } else if (localStorage.getItem("Green")) {
         localStorage.setItem("light", this.checked)
-        document.body.className = ""
+        document.body.className = "light"
         document.querySelector("#Green").removeAttribute("disabled")
       } else if (localStorage.getItem("Blue")) {
         localStorage.setItem("light", this.checked)
-        document.body.className = ""
+        document.body.className = "light"
         document.querySelector("#Blue").removeAttribute("disabled")
       } else {
         localStorage.clear()
         localStorage.setItem("light", this.checked)
-        document.body.className = ""
+        document.body.className = "light"
       }
     }
   })
