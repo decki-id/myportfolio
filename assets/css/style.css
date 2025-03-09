@@ -13,8 +13,8 @@
 
 body {
     line-height: 1.5;
-    background-color: #f2f2fc;
     overflow-x: hidden;
+    background-color: #151515;
 }
 
 ::before,
@@ -27,7 +27,7 @@ body {
 }
 
 .section {
-    background-color: #f2f2fc;
+    background-color: #151515;
     min-height: 100vh;
     display: block;
     padding: 0 30px;
@@ -64,7 +64,7 @@ body {
 }
 
 .section-title h2 {
-    color: #302e4d;
+    color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
     margin: 0;
@@ -109,7 +109,7 @@ body {
 
 .sidebar {
     width: 200px;
-    background-color: #fff;
+    background-color: #222222;
     position: fixed;
     height: 100%;
     left: 0;
@@ -133,7 +133,7 @@ body {
 
 .sidebar .logo a {
     font-size: 25px;
-    color: #302e4d;
+    color: #ffffff;
     text-decoration: none;
     display: block;
     position: relative;
@@ -190,7 +190,7 @@ body {
     border: 1px solid #d4d4ec;
     border-left: none;
     border-radius: 0 5px 5px 0;
-    background-color: #fff;
+    background-color: #222222;
     font-size: 25px;
     display: none;
     -ms-flex-align: center;
@@ -212,11 +212,10 @@ body {
 .sidebar .nav li a {
     font-size: 14px;
     font-weight: 600;
-    color: #302e4d;
+    color: #ffffff;
     text-decoration: none;
     line-height: 50px;
     display: block;
-    border-bottom: 1px solid #e3dfec;
 }
 
 .sidebar .nav li a i {
@@ -230,6 +229,7 @@ body {
 }
 
 .copyright {
+    color: #ffffff;
     font-family: monospace;
 }
 
@@ -256,13 +256,13 @@ body {
 
 .home .intro h1 {
     font-size: 30px;
-    color: #302e4d;
+    color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
 }
 
 .home .intro p {
-    color: #302e4d;
+    color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     margin: 0;
@@ -311,11 +311,13 @@ body {
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    color: #302e4d;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .about-text a {
-    color: #302e4d;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .about-text a:hover {
@@ -327,8 +329,9 @@ body {
     font-size: 15px;
     line-height: 25px;
     font-family: 'Rubik', sans-serif;
-    color: #504e70;
     margin: 0;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .personal-info {
@@ -349,13 +352,13 @@ body {
     font-weight: 600;
     font-size: 15px;
     padding: 10px 0;
-    color: #302e4d;
-    border-bottom: 1px solid #e8defc;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .personal-info .info-item p span {
     font-weight: 400;
-    color: #504e70;
+    color: #e9e9e9;
 }
 
 .about .about-content .personal-info1 {
@@ -375,13 +378,13 @@ body {
     font-weight: 600;
     font-size: 15px;
     padding: 10px 0;
-    color: #302e4d;
-    border-bottom: 1px solid #e8defc;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .personal-info1 .info-item p span {
     font-weight: 400;
-    color: #504e70;
+    color: #e9e9e9;
 }
 
 .about .about-content .personal-info2 {
@@ -401,13 +404,13 @@ body {
     font-weight: 600;
     font-size: 15px;
     padding: 10px 0;
-    color: #302e4d;
-    border-bottom: 1px solid #e8defc;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .personal-info2 .info-item p span {
     font-weight: 400;
-    color: #504e70;
+    color: #e9e9e9;
 }
 
 .about .about-content .edex {
@@ -429,11 +432,16 @@ body {
 }
 
 .about .about-content .edex .timeline {
-    background-color: #fff;
+    background-color: #222222;
     padding: 30px 15px;
     border: 1px solid #d4d4e3;
     border-radius: 10px;
     width: 100%;
+}
+
+.about .about-content .edex .timeline .edex-title {
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .edex .timeline .timeline-item {
@@ -469,8 +477,9 @@ body {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #504e70;
     margin-bottom: 5px;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .edex .timeline i {
@@ -481,22 +490,23 @@ body {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: 15px;
-    color: #302e4d;
     margin-bottom: 5px;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .about .about-content .edex .timeline .timeline-subtitle {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #504e70;
+    color: #e9e9e9;
 }
 
 .about .about-content .edex .timeline .timeline-text {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #504e70;
+    color: #e9e9e9;
     padding: 0 0 0 20px;
 }
 
@@ -546,7 +556,7 @@ body {
 .portfolios .portfolio-item-inner {
     overflow: hidden;
     border: 1px solid #d4d4e3;
-    background-color: #fff;
+    background-color: #222222;
 }
 
 .portfolios .portfolio-item-inner .portfolio-image {
@@ -576,7 +586,8 @@ body {
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    color: #302e4d;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .portfolios .portfolio-item-inner .portfolio-info .portfolio-description {
@@ -584,7 +595,7 @@ body {
     font-size: 15px;
     line-height: 25px;
     font-family: 'Rubik', sans-serif;
-    color: #504e70;
+    color: #e9e9e9;
     margin-bottom: 15px;
 }
 
@@ -602,7 +613,7 @@ body {
 .blogs .blog-item-inner {
     overflow: hidden;
     border: 1px solid #d4d4e3;
-    background-color: #fff;
+    background-color: #222222;
 }
 
 .blogs .blog-item-inner .blog-image {
@@ -624,7 +635,7 @@ body {
 
 .blogs .blog-item-inner .blog-info {
     padding: 20px;
-    background-color: white;
+    background-color: #222222;
 }
 
 .blogs .blog-item-inner .blog-info .blog-title {
@@ -632,7 +643,8 @@ body {
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    color: #302e4d;
+    color: #ffffff;
+    border-color: #393939;
 }
 
 .blogs .blog-item-inner .blog-info .blog-description {
@@ -640,7 +652,7 @@ body {
     font-size: 15px;
     line-height: 25px;
     font-family: 'Rubik', sans-serif;
-    color: #504e70;
+    color: #e9e9e9;
     margin-bottom: 15px;
 }
 
@@ -723,7 +735,7 @@ body {
     top: 20px;
     right: 0;
     z-index: 10;
-    background-color: #fff;
+    background-color: #222222;
     padding: 15px;
     border: 1px solid #d4d4e3;
     border-right: none;
@@ -732,6 +744,10 @@ body {
     transform: translateX(100%);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+}
+
+.style-switcher label {
+    color: #ffffff;
 }
 
 .style-switcher.open {
@@ -743,7 +759,7 @@ body {
     position: absolute;
     height: 45px;
     width: 45px;
-    background-color: #fff;
+    background-color: #222222;
     left: -46px;
     top: -1px;
     border: 1px solid #d4d4e3;
@@ -761,7 +777,7 @@ body {
 .style-switcher h5 {
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
-    color: #302e4d;
+    color: #ffffff;
 }
 
 .style-switcher ul {
@@ -783,6 +799,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     margin: 0 2px 0 0;
+    color: #ffffff;
 }
 
 .style-switcher hr {
@@ -806,58 +823,67 @@ body {
 }
 
 
+/* Light Body */
 
-/* Dark Body */
-
-body.dark {
-    background-color: #151515;
+body.light {
+    background-color: #f2f2fc;
 }
 
-body.dark .sidebar,
-body.dark .style-switcher,
-body.dark .about .about-content .edex .timeline,
-body.dark .portfolios .portfolio-item-inner,
-body.dark .portfolios .portfolio-item-inner .portfolio-info,
-body.dark .blogs .blog-item-inner .blog-info {
-    background-color: #222222;
+body.light .sidebar,
+body.light .style-switcher,
+body.light .about .about-content .edex .timeline,
+body.light .portfolios .portfolio-item-inner,
+body.light .portfolios .portfolio-item-inner .portfolio-info,
+body.light .blogs .blog-item-inner .blog-info {
+    background-color: #ffffff;
 }
 
-body.dark .section {
-    background-color: #151515;
+body.light .section {
+    background-color: #f2f2fc;
 }
 
-body.dark .sidebar .logo a,
-body.dark .sidebar .nav li a,
-body.dark .style-switcher h5,
-body.dark .style-switcher ul li a,
-body.dark .style-switcher label,
-body.dark .section-title h2,
-body.dark .home .intro h1,
-body.dark .home .intro p,
-body.dark .about .about-content .about-text h3,
-body.dark .about .about-content .about-text a,
-body.dark .about .about-content .about-text p,
-body.dark .about .about-content .personal-info .info-item p,
-body.dark .about .about-content .personal-info1 .info-item p,
-body.dark .about .about-content .personal-info2 .info-item p,
-body.dark .about .about-content .edex .timeline .edex-title,
-body.dark .about .about-content .edex .timeline .timeline-date,
-body.dark .about .about-content .edex .timeline .timeline-title,
-body.dark .portfolios .portfolio-item-inner .portfolio-info .portfolio-title,
-body.dark .blogs .blog-item-inner .blog-info .blog-title,
-body.dark .copyright {
-    color: #fff;
-    border-color: #393939;
+body.light .sidebar .nav li a {
+    border-bottom: 1px solid #e3dfec;
 }
 
-body.dark .about .about-content .personal-info .info-item p span,
-body.dark .about .about-content .personal-info1 .info-item p span,
-body.dark .about .about-content .personal-info2 .info-item p span,
-body.dark .about .about-content .edex .timeline .timeline-subtitle,
-body.dark .about .about-content .edex .timeline .timeline-text,
-body.dark .portfolios .portfolio-item-inner .portfolio-info .portfolio-description,
-body.dark .blogs .blog-item-inner .blog-info .blog-description {
-    color: #e9e9e9;
+body.light .about .about-content .personal-info .info-item p,
+body.light .about .about-content .personal-info1 .info-item p,
+body.light .about .about-content .personal-info2 .info-item p {
+    border-bottom: 1px solid #e8defc;
+}
+
+body.light .sidebar .logo a,
+body.light .sidebar .nav li a,
+body.light .style-switcher h5,
+body.light .style-switcher ul li a,
+body.light .style-switcher label,
+body.light .section-title h2,
+body.light .home .intro h1,
+body.light .home .intro p,
+body.light .about .about-content .about-text h3,
+body.light .about .about-content .about-text a,
+body.light .about .about-content .about-text p,
+body.light .about .about-content .personal-info .info-item p,
+body.light .about .about-content .personal-info1 .info-item p,
+body.light .about .about-content .personal-info2 .info-item p,
+body.light .about .about-content .edex .timeline .edex-title,
+body.light .about .about-content .edex .timeline .timeline-date,
+body.light .about .about-content .edex .timeline .timeline-title,
+body.light .portfolios .portfolio-item-inner .portfolio-info .portfolio-title,
+body.light .blogs .blog-item-inner .blog-info .blog-title,
+body.light .copyright {
+    color: #302e4d;
+    border-color: #c0c0c0;
+}
+
+body.light .about .about-content .personal-info .info-item p span,
+body.light .about .about-content .personal-info1 .info-item p span,
+body.light .about .about-content .personal-info2 .info-item p span,
+body.light .about .about-content .edex .timeline .timeline-subtitle,
+body.light .about .about-content .edex .timeline .timeline-text,
+body.light .portfolios .portfolio-item-inner .portfolio-info .portfolio-description,
+body.light .blogs .blog-item-inner .blog-info .blog-description {
+    color: #504e70;
 }
 
 

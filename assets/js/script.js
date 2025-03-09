@@ -241,11 +241,11 @@ for (let i = 0; i < totalBodySkin; i++) {
   })
 }
 
-if (document.body.className === "dark") {
-  localStorage.setItem("dark", this.checked)
+if (localStorage.getItem("dark")) {
+  document.body.className = "dark"
   document.querySelector("#dark").setAttribute("checked", true)
 } else {
-  localStorage.setItem("light", this.checked)
+  document.body.className = "light"
   document.querySelector("#light").setAttribute("checked", true)
 }
 
