@@ -175,7 +175,11 @@ function setActiveColor(color) {
   }
 }
 
-if (localStorage.getItem("Red")) {
+if (
+  localStorage.getItem("Red") || !localStorage.getItem("Red") &&
+  !localStorage.getItem("Yellow") && !localStorage.getItem("Green") &&
+  !localStorage.getItem("Blue")
+) {
   document.querySelector("#Red").removeAttribute("disabled")
 } else if (localStorage.getItem("Yellow")) {
   document.querySelector("#Yellow").removeAttribute("disabled")
@@ -239,7 +243,7 @@ for (let i = 0; i < bodySkin.length; i++) {
   })
 }
 
-if (localStorage.getItem("dark")) {
+if (!localStorage.getItem("light")) {
   document.body.className = "dark"
   document.querySelector("#dark").setAttribute("checked", true)
 } else {
