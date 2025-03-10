@@ -177,8 +177,8 @@ function setActiveColor(color) {
 
 if (
   localStorage.getItem("Red") || !localStorage.getItem("Red") &&
-  !localStorage.getItem("Yellow") && !localStorage.getItem("Green") &&
-  !localStorage.getItem("Blue")
+  !localStorage.getItem("Blue") && !localStorage.getItem("Green") &&
+  !localStorage.getItem("Yellow") 
 ) {
   document.querySelector("#Red").removeAttribute("disabled")
 } else if (localStorage.getItem("Yellow")) {
