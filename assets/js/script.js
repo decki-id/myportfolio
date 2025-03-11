@@ -278,7 +278,7 @@ document.addEventListener("keydown", function (event) {
 
 let currentUrl = window.location.pathname
 const homeLink = document.getElementById("home-link")
-const aboutLink = document.getElementById("about-link")
+const abouLink = document.getElementById("abou-link")
 const certLink = document.getElementById("cert-link")
 const portLink = document.getElementById("port-link")
 // const blogLink = document.getElementById("blog-link")
@@ -286,7 +286,7 @@ const portLink = document.getElementById("port-link")
 if (currentUrl === "/" || currentUrl === "") {
   document.title = `${document.title} | Home`
   homeLink.classList.add("active")
-  aboutLink.classList.remove("active")
+  abouLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.remove("active")
   // blogLink.classList.remove("active")
@@ -296,7 +296,7 @@ if (currentUrl === "/" || currentUrl === "") {
 } else if (currentUrl === "/about") {
   document.title = `${document.title} | About`
   homeLink.classList.remove("active")
-  aboutLink.classList.add("active")
+  abouLink.classList.add("active")
   certLink.classList.remove("active")
   portLink.classList.remove("active")
   // blogLink.classList.remove("active")
@@ -306,7 +306,7 @@ if (currentUrl === "/" || currentUrl === "") {
 } else if (currentUrl === "/certificates") {
   document.title = `${document.title} | Certificates`
   homeLink.classList.remove("active")
-  aboutLink.classList.remove("active")
+  abouLink.classList.remove("active")
   certLink.classList.add("active")
   portLink.classList.remove("active")
   // blogLink.classList.remove("active")
@@ -316,7 +316,7 @@ if (currentUrl === "/" || currentUrl === "") {
 } else if (currentUrl === "/portfolios") {
   document.title = `${document.title} | Portfolios`
   homeLink.classList.remove("active")
-  aboutLink.classList.remove("active")
+  abouLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.add("active")
   // blogLink.classList.remove("active")
@@ -326,7 +326,7 @@ if (currentUrl === "/" || currentUrl === "") {
 } /* else if (currentUrl === "/blogs") {
   document.title = `${document.title} | Blogs`
   homeLink.classList.remove("active")
-  aboutLink.classList.remove("active")
+  abouLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.remove("active")
   blogLink.classList.add("active")
