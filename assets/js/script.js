@@ -337,7 +337,9 @@ if (currentUrl === "/" || currentUrl === "") {
 } */
 
 downLink.addEventListener("click", () => {
-  alert("Resume downloaded successfully.")
+  setTimeout(() => {
+    alert("Resume downloaded successfully.")
+  }, 500)
 })
 
 
