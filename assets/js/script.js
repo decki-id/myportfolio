@@ -282,6 +282,7 @@ const abouLink = document.getElementById("abou-link")
 const certLink = document.getElementById("cert-link")
 const portLink = document.getElementById("port-link")
 // const blogLink = document.getElementById("blog-link")
+const downLink = document.getElementById("down-link")
 
 if (currentUrl === "/" || currentUrl === "") {
   document.title = `${document.title} | Home`
@@ -334,6 +335,10 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
   })
 } */
+
+downLink.addEventListener("click", () => {
+  alert("Resume downloaded successfully.")
+})
 
 
 // Copyright
