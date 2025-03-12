@@ -269,6 +269,7 @@ document.addEventListener("keydown", function (event) {
 // Certificates Lightbox
 
 const content = document.querySelector("#content")
+console.log(content.querySelector(".lightbox"))
 
 if (content.querySelector(".lightbox") != null) {
   let itemIndex = 0
