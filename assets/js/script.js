@@ -269,9 +269,9 @@ document.addEventListener("keydown", function (event) {
 // Certificates Lightbox
 
 const content = document.getElementById("content")
-console.log(content)
+const child = content.querySelector(".lightbox")
 
-if (content.querySelector(".lightbox") != null) {
+if (Array.from(content.children).includes(child)) {
   let itemIndex = 0
   const lightbox = document.querySelector(".lightbox")
   const certificateItem = document.querySelectorAll(".certificate-item")
