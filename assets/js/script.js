@@ -335,8 +335,7 @@ if (currentUrl === "/certificates") {
   })
 
   if (lightbox != null) {
-    console.log(lightbox)
-    const lightboxClose = lightbox.querySelector(".lightbox-close")
+    const lightboxClose = document.getElementsByClassName("lightbox-close")
     lightbox.addEventListener("click", function (event) {
       if (event.target === lightboxClose || event.target === lightbox) {
         toggleLightbox()
