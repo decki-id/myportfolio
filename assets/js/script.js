@@ -1,80 +1,74 @@
-// Certificates Lightbox
+// Copyright
+document.getElementById("year").innerHTML = new Date().getFullYear()
 
-let itemIndex = 0
-const lightbox = document.getElementsByClassName("lightbox")
-const certificateItem = document.querySelectorAll(".certificate-item")
 
-function toggleLightbox() {
-  const a = window.matchMedia("(max-height: 500px)")
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  if (a.matches || isMobile) {
-    if (lightbox.classList.contains("open")) { lightbox.classList.remove("open") }
-    else { console.log("Your screen is too small for Lightbox!") }
-  } else { lightbox.classList.toggle("open") }
-}
+// Menus
 
-function changeItem() {
-  const lightboxImage = lightbox.getElementsByClassName("lightbox-image")
-  const lightboxText = lightbox.getElementsByClassName("caption-text")
-  const lightboxCounter = lightbox.getElementsByClassName("caption-counter")
+let currentUrl = window.location.pathname
+const homeLink = document.getElementById("home-link")
+const abouLink = document.getElementById("abou-link")
+const certLink = document.getElementById("cert-link")
+const portLink = document.getElementById("port-link")
+// const blogLink = document.getElementById("blog-link")
+const downLink = document.getElementById("down-link")
 
-  imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
-  lightboxImage.src = imageSource
-  lightboxText.innerHTML = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("name")
-  lightboxCounter.innerHTML = (itemIndex + 1) + " of " + certificateItem.length
-
-  imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt")
-  imageStyle = document.querySelector(".lightbox .lightbox-content img")
-  if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") { imageStyle.style.height = "435px" }
-  else { imageStyle.style.height = "650px" }
-}
-
-function prevItem() {
-  if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
-  else { itemIndex-- }
-  changeItem()
-}
-
-function nextItem() {
-  if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
-  else { itemIndex++ }
-  changeItem()
-}
-
-for (let i = 0; i < certificateItem.length; i++) {
-  certificateItem[i].addEventListener("click", function () {
-    itemIndex = i
-    toggleLightbox()
-    changeItem()
+if (currentUrl === "/" || currentUrl === "") {
+  document.title = `${document.title} | Home`
+  homeLink.classList.add("active")
+  abouLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  // blogLink.classList.remove("active")
+  fetch("/pages/home.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
   })
-}
+} else if (currentUrl === "/about") {
+  document.title = `${document.title} | About`
+  homeLink.classList.remove("active")
+  abouLink.classList.add("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  // blogLink.classList.remove("active")
+  fetch("/pages/about.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/certificates") {
+  document.title = `${document.title} | Certificates`
+  homeLink.classList.remove("active")
+  abouLink.classList.remove("active")
+  certLink.classList.add("active")
+  portLink.classList.remove("active")
+  // blogLink.classList.remove("active")
+  fetch("/pages/certificates.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} else if (currentUrl === "/portfolios") {
+  document.title = `${document.title} | Portfolios`
+  homeLink.classList.remove("active")
+  abouLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.add("active")
+  // blogLink.classList.remove("active")
+  fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} /* else if (currentUrl === "/blogs") {
+  document.title = `${document.title} | Blogs`
+  homeLink.classList.remove("active")
+  abouLink.classList.remove("active")
+  certLink.classList.remove("active")
+  portLink.classList.remove("active")
+  blogLink.classList.add("active")
+  fetch("/pages/blogs.html").then(res => res.text()).then(html => {
+    document.getElementById("content").innerHTML = html
+  })
+} */
 
-document.addEventListener("keydown", function (event) {
-  if (lightbox != null) {
-    if (lightbox.classList.contains("open") && event.which == 27) {
-      lightbox.classList.remove("open")
-    } else if (lightbox.classList.contains("open") && event.which == 37) {
-      if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
-      else { itemIndex-- }
-      changeItem()
-    } else if (lightbox.classList.contains("open") && event.which == 39) {
-      if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
-      else { itemIndex++ }
-      changeItem()
-    }
-  }
+downLink.addEventListener("click", () => {
+  setTimeout(() => {
+    alert("Resume downloaded successfully.")
+  }, 900)
 })
-
-if (lightbox != null) {
-  const lightboxClose = lightbox.querySelector(".lightbox-close")
-  lightbox.addEventListener("click", function (event) {
-    if (event.target === lightboxClose || event.target === lightbox) {
-      toggleLightbox()
-    }
-  })
-}
-
-console.log(lightbox)
 
 
 // Style Switcher
@@ -257,12 +251,10 @@ if (!localStorage.getItem("light")) {
 const navTogglerButton = document.querySelector(".nav-toggler")
 const sidebar = document.querySelector(".sidebar")
 
-navTogglerButton.addEventListener("click", () => { sidebarSectionTogglerButton() })
-
-function sidebarSectionTogglerButton() {
+navTogglerButton.addEventListener("click", () => {
   navTogglerButton.classList.toggle("open")
   sidebar.classList.toggle("open")
-}
+})
 
 document.addEventListener("keydown", function (event) {
   if (navTogglerButton.classList.contains("open") && event.which == 27) {
@@ -274,75 +266,80 @@ document.addEventListener("keydown", function (event) {
 })
 
 
-// Menus
+// Certificates Lightbox
 
-let currentUrl = window.location.pathname
-const homeLink = document.getElementById("home-link")
-const abouLink = document.getElementById("abou-link")
-const certLink = document.getElementById("cert-link")
-const portLink = document.getElementById("port-link")
-// const blogLink = document.getElementById("blog-link")
-const downLink = document.getElementById("down-link")
+let itemIndex = 0
+const lightbox = document.getElementsByClassName("lightbox")
+const certificateItem = document.querySelectorAll(".certificate-item")
 
-if (currentUrl === "/" || currentUrl === "") {
-  document.title = `${document.title} | Home`
-  homeLink.classList.add("active")
-  abouLink.classList.remove("active")
-  certLink.classList.remove("active")
-  portLink.classList.remove("active")
-  // blogLink.classList.remove("active")
-  fetch("/pages/home.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
-  })
-} else if (currentUrl === "/about") {
-  document.title = `${document.title} | About`
-  homeLink.classList.remove("active")
-  abouLink.classList.add("active")
-  certLink.classList.remove("active")
-  portLink.classList.remove("active")
-  // blogLink.classList.remove("active")
-  fetch("/pages/about.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
-  })
-} else if (currentUrl === "/certificates") {
-  document.title = `${document.title} | Certificates`
-  homeLink.classList.remove("active")
-  abouLink.classList.remove("active")
-  certLink.classList.add("active")
-  portLink.classList.remove("active")
-  // blogLink.classList.remove("active")
-  fetch("/pages/certificates.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
-  })
-} else if (currentUrl === "/portfolios") {
-  document.title = `${document.title} | Portfolios`
-  homeLink.classList.remove("active")
-  abouLink.classList.remove("active")
-  certLink.classList.remove("active")
-  portLink.classList.add("active")
-  // blogLink.classList.remove("active")
-  fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
-  })
-} /* else if (currentUrl === "/blogs") {
-  document.title = `${document.title} | Blogs`
-  homeLink.classList.remove("active")
-  abouLink.classList.remove("active")
-  certLink.classList.remove("active")
-  portLink.classList.remove("active")
-  blogLink.classList.add("active")
-  fetch("/pages/blogs.html").then(res => res.text()).then(html => {
-    document.getElementById("content").innerHTML = html
-  })
-} */
+function toggleLightbox() {
+  const a = window.matchMedia("(max-height: 500px)")
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  if (a.matches || isMobile) {
+    if (lightbox.classList.contains("open")) { lightbox.classList.remove("open") }
+    else { console.log("Your screen is too small for Lightbox!") }
+  } else { lightbox.classList.toggle("open") }
+}
 
-downLink.addEventListener("click", () => {
-  setTimeout(() => {
-    alert("Resume downloaded successfully.")
-  }, 900)
+function changeItem() {
+  const lightboxImage = lightbox.getElementsByClassName("lightbox-image")
+  const lightboxText = lightbox.getElementsByClassName("caption-text")
+  const lightboxCounter = lightbox.getElementsByClassName("caption-counter")
+
+  imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
+  lightboxImage.src = imageSource
+  lightboxText.innerHTML = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("name")
+  lightboxCounter.innerHTML = (itemIndex + 1) + " of " + certificateItem.length
+
+  imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt")
+  imageStyle = document.querySelector(".lightbox .lightbox-content img")
+  if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") { imageStyle.style.height = "435px" }
+  else { imageStyle.style.height = "650px" }
+}
+
+function prevItem() {
+  if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
+  else { itemIndex-- }
+  changeItem()
+}
+
+function nextItem() {
+  if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
+  else { itemIndex++ }
+  changeItem()
+}
+
+for (let i = 0; i < certificateItem.length; i++) {
+  certificateItem[i].addEventListener("click", function () {
+    itemIndex = i
+    toggleLightbox()
+    changeItem()
+  })
+}
+
+document.addEventListener("keydown", function (event) {
+  if (lightbox != null) {
+    if (lightbox.classList.contains("open") && event.which == 27) {
+      lightbox.classList.remove("open")
+    } else if (lightbox.classList.contains("open") && event.which == 37) {
+      if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
+      else { itemIndex-- }
+      changeItem()
+    } else if (lightbox.classList.contains("open") && event.which == 39) {
+      if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
+      else { itemIndex++ }
+      changeItem()
+    }
+  }
 })
 
+if (lightbox != null) {
+  const lightboxClose = lightbox.querySelector(".lightbox-close")
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightboxClose || event.target === lightbox) {
+      toggleLightbox()
+    }
+  })
+}
 
-// Copyright
-
-document.getElementById("year").innerHTML = new Date().getFullYear()
+console.log(lightbox)
