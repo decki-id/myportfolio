@@ -74,6 +74,8 @@ if (lightbox != null) {
   })
 }
 
+console.log(lightbox)
+
 
 // Style Switcher
 
