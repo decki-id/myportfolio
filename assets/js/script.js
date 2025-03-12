@@ -73,9 +73,8 @@ function certificates() {
   }
 
   if (lightbox != null) {
-    const lightboxClose = lightbox.querySelector(".lightbox-close")
     lightbox.addEventListener("click", function(event) {
-      if (event.target === lightboxClose || event.target === lightbox) {
+      if (event.target === lightbox.querySelector(".lightbox-close")) {
         toggleLightbox()
       }
     })
