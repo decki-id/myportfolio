@@ -123,14 +123,14 @@ if (currentUrl === "/" || currentUrl === "") {
     document.getElementById("content").innerHTML = html
     certificates()
   })
-} else if (currentUrl === "/portfolios") {
-  document.title = `${document.title} | Portfolios`
+} else if (currentUrl === "/projects") {
+  document.title = `${document.title} | Projects`
   homeLink.classList.remove("active")
   abouLink.classList.remove("active")
   certLink.classList.remove("active")
   portLink.classList.add("active")
   // blogLink.classList.remove("active")
-  fetch("/pages/portfolios.html").then(res => res.text()).then(html => {
+  fetch("/pages/projects.html").then(res => res.text()).then(html => {
     document.getElementById("content").innerHTML = html
   })
 } /* else if (currentUrl === "/blogs") {
