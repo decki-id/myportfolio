@@ -268,9 +268,11 @@ document.addEventListener("keydown", function (event) {
 
 // Certificates Lightbox
 
-if (currentUrl === "/certificates") {
+const content = document.querySelector("#content")
+
+if (content.querySelector(".lightbox") != null) {
   let itemIndex = 0
-  const lightbox = document.getElementsByClassName("lightbox")
+  const lightbox = document.querySelector(".lightbox")
   const certificateItem = document.querySelectorAll(".certificate-item")
 
   function toggleLightbox() {
@@ -335,7 +337,6 @@ if (currentUrl === "/certificates") {
   })
 
   if (lightbox != null) {
-    console.log(lightbox)
     const lightboxClose = lightbox.querySelector(".lightbox-close")
     lightbox.addEventListener("click", function (event) {
       if (event.target === lightboxClose || event.target === lightbox) {
