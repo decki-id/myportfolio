@@ -1,7 +1,7 @@
 // Certificates Lightbox
 
 let itemIndex = 0
-const lightbox = document.getElementByClassname("lightbox")
+const lightbox = document.getElementsByClassName("lightbox")
 const certificateItem = document.querySelectorAll(".certificate-item")
 
 function toggleLightbox() {
@@ -14,9 +14,9 @@ function toggleLightbox() {
 }
 
 function changeItem() {
-  const lightboxImage = lightbox.getElementByClassname("lightbox-image")
-  const lightboxText = lightbox.getElementByClassname("caption-text")
-  const lightboxCounter = lightbox.getElementByClassname("caption-counter")
+  const lightboxImage = lightbox.getElementsByClassName("lightbox-image")
+  const lightboxText = lightbox.getElementsByClassName("caption-text")
+  const lightboxCounter = lightbox.getElementsByClassName("caption-counter")
 
   imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
   lightboxImage.src = imageSource
