@@ -272,6 +272,7 @@ const content = document.getElementById("content")
 const child = content.querySelector(".lightbox")
 
 if (Array.from(content.children).includes(child)) {
+  console.log("The Certificates condition is passed!")
   let itemIndex = 0
   const lightbox = document.querySelector(".lightbox")
   const certificateItem = document.querySelectorAll(".certificate-item")
