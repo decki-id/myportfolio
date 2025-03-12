@@ -270,7 +270,7 @@ document.addEventListener("keydown", function (event) {
 
 if (currentUrl === "/certificates") {
   let itemIndex = 0
-  const lightbox = document.getElementsByClassName("lightbox")
+  const lightbox = document.querySelector(".lightbox")
   const certificateItem = document.querySelectorAll(".certificate-item")
 
   function toggleLightbox() {
@@ -283,9 +283,9 @@ if (currentUrl === "/certificates") {
   }
 
   function changeItem() {
-    const lightboxImage = lightbox.getElementsByClassName("lightbox-image")
-    const lightboxText = lightbox.getElementsByClassName("caption-text")
-    const lightboxCounter = lightbox.getElementsByClassName("caption-counter")
+    const lightboxImage = lightbox.querySelector(".lightbox-image")
+    const lightboxText = lightbox.querySelector(".caption-text")
+    const lightboxCounter = lightbox.querySelector(".caption-counter")
 
     imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
     lightboxImage.src = imageSource
@@ -335,7 +335,7 @@ if (currentUrl === "/certificates") {
   })
 
   if (lightbox != null) {
-    const lightboxClose = document.getElementsByClassName("lightbox-close")
+    const lightboxClose = lightbox.querySelector(".lightbox-close")
     lightbox.addEventListener("click", function (event) {
       if (event.target === lightboxClose || event.target === lightbox) {
         toggleLightbox()
