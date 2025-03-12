@@ -8,6 +8,8 @@ function certificates() {
   let itemIndex = 0
   const lightbox = document.querySelector(".lightbox")
   const certificateItem = document.querySelectorAll(".certificate-item")
+  const prevItem = document.getElementById("prev-item")
+  const nextItem = document.getElementById("next-item")
 
   function toggleLightbox() {
     const a = window.matchMedia("(max-height: 500px)")
@@ -34,27 +36,19 @@ function certificates() {
     else { imageStyle.style.height = "650px" }
   }
 
-  function prevItem() {
+  prevItem.addEventListener("click", function() {
     if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
     else { itemIndex-- }
     changeItem()
-  }
+  })
 
-  function nextItem() {
+  nextItem.addEventListener("click", function() {
     if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
     else { itemIndex++ }
     changeItem()
-  }
+  })
 
-  for (let i = 0; i < certificateItem.length; i++) {
-    certificateItem[i].addEventListener("click", function () {
-      itemIndex = i
-      toggleLightbox()
-      changeItem()
-    })
-  }
-
-  document.addEventListener("keydown", function (event) {
+  document.addEventListener("keydown", function(event) {
     if (lightbox != null) {
       if (lightbox.classList.contains("open") && event.which == 27) {
         lightbox.classList.remove("open")
@@ -70,9 +64,17 @@ function certificates() {
     }
   })
 
+  for (let i = 0; i < certificateItem.length; i++) {
+    certificateItem[i].addEventListener("click", function() {
+      itemIndex = i
+      toggleLightbox()
+      changeItem()
+    })
+  }
+
   if (lightbox != null) {
     const lightboxClose = lightbox.querySelector(".lightbox-close")
-    lightbox.addEventListener("click", function (event) {
+    lightbox.addEventListener("click", function(event) {
       if (event.target === lightboxClose || event.target === lightbox) {
         toggleLightbox()
       }
@@ -157,7 +159,7 @@ document.querySelector(".switcher-toggle").addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("open")
 })
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
   if (document.querySelector(".style-switcher").classList.contains("open") && event.which == 27) {
     document.querySelector(".style-switcher").classList.remove("open")
   }
@@ -266,7 +268,7 @@ if (
 const bodySkin = document.querySelectorAll(".body-skin")
 
 for (let i = 0; i < bodySkin.length; i++) {
-  bodySkin[i].addEventListener("change", function () {
+  bodySkin[i].addEventListener("change", function() {
     if (this.value === "dark") {
       localStorage.removeItem("light")
       if (localStorage.getItem("Red")) {
@@ -336,7 +338,7 @@ navTogglerButton.addEventListener("click", () => {
   sidebar.classList.toggle("open")
 })
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
   if (navTogglerButton.classList.contains("open") && event.which == 27) {
     navTogglerButton.classList.remove("open")
   }

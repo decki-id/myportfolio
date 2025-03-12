@@ -661,8 +661,8 @@ body {
     color: #ffffff;
 }
 
-.lightbox .lightbox-controls .prev-item,
-.lightbox .lightbox-controls .next-item {
+.lightbox .lightbox-controls #prev-item,
+.lightbox .lightbox-controls #next-item {
     position: absolute;
     cursor: pointer;
     color: #e4e4e4;
@@ -671,11 +671,11 @@ body {
     z-index: 105;
 }
 
-.lightbox .lightbox-controls .prev-item {
+.lightbox .lightbox-controls #prev-item {
     left: 30px;
 }
 
-.lightbox .lightbox-controls .next-item {
+.lightbox .lightbox-controls #next-item {
     right: 30px;
 }
 
