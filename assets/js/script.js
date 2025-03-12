@@ -1,59 +1,12 @@
 // Certificates Lightbox
 
 let itemIndex = 0
-const certificateItem = document.querySelectorAll(".certificate-item")
-const totalCertificateItem = certificateItem.length
 const lightbox = document.querySelector(".lightbox")
-
-for (let i = 0; i < totalCertificateItem; i++) {
-  certificateItem[i].addEventListener("click", function () {
-    itemIndex = i
-    toggleLightbox()
-    changeItem()
-  })
-}
-
-document.addEventListener("keydown", function (event) {
-  if (lightbox != null) {
-    if (lightbox.classList.contains("open") && event.which == 27) {
-      lightbox.classList.remove("open")
-    } else if (lightbox.classList.contains("open") && event.which == 37) {
-      if (itemIndex === 0) { itemIndex = totalCertificateItem - 1 }
-      else { itemIndex-- }
-      changeItem()
-    } else if (lightbox.classList.contains("open") && event.which == 39) {
-      if (itemIndex === totalCertificateItem - 1) { itemIndex = 0 }
-      else { itemIndex++ }
-      changeItem()
-    }
-  }
-})
-
-if (lightbox != null) {
-  const lightboxClose = lightbox.querySelector(".lightbox-close")
-  lightbox.addEventListener("click", function (event) {
-    if (event.target === lightboxClose || event.target === lightbox) {
-      toggleLightbox()
-    }
-  })
-}
-
-function prevItem() {
-  if (itemIndex === 0) { itemIndex = totalCertificateItem - 1 }
-  else { itemIndex-- }
-  changeItem()
-}
-
-function nextItem() {
-  if (itemIndex === totalCertificateItem - 1) { itemIndex = 0 }
-  else { itemIndex++ }
-  changeItem()
-}
+const certificateItem = document.querySelectorAll(".certificate-item")
 
 function toggleLightbox() {
   const a = window.matchMedia("(max-height: 500px)")
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-
   if (a.matches || isMobile) {
     if (lightbox.classList.contains("open")) { lightbox.classList.remove("open") }
     else { console.log("Your screen is too small for Lightbox!") }
@@ -68,12 +21,57 @@ function changeItem() {
   imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
   lightboxImage.src = imageSource
   lightboxText.innerHTML = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("name")
-  lightboxCounter.innerHTML = (itemIndex + 1) + " of " + totalCertificateItem
+  lightboxCounter.innerHTML = (itemIndex + 1) + " of " + certificateItem.length
 
   imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt")
   imageStyle = document.querySelector(".lightbox .lightbox-content img")
   if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") { imageStyle.style.height = "435px" }
   else { imageStyle.style.height = "650px" }
+}
+
+function prevItem() {
+  if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
+  else { itemIndex-- }
+  changeItem()
+}
+
+function nextItem() {
+  if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
+  else { itemIndex++ }
+  changeItem()
+}
+
+for (let i = 0; i < certificateItem.length; i++) {
+  certificateItem[i].addEventListener("click", function () {
+    itemIndex = i
+    toggleLightbox()
+    changeItem()
+  })
+}
+
+document.addEventListener("keydown", function (event) {
+  if (lightbox != null) {
+    if (lightbox.classList.contains("open") && event.which == 27) {
+      lightbox.classList.remove("open")
+    } else if (lightbox.classList.contains("open") && event.which == 37) {
+      if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
+      else { itemIndex-- }
+      changeItem()
+    } else if (lightbox.classList.contains("open") && event.which == 39) {
+      if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
+      else { itemIndex++ }
+      changeItem()
+    }
+  }
+})
+
+if (lightbox != null) {
+  const lightboxClose = lightbox.querySelector(".lightbox-close")
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightboxClose || event.target === lightbox) {
+      toggleLightbox()
+    }
+  })
 }
 
 
