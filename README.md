@@ -1,4 +1,3 @@
-# Decki ID Portfolio
+# decki.id
 
-A repository of personal portfolio website built with HTML, CSS, JavaScript.<br>
-This project is built to be accessed by Nginx.
+This is a starter project for website https://decki.id, built with React App, powered by the elements and assets from the free templates on https://uideck.com/templates.
