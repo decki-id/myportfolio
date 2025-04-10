@@ -4,14 +4,11 @@ body.light .sidebar .nav li a.active,
 .sidebar .nav li a:hover,
 .sidebar .nav li a.active,
 .about .about-content .about-text span,
+.about .about-content .about-text a:hover,
 .about .about-content .edex .timeline .timeline-title span,
 .portfolios .portfolio-item-inner .portfolio-info .portfolio-description a,
 .style-switcher .switcher-toggle .fas {
     color: red;
-}
-
-.about .about-content .about-text a:hover {
-    text-decoration-color: red;
 }
 
 .home .intro .social-links a,
