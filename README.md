@@ -1,4 +1,3 @@
 # Decki ID Portfolio
 
-A repository of personal portfolio website built with HTML, CSS, JavaScript.<br>
-This project is built to be accessed by Nginx.
+A simple portfolio website built with HTML, CSS, and JavaScript.
