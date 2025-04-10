@@ -1,19 +1,24 @@
+body.light .sidebar .nav li a:hover,
+body.light .sidebar .nav li a.active,
 .sidebar .nav-toggler .fas,
 .sidebar .nav li a:hover,
 .sidebar .nav li a.active,
-body.light .sidebar .nav li a:hover,
-body.light .sidebar .nav li a.active,
 .about .about-content .about-text span,
 .about .about-content .edex .timeline .timeline-title span,
+.portfolios .portfolio-item-inner .portfolio-info .portfolio-description a,
 .style-switcher .switcher-toggle .fas {
     color: red;
 }
 
+.about .about-content .about-text a:hover {
+    text-decoration-color: red;
+}
+
+.home .intro .social-links a,
 .sidebar .logo #decki::before,
 .sidebar .logo #decki::after,
 .sidebar .logo #herdiawans::before,
 .sidebar .logo #herdiawans::after,
-.home .intro .social-links a,
 .section-title h2::before,
 .section-title h2::after,
 .about .about-content .timeline .timeline-item::before,

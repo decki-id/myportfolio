@@ -551,6 +551,10 @@ body {
     margin-bottom: 15px;
 }
 
+.portfolios .portfolio-item-inner .portfolio-info .portfolio-description a:hover {
+    text-decoration: underline;
+}
+
 
 /* Blogs */
 
