@@ -7,7 +7,7 @@ document.getElementById("year").innerHTML = new Date().getFullYear()
 function certificates() {
   let itemIndex = 0
   const lightbox = document.querySelector(".lightbox")
-  const certificateItem = document.querySelectorAll(".certificate-item")
+  const certItem = document.querySelectorAll(".certificate-item")
   const prevItem = document.getElementById("prev-item")
   const nextItem = document.getElementById("next-item")
 
@@ -24,48 +24,32 @@ function certificates() {
     const lightboxImage = lightbox.querySelector(".lightbox-image")
     const lightboxText = lightbox.querySelector(".caption-text")
     const lightboxCounter = lightbox.querySelector(".caption-counter")
+    const imageStyle = document.querySelector(".lightbox .lightbox-content img")
+    const imageAlt = certItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt")
 
-    imageSource = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
-    lightboxImage.src = imageSource
-    lightboxText.innerHTML = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("name")
-    lightboxCounter.innerHTML = (itemIndex + 1) + " of " + certificateItem.length
+    lightboxImage.src = certItem[itemIndex].querySelector(".certificate-image img").getAttribute("src")
+    lightboxText.innerHTML = certItem[itemIndex].querySelector(".certificate-image img").getAttribute("name")
+    lightboxCounter.innerHTML = (itemIndex + 1) + " of " + certItem.length
 
-    imageAlt = certificateItem[itemIndex].querySelector(".certificate-image img").getAttribute("alt")
-    imageStyle = document.querySelector(".lightbox .lightbox-content img")
-    if (imageAlt == "mos1" || imageAlt == "mtcna" || imageAlt == "oracle") { imageStyle.style.height = "435px" }
-    else { imageStyle.style.height = "650px" }
+    if (imageAlt === "mos1" || imageAlt === "mtcna" || imageAlt === "oracle") {
+      imageStyle.style.height = "435px"
+    } else { imageStyle.style.height = "650px" }
   }
 
-  prevItem.addEventListener("click", function() {
-    if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
+  prevItem.addEventListener("click", function () {
+    if (itemIndex === 0) { itemIndex = certItem.length - 1 }
     else { itemIndex-- }
     changeItem()
   })
 
-  nextItem.addEventListener("click", function() {
-    if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
+  nextItem.addEventListener("click", function () {
+    if (itemIndex === certItem.length - 1) { itemIndex = 0 }
     else { itemIndex++ }
     changeItem()
   })
 
-  document.addEventListener("keydown", function(event) {
-    if (lightbox != null) {
-      if (lightbox.classList.contains("open") && event.which == 27) {
-        lightbox.classList.remove("open")
-      } else if (lightbox.classList.contains("open") && event.which == 37) {
-        if (itemIndex === 0) { itemIndex = certificateItem.length - 1 }
-        else { itemIndex-- }
-        changeItem()
-      } else if (lightbox.classList.contains("open") && event.which == 39) {
-        if (itemIndex === certificateItem.length - 1) { itemIndex = 0 }
-        else { itemIndex++ }
-        changeItem()
-      }
-    }
-  })
-
-  for (let i = 0; i < certificateItem.length; i++) {
-    certificateItem[i].addEventListener("click", function() {
+  for (let i = 0; i < certItem.length; i++) {
+    certItem[i].addEventListener("click", function () {
       itemIndex = i
       toggleLightbox()
       changeItem()
@@ -73,12 +57,28 @@ function certificates() {
   }
 
   if (lightbox != null) {
-    lightbox.addEventListener("click", function(event) {
+    lightbox.addEventListener("click", function (event) {
       if (event.target === lightbox.querySelector(".lightbox-close")) {
         toggleLightbox()
       }
     })
   }
+
+  document.addEventListener("keydown", function (event) {
+    if (lightbox != null) {
+      if (lightbox.classList.contains("open") && event.which == 27) {
+        lightbox.classList.remove("open")
+      } else if (lightbox.classList.contains("open") && event.which == 37) {
+        if (itemIndex === 0) { itemIndex = certItem.length - 1 }
+        else { itemIndex-- }
+        changeItem()
+      } else if (lightbox.classList.contains("open") && event.which == 39) {
+        if (itemIndex === certItem.length - 1) { itemIndex = 0 }
+        else { itemIndex++ }
+        changeItem()
+      }
+    }
+  })
 }
 
 
@@ -152,14 +152,10 @@ downLink.addEventListener("click", () => {
 
 // Style Switcher
 
-document.querySelector(".switcher-toggle").addEventListener("click", () => {
-  document.querySelector(".style-switcher").classList.toggle("open")
-})
+const styleSwitcher = document.querySelector(".style-switcher")
 
-document.addEventListener("keydown", function(event) {
-  if (document.querySelector(".style-switcher").classList.contains("open") && event.which == 27) {
-    document.querySelector(".style-switcher").classList.remove("open")
-  }
+document.querySelector(".switcher-toggle").addEventListener("click", () => {
+  styleSwitcher.classList.toggle("open")
 })
 
 function setActiveColor(color) {
@@ -257,7 +253,7 @@ if (
 const bodySkin = document.querySelectorAll(".body-skin")
 
 for (let i = 0; i < bodySkin.length; i++) {
-  bodySkin[i].addEventListener("change", function() {
+  bodySkin[i].addEventListener("change", function () {
     if (this.value === "dark") {
       localStorage.removeItem("light")
       localStorage.setItem("dark", this.checked)
@@ -311,7 +307,10 @@ navTogglerButton.addEventListener("click", () => {
   sidebar.classList.toggle("open")
 })
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
+  if (styleSwitcher.classList.contains("open") && event.which == 27) {
+    styleSwitcher.classList.remove("open")
+  }
   if (navTogglerButton.classList.contains("open") && event.which == 27) {
     navTogglerButton.classList.remove("open")
   }
