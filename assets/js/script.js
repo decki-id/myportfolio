@@ -146,9 +146,7 @@ if (currentUrl === "/" || currentUrl === "") {
 } */
 
 downLink.addEventListener("click", () => {
-  setTimeout(() => {
-    alert("Resume downloaded successfully.")
-  }, 900)
+  setTimeout(() => { alert("Resume downloaded successfully") }, 900)
 })
 
 
@@ -173,78 +171,70 @@ function setActiveColor(color) {
         localStorage.removeItem("Yellow")
         localStorage.removeItem("Green")
         localStorage.removeItem("Blue")
+        localStorage.setItem("Red", true)
+        links[i].removeAttribute("disabled")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Red", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Red", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "light"
         } else {
-          localStorage.clear()
-          localStorage.setItem("Red", true)
-          links[i].removeAttribute("disabled")
+          localStorage.setItem("dark", true)
+          document.body.className = "dark"
         }
       } else if (color == "Yellow") {
         localStorage.removeItem("Red")
         localStorage.removeItem("Green")
         localStorage.removeItem("Blue")
+        localStorage.setItem("Yellow", true)
+        links[i].removeAttribute("disabled")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Yellow", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Yellow", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "light"
         } else {
-          localStorage.clear()
-          localStorage.setItem("Yellow", true)
-          links[i].removeAttribute("disabled")
+          localStorage.setItem("dark", true)
+          document.body.className = "dark"
         }
       } else if (color == "Green") {
         localStorage.removeItem("Yellow")
         localStorage.removeItem("Red")
         localStorage.removeItem("Blue")
+        localStorage.setItem("Green", true)
+        links[i].removeAttribute("disabled")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Green", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Green", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "light"
         } else {
-          localStorage.clear()
-          localStorage.setItem("Green", true)
-          links[i].removeAttribute("disabled")
+          localStorage.setItem("dark", true)
+          document.body.className = "dark"
         }
       } else {
         localStorage.removeItem("Yellow")
         localStorage.removeItem("Green")
         localStorage.removeItem("Red")
+        localStorage.setItem("Blue", true)
+        links[i].removeAttribute("disabled")
         if (localStorage.getItem("dark")) {
-          localStorage.setItem("Blue", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "dark"
         } else if (localStorage.getItem("light")) {
-          localStorage.setItem("Blue", true)
-          links[i].removeAttribute("disabled")
           document.body.className = "light"
         } else {
-          localStorage.clear()
-          localStorage.setItem("Blue", true)
-          links[i].removeAttribute("disabled")
+          localStorage.setItem("dark", true)
+          document.body.className = "dark"
         }
       }
     } else {
       if (localStorage.getItem("dark")) {
         links[i].setAttribute("disabled", true)
         document.body.className = "dark"
-      } else {
+      } else if (localStorage.getItem("light")) {
         links[i].setAttribute("disabled", true)
         document.body.className = "light"
+      } else {
+        localStorage.setItem("dark", true)
+        links[i].setAttribute("disabled", true)
+        document.body.className = "dark"
       }
     }
   }
@@ -270,49 +260,33 @@ for (let i = 0; i < bodySkin.length; i++) {
   bodySkin[i].addEventListener("change", function() {
     if (this.value === "dark") {
       localStorage.removeItem("light")
+      localStorage.setItem("dark", this.checked)
+      document.body.className = "dark"
       if (localStorage.getItem("Red")) {
-        localStorage.setItem("dark", this.checked)
-        document.body.className = "dark"
         document.querySelector("#Red").removeAttribute("disabled")
       } else if (localStorage.getItem("Yellow")) {
-        localStorage.setItem("dark", this.checked)
-        document.body.className = "dark"
         document.querySelector("#Yellow").removeAttribute("disabled")
       } else if (localStorage.getItem("Green")) {
-        localStorage.setItem("dark", this.checked)
-        document.body.className = "dark"
         document.querySelector("#Green").removeAttribute("disabled")
       } else if (localStorage.getItem("Blue")) {
-        localStorage.setItem("dark", this.checked)
-        document.body.className = "dark"
         document.querySelector("#Blue").removeAttribute("disabled")
       } else {
-        localStorage.clear()
-        localStorage.setItem("dark", this.checked)
-        document.body.className = "dark"
+        document.querySelector("#Red").removeAttribute("disabled")
       }
     } else {
       localStorage.removeItem("dark")
+      localStorage.setItem("light", this.checked)
+      document.body.className = "light"
       if (localStorage.getItem("Red")) {
-        localStorage.setItem("light", this.checked)
-        document.body.className = "light"
         document.querySelector("#Red").removeAttribute("disabled")
       } else if (localStorage.getItem("Yellow")) {
-        localStorage.setItem("light", this.checked)
-        document.body.className = "light"
         document.querySelector("#Yellow").removeAttribute("disabled")
       } else if (localStorage.getItem("Green")) {
-        localStorage.setItem("light", this.checked)
-        document.body.className = "light"
         document.querySelector("#Green").removeAttribute("disabled")
       } else if (localStorage.getItem("Blue")) {
-        localStorage.setItem("light", this.checked)
-        document.body.className = "light"
         document.querySelector("#Blue").removeAttribute("disabled")
       } else {
-        localStorage.clear()
-        localStorage.setItem("light", this.checked)
-        document.body.className = "light"
+        document.querySelector("#Red").removeAttribute("disabled")
       }
     }
   })
