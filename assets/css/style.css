@@ -227,6 +227,7 @@ body {
 }
 
 .copyright {
+    margin-top: 20px;
     color: #ffffff;
     font-family: monospace;
 }
