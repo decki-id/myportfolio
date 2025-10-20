@@ -793,6 +793,7 @@ body.light .style-switcher .switcher-toggle,
 body.light .about .about-content .edex .timeline,
 body.light .portfolios .portfolio-item-inner,
 body.light .portfolios .portfolio-item-inner .portfolio-info,
+body.light .blogs .blog-item-inner,
 body.light .blogs .blog-item-inner .blog-info {
     background-color: #ffffff;
 }
