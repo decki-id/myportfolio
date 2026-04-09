@@ -581,6 +581,7 @@ body {
 
 .blogs .blog-item-inner .blog-image img {
     width: 100%;
+    height: 168px;
     display: block;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
